@@ -1,0 +1,59 @@
+/* Base idêntica ao <helmet> dos HTML de referência (design/*.dc.html). */
+body {
+  margin: 0;
+  background: #061423;
+  font-family: 'Schibsted Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #1470C4;
+}
+
+a:hover {
+  color: #0A2A52;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* `style-hover` do runtime de design vira classe utilitária. */
+.ea-hover-wa {
+  transition: transform 0.16s ease;
+}
+.ea-hover-wa:hover {
+  transform: scale(1.07);
+}
+
+.ea-card {
+  transition: border-color 0.16s ease, background-color 0.16s ease;
+}
+.ea-card:hover {
+  border-color: #1470C4;
+}
+
+.ea-card-gelo:hover {
+  background: #FFFFFF;
+}
+
+/* Links que herdam a cor do pano em que estão (nav, rodapé, botões). */
+.ea-link-inherit:hover {
+  color: inherit;
+  opacity: 0.82;
+}
+
+/* O FAQ troca o "+" por "−" quando aberto. */
+details[open] > summary .ea-faq-sinal::after {
+  content: '−';
+}
+.ea-faq-sinal::after {
+  content: '+';
+}
+
+/* Respeita quem pediu menos movimento. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

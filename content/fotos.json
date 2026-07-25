@@ -1,0 +1,4 @@
+{
+  "nota": "Fotos reais da clínica (pendência do handoff: 'Fotos reais da clínica/equipe (hoje banco de imagens)'). Coloque os arquivos em public/fotos/ e adicione a entrada aqui — a seção 'A clínica por dentro' em /sobre-nos aparece sozinha assim que a lista deixa de estar vazia. Sem entradas, a seção não é renderizada.",
+  "clinica": []
+}

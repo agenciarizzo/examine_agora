@@ -1,0 +1,2091 @@
+{
+ "schema": "ea-landings",
+ "created": "2026-07-25",
+ "nota": "Fonte única do SITE COMPLETO Examine Agora (landings de campanha + páginas de apoio). Pedido 25/07: procedimentos-âncora + SEO por serviço. Granularidade = campanhas Ads (Morfológico · Mulher · Abdominal · Doppler · Articulações · Homem · Biópsias · Lab). Toda afirmação médica exige REVISÃO CLÍNICA do RT. JSON-LD por página: MedicalProcedure/MedicalTest + FAQPage + MedicalClinic. Vedado no site: resultados online (descontinuado), diagnóstico de câncer de colo do útero, preço.",
+ "clinica": {
+  "nome": "Examine Agora — Imagem e Medicina",
+  "rt_line": "Resp. Técnico: Dr. Flávio H. A. Chaves · CRM-DF 19506 · RQE 11288",
+  "rt": {
+   "name": "Dr. Flávio H. A. Chaves",
+   "specialty": "Radiologia e Diagnóstico por Imagem",
+   "crm": "CRM-DF 19506 · CRM-SP 123212",
+   "rqe": "RQE 11288",
+   "bio": "Radiologia pelo Hospital Heliópolis, ressonância musculoesquelética pelo HCOR e formação em ultrassom morfológico e biópsia pelo Cetrus. É ele quem realiza os procedimentos guiados e assina o seu laudo."
+  },
+  "phone": "(61) 3208-6814",
+  "whatsapp_link": "https://wa.me/556132086814",
+  "handle": "@examineagora",
+  "site": "examineagora.com.br",
+  "address": "Av. Recanto das Emas, Q102 L03 Loja 06 · Brasília-DF",
+  "hours": "Seg a sex 8h–18h · Sáb 8h–12h",
+  "pagamento": "Convênio e particular",
+  "selo": "Convênio e particular · Recanto das Emas · Brasília-DF"
+ },
+ "pages": [
+  {
+   "slug": "hub",
+   "hub": true,
+   "file": "EA Landing Hub.dc.html",
+   "path": "/procedimentos-guiados-por-ultrassom",
+   "nome": "Procedimentos guiados por ultrassom",
+   "curto": "Hub · Procedimentos",
+   "intencao": "posicionamento + distribuição",
+   "seo": {
+    "title": "Procedimentos guiados por ultrassom | Examine Agora",
+    "description": "Referência em biópsias e punções guiadas por ultrassom em Brasília: próstata, mama, tireoide e linfonodo, com radiologista experiente e laudo próprio.",
+    "kw": "procedimentos guiados por ultrassom",
+    "kws": [
+     "biópsia guiada por ultrassom brasília",
+     "punção guiada por ultrassom",
+     "clínica de ultrassom recanto das emas"
+    ],
+    "waMsg": "Olá! Quero agendar um procedimento guiado por ultrassom."
+   },
+   "hero": {
+    "h1a": "Procedimentos",
+    "emph": "guiados",
+    "h1b": "por ultrassom",
+    "pano": "campo",
+    "sub": "Biópsias e punções em que a agulha é vista em tempo real, do início ao fim — pelo mesmo radiologista que assina o seu laudo."
+   },
+   "manifesto": [
+    "Numa biópsia ou punção, a diferença entre um procedimento tranquilo e um procedimento repetido está em enxergar o alvo. Guiado por ultrassom, o trajeto da agulha aparece na tela em tempo real: o médico vê o nódulo, vê a agulha e vê o caminho entre os dois.",
+    "Desde 2012 no Recanto das Emas, a Examine Agora realiza esses procedimentos em ambiente ambulatorial, com anestesia local e sem radiação — e o material segue para análise no mesmo dia."
+   ],
+   "guiado": {
+    "h2": "Por que guiado por ultrassom",
+    "emph": "vista",
+    "lead": "A agulha não anda no escuro: ela é vista em tempo real.",
+    "pontos": [
+     {
+      "t": "Tempo real",
+      "d": "O ultrassom mostra a agulha durante todo o trajeto. O médico corrige o caminho enquanto avança — não depois."
+     },
+     {
+      "t": "Precisão no alvo",
+      "d": "A coleta sai do ponto suspeito, não da vizinhança. Menos material inconclusivo, menos repetição de exame."
+     },
+     {
+      "t": "Sem radiação",
+      "d": "Ultrassom não usa radiação ionizante nem contraste. Pode ser repetido sempre que necessário."
+     },
+     {
+      "t": "Ambulatorial",
+      "d": "Anestesia local, procedimento em sala de exame e retorno para casa no mesmo dia. Sem internação."
+     }
+    ]
+   },
+   "rel": [],
+   "gridSlugs": [
+    "prostata",
+    "mama",
+    "tireoide",
+    "linfonodo",
+    "musculo",
+    "doppler"
+   ],
+   "tipo": "landing",
+   "grupo": "proc"
+  },
+  {
+   "slug": "prostata",
+   "file": "EA Landing Biopsia de Prostata.dc.html",
+   "path": "/biopsia-de-prostata-brasilia",
+   "nome": "Biópsia de próstata transretal",
+   "curto": "Biópsia de próstata",
+   "intencao": "ticket alto · homem 45+",
+   "illo": "anatomia da próstata com transdutor transretal e trajeto da agulha — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Biópsia de próstata em Brasília | Examine Agora",
+    "description": "Biópsia de próstata transretal guiada por ultrassom, com anestesia local e radiologista experiente. Convênio e particular no Recanto das Emas, Brasília-DF.",
+    "kw": "biópsia de próstata brasília",
+    "kws": [
+     "biópsia de próstata guiada por ultrassom",
+     "biópsia transretal de próstata",
+     "onde fazer biópsia de próstata no DF"
+    ],
+    "waMsg": "Olá! Quero agendar uma biópsia de próstata guiada por ultrassom."
+   },
+   "hero": {
+    "h1a": "Biópsia de próstata",
+    "emph": "guiada por ultrassom",
+    "h1b": "em Brasília",
+    "pano": "campo",
+    "sub": "Procedimento ambulatorial, com anestesia local e a agulha acompanhada em tempo real pelo radiologista."
+   },
+   "indicada": {
+    "h2": "Quando a biópsia de próstata é indicada",
+    "itens": [
+     "PSA elevado ou em elevação progressiva, a critério do seu urologista",
+     "Toque retal com alteração suspeita",
+     "Lesão suspeita em ressonância da próstata (PI-RADS 4 ou 5)",
+     "Acompanhamento em vigilância ativa",
+     "Suspeita persistente após biópsia anterior negativa"
+    ]
+   },
+   "como": {
+    "h2": "Como é feita a biópsia transretal",
+    "dur": "15 a 20 minutos",
+    "passos": [
+     {
+      "t": "Confirmação do preparo",
+      "d": "Checamos o antibiótico, o preparo intestinal e os exames que você trouxe (PSA, ressonância)."
+     },
+     {
+      "t": "Ultrassom transretal",
+      "d": "O transdutor mapeia a próstata e localiza as áreas a serem amostradas."
+     },
+     {
+      "t": "Anestesia local",
+      "d": "Bloqueio anestésico aplicado sob visão do ultrassom, antes de qualquer coleta."
+     },
+     {
+      "t": "Coleta guiada",
+      "d": "Fragmentos são colhidos com agulha fina, cada um acompanhado em tempo real na tela."
+     },
+     {
+      "t": "Observação e alta",
+      "d": "Curto período de observação, orientações por escrito e liberação para casa."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo para a biópsia de próstata",
+    "itens": [
+     "Tomar o antibiótico prescrito exatamente como orientado",
+     "Fazer o preparo intestinal indicado na véspera ou no dia",
+     "Informar anticoagulantes e antiagregantes com antecedência — a pausa é orientada caso a caso",
+     "Trazer pedido médico, PSA recente e exames de imagem anteriores",
+     "Vir acompanhado e evitar dirigir na volta"
+    ]
+   },
+   "guiado": {
+    "h2": "Segurança: por que guiada por ultrassom",
+    "emph": "vista",
+    "lead": "A agulha é vista em tempo real, do reto ao alvo.",
+    "pontos": [
+     {
+      "t": "Trajeto controlado",
+      "d": "O ultrassom mostra a agulha durante todo o percurso — o médico corrige o caminho enquanto avança."
+     },
+     {
+      "t": "Amostra do lugar certo",
+      "d": "As coletas saem das zonas mapeadas, incluindo áreas suspeitas da ressonância."
+     },
+     {
+      "t": "Protocolo de antibiótico",
+      "d": "Profilaxia prescrita e conferida antes do procedimento reduz o risco de infecção."
+     },
+     {
+      "t": "Ambulatorial",
+      "d": "Anestesia local e alta no mesmo dia. Sem internação, sem anestesia geral."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Recuperação depois da biópsia",
+    "itens": [
+     "Atividades leves ainda no mesmo dia; esforço físico só depois de 48h",
+     "Pequena quantidade de sangue na urina, nas fezes ou no sêmen pode ocorrer por alguns dias — é esperado",
+     "Complete o antibiótico até o fim, mesmo sem sintomas",
+     "Febre, dor intensa ou dificuldade para urinar: entre em contato imediatamente"
+    ]
+   },
+   "faq": [
+    {
+     "q": "A biópsia de próstata dói?",
+     "a": "Com a anestesia local guiada pelo ultrassom, a maioria dos pacientes relata desconforto breve e tolerável, não dor intensa. O procedimento todo dura cerca de 15 a 20 minutos."
+    },
+    {
+     "q": "Preciso de acompanhante?",
+     "a": "Recomendamos vir acompanhado e não dirigir na volta, pelo conforto após o procedimento."
+    },
+    {
+     "q": "Quando sai o resultado?",
+     "a": "O material segue para análise anatomopatológica em laboratório parceiro. O prazo é informado no dia da coleta."
+    },
+    {
+     "q": "Preciso parar meus remédios?",
+     "a": "Somente com orientação. Anticoagulantes e antiagregantes exigem pausa programada; informe tudo o que usa no agendamento."
+    },
+    {
+     "q": "Convênio cobre a biópsia?",
+     "a": "Atendemos convênio e particular. Confirme a cobertura do seu plano no agendamento pelo WhatsApp."
+    },
+    {
+     "q": "PSA alto significa câncer?",
+     "a": "Não. O PSA também sobe por causas benignas, como crescimento da próstata e inflamação. A biópsia existe justamente para esclarecer."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Biópsia de próstata é insuportável",
+     "v": "Com anestesia local e trajeto guiado por ultrassom, o desconforto é breve e controlado."
+    },
+    "pares": [
+     {
+      "m": "A biópsia espalha o câncer",
+      "v": "A coleta guiada usa trajeto controlado. O que muda o prognóstico é descobrir cedo."
+     },
+     {
+      "m": "PSA alto já confirma o diagnóstico",
+      "v": "PSA sobe por várias causas benignas. Só a análise do tecido confirma."
+     }
+    ]
+   },
+   "rel": [
+    "doppler",
+    "linfonodo"
+   ],
+   "tipo": "landing",
+   "grupo": "proc"
+  },
+  {
+   "slug": "mama",
+   "file": "EA Landing Biopsia de Mama.dc.html",
+   "path": "/biopsia-de-mama-guiada-por-ultrassom",
+   "nome": "Biópsia de mama guiada por ultrassom",
+   "curto": "Biópsia de mama",
+   "intencao": "ticket alto · mulher 35+",
+   "illo": "anatomia da mama com nódulo, transdutor e agulha de core biopsy — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Biópsia de mama guiada por ultrassom | Examine Agora",
+    "description": "Biópsia de mama (core biopsy) guiada por ultrassom: coleta precisa, anestesia local e ambiente acolhedor. Convênio e particular em Brasília-DF.",
+    "kw": "biópsia de mama guiada por ultrassom",
+    "kws": [
+     "core biopsy de mama brasília",
+     "biópsia de nódulo de mama",
+     "punção de mama guiada por ultrassom"
+    ],
+    "waMsg": "Olá! Quero agendar uma biópsia de mama guiada por ultrassom."
+   },
+   "hero": {
+    "h1a": "Biópsia de mama",
+    "emph": "guiada por ultrassom",
+    "h1b": "",
+    "pano": "campo",
+    "sub": "O médico enxerga a agulha o tempo todo. Coleta precisa, anestesia local e alta no mesmo dia."
+   },
+   "indicada": {
+    "h2": "Quando a biópsia de mama é indicada",
+    "itens": [
+     "Nódulo classificado como BI-RADS 4 ou 5 na mamografia ou no ultrassom",
+     "Nódulo palpável com característica suspeita ao exame de imagem",
+     "Assimetria ou distorção com correlação no ultrassom",
+     "Nódulo conhecido que mudou de tamanho ou aspecto"
+    ]
+   },
+   "como": {
+    "h2": "Como é feita a biópsia de mama guiada por ultrassom",
+    "dur": "cerca de 30 minutos",
+    "passos": [
+     {
+      "t": "Localização do nódulo",
+      "d": "O ultrassom encontra e mede o nódulo; o médico define o melhor trajeto."
+     },
+     {
+      "t": "Anestesia local",
+      "d": "Pequena quantidade de anestésico na pele e no trajeto — você fica acordada e confortável."
+     },
+     {
+      "t": "Coleta guiada (core biopsy)",
+      "d": "A agulha entra por uma incisão mínima e colhe fragmentos, cada um visto em tempo real na tela."
+     },
+     {
+      "t": "Curativo compressivo",
+      "d": "Compressão local por alguns minutos e curativo simples. Sem pontos."
+     },
+     {
+      "t": "Orientações e alta",
+      "d": "Você sai andando, com as orientações por escrito."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo para a biópsia de mama",
+    "itens": [
+     "Não é necessário jejum",
+     "Informar anticoagulantes e antiagregantes no agendamento",
+     "Trazer pedido médico, mamografia e ultrassons anteriores",
+     "Vir com sutiã confortável, de bom apoio, para usar após o procedimento",
+     "Evitar cremes e óleos na região das mamas no dia"
+    ]
+   },
+   "guiado": {
+    "h2": "Segurança: por que guiada por ultrassom",
+    "emph": "enxerga",
+    "lead": "O médico enxerga a agulha e o nódulo na mesma tela.",
+    "pontos": [
+     {
+      "t": "Precisão milimétrica",
+      "d": "A amostra sai de dentro do nódulo, não da borda — resultado mais confiável."
+     },
+     {
+      "t": "Sem radiação",
+      "d": "Todo o procedimento é guiado por ultrassom, sem radiação ionizante."
+     },
+     {
+      "t": "Incisão mínima",
+      "d": "Abertura de poucos milímetros, sem pontos e sem cicatriz relevante."
+     },
+     {
+      "t": "Ambulatorial",
+      "d": "Anestesia local, cerca de 30 minutos, alta imediata."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Recuperação depois da biópsia",
+    "itens": [
+     "Manter o curativo conforme orientação e aplicar gelo local nas primeiras horas",
+     "Hematoma leve e sensibilidade no local são esperados por alguns dias",
+     "Atividades normais no dia seguinte; esforço com os braços só depois de 48h",
+     "Vermelhidão intensa, febre ou dor crescente: entre em contato"
+    ]
+   },
+   "faq": [
+    {
+     "q": "A biópsia de mama dói?",
+     "a": "Com a anestesia local, o habitual é sentir pressão, não dor. O desconforto posterior costuma ser leve e passa com analgésico comum, se necessário."
+    },
+    {
+     "q": "Deixa cicatriz?",
+     "a": "A incisão tem poucos milímetros e não leva pontos. Em geral a marca fica imperceptível."
+    },
+    {
+     "q": "Quando sai o resultado?",
+     "a": "O material segue para análise anatomopatológica em laboratório parceiro. O prazo é informado no dia da coleta."
+    },
+    {
+     "q": "Posso dirigir depois?",
+     "a": "Sim. A anestesia é local e não afeta reflexos. Ainda assim, se preferir vir acompanhada, fique à vontade."
+    },
+    {
+     "q": "Estou amamentando. Posso fazer?",
+     "a": "Em geral sim, com técnica adequada — informe no agendamento para o médico avaliar o seu caso."
+    },
+    {
+     "q": "Toda biópsia significa câncer?",
+     "a": "Não. A maioria dos nódulos investigados é benigna. A biópsia serve exatamente para dar essa resposta com segurança."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Toda biópsia de mama significa câncer",
+     "v": "A maioria dos nódulos investigados é benigna. A biópsia existe para responder com segurança."
+    },
+    "pares": [
+     {
+      "m": "A biópsia espalha o câncer",
+      "v": "A punção guiada usa trajeto controlado. Descobrir cedo é o que muda o prognóstico."
+     },
+     {
+      "m": "Precisa internar para fazer",
+      "v": "É ambulatorial: anestesia local, cerca de 30 minutos e alta imediata."
+     }
+    ]
+   },
+   "rel": [
+    "linfonodo",
+    "tireoide"
+   ],
+   "tipo": "landing",
+   "grupo": "proc"
+  },
+  {
+   "slug": "tireoide",
+   "file": "EA Landing PAAF de Tireoide.dc.html",
+   "path": "/paaf-de-tireoide-brasilia",
+   "nome": "PAAF / biópsia de tireoide",
+   "curto": "PAAF de tireoide",
+   "intencao": "ticket alto · nódulo em US",
+   "illo": "tireoide com nódulo e agulha fina guiada pelo transdutor — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "PAAF de tireoide em Brasília | Examine Agora",
+    "description": "PAAF de tireoide guiada por ultrassom para investigar nódulos: agulha fina, desconforto mínimo e coleta precisa. Convênio e particular no Recanto das Emas.",
+    "kw": "paaf de tireoide brasília",
+    "kws": [
+     "punção de tireoide guiada por ultrassom",
+     "biópsia de nódulo de tireoide",
+     "paaf guiada por ultrassom DF"
+    ],
+    "waMsg": "Olá! Quero agendar uma PAAF de tireoide guiada por ultrassom."
+   },
+   "hero": {
+    "h1a": "PAAF de tireoide",
+    "emph": "guiada por ultrassom",
+    "h1b": "em Brasília",
+    "pano": "campo",
+    "sub": "Punção com agulha fina — mais fina que a de coleta de sangue — para investigar nódulos com precisão."
+   },
+   "indicada": {
+    "h2": "Quando a PAAF de tireoide é indicada",
+    "itens": [
+     "Nódulo com características suspeitas ao ultrassom (classificação TI-RADS)",
+     "Nódulo acima do tamanho de corte para o seu perfil, a critério do médico",
+     "Nódulo conhecido que cresceu ou mudou de aspecto",
+     "Linfonodo cervical suspeito associado"
+    ]
+   },
+   "como": {
+    "h2": "Como é feita a PAAF de tireoide",
+    "dur": "cerca de 15 minutos",
+    "passos": [
+     {
+      "t": "Ultrassom da tireoide",
+      "d": "O nódulo é medido e classificado; o médico define o ponto exato da punção."
+     },
+     {
+      "t": "Antissepsia",
+      "d": "Limpeza da pele do pescoço. Anestesia local é usada quando necessário."
+     },
+     {
+      "t": "Punção guiada",
+      "d": "Duas a três passagens rápidas com agulha fina, cada uma acompanhada em tempo real na tela."
+     },
+     {
+      "t": "Curativo simples",
+      "d": "Compressão breve e curativo pequeno. Você já pode falar e engolir normalmente."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo para a PAAF",
+    "itens": [
+     "Não é necessário jejum",
+     "Vir com roupa que deixe o colo livre",
+     "Informar anticoagulantes e antiagregantes no agendamento",
+     "Trazer pedido médico e ultrassons anteriores da tireoide"
+    ]
+   },
+   "guiado": {
+    "h2": "Segurança: por que guiada por ultrassom",
+    "emph": "fina",
+    "lead": "Agulha fina, trajeto visto em tempo real.",
+    "pontos": [
+     {
+      "t": "Mais fina que a do sangue",
+      "d": "A agulha da PAAF é mais fina que a usada em coleta de sangue. O desconforto é comparável."
+     },
+     {
+      "t": "Desvia do que importa",
+      "d": "O ultrassom mostra vasos e estruturas do pescoço — o trajeto passa longe deles."
+     },
+     {
+      "t": "Coleta representativa",
+      "d": "A ponta da agulha é vista dentro do nódulo, garantindo material do lugar certo."
+     },
+     {
+      "t": "Sem radiação",
+      "d": "Procedimento rápido, ambulatorial e sem radiação ionizante."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Depois da PAAF",
+    "itens": [
+     "Atividades normais imediatamente após o procedimento",
+     "Leve dor local nas primeiras 24h é esperada — gelo ajuda",
+     "Pequeno hematoma no ponto da punção pode ocorrer",
+     "Inchaço importante ou dor crescente: entre em contato"
+    ]
+   },
+   "faq": [
+    {
+     "q": "A PAAF dói?",
+     "a": "O desconforto é comparável ao de uma coleta de sangue: a agulha é ainda mais fina. Muitos pacientes dispensam anestesia."
+    },
+    {
+     "q": "Preciso de anestesia?",
+     "a": "Nem sempre. Quando necessário, usamos anestesia local em pequena quantidade."
+    },
+    {
+     "q": "Posso falar e engolir depois?",
+     "a": "Sim, normalmente, logo após o procedimento."
+    },
+    {
+     "q": "Quando sai o resultado?",
+     "a": "O material segue para análise citológica em laboratório parceiro. O prazo é informado no dia da coleta."
+    },
+    {
+     "q": "E se o resultado vier inconclusivo?",
+     "a": "Acontece numa parcela dos casos, pela própria natureza do exame. Quando ocorre, o médico orienta se e quando repetir."
+    },
+    {
+     "q": "Todo nódulo de tireoide é câncer?",
+     "a": "Não — a grande maioria é benigna. A PAAF existe para identificar a minoria que precisa de tratamento."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Todo nódulo de tireoide é câncer",
+     "v": "A grande maioria dos nódulos é benigna. A PAAF identifica a minoria que precisa de tratamento."
+    },
+    "pares": [
+     {
+      "m": "Mexer no nódulo faz ele crescer",
+      "v": "A punção com agulha fina não estimula o nódulo. Ela apenas colhe células para análise."
+     },
+     {
+      "m": "PAAF é uma cirurgia",
+      "v": "É uma punção ambulatorial de minutos, sem corte, sem pontos e sem internação."
+     }
+    ]
+   },
+   "rel": [
+    "linfonodo",
+    "mama"
+   ],
+   "tipo": "landing",
+   "grupo": "proc"
+  },
+  {
+   "slug": "linfonodo",
+   "file": "EA Landing Biopsia de Linfonodo.dc.html",
+   "path": "/biopsia-de-linfonodo-axilar",
+   "nome": "PAAF / biópsia de linfonodo axilar",
+   "curto": "Biópsia de linfonodo",
+   "intencao": "encaminhamento médico",
+   "illo": "região axilar com linfonodo e agulha guiada pelo transdutor — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Biópsia de linfonodo axilar em Brasília | Examine Agora",
+    "description": "PAAF e biópsia de linfonodo axilar guiadas por ultrassom, com trajeto seguro e anestesia local. Atendemos encaminhamentos — convênio e particular em Brasília.",
+    "kw": "biópsia de linfonodo axilar",
+    "kws": [
+     "paaf de linfonodo axilar",
+     "punção de linfonodo guiada por ultrassom",
+     "linfonodo axilar aumentado ultrassom"
+    ],
+    "waMsg": "Olá! Quero agendar uma biópsia de linfonodo axilar guiada por ultrassom."
+   },
+   "hero": {
+    "h1a": "Biópsia de linfonodo axilar",
+    "emph": "guiada por ultrassom",
+    "h1b": "",
+    "pano": "campo",
+    "sub": "Numa região cheia de vasos e nervos, o guia por ultrassom é o que garante o trajeto seguro da agulha."
+   },
+   "indicada": {
+    "h2": "Quando a biópsia de linfonodo é indicada",
+    "itens": [
+     "Linfonodo axilar aumentado ou com cortical espessada ao ultrassom",
+     "Investigação complementar durante avaliação de nódulo de mama",
+     "Linfonodo persistente sem causa aparente, a critério do seu médico",
+     "Encaminhamento do mastologista, oncologista ou hematologista"
+    ]
+   },
+   "como": {
+    "h2": "Como é feita a punção do linfonodo axilar",
+    "dur": "15 a 20 minutos",
+    "passos": [
+     {
+      "t": "Mapeamento por ultrassom",
+      "d": "O linfonodo é localizado e o médico traça o trajeto mais seguro, longe de vasos e nervos."
+     },
+     {
+      "t": "Anestesia local",
+      "d": "Pequena quantidade de anestésico na pele e no trajeto."
+     },
+     {
+      "t": "PAAF ou core, conforme a indicação",
+      "d": "Agulha fina (PAAF) ou agulha de fragmento (core), definida pelo pedido do seu médico."
+     },
+     {
+      "t": "Coleta em tempo real",
+      "d": "Cada passagem da agulha é vista na tela, da pele ao linfonodo."
+     },
+     {
+      "t": "Curativo e alta",
+      "d": "Compressão breve, curativo simples e liberação imediata."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo para a punção",
+    "itens": [
+     "Não é necessário jejum",
+     "Informar anticoagulantes e antiagregantes no agendamento",
+     "Trazer pedido médico e exames de imagem anteriores (ultrassom, mamografia)",
+     "Vir com roupa que facilite expor a axila"
+    ]
+   },
+   "guiado": {
+    "h2": "Segurança: por que guiada por ultrassom",
+    "emph": "seguro",
+    "lead": "Na axila, ver o trajeto não é detalhe — é o procedimento.",
+    "pontos": [
+     {
+      "t": "Anatomia delicada",
+      "d": "A axila concentra vasos e nervos do braço. O ultrassom mostra cada um deles antes e durante a punção."
+     },
+     {
+      "t": "Alvo confirmado",
+      "d": "A agulha é vista dentro do linfonodo suspeito — não do vizinho."
+     },
+     {
+      "t": "Anestesia local",
+      "d": "Procedimento ambulatorial, sem sedação e sem internação."
+     },
+     {
+      "t": "Sem radiação",
+      "d": "Todo o guia é feito por ultrassom."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Recuperação depois da punção",
+    "itens": [
+     "Atividades normais no mesmo dia",
+     "Desconforto leve na axila por 24 a 48h é esperado",
+     "Evitar esforço intenso com o braço no primeiro dia",
+     "Inchaço importante, febre ou dor crescente: entre em contato"
+    ]
+   },
+   "faq": [
+    {
+     "q": "Vou fazer PAAF ou biópsia?",
+     "a": "Depende do pedido do seu médico e do aspecto do linfonodo. A PAAF usa agulha fina; a core colhe um fragmento maior. As duas são guiadas por ultrassom."
+    },
+    {
+     "q": "Dói?",
+     "a": "Com anestesia local, o habitual é sentir pressão. O desconforto posterior é leve e passageiro."
+    },
+    {
+     "q": "Por que investigar a axila?",
+     "a": "Os linfonodos axilares drenam a mama e o braço. Avaliá-los complementa a investigação de alterações da mama."
+    },
+    {
+     "q": "Linfonodo aumentado é sempre grave?",
+     "a": "Não. Infecções, vacinas recentes e inflamações também aumentam linfonodos. A punção esclarece."
+    },
+    {
+     "q": "Quando sai o resultado?",
+     "a": "O material segue para análise em laboratório parceiro. O prazo é informado no dia da coleta."
+    },
+    {
+     "q": "Posso vir por encaminhamento de outro médico?",
+     "a": "Sim — atendemos encaminhamentos com pedido médico, por convênio e particular."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Linfonodo aumentado é sempre câncer",
+     "v": "Infecções, vacinas e inflamações também aumentam linfonodos. A punção existe para esclarecer."
+    },
+    "pares": [
+     {
+      "m": "Tirar amostra espalha a doença",
+      "v": "A punção guiada usa trajeto controlado e agulha adequada ao caso."
+     },
+     {
+      "m": "Vou perder movimento do braço",
+      "v": "A punção não afeta músculos nem nervos — o ultrassom mostra e evita cada um deles."
+     }
+    ]
+   },
+   "rel": [
+    "mama",
+    "tireoide"
+   ],
+   "tipo": "landing",
+   "grupo": "proc"
+  },
+  {
+   "slug": "musculo",
+   "file": "EA Landing Ultrassom Musculoesqueletico.dc.html",
+   "path": "/ultrassom-musculoesqueletico-brasilia",
+   "nome": "Ultrassom musculoesquelético",
+   "curto": "US musculoesquelético",
+   "intencao": "volume · dor/lesão",
+   "illo": "articulação do ombro com tendão e transdutor em exame dinâmico — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Ultrassom musculoesquelético em Brasília | Examine Agora",
+    "description": "Ultrassom musculoesquelético em Brasília: exame dinâmico de ombro, joelho, tendões e músculos, sem radiação. Convênio e particular no Recanto das Emas.",
+    "kw": "ultrassom musculoesquelético brasília",
+    "kws": [
+     "ultrassom de ombro",
+     "ultrassom de tendão",
+     "exame para dor no ombro DF"
+    ],
+    "waMsg": "Olá! Quero agendar um ultrassom musculoesquelético."
+   },
+   "hero": {
+    "h1a": "Ultrassom musculoesquelético",
+    "emph": "em movimento",
+    "h1b": "",
+    "pano": "campo",
+    "sub": "O exame que vê o tendão trabalhando: dinâmico, sem radiação, com laudo de radiologista com formação em imagem musculoesquelética."
+   },
+   "indicada": {
+    "h2": "Quando o ultrassom musculoesquelético é indicado",
+    "itens": [
+     "Dor no ombro, cotovelo, punho, quadril, joelho ou tornozelo",
+     "Suspeita de tendinite, bursite ou rotura de tendão",
+     "Lesão muscular no esporte ou no trabalho",
+     "Nódulos e caroços em partes moles",
+     "Acompanhamento de lesão já conhecida"
+    ]
+   },
+   "como": {
+    "h2": "Como é feito o exame",
+    "dur": "20 a 30 minutos",
+    "passos": [
+     {
+      "t": "Conversa direcionada",
+      "d": "O médico pergunta onde dói e em que movimento — isso guia o exame."
+     },
+     {
+      "t": "Varredura da região",
+      "d": "Gel e transdutor sobre a pele; tendões, músculos e articulação aparecem em detalhe."
+     },
+     {
+      "t": "Manobras dinâmicas",
+      "d": "Você move o braço ou a perna durante o exame: o tendão é avaliado em funcionamento."
+     },
+     {
+      "t": "Comparação com o outro lado",
+      "d": "Quando ajuda no diagnóstico, o lado sem dor serve de referência."
+     },
+     {
+      "t": "Laudo",
+      "d": "Assinado pelo radiologista que fez o exame."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo",
+    "itens": [
+     "Não é necessário nenhum preparo",
+     "Venha com roupa confortável que exponha a região examinada",
+     "Traga pedido médico e exames anteriores da mesma região, se tiver"
+    ]
+   },
+   "guiado": {
+    "h2": "Por que ultrassom para músculos e tendões",
+    "emph": "dinâmico",
+    "lead": "É o único exame que vê a estrutura em movimento.",
+    "pontos": [
+     {
+      "t": "Exame dinâmico",
+      "d": "Ressonância fotografa a articulação parada; o ultrassom mostra o tendão deslizando enquanto você se move."
+     },
+     {
+      "t": "Onde dói, na hora",
+      "d": "O médico examina exatamente o ponto da dor, com você indicando durante o exame."
+     },
+     {
+      "t": "Sem radiação",
+      "d": "Pode ser repetido para acompanhar a evolução de uma lesão."
+     },
+     {
+      "t": "Resolutivo e acessível",
+      "d": "Agenda rápida e resposta objetiva para a maior parte das dores articulares."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Depois do exame",
+    "itens": [
+     "Nenhuma restrição: atividades normais imediatamente",
+     "O gel sai com papel — sem resíduos",
+     "Leve o laudo ao médico que pediu o exame para definir o tratamento"
+    ]
+   },
+   "faq": [
+    {
+     "q": "Preciso de preparo ou jejum?",
+     "a": "Não. Basta vir com roupa confortável que exponha a região."
+    },
+    {
+     "q": "O exame dói?",
+     "a": "Não — é o transdutor deslizando sobre a pele com gel. Em pontos inflamados pode haver sensibilidade leve à pressão."
+    },
+    {
+     "q": "Ultrassom substitui a ressonância?",
+     "a": "São exames complementares. Para tendões e avaliação dinâmica o ultrassom costuma responder; seu médico define o melhor para o caso."
+    },
+    {
+     "q": "Quanto tempo demora?",
+     "a": "Entre 20 e 30 minutos, conforme a região e as manobras necessárias."
+    },
+    {
+     "q": "Quem faz o exame?",
+     "a": "Radiologista com formação em imagem musculoesquelética pelo HCOR — o mesmo que assina o laudo."
+    },
+    {
+     "q": "Convênio cobre?",
+     "a": "Atendemos convênio e particular. Confirme seu plano no agendamento pelo WhatsApp."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Só a ressonância enxerga lesão de tendão",
+     "v": "Para tendões superficiais, o ultrassom dinâmico mostra a lesão — e mostra em movimento."
+    },
+    "pares": [
+     {
+      "m": "Ultrassom é exame simples demais",
+      "v": "Nas mãos de um radiologista treinado, é padrão de referência para várias lesões."
+     },
+     {
+      "m": "Precisa de preparo",
+      "v": "Nenhum. Roupa confortável e pedido médico bastam."
+     }
+    ]
+   },
+   "rel": [
+    "doppler",
+    "tireoide"
+   ],
+   "tipo": "landing",
+   "grupo": "exame"
+  },
+  {
+   "slug": "doppler",
+   "file": "EA Landing Doppler Vascular.dc.html",
+   "path": "/doppler-vascular-brasilia",
+   "nome": "Doppler vascular",
+   "curto": "Doppler vascular",
+   "intencao": "volume · convênio",
+   "illo": "vaso sanguíneo com fluxo mapeado e transdutor — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Doppler vascular em Brasília | Examine Agora",
+    "description": "Doppler vascular em Brasília: veias, artérias e carótidas com mapeamento do fluxo em cores, sem contraste. Convênio e particular no Recanto das Emas.",
+    "kw": "doppler vascular brasília",
+    "kws": [
+     "doppler venoso de membros inferiores",
+     "doppler de carótidas",
+     "exame para varizes DF"
+    ],
+    "waMsg": "Olá! Quero agendar um Doppler vascular."
+   },
+   "hero": {
+    "h1a": "Doppler vascular",
+    "emph": "em cores",
+    "h1b": "em Brasília",
+    "pano": "campo",
+    "sub": "O fluxo do seu sangue mapeado em cores, em tempo real — sem contraste, sem radiação, sem agulha."
+   },
+   "indicada": {
+    "h2": "Quando o Doppler é indicado",
+    "itens": [
+     "Varizes e suspeita de insuficiência venosa",
+     "Inchaço ou dor assimétrica na perna — investigação de trombose",
+     "Avaliação de carótidas e vertebrais, a critério do médico",
+     "Planejamento pré-operatório de cirurgia de varizes",
+     "Acompanhamento de doença vascular já conhecida"
+    ]
+   },
+   "como": {
+    "h2": "Como é feito o Doppler vascular",
+    "dur": "30 a 40 minutos",
+    "passos": [
+     {
+      "t": "Posicionamento",
+      "d": "Deitado ou em pé, conforme o vaso examinado — veias de perna são avaliadas também em pé."
+     },
+     {
+      "t": "Mapeamento em cores",
+      "d": "O transdutor percorre o trajeto do vaso; o fluxo aparece em cores na tela."
+     },
+     {
+      "t": "Manobras de fluxo",
+      "d": "Compressões e manobras respiratórias testam válvulas e refluxo."
+     },
+     {
+      "t": "Medidas e registro",
+      "d": "Velocidades e diâmetros são medidos e documentados no laudo."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo para o Doppler",
+    "itens": [
+     "Membros, carótidas e tireoide: sem preparo",
+     "Doppler abdominal (aorta, artérias renais): jejum e dieta orientados no agendamento",
+     "Traga pedido médico e exames vasculares anteriores",
+     "Venha com roupa que facilite expor a região"
+    ]
+   },
+   "guiado": {
+    "h2": "Por que Doppler na Examine Agora",
+    "emph": "cores",
+    "lead": "O fluxo aparece em cores, na hora, na tela.",
+    "pontos": [
+     {
+      "t": "Sem contraste",
+      "d": "Nenhuma injeção, nenhum contraste iodado. O método é totalmente não invasivo."
+     },
+     {
+      "t": "Sem radiação",
+      "d": "Pode ser repetido quantas vezes o acompanhamento exigir."
+     },
+     {
+      "t": "Funcional, não só anatômico",
+      "d": "Além da imagem do vaso, o Doppler mede o fluxo — refluxo, obstrução e velocidade."
+     },
+     {
+      "t": "Laudo de radiologista",
+      "d": "Exame feito e assinado pelo mesmo médico, com medidas documentadas."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Depois do exame",
+    "itens": [
+     "Nenhuma restrição: atividades normais imediatamente",
+     "Leve o laudo ao médico que pediu o exame",
+     "No caso de trombose suspeita, o resultado alterado é comunicado ao seu médico com prioridade"
+    ]
+   },
+   "faq": [
+    {
+     "q": "Doppler dói ou usa agulha?",
+     "a": "Não. É o transdutor com gel sobre a pele — sem agulha, sem contraste, sem dor."
+    },
+    {
+     "q": "Preciso de jejum?",
+     "a": "Só para Doppler abdominal (aorta e artérias renais). Membros e carótidas não exigem preparo."
+    },
+    {
+     "q": "Quanto tempo demora?",
+     "a": "Entre 30 e 40 minutos, conforme a região e as manobras."
+    },
+    {
+     "q": "O que o Doppler mostra?",
+     "a": "O caminho do sangue: se há refluxo nas veias, estreitamento nas artérias ou sinais de trombose."
+    },
+    {
+     "q": "Serve para varizes?",
+     "a": "Sim — é o exame padrão para mapear insuficiência venosa e planejar o tratamento das varizes."
+    },
+    {
+     "q": "Convênio cobre?",
+     "a": "Atendemos convênio e particular. Confirme seu plano no agendamento pelo WhatsApp."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Doppler usa contraste e agulha",
+     "v": "Não usa nem um nem outro. É ultrassom com mapeamento de fluxo — totalmente não invasivo."
+    },
+    "pares": [
+     {
+      "m": "Doppler só serve para varizes",
+      "v": "Avalia também artérias, carótidas, trombose e vasos abdominais."
+     },
+     {
+      "m": "É o mesmo que ultrassom comum",
+      "v": "O Doppler acrescenta a medida do fluxo: mostra como o sangue se move, não só o vaso."
+     }
+    ]
+   },
+   "rel": [
+    "prostata",
+    "musculo"
+   ],
+   "tipo": "landing",
+   "grupo": "exame"
+  },
+  {
+   "tipo": "landing",
+   "grupo": "exame",
+   "slug": "morfologico",
+   "file": "EA Landing Ultrassom Morfologico.dc.html",
+   "path": "/ultrassom-morfologico-brasilia",
+   "nome": "Ultrassom morfológico",
+   "curto": "US morfológico",
+   "intencao": "campanha gestantes · 1º e 2º trimestre",
+   "illo": "feto em perfil com translucência nucal e transdutor — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Ultrassom morfológico em Brasília | Examine Agora",
+    "description": "Ultrassom morfológico do 1º e 2º trimestre no Recanto das Emas: avaliação detalhada do bebê, com Doppler quando indicado. Convênio e particular em Brasília.",
+    "kw": "ultrassom morfológico brasília",
+    "kws": [
+     "ultrassom morfológico 1 trimestre",
+     "morfológico recanto das emas",
+     "translucência nucal brasília"
+    ],
+    "waMsg": "Olá! Quero agendar um ultrassom morfológico."
+   },
+   "hero": {
+    "h1a": "Ultrassom morfológico",
+    "emph": "do seu bebê",
+    "h1b": "em Brasília",
+    "pano": "campo",
+    "sub": "A avaliação detalhada do bebê, órgão por órgão — no 1º trimestre (11 a 13 semanas e 6 dias) e no 2º trimestre."
+   },
+   "indicada": {
+    "h2": "Quando fazer o ultrassom morfológico",
+    "itens": [
+     "1º trimestre: entre 11 semanas e 13 semanas e 6 dias — inclui a medida da translucência nucal",
+     "2º trimestre: janela indicada pelo seu obstetra para a anatomia detalhada do bebê",
+     "Gestação gemelar ou trigemelar — modalidades específicas",
+     "Com Doppler colorido, quando o pré-natal pedir"
+    ]
+   },
+   "como": {
+    "h2": "Como é feito o exame",
+    "dur": "30 a 40 minutos",
+    "passos": [
+     {
+      "t": "Chegada e pedido",
+      "d": "Conferimos o pedido do pré-natal e os ultrassons anteriores da gestação."
+     },
+     {
+      "t": "Exame pela barriga",
+      "d": "Gel e transdutor abdominal — sem desconforto para você e para o bebê."
+     },
+     {
+      "t": "Órgão por órgão",
+      "d": "Cabeça, coração, coluna, membros, placenta e líquido: cada estrutura é medida e documentada."
+     },
+     {
+      "t": "Doppler quando indicado",
+      "d": "O fluxo do cordão e das artérias uterinas entra no estudo quando o obstetra solicita."
+     },
+     {
+      "t": "Laudo detalhado",
+      "d": "Assinado pelo radiologista com formação em morfológico pelo Cetrus."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo",
+    "itens": [
+     "Não é necessário jejum nem bexiga cheia",
+     "Traga o pedido do pré-natal e os ultrassons anteriores",
+     "Você pode vir com acompanhante",
+     "Reserve o horário com folga — o exame é minucioso"
+    ]
+   },
+   "guiado": {
+    "h2": "Por que fazer o morfológico na Examine Agora",
+    "emph": "minúcia",
+    "lead": "Um exame de minúcia, feito sem pressa.",
+    "pontos": [
+     {
+      "t": "Formação específica",
+      "d": "Dr. Flávio tem formação em ultrassom morfológico pelo Cetrus-SP, referência nacional no método."
+     },
+     {
+      "t": "Aparelho moderno",
+      "d": "Imagem de alta definição para enxergar estruturas milimétricas do bebê."
+     },
+     {
+      "t": "Tempo de exame",
+      "d": "A agenda reserva o tempo que a anatomia detalhada exige — sem exame apressado."
+     },
+     {
+      "t": "Gemelar e trigemelar",
+      "d": "Modalidades específicas para gestações múltiplas, com Doppler quando indicado."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Depois do exame",
+    "itens": [
+     "Nenhuma restrição — siga o seu dia normalmente",
+     "Leve o laudo à consulta do pré-natal",
+     "Guarde as imagens com os demais exames da gestação"
+    ]
+   },
+   "faq": [
+    {
+     "q": "Qual a diferença entre morfológico e obstétrico comum?",
+     "a": "O obstétrico acompanha crescimento e vitalidade. O morfológico examina a anatomia do bebê estrutura por estrutura, nas janelas certas da gestação."
+    },
+    {
+     "q": "Dá para descobrir o sexo?",
+     "a": "Muitas vezes sim, dependendo da posição do bebê — mas o objetivo do exame é a avaliação anatômica completa."
+    },
+    {
+     "q": "Preciso de bexiga cheia?",
+     "a": "Não. O morfológico é feito pela barriga, sem preparo."
+    },
+    {
+     "q": "Posso levar acompanhante?",
+     "a": "Sim — a presença de um acompanhante é bem-vinda."
+    },
+    {
+     "q": "O ultrassom faz mal ao bebê?",
+     "a": "Não. O ultrassom usa ondas sonoras, sem radiação, e é o método padrão de acompanhamento da gestação."
+    },
+    {
+     "q": "Perdi a janela do 1º trimestre. E agora?",
+     "a": "Converse com seu obstetra: o morfológico do 2º trimestre segue disponível e cada janela avalia aspectos diferentes."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Morfológico é só para ver o rostinho",
+     "v": "O exame avalia coração, cérebro, coluna, rins e placenta — é uma das avaliações mais completas do pré-natal."
+    },
+    "pares": [
+     {
+      "m": "Ultrassom faz mal ao bebê",
+      "v": "São ondas sonoras, sem radiação. É o método padrão de acompanhamento da gestação."
+     },
+     {
+      "m": "Só gravidez de risco precisa",
+      "v": "O morfológico é recomendado no pré-natal de rotina, nas janelas certas."
+     }
+    ]
+   },
+   "rel": [
+    "mulher",
+    "doppler"
+   ]
+  },
+  {
+   "tipo": "landing",
+   "grupo": "exame",
+   "slug": "mulher",
+   "file": "EA Landing Ultrassom da Mulher.dc.html",
+   "path": "/ultrassom-da-mulher-brasilia",
+   "nome": "Ultrassom da mulher",
+   "curto": "US da mulher",
+   "intencao": "campanha mulher · transvaginal · pélvico · mamas · obstétrico",
+   "illo": "útero e ovários com transdutor — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Ultrassom da mulher em Brasília | Examine Agora",
+    "description": "Ultrassom transvaginal, pélvico, de mamas e obstétrico no Recanto das Emas, com Doppler colorido quando indicado. Convênio e particular em Brasília-DF.",
+    "kw": "ultrassom transvaginal brasília",
+    "kws": [
+     "ultrassom pélvico recanto das emas",
+     "ultrassom de mamas brasília",
+     "ultrassom obstétrico DF"
+    ],
+    "waMsg": "Olá! Quero agendar um ultrassom (saúde da mulher)."
+   },
+   "hero": {
+    "h1a": "Ultrassom",
+    "emph": "da mulher",
+    "h1b": "em Brasília",
+    "pano": "campo",
+    "sub": "Transvaginal, pélvico, mamas e obstétrico — o acompanhamento completo da sua saúde, no seu bairro."
+   },
+   "indicada": {
+    "h2": "Quando o ultrassom é indicado",
+    "itens": [
+     "Dor pélvica, cólica fora do período ou sangramento irregular",
+     "Acompanhamento de mioma, cisto ou endométrio",
+     "Nódulo ou alteração na mama — complementa a mamografia",
+     "Acompanhamento da gestação (obstétrico e transvaginal obstétrico)",
+     "Avaliação do colo uterino na gravidez, quando o obstetra pede"
+    ]
+   },
+   "como": {
+    "h2": "Como é feito o exame",
+    "dur": "20 a 30 minutos",
+    "passos": [
+     {
+      "t": "A via certa",
+      "d": "Transvaginal, abdominal ou mamária — definida pelo pedido médico e pela indicação."
+     },
+     {
+      "t": "Exame com calma",
+      "d": "Sala reservada, exame conduzido pela própria médica ou médico radiologista."
+     },
+     {
+      "t": "Doppler quando indicado",
+      "d": "O estudo do fluxo entra quando o pedido solicita — ovários, endométrio, mamas."
+     },
+     {
+      "t": "Medidas e documentação",
+      "d": "Cada estrutura é medida e fotografada para o laudo."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo por tipo de exame",
+    "itens": [
+     "Transvaginal: bexiga vazia — urine antes do exame",
+     "Pélvico pela barriga: bexiga cheia",
+     "Mamas: sem preparo — traga mamografia e ultrassons anteriores",
+     "Obstétrico: sem preparo"
+    ]
+   },
+   "guiado": {
+    "h2": "Por que na Examine Agora",
+    "emph": "acolhimento",
+    "lead": "Precisão técnica com acolhimento de verdade.",
+    "pontos": [
+     {
+      "t": "Todas as modalidades",
+      "d": "Do transvaginal ao morfológico, o acompanhamento inteiro no mesmo lugar."
+     },
+     {
+      "t": "Doppler colorido",
+      "d": "Estudo de fluxo disponível em todas as modalidades que o pedirem."
+     },
+     {
+      "t": "Continuidade",
+      "d": "Se um achado pedir investigação, a biópsia guiada é feita aqui — sem recomeçar em outra clínica."
+     },
+     {
+      "t": "No seu bairro",
+      "d": "Recanto das Emas, com agenda de segunda a sábado, convênio e particular."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Depois do exame",
+    "itens": [
+     "Nenhuma restrição — atividades normais",
+     "Leve o laudo ao médico que pediu o exame",
+     "Achados que precisam de investigação têm continuidade aqui: ultrassom de mama pode seguir para biópsia guiada, se indicado"
+    ]
+   },
+   "faq": [
+    {
+     "q": "O transvaginal dói?",
+     "a": "É um exame de poucos minutos, com transdutor fino e protegido. Pode haver leve desconforto, não dor."
+    },
+    {
+     "q": "Menstruada pode fazer?",
+     "a": "Em geral sim — e para algumas avaliações a fase do ciclo importa. Confirme no agendamento a melhor data."
+    },
+    {
+     "q": "Grávida faz transvaginal?",
+     "a": "Sim, quando o obstetra pede — é seguro e usado inclusive para avaliar o colo uterino."
+    },
+    {
+     "q": "Ultrassom de mama substitui a mamografia?",
+     "a": "Não — são complementares. O ultrassom detalha nódulos e orienta punções; a mamografia rastreia."
+    },
+    {
+     "q": "Posso escolher fazer pela barriga em vez de transvaginal?",
+     "a": "A via depende da indicação do pedido: cada uma enxerga estruturas diferentes. Fale com seu médico."
+    },
+    {
+     "q": "Convênio cobre?",
+     "a": "Atendemos convênio e particular. Confirme seu plano no agendamento pelo WhatsApp."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Ultrassom de mama substitui a mamografia",
+     "v": "São exames complementares: um rastreia, o outro detalha e orienta a investigação."
+    },
+    "pares": [
+     {
+      "m": "Transvaginal não pode na gravidez",
+      "v": "Pode e é usado no próprio pré-natal, quando o obstetra solicita."
+     },
+     {
+      "m": "Cisto no ovário é sempre grave",
+      "v": "A maioria é funcional e desaparece sozinha. O ultrassom acompanha e diferencia."
+     }
+    ]
+   },
+   "rel": [
+    "morfologico",
+    "mama"
+   ]
+  },
+  {
+   "tipo": "landing",
+   "grupo": "exame",
+   "slug": "abdominal",
+   "file": "EA Landing Ultrassom Abdominal.dc.html",
+   "path": "/ultrassom-abdominal-brasilia",
+   "nome": "Ultrassom abdominal",
+   "curto": "US abdominal",
+   "intencao": "campanha abdominal · check-up",
+   "illo": "abdome com fígado, vesícula e rins sob o transdutor — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Ultrassom abdominal em Brasília | Examine Agora",
+    "description": "Ultrassom de abdome total, abdome superior e vias urinárias no Recanto das Emas. Rápido, indolor e sem radiação. Convênio e particular em Brasília-DF.",
+    "kw": "ultrassom abdominal brasília",
+    "kws": [
+     "ultrassom de abdome total",
+     "ultrassom vias urinárias DF",
+     "ultrassom recanto das emas"
+    ],
+    "waMsg": "Olá! Quero agendar um ultrassom abdominal."
+   },
+   "hero": {
+    "h1a": "Ultrassom abdominal",
+    "emph": "total",
+    "h1b": "em Brasília",
+    "pano": "campo",
+    "sub": "Fígado, vesícula, rins, pâncreas e bexiga num exame rápido, indolor e sem radiação."
+   },
+   "indicada": {
+    "h2": "Quando o ultrassom abdominal é indicado",
+    "itens": [
+     "Dor abdominal em investigação",
+     "Suspeita de pedra na vesícula ou nos rins",
+     "Alterações em exames de sangue do fígado",
+     "Check-up preventivo periódico",
+     "Avaliação de hérnias e da parede abdominal"
+    ]
+   },
+   "como": {
+    "h2": "Como é feito o exame",
+    "dur": "20 a 30 minutos",
+    "passos": [
+     {
+      "t": "Conferência do preparo",
+      "d": "Jejum e medicações são confirmados na chegada."
+     },
+     {
+      "t": "Varredura órgão a órgão",
+      "d": "Fígado, vesícula, vias biliares, pâncreas, baço, rins e bexiga, cada um medido e documentado."
+     },
+     {
+      "t": "Doppler quando indicado",
+      "d": "O estudo do fluxo (sistema porta, artérias renais, aorta) entra quando o pedido solicita."
+     },
+     {
+      "t": "Laudo",
+      "d": "Assinado pelo radiologista que fez o exame."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo para o ultrassom abdominal",
+    "itens": [
+     "Jejum de 6 horas",
+     "Exame à tarde: 30 gotas de simeticona (Luftal® ou Flagass®) 2 horas antes",
+     "Vias urinárias: bexiga cheia — beba água e não urine na hora anterior",
+     "Medicação de uso contínuo mantida, com um pouco de água",
+     "Traga pedido médico e exames anteriores"
+    ]
+   },
+   "guiado": {
+    "h2": "Por que na Examine Agora",
+    "emph": "rotina",
+    "lead": "O exame de rotina que evita surpresa grande.",
+    "pontos": [
+     {
+      "t": "Sem radiação",
+      "d": "Ondas sonoras, sem raios X e sem contraste — pode repetir sempre que o médico pedir."
+     },
+     {
+      "t": "Praticamente sem contraindicação",
+      "d": "Simples, rápido e indolor, para todas as idades."
+     },
+     {
+      "t": "Doppler disponível",
+      "d": "Fluxo do fígado, aorta e artérias renais no mesmo aparelho."
+     },
+     {
+      "t": "Radiologista experiente",
+      "d": "Exame feito e assinado pelo mesmo médico."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Depois do exame",
+    "itens": [
+     "Nenhuma restrição — pode se alimentar normalmente",
+     "Leve o laudo ao médico que pediu o exame"
+    ]
+   },
+   "faq": [
+    {
+     "q": "Preciso de jejum?",
+     "a": "Sim, 6 horas — o jejum melhora a visualização da vesícula e reduz gases. À tarde, acrescente a simeticona orientada."
+    },
+    {
+     "q": "Posso tomar meus remédios?",
+     "a": "Sim — medicação de uso contínuo é mantida, com um pouco de água."
+    },
+    {
+     "q": "O exame vê o intestino?",
+     "a": "O ultrassom avalia principalmente os órgãos sólidos. Para o intestino, seu médico pode pedir exames complementares."
+    },
+    {
+     "q": "Serve para dor do lado direito?",
+     "a": "É um dos primeiros exames para investigar vesícula e fígado, causas comuns dessa dor."
+    },
+    {
+     "q": "Quanto tempo demora?",
+     "a": "Entre 20 e 30 minutos."
+    },
+    {
+     "q": "Convênio cobre?",
+     "a": "Atendemos convênio e particular. Confirme seu plano no agendamento pelo WhatsApp."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Ultrassom de abdome precisa de contraste",
+     "v": "Não precisa de contraste nem radiação — é gel, transdutor e um bom jejum."
+    },
+    "pares": [
+     {
+      "m": "Só faz quando dói",
+      "v": "Como exame preventivo, ele encontra alterações antes dos sintomas."
+     },
+     {
+      "m": "Pedra na vesícula sempre avisa",
+      "v": "Muitos cálculos são silenciosos — achados justamente no exame de rotina."
+     }
+    ]
+   },
+   "rel": [
+    "doppler",
+    "laboratorio"
+   ]
+  },
+  {
+   "tipo": "landing",
+   "grupo": "exame",
+   "slug": "homem",
+   "file": "EA Landing Ultrassom do Homem.dc.html",
+   "path": "/ultrassom-de-prostata-brasilia",
+   "nome": "Ultrassom do homem (próstata e bolsa escrotal)",
+   "curto": "US do homem",
+   "intencao": "campanha homem 45+ · funil da biópsia",
+   "illo": "próstata e vias urinárias com transdutor — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Ultrassom de próstata em Brasília | Examine Agora",
+    "description": "Ultrassom de próstata (abdominal e transretal) e bolsa escrotal no Recanto das Emas, com Doppler colorido. Convênio e particular em Brasília-DF.",
+    "kw": "ultrassom de próstata brasília",
+    "kws": [
+     "ultrassom transretal de próstata",
+     "ultrassom de bolsa escrotal",
+     "saúde do homem recanto das emas"
+    ],
+    "waMsg": "Olá! Quero agendar um ultrassom de próstata."
+   },
+   "hero": {
+    "h1a": "Ultrassom de próstata",
+    "emph": "e do homem",
+    "h1b": "em Brasília",
+    "pano": "campo",
+    "sub": "Próstata por via abdominal ou transretal e bolsa escrotal, com Doppler colorido — o primeiro passo da investigação."
+   },
+   "indicada": {
+    "h2": "Quando o exame é indicado",
+    "itens": [
+     "Avaliação do tamanho e volume da próstata, junto com o PSA",
+     "Sintomas urinários: jato fraco, urgência, levantar à noite",
+     "Dor, nódulo ou aumento testicular — bolsa escrotal",
+     "Investigação de varicocele e infertilidade",
+     "Acompanhamento pedido pelo urologista"
+    ]
+   },
+   "como": {
+    "h2": "Como é feito o exame",
+    "dur": "15 a 25 minutos",
+    "passos": [
+     {
+      "t": "A via do pedido",
+      "d": "Abdominal (sobre a barriga, com bexiga cheia) ou transretal (imagem mais nítida da glândula) — conforme o pedido médico."
+     },
+     {
+      "t": "Medidas da glândula",
+      "d": "Tamanho, volume e características da próstata, documentados no laudo."
+     },
+     {
+      "t": "Doppler colorido",
+      "d": "O fluxo entra no estudo quando o pedido solicita."
+     },
+     {
+      "t": "Continuidade",
+      "d": "Se o conjunto PSA + exame indicar, a biópsia guiada por ultrassom é feita aqui mesmo."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo por via",
+    "itens": [
+     "Via abdominal: bexiga cheia — beba água e não urine na hora anterior",
+     "Via transretal: 2 comprimidos de Lactopurga às 17h do dia anterior + bexiga cheia",
+     "Bolsa escrotal: sem preparo",
+     "Traga pedido médico, PSA e exames anteriores"
+    ]
+   },
+   "guiado": {
+    "h2": "Do exame à resposta",
+    "emph": "investigação",
+    "lead": "A investigação inteira num lugar só.",
+    "pontos": [
+     {
+      "t": "Exame + biópsia",
+      "d": "Se a investigação avançar, a biópsia de próstata guiada por ultrassom é realizada na própria clínica."
+     },
+     {
+      "t": "Transretal com nitidez",
+      "d": "A via transretal enxerga a glândula de perto — a mesma tecnologia que guia a biópsia."
+     },
+     {
+      "t": "Sem constrangimento",
+      "d": "Atendimento direto, respeitoso e objetivo. Exame rápido, feito por médico experiente."
+     },
+     {
+      "t": "Doppler incluso quando pedido",
+      "d": "Fluxo da próstata e dos testículos no mesmo aparelho."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Depois do exame",
+    "itens": [
+     "Nenhuma restrição — atividades normais",
+     "Leve o laudo ao urologista junto com o PSA",
+     "Se houver indicação de biópsia, veja a página do procedimento e agende pelo WhatsApp"
+    ]
+   },
+   "faq": [
+    {
+     "q": "O transretal dói?",
+     "a": "Causa desconforto breve, não dor — o transdutor é fino e o exame dura poucos minutos."
+    },
+    {
+     "q": "Posso escolher a via abdominal?",
+     "a": "A via é indicada pelo seu médico: cada uma responde a perguntas diferentes. A transretal dá imagem mais nítida da glândula."
+    },
+    {
+     "q": "PSA alto: o ultrassom confirma câncer?",
+     "a": "Não — o ultrassom avalia tamanho e características. Quando a suspeita persiste, a biópsia guiada é o exame que responde."
+    },
+    {
+     "q": "Preciso de acompanhante?",
+     "a": "Não — é um exame simples, sem sedação."
+    },
+    {
+     "q": "Bolsa escrotal precisa de preparo?",
+     "a": "Não. Sem jejum e sem bexiga cheia."
+    },
+    {
+     "q": "Convênio cobre?",
+     "a": "Atendemos convênio e particular. Confirme seu plano no agendamento pelo WhatsApp."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Cuidar da próstata é frescura",
+     "v": "É rotina de saúde a partir dos 45 — um exame simples, rápido e que resolve a dúvida."
+    },
+    "pares": [
+     {
+      "m": "Ultrassom de próstata substitui o PSA",
+      "v": "São complementares: o PSA rastreia, o ultrassom avalia a glândula, a biópsia confirma."
+     },
+     {
+      "m": "Transretal é humilhante",
+      "v": "É um exame médico de minutos, feito com respeito e privacidade."
+     }
+    ]
+   },
+   "rel": [
+    "prostata",
+    "doppler"
+   ]
+  },
+  {
+   "tipo": "landing",
+   "grupo": "lab",
+   "slug": "laboratorio",
+   "file": "EA Landing Exames Laboratoriais.dc.html",
+   "path": "/exames-laboratoriais",
+   "nome": "Exames laboratoriais",
+   "curto": "Laboratório",
+   "intencao": "campanha lab · volume · check-up",
+   "illo": "tubos de coleta e microscópio — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Exames laboratoriais no Recanto das Emas | Examine Agora",
+    "description": "Exames de sangue, urina e fezes no Recanto das Emas: hemograma, glicemia, colesterol, hormônios e marcadores. Convênio e particular, seg a sáb.",
+    "kw": "exames laboratoriais recanto das emas",
+    "kws": [
+     "laboratório recanto das emas",
+     "exame de sangue brasília",
+     "teste de gravidez recanto das emas"
+    ],
+    "waMsg": "Olá! Quero agendar exames laboratoriais."
+   },
+   "hero": {
+    "h1a": "Exames laboratoriais",
+    "emph": "no bairro",
+    "h1b": "",
+    "pano": "campo",
+    "sub": "Sangue, urina e fezes com a mesma seriedade da imagem — e o teste de gravidez com resultado em 20 minutos."
+   },
+   "indicada": {
+    "h2": "O que você encontra aqui",
+    "itens": [
+     "Hemograma completo, glicemia e colesterol",
+     "Dosagens hormonais e marcadores tumorais",
+     "Exames de fezes e urina",
+     "Teste de gravidez com resultado em 20 minutos",
+     "Citopatologia, anátomo patológico e histopatologia — as análises das biópsias"
+    ]
+   },
+   "como": {
+    "h2": "Como funciona",
+    "dur": "coleta em minutos",
+    "passos": [
+     {
+      "t": "Chegue com o pedido",
+      "d": "Confirmamos os exames e o jejum de cada um."
+     },
+     {
+      "t": "Coleta rápida",
+      "d": "Equipe treinada, material descartável e coleta em poucos minutos."
+     },
+     {
+      "t": "Análise",
+      "d": "As amostras seguem para processamento com controle de qualidade."
+     },
+     {
+      "t": "Resultado",
+      "d": "O prazo de cada exame é informado no dia da coleta."
+     }
+    ]
+   },
+   "preparo": {
+    "h2": "Preparo para a coleta",
+    "itens": [
+     "O jejum varia por exame — até 12 horas para alguns; confirme o seu no agendamento",
+     "Medicação de uso contínuo mantida, com um pouco de água",
+     "Traga documento e pedido médico",
+     "Prefira coletar pela manhã quando houver jejum longo"
+    ]
+   },
+   "guiado": {
+    "h2": "Imagem e laboratório juntos",
+    "emph": "lugar",
+    "lead": "A investigação começa e termina num lugar só.",
+    "pontos": [
+     {
+      "t": "Do exame à biópsia",
+      "d": "Marcador alterado pode seguir para o ultrassom — e, se preciso, para a punção guiada, tudo aqui."
+     },
+     {
+      "t": "Análise das biópsias",
+      "d": "Citopatologia e anátomo patológico: o material colhido nos procedimentos é analisado com rigor."
+     },
+     {
+      "t": "Resposta rápida",
+      "d": "Teste de gravidez em 20 minutos; demais prazos informados na coleta."
+     },
+     {
+      "t": "Seg a sábado",
+      "d": "Horários que cabem na rotina de quem trabalha."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "Depois da coleta",
+    "itens": [
+     "Alimente-se normalmente após o jejum",
+     "Retire o resultado na clínica no prazo informado",
+     "Leve os resultados ao médico que pediu os exames"
+    ]
+   },
+   "faq": [
+    {
+     "q": "Precisa agendar ou é por ordem de chegada?",
+     "a": "Chame no WhatsApp: orientamos o melhor horário e o jejum de cada exame."
+    },
+    {
+     "q": "Água quebra o jejum?",
+     "a": "Água pura em pequena quantidade em geral não quebra o jejum — confirme a orientação do seu exame no agendamento."
+    },
+    {
+     "q": "Posso tomar meus remédios antes?",
+     "a": "Medicação de uso contínuo é mantida, com um pouco de água, salvo orientação contrária do seu médico."
+    },
+    {
+     "q": "O teste de gravidez sai na hora?",
+     "a": "O resultado sai em cerca de 20 minutos."
+    },
+    {
+     "q": "Como recebo o resultado?",
+     "a": "O resultado é retirado na clínica, no prazo informado no dia da coleta."
+    },
+    {
+     "q": "Convênio cobre?",
+     "a": "Atendemos convênio e particular. Confirme seu plano no agendamento pelo WhatsApp."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Todo exame de sangue exige 12 horas de jejum",
+     "v": "O jejum varia por exame — muitos não exigem nenhum. Confirme o seu no agendamento."
+    },
+    "pares": [
+     {
+      "m": "Água quebra o jejum",
+      "v": "Água pura em pequena quantidade em geral não quebra — confirme na coleta."
+     },
+     {
+      "m": "Marcador tumoral alterado é diagnóstico",
+      "v": "É um sinal de investigação, não uma sentença. Imagem e biópsia completam a resposta."
+     }
+    ]
+   },
+   "rel": [
+    "abdominal",
+    "tireoide"
+   ]
+  },
+  {
+   "tipo": "site",
+   "grupo": "site",
+   "slug": "inicio",
+   "file": "EA Site Home.dc.html",
+   "path": "/",
+   "nome": "Início",
+   "curto": "Início",
+   "intencao": "home · marca + distribuição",
+   "seo": {
+    "title": "Ultrassom no Recanto das Emas | Examine Agora",
+    "description": "Clínica de ultrassonografia, biópsia guiada e exames laboratoriais no Recanto das Emas, Brasília. Morfológico, Doppler e procedimentos com radiologista experiente.",
+    "kw": "ultrassom recanto das emas",
+    "kws": [
+     "clínica de ultrassom brasília",
+     "exame de imagem recanto das emas",
+     "examine agora"
+    ],
+    "waMsg": "Olá! Quero agendar um exame."
+   }
+  },
+  {
+   "tipo": "site",
+   "grupo": "site",
+   "slug": "preparos",
+   "file": "EA Site Preparos.dc.html",
+   "path": "/preparos",
+   "nome": "Preparos de exames",
+   "curto": "Preparos",
+   "intencao": "apoio · reduz falta e remarcação",
+   "seo": {
+    "title": "Preparos de exames | Examine Agora",
+    "description": "Preparo de cada exame da Examine Agora: jejum, bexiga cheia, medicações e o que trazer no dia. Ultrassom, biópsias guiadas e exames laboratoriais.",
+    "kw": "preparo ultrassom abdominal",
+    "kws": [
+     "preparo ultrassom de próstata",
+     "preparo biópsia",
+     "jejum exame de sangue"
+    ],
+    "waMsg": "Olá! Tenho uma dúvida sobre o preparo do meu exame."
+   }
+  },
+  {
+   "tipo": "site",
+   "grupo": "site",
+   "slug": "convenios",
+   "file": "EA Site Convenios.dc.html",
+   "path": "/convenios",
+   "nome": "Convênios",
+   "curto": "Convênios",
+   "intencao": "apoio · decisão de agendamento",
+   "seo": {
+    "title": "Convênios atendidos | Examine Agora",
+    "description": "Consulte os convênios atendidos pela Examine Agora no Recanto das Emas: GDF Saúde, Saúde Caixa, FUSEX, Postal Saúde e mais de 40 planos. Também particular.",
+    "kw": "convênios ultrassom recanto das emas",
+    "kws": [
+     "gdf saúde ultrassom",
+     "clínica que atende fusex brasília",
+     "saúde caixa exames DF"
+    ],
+    "waMsg": "Olá! Meu convênio é atendido? Quero agendar um exame."
+   }
+  },
+  {
+   "tipo": "site",
+   "grupo": "site",
+   "slug": "sobre",
+   "file": "EA Site Sobre.dc.html",
+   "path": "/sobre-nos",
+   "nome": "A clínica",
+   "curto": "A clínica",
+   "intencao": "apoio · confiança + E-E-A-T",
+   "seo": {
+    "title": "A clínica | Examine Agora — Imagem e Medicina",
+    "description": "Desde 2012 no diagnóstico por imagem em Brasília, com sede própria no Recanto das Emas. Conheça a Examine Agora e o Dr. Flávio Chaves, radiologista.",
+    "kw": "examine agora recanto das emas",
+    "kws": [
+     "clínica de imagem brasília",
+     "dr flávio chaves radiologista",
+     "quem somos examine agora"
+    ],
+    "waMsg": "Olá! Quero conhecer a clínica e agendar um exame."
+   }
+  },
+  {
+   "tipo": "site",
+   "grupo": "site",
+   "slug": "agende",
+   "file": "EA Site Agende.dc.html",
+   "path": "/agende-seu-exame",
+   "nome": "Agende seu exame",
+   "curto": "Agendar",
+   "intencao": "conversão",
+   "seo": {
+    "title": "Agende seu exame no Recanto das Emas | Examine Agora",
+    "description": "Agende ultrassom, biópsia guiada ou exames laboratoriais pelo WhatsApp (61) 3208-6814. Q102 Loja 06, Recanto das Emas, Brasília. Seg a sáb.",
+    "kw": "agendar ultrassom recanto das emas",
+    "kws": [
+     "agendar exame brasília",
+     "ultrassom perto de mim recanto",
+     "whatsapp examine agora"
+    ],
+    "waMsg": "Olá! Quero agendar um exame."
+   }
+  }
+ ],
+ "site": {
+  "nav": [
+   {
+    "label": "Início",
+    "slug": "inicio"
+   },
+   {
+    "label": "Exames",
+    "slug": "inicio",
+    "hash": "#exames"
+   },
+   {
+    "label": "Procedimentos",
+    "slug": "hub"
+   },
+   {
+    "label": "Preparos",
+    "slug": "preparos"
+   },
+   {
+    "label": "Convênios",
+    "slug": "convenios"
+   },
+   {
+    "label": "A clínica",
+    "slug": "sobre"
+   }
+  ],
+  "convenios": [
+   "AFEB BRASAL",
+   "AFFEGO",
+   "ASETE (ASTE)",
+   "BACEN",
+   "CAEME-GO",
+   "CAESAN",
+   "CAMED",
+   "CARE PLUS",
+   "CASEC (CODEVASF)",
+   "CASEMBRAPA (EMBRAPA)",
+   "CNTI",
+   "CONAB",
+   "DOUTOR HOJE",
+   "E-VIDA (ELETRONORTE)",
+   "EMBRATEL — DEMAIS PLANOS",
+   "FAPES (BNDES)",
+   "FASCAL",
+   "FUSEX",
+   "GRAVIA",
+   "GDF SAÚDE",
+   "INFRAERO",
+   "INTERLIFE",
+   "LIFE EMPRESARIAL",
+   "NEWMED",
+   "OMINT SAÚDE",
+   "PETROBRAS DISTRIBUIDORA",
+   "PETROBRAS PETRÓLEO",
+   "PLAN-ASSISTE (MPF)",
+   "PLAN-ASSISTE (MPM)",
+   "PLAN-ASSISTE (MPT)",
+   "PLAS/JMU (STM)",
+   "POSTAL SAÚDE (ECT)",
+   "PROASA",
+   "PRÓ-SAÚDE (TJDFT)",
+   "PRÓ-SER (STJ)",
+   "PRÓ-SOCIAL (TRF)",
+   "REAL GRANDEZA",
+   "SAÚDE CAIXA",
+   "SERPRO",
+   "SIS (SENADOR)",
+   "STF-MED (STF)",
+   "TRE SAÚDE",
+   "TRT SAÚDE",
+   "UNAFISCO (SINDIFISCO)"
+  ],
+  "sobre": {
+   "historia": [
+    "Desde 2012, a Examine Agora atua no diagnóstico por imagem em parceria com grandes clínicas e grupos hospitalares de Brasília. Com a experiência adquirida e a união de médicos especialistas formados nos maiores centros do país, decidimos construir sede própria.",
+    "Fincamos nossos sonhos e corações no Recanto das Emas — região de população vibrante, hospitaleira e aguerrida — que agora conta com serviços de excelência em ultrassonografia, incluindo morfológico e biópsias de mama, tireoide e próstata.",
+    "A clínica oferece estrutura agradável e atendimento humanizado para entregar, além de um diagnóstico preciso, a experiência do bem-estar."
+   ],
+   "missao": "Proporcionar diagnósticos por imagem de alto nível, particularizados e eficientes, com equipamentos de alta tecnologia, contribuindo com informações precisas para um diagnóstico médico eficaz e o bem-estar dos pacientes.",
+   "visao": "Ser uma clínica de diagnóstico por imagem cada vez mais reconhecida pela qualidade, referência pelo comprometimento com a saúde e alto conceito no mercado.",
+   "valores": [
+    "Ética",
+    "Transparência",
+    "Honestidade",
+    "Compromisso com a qualidade",
+    "Bem-estar do paciente",
+    "Responsabilidade social e ambiental",
+    "Valorização da vida"
+   ],
+   "bio": [
+    "Graduação em Medicina em 2004 — Universidade Estadual do Pará (UEPA)",
+    "Especialização em Radiologia e Diagnóstico por Imagem em 2010 — Hospital Heliópolis (SP)",
+    "Subespecialidade em Ressonância Musculoesquelética em 2011 — HCOR (SP)",
+    "Curso de Ultrassom Morfológico em 2018 — Cetrus (SP)",
+    "Curso de Biópsia em 2020 — Cetrus (SP)",
+    "Participação contínua em congressos e jornadas"
+   ]
+  },
+  "preparos": [
+   {
+    "grupo": "Sem preparo",
+    "nota": "Só trazer pedido médico e exames anteriores da região.",
+    "exames": [
+     "Mamas",
+     "Tireoide e cervical",
+     "Articulações (musculoesquelético)",
+     "Morfológico e obstétrico",
+     "Bolsa escrotal",
+     "Partes moles",
+     "Doppler de membros e carótidas"
+    ]
+   },
+   {
+    "grupo": "Bexiga cheia",
+    "nota": "Beba água e não urine na hora anterior ao exame.",
+    "exames": [
+     "Próstata via abdominal",
+     "Pélvico (ginecológico) pela barriga",
+     "Vias urinárias, rins e bexiga"
+    ]
+   },
+   {
+    "grupo": "Bexiga vazia",
+    "nota": "Urine antes do exame.",
+    "exames": [
+     "Transvaginal"
+    ]
+   },
+   {
+    "grupo": "Abdome total e superior",
+    "nota": "Jejum de 6 horas. Exame à tarde: 30 gotas de simeticona (Luftal® ou Flagass®) 2h antes. Medicação contínua mantida, com pouca água.",
+    "exames": [
+     "Abdome total",
+     "Abdome superior",
+     "Doppler abdominal (aorta, renais, sistema porta)"
+    ]
+   },
+   {
+    "grupo": "Próstata via transretal",
+    "nota": "2 comprimidos de Lactopurga às 17h do dia anterior + bexiga cheia.",
+    "exames": [
+     "Ultrassom transretal da próstata"
+    ]
+   },
+   {
+    "grupo": "Biópsias guiadas e PAAF",
+    "nota": "Orientação individual no agendamento. Informe anticoagulantes e antiagregantes. Biópsia de próstata: antibiótico prescrito + preparo intestinal. Biópsia de mama: véspera com 2 comprimidos de Dulcolax® às 16h e dieta leve; no dia, jejum de 8–10h e 100 gotas de dimeticona 1h antes.",
+    "exames": [
+     "Biópsia de próstata",
+     "Biópsia de mama",
+     "PAAF de tireoide",
+     "PAAF/biópsia de linfonodo"
+    ]
+   },
+   {
+    "grupo": "Exames laboratoriais",
+    "nota": "Jejum varia por exame (até 12h para alguns). Medicação contínua mantida, com pouca água.",
+    "exames": [
+     "Sangue, urina e fezes",
+     "Teste de gravidez (resultado em ~20 min)"
+    ]
+   }
+  ],
+  "port_map": [
+   {
+    "de": "/",
+    "para": "inicio"
+   },
+   {
+    "de": "/ultrassom/",
+    "para": "inicio"
+   },
+   {
+    "de": "/exames/",
+    "para": "laboratorio"
+   },
+   {
+    "de": "/morfologico/",
+    "para": "morfologico"
+   },
+   {
+    "de": "/obstetrico/",
+    "para": "mulher"
+   },
+   {
+    "de": "/mulher/",
+    "para": "mulher"
+   },
+   {
+    "de": "/abdominal/",
+    "para": "abdominal"
+   },
+   {
+    "de": "/abdominal-2/",
+    "para": "abdominal"
+   },
+   {
+    "de": "/homem/",
+    "para": "homem"
+   },
+   {
+    "de": "/articulacoes/",
+    "para": "musculo"
+   },
+   {
+    "de": "/doppler/",
+    "para": "doppler"
+   },
+   {
+    "de": "/outros/",
+    "para": "inicio"
+   },
+   {
+    "de": "/biopsia-por-ultrassonografia/",
+    "para": "hub"
+   },
+   {
+    "de": "/exames-laboratoriais/",
+    "para": "laboratorio"
+   },
+   {
+    "de": "/preparos/",
+    "para": "preparos"
+   },
+   {
+    "de": "/convenios/",
+    "para": "convenios"
+   },
+   {
+    "de": "/valores/",
+    "para": "convenios"
+   },
+   {
+    "de": "/sobre-nos/",
+    "para": "sobre"
+   },
+   {
+    "de": "/agende-seu-exame/",
+    "para": "agende"
+   },
+   {
+    "de": "/noticias/",
+    "para": "inicio"
+   },
+   {
+    "de": "/resultado-on-line/ + área restrita/conta/registro",
+    "para": "agende (serviço de resultados online DESCONTINUADO — 301 e remover)"
+   },
+   {
+    "de": "/politica-de-privacidade|cookies|termos-de-uso/",
+    "para": "portar como estão (sem redesign)"
+   }
+  ],
+  "posts_wp": "21 posts do blog permanecem como artigos; na migração, interligar cada um à landing do seu tema (ex.: 'Biópsia de mama: linhas gerais' → mama; 'Câncer de próstata' → prostata; 'Doppler de carótidas' → doppler)."
+ }
+}

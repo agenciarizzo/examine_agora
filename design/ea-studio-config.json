@@ -1,0 +1,50 @@
+{
+  "client": "EA · Examine Agora — Imagem e Medicina",
+  "sigla": "EA",
+  "tipo": "clinica",
+  "updated": "2026-07-25",
+  "nota": "Config 1× (R1). Preenchido na IMPORTAÇÃO do pack; nenhum job redigita isso. Espelha os campos da tela de importação do Studio.",
+
+  "illo_style": "científica em vetor de linha — anatomia correta do órgão examinado (tireoide, mama, abdome, próstata, útero/feto, articulação) com o transdutor como elemento recorrente; traço fino, UM elemento central, paleta navy #0A2A52 + eco #1470C4 sobre gelo #EEF6FC, fundo limpo com espaço para o texto. Nunca aparelho genérico, nunca ícone de coração/estetoscópio, nunca imagem que pareça um laudo real.",
+
+  "casting_regiao": "Brasileiros reais do Recanto das Emas e Riacho Fundo II (classes C/D), pegada publicitária e digna: mulheres 20–45 (morfológico, mama, tireoide), homens 45+ (próstata, Doppler), gestantes e famílias — gente comum bem cuidada, JAMAIS luxo/fashion e JAMAIS miserabilismo ou 'paciente sofrido'. Ambiente: clínica de bairro real, clara e limpa, com aparelho de ultrassom em cena; luz natural, clima acolhedor e documental. Paciente sereno e vestido com dignidade (avental de exame só quando o tema exige); equipe em procedimento sempre com luvas. Sem antes/depois, sem tela de laudo legível, sem nada que pareça diagnóstico.",
+
+  "regiao": "Recanto das Emas · Brasília-DF (ampliação: Riacho Fundo II)",
+
+  "corpo_clinico": [
+    {
+      "name": "Dr. Flávio H. A. Chaves",
+      "specialty": "Radiologia e Diagnóstico por Imagem",
+      "crm": "CRM-DF 19506 · CRM-SP 123212",
+      "rqe": "RQE 11288",
+      "is_rt": true,
+      "ai_face_ok": true,
+      "photo": null,
+      "short_bio": "Radiologia pelo Hospital Heliópolis, ressonância musculoesquelética pelo HCOR, ultrassom morfológico e biópsia pelo Cetrus.",
+      "pendente": "foto de referência (trava os traços na IA e vira avatar do chat)"
+    }
+  ],
+  "corpo_clinico_pendente": "Demais ultrassonografistas e responsável do laboratório: cliente ainda não passou nomes/CRM. Enquanto não vierem, só o RT assina peça.",
+
+  "rt_line": "Resp. Técnico: Dr. Flávio H. A. Chaves · CRM-DF 19506 · RQE 11288",
+
+  "contato": {
+    "phone": "(61) 3208-6814",
+    "whatsapp": "(61) 3208-6814",
+    "whatsapp_link": "https://wa.me/556132086814",
+    "handle": "@examineagora",
+    "site": "examineagora.com.br",
+    "address": "Av. Recanto das Emas, Q102 L03 Loja 06 · Brasília-DF",
+    "hours": "Seg a sex 8h–18h · Sáb 8h–12h",
+    "pagamento": "Convênio e particular",
+    "cta_padrao": "Agende seu exame"
+  },
+
+  "guardrails": [
+    "Tom educativo; RT na legenda de todo post de procedimento.",
+    "Sem promessa de cura, sem antes/depois, sem resultado de exame online.",
+    "Vedado: diagnóstico de câncer de colo do útero.",
+    "\"Doppler\" sempre com D maiúsculo.",
+    "CTA direto de clínica (\"Agende seu exame\") — nunca CTA agressivo de médico individual."
+  ]
+}

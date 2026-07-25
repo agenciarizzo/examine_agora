@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#061423; font-family:'Schibsted Grotesk',sans-serif; }
+    a { color:#1470C4; } a:hover { color:#A9D6F5; }
+  </style>
+</helmet>
+<div style="min-height:100vh;background:#061423;color:#EEF6FC;padding:0 0 80px">
+  <div style="max-width:1280px;margin:0 auto;padding:56px 32px 0">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <img src="public/ea_logo_light.png" alt="Examine Agora" style="height:38px;display:block">
+      <span style="font-size:13px;color:rgba(169,214,245,.7)">camada de site · pedido do cliente 25/07/2026 · linha Eco Editorial</span>
+    </div>
+    <h1 style="margin:40px 0 10px;font-weight:500;letter-spacing:-0.03em;line-height:1;font-size:clamp(40px,5vw,72px);color:#FFFFFF">O site <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#A9D6F5">completo</em></h1>
+    <p style="margin:0 0 44px;font-size:17px;color:rgba(238,246,252,.75);max-width:70ch">17 páginas na granularidade das campanhas: home, 5 procedimentos guiados, 6 landings de exame, laboratório e 4 páginas de apoio. Fonte única <span style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#A9D6F5">ea-landings.json</span> (conteúdo, FAQ, meta, JSON-LD, preparos, convênios e mapa de redirecionamentos do WordPress). Afirmações médicas aguardam revisão do RT (toggle nas tweaks).</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
+      <sc-for list="{{cards}}" as="cd" hint-placeholder-count="7">
+        <a href="{{cd.href}}" style="display:block;text-decoration:none;background:#0A2A52;color:#EEF6FC;border:1px solid rgba(169,214,245,.18);border-radius:10px;padding:24px" style-hover="border:1px solid #A9D6F5">
+          <p style="margin:0 0 10px;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A9D6F5">{{cd.grupo}} · {{cd.intencao}}</p>
+          <h2 style="margin:0 0 8px;font-size:21px;font-weight:500;letter-spacing:-0.02em;color:#FFFFFF">{{cd.nome}}</h2>
+          <p style="margin:0 0 14px;font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(169,214,245,.65)">{{cd.path}}</p>
+          <span style="font-size:14px;font-weight:700;color:#A9D6F5">Abrir página ›</span>
+        </a>
+      </sc-for>
+    </div>
+
+    <h2 style="margin:64px 0 6px;font-weight:500;letter-spacing:-0.02em;font-size:clamp(26px,3vw,36px);color:#FFFFFF">Tabela de SEO <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#A9D6F5">para aprovação</em></h2>
+    <p style="margin:0 0 24px;font-size:14px;color:rgba(238,246,252,.65)">Title ≤60 · description 140–155 · JSON-LD por página: MedicalProcedure + FAQPage + MedicalClinic.</p>
+    <div style="border:1px solid rgba(169,214,245,.18);border-radius:10px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:180px 1fr 1.4fr 1fr;gap:0;background:#0A2A52;padding:12px 18px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#A9D6F5">
+        <span>slug</span><span>title</span><span>description</span><span>palavras-chave</span>
+      </div>
+      <sc-for list="{{rows}}" as="r" hint-placeholder-count="7">
+        <div style="display:grid;grid-template-columns:180px 1fr 1.4fr 1fr;gap:18px;padding:16px 18px;border-top:1px solid rgba(169,214,245,.12);font-size:13px;line-height:1.5">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#A9D6F5;word-break:break-all">{{r.path}}</span>
+          <span style="color:#FFFFFF">{{r.title}}</span>
+          <span style="color:rgba(238,246,252,.75)">{{r.description}}</span>
+          <span style="color:rgba(238,246,252,.75)"><strong style="color:#A9D6F5">{{r.kw}}</strong> · {{r.kws}}</span>
+        </div>
+      </sc-for>
+    </div>
+    <h2 style="margin:64px 0 6px;font-weight:500;letter-spacing:-0.02em;font-size:clamp(26px,3vw,36px);color:#FFFFFF">Migração do WordPress <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#A9D6F5">(301)</em></h2>
+    <p style="margin:0 0 24px;font-size:14px;color:rgba(238,246,252,.65)">Toda URL do site atual aponta para uma página nova — preserva o SEO conquistado. Área restrita e resultados online: descontinuados. {{postsNota}}</p>
+    <div style="border:1px solid rgba(169,214,245,.18);border-radius:10px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:1fr 1.6fr;background:#0A2A52;padding:12px 18px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#A9D6F5">
+        <span>URL atual</span><span>destino</span>
+      </div>
+      <sc-for list="{{ports}}" as="pt" hint-placeholder-count="8">
+        <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:18px;padding:11px 18px;border-top:1px solid rgba(169,214,245,.12);font-size:13px;line-height:1.5">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#A9D6F5;word-break:break-all">{{pt.de}}</span>
+          <span style="color:rgba(238,246,252,.8)">{{pt.para}}</span>
+        </div>
+      </sc-for>
+    </div>
+    <p style="margin:28px 0 0;font-size:13px;color:rgba(169,214,245,.6)">{{rtLine}}</p>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { db: null };
+  componentDidMount() {
+    fetch('ea-landings.json').then(r => r.json()).then(db => this.setState({ db }));
+  }
+  renderVals() {
+    const db = this.state.db;
+    if (!db) return { cards: [], rows: [], ports: [] };
+    const href = pg => pg.file.replace(/ /g, '%20');
+    const ord = { site: 0, proc: 1, exame: 2, lab: 3 };
+    const gLabel = { site: 'site', proc: 'procedimento guiado', exame: 'exame', lab: 'laboratório' };
+    const pages = db.pages.slice().sort((a, b) => (ord[a.grupo] - ord[b.grupo]));
+    return {
+      rtLine: db.clinica.rt_line,
+      postsNota: db.site.posts_wp,
+      ports: db.site.port_map,
+      cards: pages.map(x => ({ href: href(x), nome: x.nome, intencao: x.intencao, path: x.path, grupo: gLabel[x.grupo] })),
+      rows: pages.map(x => ({ path: x.path, title: x.seo.title, description: x.seo.description, kw: x.seo.kw, kws: x.seo.kws.join(' · ') }))
+    };
+  }
+}
+</script>
+</body>
+</html>
