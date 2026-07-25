@@ -6,3 +6,7 @@ out
 next-env.d.ts
 .env*.local
 .DS_Store
+
+# Lixo do Explorer do Windows
+desktop.ini
+Thumbs.db

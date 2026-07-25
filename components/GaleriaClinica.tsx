@@ -44,6 +44,9 @@ export function GaleriaClinica() {
                 overflow: 'hidden',
                 border: '1px solid rgba(20,112,196,.18)',
                 background: '#FFFFFF',
+                // As fotos vêm em retrato e paisagem; a proporção fixa mantém
+                // a grade alinhada e o recorte fica com o `cover`.
+                aspectRatio: '4 / 3',
               }}
             >
               <Image
@@ -51,7 +54,8 @@ export function GaleriaClinica() {
                 alt={f.alt}
                 width={f.w}
                 height={f.h}
-                style={{ width: '100%', height: 'auto', display: 'block' }}
+                sizes="(max-width: 700px) 100vw, 33vw"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
             </figure>
           ))}

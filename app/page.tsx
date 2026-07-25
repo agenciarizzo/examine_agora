@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BotaoCeu, Em, JsonLd } from '@/components/Bits';
 import { Fechamento } from '@/components/Fechamento';
+import { RetratoRT } from '@/components/RetratoRT';
 import { Eco, Grain, Halo, Setor, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -414,35 +415,7 @@ export default function Home() {
               alignItems: 'center',
             }}
           >
-            <div
-              style={{
-                width: 200,
-                height: 240,
-                flex: '0 0 auto',
-                border: '2px dashed rgba(20,112,196,.45)',
-                background: cor.gelo,
-                borderRadius: 8,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textAlign: 'center',
-                padding: 16,
-              }}
-            >
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: 12,
-                  fontWeight: 700,
-                  letterSpacing: '.1em',
-                  textTransform: 'uppercase',
-                  color: cor.eco,
-                }}
-              >
-                foto do dr. flávio
-                <br />· pendente ·
-              </p>
-            </div>
+            <RetratoRT width={200} height={240} />
             <div style={{ flex: 1, minWidth: 300 }}>
               <p
                 style={{

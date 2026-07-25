@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { BotaoCeu, Em, JsonLd, Pilula } from '@/components/Bits';
 import { GaleriaClinica } from '@/components/GaleriaClinica';
+import { RetratoRT } from '@/components/RetratoRT';
 import { Halo, Setor, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -134,35 +135,7 @@ export default function Sobre() {
               gap: 44,
             }}
           >
-            <div
-              style={{
-                width: 220,
-                height: 260,
-                flex: '0 0 auto',
-                border: '2px dashed rgba(169,214,245,.5)',
-                background: 'rgba(238,246,252,.06)',
-                borderRadius: 8,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textAlign: 'center',
-                padding: 16,
-              }}
-            >
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: 12,
-                  fontWeight: 700,
-                  letterSpacing: '.1em',
-                  textTransform: 'uppercase',
-                  color: cor.ceu,
-                }}
-              >
-                foto do dr. flávio
-                <br />· pendente ·
-              </p>
-            </div>
+            <RetratoRT width={220} height={260} />
             <div style={{ flex: 1, minWidth: 300 }}>
               <p
                 style={{

@@ -88,12 +88,29 @@ As afirmações médicas seguem **pendentes de validação do Dr. Flávio**. Enq
 NEXT_PUBLIC_REVISAO_CLINICA=false npm run build
 ```
 
+## Fotos
+
+As fotos reais da clínica entraram no lugar dos placeholders do handoff:
+
+- **Retrato do RT** (`public/dr-flavio.webp`) na Home, nas 12 landings e em `/sobre-nos`.
+- **Galeria "A clínica por dentro"** em `/sobre-nos`, montada a partir de
+  `content/fotos.json`. Para acrescentar uma foto: arquivo em `public/fotos/`,
+  entrada no json — nada de mexer em componente.
+
+Os originais enviados pelo cliente ficam em `design/fotos-originais/` (fonte, sem
+tratamento) e a marca original em `design/marca-original/`. O site usa os logos do
+pacote de design (`public/ea_logo_*.png`), que são a versão fechada da marca.
+
+Duas fotos do lote ficaram de fora, de propósito:
+
+- `balcao-recepcao.jpeg` — o monitor do balcão exibe um portal de notícias com
+  manchete política, legível na foto.
+- `entrada-bandeiras.jpeg` — traz uma pessoa identificável, sem autorização de uso
+  de imagem.
+
 ## Pendências herdadas do handoff
 
 - **Revisão clínica do RT** — ver acima; é o que trava o go-live.
-- **Foto do Dr. Flávio** — molduras "· pendente ·" na Home, nas landings e em `/sobre-nos`.
-- **Fotos da clínica** — coloque os arquivos em `public/fotos/` e registre em
-  `content/fotos.json`; a seção "A clínica por dentro" em `/sobre-nos` aparece sozinha.
 - **Blog (21 posts do WP)** — `site.posts_wp` descreve a regra de interligação, mas o
   pacote não traz o conteúdo dos posts. Precisa do export do WordPress para migrar.
 - **Páginas legais** — `/politica-de-privacidade`, `/cookies` e `/termos-de-uso` são

@@ -1,4 +1,41 @@
 {
-  "nota": "Fotos reais da clínica (pendência do handoff: 'Fotos reais da clínica/equipe (hoje banco de imagens)'). Coloque os arquivos em public/fotos/ e adicione a entrada aqui — a seção 'A clínica por dentro' em /sobre-nos aparece sozinha assim que a lista deixa de estar vazia. Sem entradas, a seção não é renderizada.",
-  "clinica": []
+  "nota": "Fotos reais da sede (Av. Recanto das Emas, Q102 L03 Loja 06). Para acrescentar: coloque o arquivo em public/fotos/ e some uma entrada aqui — a seção 'A clínica por dentro' em /sobre-nos é montada a partir desta lista.",
+  "clinica": [
+    {
+      "src": "/fotos/fachada.jpg",
+      "alt": "Fachada da Examine Agora na Av. Recanto das Emas, com a placa da clínica e o telefone (61) 3208-6814",
+      "w": 960,
+      "h": 1280
+    },
+    {
+      "src": "/fotos/sala-de-espera.jpg",
+      "alt": "Sala de espera da clínica, com balcão de recepção em madeira clara, painel de senha e cadeiras azuis",
+      "w": 1280,
+      "h": 960
+    },
+    {
+      "src": "/fotos/recepcao-mezanino.jpg",
+      "alt": "Sala de espera vista do mezanino, com pé-direito alto e luz natural",
+      "w": 960,
+      "h": 1280
+    },
+    {
+      "src": "/fotos/sala-de-ultrassom.jpg",
+      "alt": "Sala de ultrassonografia, com aparelho de ultrassom, maca e monitor de apoio",
+      "w": 1024,
+      "h": 768
+    },
+    {
+      "src": "/fotos/corredor.jpg",
+      "alt": "Corredor interno da clínica dando acesso às salas de ultrassonografia",
+      "w": 768,
+      "h": 1024
+    },
+    {
+      "src": "/fotos/fachada-entrada.jpg",
+      "alt": "Entrada da Examine Agora em dia de atendimento, com as bandeiras da clínica na calçada",
+      "w": 768,
+      "h": 1024
+    }
+  ]
 }
