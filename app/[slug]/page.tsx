@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BotaoCeu, Em, ItemBarra, JsonLd, SeloRevisao } from '@/components/Bits';
 import { Fechamento } from '@/components/Fechamento';
+import { Ilustracao, temIlustracao } from '@/components/Ilustracao';
 import { RetratoRT } from '@/components/RetratoRT';
 import { Eco, Grain, Halo, Setor, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
@@ -249,32 +250,36 @@ export default async function Landing({ params }: { params: Promise<{ slug: stri
                 ))}
               </div>
               {p.illo && (
-                <div
-                  style={{
-                    marginTop: 52,
-                    border: '2px dashed rgba(20,112,196,.45)',
-                    background: cor.gelo,
-                    borderRadius: 8,
-                    padding: 28,
-                    maxWidth: 760,
-                  }}
-                >
-                  <p
+                temIlustracao(p.slug) ? (
+                  <Ilustracao slug={p.slug} nome={p.nome} />
+                ) : (
+                  <div
                     style={{
-                      margin: 0,
-                      fontSize: 12,
-                      fontWeight: 700,
-                      letterSpacing: '.12em',
-                      textTransform: 'uppercase',
-                      color: cor.eco,
+                      marginTop: 52,
+                      border: '2px dashed rgba(20,112,196,.45)',
+                      background: cor.gelo,
+                      borderRadius: 8,
+                      padding: 28,
+                      maxWidth: 760,
                     }}
                   >
-                    ilustração científica · placeholder
-                  </p>
-                  <p style={{ margin: '8px 0 0', fontSize: 15, color: 'rgba(10,42,82,.7)' }}>
-                    {p.illo}
-                  </p>
-                </div>
+                    <p
+                      style={{
+                        margin: 0,
+                        fontSize: 12,
+                        fontWeight: 700,
+                        letterSpacing: '.12em',
+                        textTransform: 'uppercase',
+                        color: cor.eco,
+                      }}
+                    >
+                      ilustração científica · placeholder
+                    </p>
+                    <p style={{ margin: '8px 0 0', fontSize: 15, color: 'rgba(10,42,82,.7)' }}>
+                      {p.illo}
+                    </p>
+                  </div>
+                )
               )}
             </div>
           </section>

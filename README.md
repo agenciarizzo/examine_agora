@@ -88,14 +88,21 @@ As afirmações médicas seguem **pendentes de validação do Dr. Flávio**. Enq
 NEXT_PUBLIC_REVISAO_CLINICA=false npm run build
 ```
 
-## Fotos
+## Fotos e ilustrações
 
-As fotos reais da clínica entraram no lugar dos placeholders do handoff:
+As fotos reais da clínica e as ilustrações científicas entraram no lugar dos
+placeholders do handoff:
 
 - **Retrato do RT** (`public/dr-flavio.webp`) na Home, nas 12 landings e em `/sobre-nos`.
 - **Galeria "A clínica por dentro"** em `/sobre-nos`, montada a partir de
   `content/fotos.json`. Para acrescentar uma foto: arquivo em `public/fotos/`,
   entrada no json — nada de mexer em componente.
+- **Ilustrações científicas** das 11 landings (`public/ilustracoes/<slug>.jpg`),
+  no lugar da caixa tracejada "ilustração científica · placeholder" na seção
+  "Como é realizado". Prompts e convenção de nome em
+  `design/prompts-ilustracoes.md`; o componente (`components/Ilustracao.tsx`)
+  degrada de volta ao placeholder textual (`p.illo`) se um slug futuro não
+  tiver arquivo — nada trava se faltar imagem.
 
 Os originais enviados pelo cliente ficam em `design/fotos-originais/` (fonte, sem
 tratamento) e a marca original em `design/marca-original/`. O site usa os logos do
