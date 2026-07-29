@@ -21,7 +21,7 @@ const EXAMES = ['morfologico', 'mulher', 'abdominal', 'homem', 'musculo', 'doppl
 
 function card(slug: string) {
   const x = page(slug);
-  return { href: x.path, nome: x.nome, intencao: x.intencao, sub: x.hero?.sub ?? '' };
+  return { href: x.path, nome: x.nome, sub: x.hero?.sub ?? '' };
 }
 
 export default function Home() {
@@ -272,18 +272,6 @@ export default function Home() {
                     padding: 24,
                   }}
                 >
-                  <p
-                    style={{
-                      margin: '0 0 8px',
-                      fontSize: 11,
-                      fontWeight: 700,
-                      letterSpacing: '.13em',
-                      textTransform: 'uppercase',
-                      color: cor.eco,
-                    }}
-                  >
-                    {g.intencao}
-                  </p>
                   <h3
                     style={{
                       margin: '0 0 8px',

@@ -405,18 +405,6 @@ export default async function Landing({ params }: { params: Promise<{ slug: stri
                         padding: 26,
                       }}
                     >
-                      <p
-                        style={{
-                          margin: '0 0 10px',
-                          fontSize: 11,
-                          fontWeight: 700,
-                          letterSpacing: '.13em',
-                          textTransform: 'uppercase',
-                          color: cor.eco,
-                        }}
-                      >
-                        {g.intencao}
-                      </p>
                       <h3
                         style={{
                           margin: '0 0 10px',
