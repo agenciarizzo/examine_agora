@@ -13,10 +13,11 @@
  *    (sem redesign)": não são 301, são páginas — e agora existem de verdade,
  *    escritas a partir de `site.legal` (ver `components/PaginaLegal.tsx`).
  *
- * Os posts do blog ainda não foram migrados (falta o export do WP), mas as
- * URLs deles estavam indexadas: cada uma vai de 301 para a landing do seu
- * tema, que é o que `site.posts_wp` manda fazer na interligação. Se um post
- * for republicado no site, basta tirar a linha correspondente do json.
+ * Depois da migração do blog (2026-08), `site.port_map_posts` guarda só os 10
+ * posts que ficaram fora do site por serem reprodução de terceiros — esses
+ * seguem em 301 para a landing do tema. Os 11 posts de texto próprio voltaram
+ * nas URLs originais e respondem 200; 301 neles apagaria a página que acabou
+ * de voltar, e `scripts/migra-wp.mjs` falha se as duas listas se cruzarem.
  */
 import { page, site } from './content';
 
@@ -38,20 +39,21 @@ const EXTRAS: { source: string; para: string }[] = [
 
 /**
  * O que o WordPress publicava além das páginas e dos posts: arquivos de
- * categoria, autor e tag, feeds RSS e a página de manutenção. Tudo isso foi
- * rastreado pelo Google e não tem equivalente no site novo — vai para o
- * início. Os `:slug*` cobrem também o que não apareceu no relatório de
- * cobertura (ex.: `/category/noticias/page/2`).
+ * categoria, autor e tag, feeds RSS e a página de manutenção. Os arquivos do
+ * blog vão para `/noticias`, que é o índice equivalente no site novo; só a
+ * página de manutenção não tem par e vai para o início. Os `:slug*` cobrem
+ * também o que não apareceu no relatório de cobertura (ex.:
+ * `/category/noticias/page/2`).
  */
 const ARQUIVOS_WP: { source: string; para: string }[] = [
-  { source: '/category/:slug*', para: 'inicio' },
-  { source: '/categoria/:slug*', para: 'inicio' },
-  { source: '/author/:slug*', para: 'inicio' },
-  { source: '/autor/:slug*', para: 'inicio' },
-  { source: '/tag/:slug*', para: 'inicio' },
-  { source: '/blog/:slug*', para: 'inicio' },
-  { source: '/feed/:slug*', para: 'inicio' },
-  { source: '/comments/feed/:slug*', para: 'inicio' },
+  { source: '/category/:slug*', para: 'noticias' },
+  { source: '/categoria/:slug*', para: 'noticias' },
+  { source: '/author/:slug*', para: 'noticias' },
+  { source: '/autor/:slug*', para: 'noticias' },
+  { source: '/tag/:slug*', para: 'noticias' },
+  { source: '/blog/:slug*', para: 'noticias' },
+  { source: '/feed/:slug*', para: 'noticias' },
+  { source: '/comments/feed/:slug*', para: 'noticias' },
   { source: '/manutencao', para: 'inicio' },
 ];
 

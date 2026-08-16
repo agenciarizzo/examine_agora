@@ -147,11 +147,14 @@ export function href(slug: string, hash?: string): string {
   return page(slug).path + (hash ?? '');
 }
 
+/** Link de WhatsApp com uma mensagem já escrita. */
+export function waMsgHref(msg: string): string {
+  return clinica.whatsapp_link + '?text=' + encodeURIComponent(msg);
+}
+
 /** Link de WhatsApp com o `waMsg` da própria página. */
 export function waHref(slug: string): string {
-  return (
-    clinica.whatsapp_link + '?text=' + encodeURIComponent(page(slug).seo.waMsg)
-  );
+  return waMsgHref(page(slug).seo.waMsg);
 }
 
 export const mapHref =

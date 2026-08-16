@@ -1832,6 +1832,27 @@
   },
   {
    "tipo": "site",
+   "grupo": "site",
+   "slug": "noticias",
+   "file": "porte do WP · índice do blog",
+   "path": "/noticias",
+   "nome": "Notícias",
+   "curto": "Notícias",
+   "intencao": "conteúdo · topo de funil",
+   "seo": {
+    "title": "Notícias e artigos sobre exames de imagem | Examine Agora",
+    "description": "Artigos da Examine Agora sobre ultrassom, Doppler, biópsias guiadas e preparo de exames — escritos para quem vai fazer o exame no Recanto das Emas, Brasília-DF.",
+    "kw": "artigos sobre ultrassom brasília",
+    "kws": [
+     "blog de clínica de imagem",
+     "dúvidas sobre ultrassom",
+     "exames de imagem recanto das emas"
+    ],
+    "waMsg": "Olá! Li um artigo no site e quero agendar um exame."
+   }
+  },
+  {
+   "tipo": "site",
    "grupo": "legal",
    "slug": "privacidade",
    "file": "porte do WP · sem HTML de referência",
@@ -1916,6 +1937,10 @@
    {
     "label": "Convênios",
     "slug": "convenios"
+   },
+   {
+    "label": "Notícias",
+    "slug": "noticias"
    },
    {
     "label": "A clínica",
@@ -2138,7 +2163,7 @@
    },
    {
     "de": "/noticias/",
-    "para": "inicio"
+    "para": "noticias"
    },
    {
     "de": "/resultado-on-line/ + área restrita/conta/registro",
@@ -2149,75 +2174,47 @@
     "para": "portar como estão (sem redesign)"
    }
   ],
-  "posts_wp": "21 posts do blog permanecem como artigos; na migração, interligar cada um à landing do seu tema (ex.: 'Biópsia de mama: linhas gerais' → mama; 'Câncer de próstata' → prostata; 'Doppler de carótidas' → doppler).",
+  "posts_wp": "Blog do WP migrado em 2026-08: 11 posts de texto próprio da clínica voltaram nas URLs originais, cada um interligado à landing do seu tema (campo `tema` em content/posts.json). Os 10 posts reproduzidos de terceiros (crédito \"Fonte:\") ficaram fora, com 301 para a landing — ver port_map_posts e o README.",
   "port_map_posts": [
    {
-    "de": "/o-que-e-o-ultrassom-morfologico/",
-    "para": "morfologico"
+    "de": "/nodulos-tireoidianos-respeito-e-bom-e-eles-gostam/",
+    "para": "tireoide"
    },
    {
-    "de": "/ultrassom-morfologico-guia-completo-bebe/",
-    "para": "morfologico"
+    "de": "/ultrassom-o-que-e-como-e-feito-e-para-que-serve/",
+    "para": "inicio"
    },
    {
     "de": "/ultrassom-na-gravidez-quantos-a-gravida-tem-que-fazer/",
     "para": "morfologico"
    },
    {
-    "de": "/ultrassonografia-ajudar-rastreio-pre-eclampsia/",
-    "para": "morfologico"
-   },
-   {
-    "de": "/quando-realizar-ultrassom-transvaginal/",
-    "para": "mulher"
-   },
-   {
-    "de": "/ultrassom-de-mamas-quando-e-indicado-e-o-que-o-exame-detecta/",
-    "para": "mulher"
-   },
-   {
-    "de": "/ultrassom-abdominal-no-diagnostico-de-doencas/",
-    "para": "abdominal"
-   },
-   {
-    "de": "/ultrassom-das-articulacoes/",
-    "para": "musculo"
-   },
-   {
-    "de": "/a-importancia-do-mapeamento-no-doppler-venoso-superficial-dos-membros-inferiores-para-o-tratamento-das-varizes/",
-    "para": "doppler"
-   },
-   {
-    "de": "/importancia-do-exame-de-ultrassonografia-vascular-com-doppler-colorido/",
-    "para": "doppler"
+    "de": "/biopsia-de-mama-linhas-gerais/",
+    "para": "mama"
    },
    {
     "de": "/como-a-covid-19-causa-trombose/",
     "para": "doppler"
    },
    {
-    "de": "/quando-realizar-ultrassonografia-do-aparelho-reprodutor-masculino/",
-    "para": "homem"
-   },
-   {
-    "de": "/cancer-de-prostata-ultrassom-diagnostico/",
-    "para": "prostata"
-   },
-   {
-    "de": "/biopsia-de-mama-linhas-gerais/",
-    "para": "mama"
+    "de": "/a-importancia-do-mapeamento-no-doppler-venoso-superficial-dos-membros-inferiores-para-o-tratamento-das-varizes/",
+    "para": "doppler"
    },
    {
     "de": "/entenda-a-puncao-aspirativa-com-agulha-fina-paaf/",
     "para": "tireoide"
    },
    {
-    "de": "/ultrassom-de-tireoide-diagnostico/",
-    "para": "tireoide"
+    "de": "/cancer-de-prostata/",
+    "para": "prostata"
    },
    {
-    "de": "/ultrassom-o-que-e-como-e-feito-e-para-que-serve/",
-    "para": "inicio"
+    "de": "/o-que-e-o-doppler-de-carotidas-quando-e-indicado-e-como-e-feito/",
+    "para": "doppler"
+   },
+   {
+    "de": "/ultrassom-de-mamas-quando-e-indicado-e-o-que-o-exame-detecta/",
+    "para": "mulher"
    }
   ],
   "legal": {
