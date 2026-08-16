@@ -1829,6 +1829,69 @@
     ],
     "waMsg": "Olá! Quero agendar um exame."
    }
+  },
+  {
+   "tipo": "site",
+   "grupo": "legal",
+   "slug": "privacidade",
+   "file": "porte do WP · sem HTML de referência",
+   "path": "/politica-de-privacidade",
+   "nome": "Política de Privacidade",
+   "curto": "Privacidade",
+   "intencao": "legal · LGPD",
+   "seo": {
+    "title": "Política de Privacidade | Examine Agora",
+    "description": "Como a Examine Agora trata os seus dados pessoais e de saúde: o que coletamos, por quê, com quem compartilhamos, por quanto tempo guardamos e os seus direitos na LGPD.",
+    "kw": "política de privacidade examine agora",
+    "kws": [
+     "lgpd clínica de imagem",
+     "privacidade de dados de saúde",
+     "tratamento de dados examine agora"
+    ],
+    "waMsg": "Olá! Tenho uma dúvida sobre a política de privacidade e os meus dados."
+   }
+  },
+  {
+   "tipo": "site",
+   "grupo": "legal",
+   "slug": "termos",
+   "file": "porte do WP · sem HTML de referência",
+   "path": "/termos-de-uso",
+   "nome": "Termos de Uso",
+   "curto": "Termos de uso",
+   "intencao": "legal · regras do site",
+   "seo": {
+    "title": "Termos de Uso | Examine Agora",
+    "description": "As regras de uso do site da Examine Agora: caráter informativo do conteúdo, agendamento pelo WhatsApp, convênios, entrega de laudos, propriedade intelectual e foro.",
+    "kw": "termos de uso examine agora",
+    "kws": [
+     "condições de uso do site",
+     "regras de agendamento examine agora",
+     "aviso legal clínica de imagem"
+    ],
+    "waMsg": "Olá! Tenho uma dúvida sobre os termos de uso do site."
+   }
+  },
+  {
+   "tipo": "site",
+   "grupo": "legal",
+   "slug": "cookies",
+   "file": "porte do WP · sem HTML de referência",
+   "path": "/cookies",
+   "nome": "Política de Cookies",
+   "curto": "Cookies",
+   "intencao": "legal · navegação",
+   "seo": {
+    "title": "Política de Cookies | Examine Agora",
+    "description": "O que o site da Examine Agora guarda no seu navegador, quais serviços de terceiros são acionados na visita e como controlar tudo isso pelas configurações do navegador.",
+    "kw": "política de cookies examine agora",
+    "kws": [
+     "cookies de site de clínica",
+     "como bloquear cookies no navegador",
+     "privacidade de navegação examine agora"
+    ],
+    "waMsg": "Olá! Tenho uma dúvida sobre a política de cookies do site."
+   }
   }
  ],
  "site": {
@@ -2086,6 +2149,341 @@
     "para": "portar como estão (sem redesign)"
    }
   ],
-  "posts_wp": "21 posts do blog permanecem como artigos; na migração, interligar cada um à landing do seu tema (ex.: 'Biópsia de mama: linhas gerais' → mama; 'Câncer de próstata' → prostata; 'Doppler de carótidas' → doppler)."
+  "posts_wp": "21 posts do blog permanecem como artigos; na migração, interligar cada um à landing do seu tema (ex.: 'Biópsia de mama: linhas gerais' → mama; 'Câncer de próstata' → prostata; 'Doppler de carótidas' → doppler).",
+  "port_map_posts": [
+   {
+    "de": "/o-que-e-o-ultrassom-morfologico/",
+    "para": "morfologico"
+   },
+   {
+    "de": "/ultrassom-morfologico-guia-completo-bebe/",
+    "para": "morfologico"
+   },
+   {
+    "de": "/ultrassom-na-gravidez-quantos-a-gravida-tem-que-fazer/",
+    "para": "morfologico"
+   },
+   {
+    "de": "/ultrassonografia-ajudar-rastreio-pre-eclampsia/",
+    "para": "morfologico"
+   },
+   {
+    "de": "/quando-realizar-ultrassom-transvaginal/",
+    "para": "mulher"
+   },
+   {
+    "de": "/ultrassom-de-mamas-quando-e-indicado-e-o-que-o-exame-detecta/",
+    "para": "mulher"
+   },
+   {
+    "de": "/ultrassom-abdominal-no-diagnostico-de-doencas/",
+    "para": "abdominal"
+   },
+   {
+    "de": "/ultrassom-das-articulacoes/",
+    "para": "musculo"
+   },
+   {
+    "de": "/a-importancia-do-mapeamento-no-doppler-venoso-superficial-dos-membros-inferiores-para-o-tratamento-das-varizes/",
+    "para": "doppler"
+   },
+   {
+    "de": "/importancia-do-exame-de-ultrassonografia-vascular-com-doppler-colorido/",
+    "para": "doppler"
+   },
+   {
+    "de": "/como-a-covid-19-causa-trombose/",
+    "para": "doppler"
+   },
+   {
+    "de": "/quando-realizar-ultrassonografia-do-aparelho-reprodutor-masculino/",
+    "para": "homem"
+   },
+   {
+    "de": "/cancer-de-prostata-ultrassom-diagnostico/",
+    "para": "prostata"
+   },
+   {
+    "de": "/biopsia-de-mama-linhas-gerais/",
+    "para": "mama"
+   },
+   {
+    "de": "/entenda-a-puncao-aspirativa-com-agulha-fina-paaf/",
+    "para": "tireoide"
+   },
+   {
+    "de": "/ultrassom-de-tireoide-diagnostico/",
+    "para": "tireoide"
+   },
+   {
+    "de": "/ultrassom-o-que-e-como-e-feito-e-para-que-serve/",
+    "para": "inicio"
+   }
+  ],
+  "legal": {
+   "atualizado": "16 de agosto de 2026",
+   "nota": "Texto redigido para o site novo — o conteúdo do WP antigo não veio no pacote de migração. Pendente de revisão jurídica do cliente; ver README.",
+   "docs": [
+    {
+     "slug": "privacidade",
+     "h1a": "Política de",
+     "emph": "privacidade",
+     "h1b": "",
+     "lead": "Esta política explica quais dados pessoais a Examine Agora coleta, por que coleta, com quem compartilha e por quanto tempo guarda — inclusive os dados de saúde, que a LGPD trata como sensíveis.",
+     "secoes": [
+      {
+       "h2": "Quem trata os seus dados",
+       "ps": [
+        "O controlador é a Examine Agora — Imagem e Medicina, com sede na Av. Recanto das Emas, Q102 L03 Loja 06, Brasília-DF, sob responsabilidade técnica do Dr. Flávio H. A. Chaves (CRM-DF 19506 · RQE 11288).",
+        "Falar com a gente sobre dados é o mesmo caminho de sempre: WhatsApp ou telefone (61) 3208-6814, de segunda a sexta das 8h às 18h e no sábado das 8h às 12h, ou pessoalmente na recepção da clínica."
+       ]
+      },
+      {
+       "h2": "Quais dados a clínica coleta",
+       "ps": [
+        "São três grupos, e cada um entra por um motivo diferente:"
+       ],
+       "itens": [
+        "Identificação e contato: nome, data de nascimento, documento, telefone, e-mail quando você informa, convênio e número da carteirinha.",
+        "Dados de saúde, que a LGPD classifica como sensíveis: pedido médico, informações clínicas necessárias para o exame, imagens, laudos e o material colhido nas biópsias.",
+        "Navegação no site: páginas visitadas, tipo de dispositivo e endereço IP — detalhados na Política de Cookies."
+       ],
+       "nota": "O site não tem formulário, cadastro nem área de acesso: nenhum dado de saúde é pedido por aqui. O contato começa no WhatsApp, no telefone ou na recepção."
+      },
+      {
+       "h2": "De onde vêm esses dados",
+       "ps": [
+        "Da própria pessoa atendida ou de quem a acompanha, do médico que solicitou o exame e, no caso do faturamento, da operadora que autoriza o procedimento."
+       ]
+      },
+      {
+       "h2": "Para que usamos",
+       "itens": [
+        "Agendar, preparar e realizar o exame ou o procedimento.",
+        "Produzir, assinar e entregar o laudo, e conversar com o médico solicitante quando o caso pede.",
+        "Avisar sobre preparo, horário, remarcação e retirada de material.",
+        "Faturar o atendimento junto ao convênio ou emitir o documento fiscal no particular.",
+        "Cumprir obrigações legais, sanitárias e do conselho de classe, e exercer direitos em processo quando for necessário."
+       ]
+      },
+      {
+       "h2": "Com que base legal",
+       "ps": [
+        "Os dados de saúde são tratados para a tutela da saúde, em procedimento realizado por profissionais de saúde e por serviço de saúde — a hipótese do art. 11, II, \"f\", da LGPD (Lei 13.709/2018).",
+        "Os demais dados se apoiam na execução do atendimento contratado, no cumprimento de obrigação legal ou regulatória e no exercício regular de direitos. Quando nada disso se aplica — o caso de uma mensagem de campanha, por exemplo —, pedimos o seu consentimento, que pode ser retirado a qualquer momento."
+       ]
+      },
+      {
+       "h2": "Com quem compartilhamos",
+       "ps": [
+        "A clínica não vende dados e não os cede para publicidade de terceiros. O compartilhamento acontece no que o atendimento exige:"
+       ],
+       "itens": [
+        "A operadora do seu convênio, para autorização e faturamento do exame.",
+        "Laboratórios de apoio e o serviço de anatomia patológica que analisa o material das biópsias.",
+        "O médico que solicitou o exame, que recebe o laudo.",
+        "Autoridades sanitárias e judiciais, nas hipóteses em que a lei obriga.",
+        "Prestadores de tecnologia que hospedam o site e os sistemas da clínica, limitados à finalidade contratada."
+       ],
+       "nota": "O agendamento pelo WhatsApp corre dentro do aplicativo, sob os termos e a política de privacidade do próprio serviço. Se preferir não usá-lo, ligue para (61) 3208-6814 ou venha à recepção."
+      },
+      {
+       "h2": "Por quanto tempo guardamos",
+       "ps": [
+        "O registro do paciente — pedido, imagens e laudo — é guardado por no mínimo 20 anos a contar do último atendimento, prazo que a Resolução CFM 1.821/2007 fixa para os prontuários.",
+        "Os dados de faturamento seguem os prazos fiscais e prescricionais. Contatos usados só para agendar são descartados quando deixam de ser necessários."
+       ]
+      },
+      {
+       "h2": "Como protegemos",
+       "ps": [
+        "O acesso ao prontuário e às imagens é restrito à equipe que participa do atendimento, sob sigilo profissional. Os sistemas ficam em ambiente controlado, com controle de acesso e cópia de segurança, e a equipe é orientada sobre o dever de sigilo."
+       ]
+      },
+      {
+       "h2": "Os seus direitos",
+       "ps": [
+        "O art. 18 da LGPD garante que você peça, a qualquer momento:"
+       ],
+       "itens": [
+        "Confirmação de que tratamos os seus dados, e acesso a eles.",
+        "Correção de dado incompleto, inexato ou desatualizado.",
+        "Anonimização, bloqueio ou eliminação de dado desnecessário, excessivo ou tratado fora da lei.",
+        "Portabilidade e informação sobre com quem compartilhamos.",
+        "Revogação do consentimento, quando foi ele que autorizou o tratamento."
+       ],
+       "nota": "Um limite honesto: enquanto corre o prazo legal de guarda do prontuário, a clínica não pode apagar o registro do seu atendimento, mesmo a pedido. Fora dessa hipótese, atendemos aos pedidos nos prazos da LGPD."
+      },
+      {
+       "h2": "Como exercer os seus direitos",
+       "ps": [
+        "Peça pessoalmente na recepção, com documento com foto, ou pelo WhatsApp e telefone (61) 3208-6814. Cópia de laudos e imagens é entregue à própria pessoa atendida ou a quem ela autorizar por escrito.",
+        "Se a resposta não resolver, você pode levar o caso à Autoridade Nacional de Proteção de Dados (ANPD)."
+       ]
+      },
+      {
+       "h2": "Crianças e adolescentes",
+       "ps": [
+        "Exames de crianças e adolescentes são agendados e realizados com o responsável legal, que acompanha o atendimento e autoriza o tratamento dos dados. O tratamento se dá sempre no melhor interesse do menor, como pede o art. 14 da LGPD."
+       ]
+      },
+      {
+       "h2": "Mudanças nesta política",
+       "ps": [
+        "Quando o texto mudar, a data de atualização no topo muda junto. A versão vigente é sempre a publicada nesta página."
+       ],
+       "links": [
+        {
+         "label": "Política de Cookies",
+         "slug": "cookies"
+        },
+        {
+         "label": "Termos de Uso",
+         "slug": "termos"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "termos",
+     "h1a": "Termos de",
+     "emph": "uso",
+     "h1b": "",
+     "lead": "As regras de uso do site da Examine Agora. Ao navegar por aqui, você concorda com elas — e elas cabem em uma leitura de três minutos.",
+     "secoes": [
+      {
+       "h2": "O que é este site",
+       "ps": [
+        "É o site institucional da Examine Agora — Imagem e Medicina, clínica de diagnóstico por imagem no Recanto das Emas, Brasília-DF. Ele apresenta os exames e procedimentos, os preparos, os convênios atendidos e os canais de contato da clínica."
+       ]
+      },
+      {
+       "h2": "O conteúdo não substitui a consulta",
+       "ps": [
+        "Os textos daqui são informativos. Não são diagnóstico, prescrição, segunda opinião nem recomendação individual: quem indica um exame é o seu médico, e é o pedido dele que a clínica atende.",
+        "Em situação de urgência, não use o site: procure um pronto-socorro ou ligue 192 (SAMU)."
+       ]
+      },
+      {
+       "h2": "Agendamento",
+       "itens": [
+        "O agendamento é feito pelo WhatsApp ou pelo telefone (61) 3208-6814 — a mensagem enviada é um pedido de horário, e só vira agendamento depois da confirmação da recepção.",
+        "Todo exame e procedimento exige pedido médico, apresentado no dia do atendimento.",
+        "O preparo informado pela clínica é parte do exame: sem ele, pode ser necessário remarcar.",
+        "Horário de atendimento: segunda a sexta das 8h às 18h e sábado das 8h às 12h."
+       ]
+      },
+      {
+       "h2": "Convênios e pagamento",
+       "ps": [
+        "A lista de convênios atendidos muda com o tempo, e a cobertura de cada exame depende do seu plano — por isso ela é confirmada no agendamento, e não pelo site. O site não divulga valores; a recepção informa as condições do atendimento particular."
+       ]
+      },
+      {
+       "h2": "Laudos, imagens e material de biópsia",
+       "ps": [
+        "Os laudos e as imagens são entregues na própria clínica, à pessoa atendida ou a quem ela autorizar por escrito, mediante documento com foto. O material colhido nas biópsias segue para o serviço de anatomia patológica, e o prazo de entrega é informado no dia do procedimento."
+       ]
+      },
+      {
+       "h2": "Propriedade intelectual",
+       "ps": [
+        "A marca Examine Agora, os textos, as fotos da clínica e as ilustrações deste site pertencem à clínica ou são usados por ela com autorização. Reprodução ou uso comercial sem autorização prévia por escrito é vedado. Citar um trecho com link para a página de origem, isso sim, é bem-vindo."
+       ]
+      },
+      {
+       "h2": "Links para outros serviços",
+       "ps": [
+        "O botão de agendamento leva ao WhatsApp e o endereço leva ao mapa. São serviços de terceiros, com termos e políticas próprios, fora do controle da clínica."
+       ]
+      },
+      {
+       "h2": "Disponibilidade do site",
+       "ps": [
+        "Fazemos o possível para manter o site no ar, correto e atualizado, mas não garantimos funcionamento ininterrupto nem ausência de erro. O site pode sair do ar para manutenção, e o conteúdo pode mudar sem aviso prévio."
+       ]
+      },
+      {
+       "h2": "Privacidade",
+       "ps": [
+        "O tratamento dos seus dados pessoais e de saúde está descrito na Política de Privacidade. O que a visita ao site aciona no seu navegador está na Política de Cookies."
+       ],
+       "links": [
+        {
+         "label": "Política de Privacidade",
+         "slug": "privacidade"
+        },
+        {
+         "label": "Política de Cookies",
+         "slug": "cookies"
+        }
+       ]
+      },
+      {
+       "h2": "Alterações e foro",
+       "ps": [
+        "Estes termos podem ser alterados a qualquer momento; a versão vigente é sempre a publicada nesta página, com a data de atualização no topo. Aplica-se a lei brasileira, e fica eleito o foro de Brasília-DF para o que não se resolver por acordo."
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "cookies",
+     "h1a": "Política de",
+     "emph": "cookies",
+     "h1b": "",
+     "lead": "Cookies são arquivos pequenos que um site guarda no seu navegador. Este aqui usa muito pouco disso — e o texto abaixo diz exatamente o quê.",
+     "secoes": [
+      {
+       "h2": "O que este site guarda no seu navegador",
+       "ps": [
+        "O site da Examine Agora é estático: não tem cadastro, área de acesso nem carrinho, e não grava cookie próprio de análise, de publicidade ou de perfil de navegação. Nada do que você lê aqui depende de aceitar cookie."
+       ]
+      },
+      {
+       "h2": "Serviços de terceiros acionados pela visita",
+       "ps": [
+        "Três serviços externos entram na sua visita — e vale saber o que cada um faz:"
+       ],
+       "itens": [
+        "Fontes do Google: a tipografia do site é carregada dos servidores do Google, o que expõe o seu endereço IP e o seu navegador ao serviço. Esse carregamento não grava cookie.",
+        "WhatsApp: só quando você toca em um botão de agendamento. A conversa acontece dentro do aplicativo, sob os termos do próprio serviço.",
+        "Mapa: só quando você abre a rota até a clínica."
+       ],
+       "nota": "A hospedagem do site pode gravar cookie estritamente técnico, de segurança e de entrega da página. Ele não monta perfil de navegação nem serve para publicidade."
+      },
+      {
+       "h2": "Se um dia isso mudar",
+       "ps": [
+        "Se a clínica passar a medir campanhas ou a usar ferramenta de análise de audiência, este texto muda antes, e o seu consentimento é pedido no primeiro acesso. Nada de tag silenciosa."
+       ]
+      },
+      {
+       "h2": "Como controlar cookies no seu navegador",
+       "ps": [
+        "Todo navegador permite bloquear ou apagar cookies, e quase todos têm uma janela anônima que descarta tudo ao fechar. O caminho costuma ser Configurações → Privacidade e segurança → Cookies. Bloquear cookies não atrapalha a leitura deste site."
+       ]
+      },
+      {
+       "h2": "Relação com a Política de Privacidade",
+       "ps": [
+        "Os dados que a clínica trata no atendimento — identificação, contato e saúde — não vêm de cookie: vêm do seu contato com a recepção. Eles estão descritos na Política de Privacidade."
+       ],
+       "links": [
+        {
+         "label": "Política de Privacidade",
+         "slug": "privacidade"
+        },
+        {
+         "label": "Termos de Uso",
+         "slug": "termos"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
  }
 }
