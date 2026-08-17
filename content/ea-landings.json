@@ -2433,16 +2433,16 @@
      "lead": "Cookies são arquivos pequenos que um site guarda no seu navegador. Este aqui usa pouco disso — e o texto abaixo diz exatamente o quê.",
      "secoes": [
       {
-       "h2": "Nada liga antes de você aceitar",
+       "h2": "Como funciona a medição aqui",
        "ps": [
-        "No primeiro acesso aparece uma faixa perguntando se você aceita a medição de audiência. Enquanto você não responde, o site não carrega ferramenta de medição nenhuma e não grava nada além do necessário para a página aparecer — a decisão vem antes da tag, não depois.",
-        "Se você recusar, nada muda na leitura: as páginas, os preparos, os posts e os botões de agendamento funcionam igual. Se aceitar e depois mudar de ideia, apagar os dados deste site no seu navegador zera a escolha, e a faixa pergunta de novo."
+        "A medição de audiência começa junto com a visita, e a faixa que aparece no primeiro acesso avisa disso em vez de barrar a leitura. É o modelo de recusa: você não precisa autorizar nada para ler o site, e desliga a medição quando quiser, no botão \"Recusar\" da própria faixa ou pelo navegador.",
+        "A base para isso é o legítimo interesse da clínica em entender quais páginas ajudam quem procura exame — medição agregada, que não identifica você e não decide nada sobre o seu atendimento. Recusar não muda uma vírgula do site: páginas, preparos, posts e botões de agendamento funcionam igual."
        ]
       },
       {
        "h2": "O que este site guarda no seu navegador",
        "ps": [
-        "O site da Examine Agora é estático: não tem cadastro, área de acesso nem carrinho, e não grava cookie de remarketing nem monta perfil de navegação para receber anúncio. Depois do seu aceite, ele guarda três coisas: o cookie de medição de audiência do Google Analytics, o registro de qual anúncio trouxe a sua visita — se ela veio de um — e a própria resposta que você deu na faixa, para não perguntar outra vez."
+        "O site da Examine Agora é estático: não tem cadastro, área de acesso nem carrinho. Ele guarda três coisas: o cookie de medição de audiência do Google Analytics, o registro de qual anúncio trouxe a sua visita — se ela veio de um — e a resposta que você deu na faixa, para não avisar de novo a cada página."
        ]
       },
       {
@@ -2456,12 +2456,12 @@
         "WhatsApp: só quando você toca em um botão de agendamento. A conversa acontece dentro do aplicativo, sob os termos do próprio serviço.",
         "Mapa: só quando você abre a rota até a clínica."
        ],
-       "nota": "Na medição de audiência, o endereço IP serve para estimar a região e não fica guardado nos relatórios. Dentro do Google Analytics, os sinais de anúncio e o remarketing seguem desligados: a clínica não usa a sua navegação para te perseguir com publicidade depois. O que ela faz com o dado de campanha está na seção seguinte, sem meia palavra. A hospedagem do site, por sua vez, pode gravar cookie estritamente técnico, de segurança e de entrega da página."
+       "nota": "Na medição de audiência, o endereço IP serve para estimar a região e não fica guardado nos relatórios. A clínica pode usar esses dados para ajustar a própria divulgação e falar de novo com quem já visitou o site — nunca separando as pessoas por exame procurado ou condição de saúde, como a seção seguinte detalha. A hospedagem do site, por sua vez, pode gravar cookie estritamente técnico, de segurança e de entrega da página."
       },
       {
        "h2": "De qual anúncio a sua visita veio",
        "ps": [
-        "Quando você chega ao site por um anúncio, o link traz um código que identifica aquele clique — não identifica você. Com o seu aceite, o site guarda esse código por até 90 dias e o repete numa última linha da mensagem que o WhatsApp já abre escrita, entre colchetes, começando por \"ref\". Ela está à vista, e você pode apagar a linha antes de enviar: a mensagem chega do mesmo jeito e o atendimento corre igual.",
+        "Quando você chega ao site por um anúncio, o link traz um código que identifica aquele clique — não identifica você. O site guarda esse código por até 90 dias e o repete numa última linha da mensagem que o WhatsApp já abre escrita, entre colchetes, começando por \"ref\". Ela está à vista, e você pode apagar a linha antes de enviar: a mensagem chega do mesmo jeito e o atendimento corre igual.",
         "Serve para uma coisa só: descobrir quais anúncios trazem gente que realmente precisa de exame, em vez de gastar verba no que não traz. Quando o exame acontece, a clínica informa ao Google Ads que aquele clique virou atendimento.",
         "O que nunca atravessa para a plataforma de anúncio é o exame. Nome do exame, página que você leu, laudo, imagem, qualquer informação clínica: nada disso é enviado ao Google nem ao Meta. Para eles vai o código do clique e o fato de ter havido atendimento — nada além."
        ]
@@ -2469,9 +2469,9 @@
       {
        "h2": "Como recusar a medição",
        "ps": [
-        "O caminho mais curto é o botão \"Recusar\" na faixa do primeiro acesso: nada é carregado e nada é guardado. Se você já aceitou, apagar os dados deste site no navegador desfaz a escolha e a faixa volta a perguntar.",
-        "Vale também o caminho de sempre, que não depende de nós: bloquear cookies para este domínio, abrir o site em janela anônima ou instalar o complemento oficial do Google que desativa o Analytics em todos os sites que você visita.",
-        "Se a clínica um dia passar a fazer remarketing — usar a sua navegação para te mostrar anúncio depois —, este texto muda antes, e o consentimento é pedido outra vez. Nada de tag silenciosa."
+        "O caminho mais curto é o botão \"Recusar\" da faixa: ele desliga de uma vez a medição de audiência e o registro de origem do anúncio, e apaga o que já tiver sido guardado. A faixa some na primeira resposta e não volta a incomodar.",
+        "Se você fechou a faixa e mudou de ideia, apagar os dados deste site no navegador zera a escolha e a faixa aparece de novo. Vale também o caminho de sempre, que não depende de nós: bloquear cookies para este domínio, abrir o site em janela anônima ou instalar o complemento oficial do Google que desativa o Analytics em todos os sites que você visita.",
+        "Uma linha que não se move: o que a clínica faz de divulgação nunca separa as pessoas por exame procurado ou condição de saúde. Se esse limite mudar, este texto muda antes."
        ]
       },
       {
