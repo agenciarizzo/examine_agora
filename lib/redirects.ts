@@ -1,16 +1,23 @@
 /**
  * Mapa de 301 do WordPress antigo → site novo.
  *
- * A base vem de `site.port_map` no ea-landings.json. Duas linhas de lá são
- * anotações em prosa, não URLs, e por isso são tratadas à parte:
+ * A base vem de `site.port_map` (páginas do WP) e `site.port_map_posts` (os
+ * posts do blog) no ea-landings.json. Duas linhas do port_map são anotações em
+ * prosa, não URLs, e por isso são tratadas à parte:
  *
  *  - "/resultado-on-line/ + área restrita/conta/registro" → agende
  *    (serviço de resultados online DESCONTINUADO — 301 e remover);
  *    expandido abaixo em `EXTRAS` com as rotas reais que o WP publicava.
  *
  *  - "/politica-de-privacidade|cookies|termos-de-uso/" → "portar como estão
- *    (sem redesign)": não são 301, são páginas a portar. Ficam listadas em
- *    `A_PORTAR` e não geram redirect.
+ *    (sem redesign)": não são 301, são páginas — e agora existem de verdade,
+ *    escritas a partir de `site.legal` (ver `components/PaginaLegal.tsx`).
+ *
+ * Depois da migração do blog (2026-08), `site.port_map_posts` guarda só os 10
+ * posts que ficaram fora do site por serem reprodução de terceiros — esses
+ * seguem em 301 para a landing do tema. Os 11 posts de texto próprio voltaram
+ * nas URLs originais e respondem 200; 301 neles apagaria a página que acabou
+ * de voltar, e `scripts/migra-wp.mjs` falha se as duas listas se cruzarem.
  */
 import { page, site } from './content';
 
@@ -30,8 +37,25 @@ const EXTRAS: { source: string; para: string }[] = [
   { source: '/login', para: 'agende' },
 ];
 
-/** Páginas legais do WP que devem ser portadas como estão, sem redesign. */
-export const A_PORTAR = ['/politica-de-privacidade', '/cookies', '/termos-de-uso'];
+/**
+ * O que o WordPress publicava além das páginas e dos posts: arquivos de
+ * categoria, autor e tag, feeds RSS e a página de manutenção. Os arquivos do
+ * blog vão para `/noticias`, que é o índice equivalente no site novo; só a
+ * página de manutenção não tem par e vai para o início. Os `:slug*` cobrem
+ * também o que não apareceu no relatório de cobertura (ex.:
+ * `/category/noticias/page/2`).
+ */
+const ARQUIVOS_WP: { source: string; para: string }[] = [
+  { source: '/category/:slug*', para: 'noticias' },
+  { source: '/categoria/:slug*', para: 'noticias' },
+  { source: '/author/:slug*', para: 'noticias' },
+  { source: '/autor/:slug*', para: 'noticias' },
+  { source: '/tag/:slug*', para: 'noticias' },
+  { source: '/blog/:slug*', para: 'noticias' },
+  { source: '/feed/:slug*', para: 'noticias' },
+  { source: '/comments/feed/:slug*', para: 'noticias' },
+  { source: '/manutencao', para: 'inicio' },
+];
 
 function normaliza(de: string): string {
   const s = de.replace(/\/+$/, '');
@@ -54,7 +78,8 @@ export function redirects(): Redirect[] {
     if (PROSA.some((p) => de.startsWith(p))) continue;
     add(normaliza(de), para);
   }
-  for (const { source, para } of EXTRAS) add(source, para);
+  for (const { de, para } of site.port_map_posts) add(normaliza(de), para);
+  for (const { source, para } of [...EXTRAS, ...ARQUIVOS_WP]) add(source, para);
 
   return out;
 }

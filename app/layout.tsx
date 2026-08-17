@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Analytics } from '@/components/Analytics';
 import { clinica, page, SITE_URL } from '@/lib/content';
 import './globals.css';
 
@@ -36,8 +37,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap"
           rel="stylesheet"
         />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

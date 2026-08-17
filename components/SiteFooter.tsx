@@ -1,11 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { clinica, href, nav } from '@/lib/content';
+import { clinica, href, legais, nav } from '@/lib/content';
 import { cor, WRAP } from '@/lib/theme';
 
+const miudo = {
+  color: 'rgba(169,214,245,.55)',
+  textDecoration: 'none',
+  fontSize: 12,
+} as const;
+
 /**
- * Rodapé mudo com a linha do RT. A faixa de links só aparece nas páginas que
- * a têm nos HTML de referência (Home e landings).
+ * Rodapé mudo com a linha do RT. A faixa de links de navegação só aparece nas
+ * páginas que a têm nos HTML de referência (Home e landings); a faixa legal
+ * (privacidade, termos, cookies) vai em todas — é por ela que essas páginas
+ * deixam de ser órfãs, no site e para o buscador.
  */
 export function SiteFooter({ links = false }: { links?: boolean }) {
   return (
@@ -39,31 +47,39 @@ export function SiteFooter({ links = false }: { links?: boolean }) {
           style={{
             maxWidth: WRAP,
             margin: '0 auto',
-            padding: '0 24px 26px',
+            padding: '0 24px 20px',
             display: 'flex',
             flexWrap: 'wrap',
             gap: '8px 22px',
           }}
         >
           {nav.map((n) => (
-            <Link
-              key={n.label}
-              href={n.href}
-              className="ea-link-inherit"
-              style={{ color: 'rgba(169,214,245,.55)', textDecoration: 'none', fontSize: 12 }}
-            >
+            <Link key={n.label} href={n.href} className="ea-link-inherit" style={miudo}>
               {n.label}
             </Link>
           ))}
-          <Link
-            href={href('agende')}
-            className="ea-link-inherit"
-            style={{ color: 'rgba(169,214,245,.55)', textDecoration: 'none', fontSize: 12 }}
-          >
+          <Link href={href('agende')} className="ea-link-inherit" style={miudo}>
             Agende seu exame
           </Link>
         </div>
       )}
+      <div
+        style={{
+          maxWidth: WRAP,
+          margin: '0 auto',
+          padding: '16px 24px 26px',
+          borderTop: '1px solid rgba(169,214,245,.1)',
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '8px 22px',
+        }}
+      >
+        {legais.map((l) => (
+          <Link key={l.slug} href={l.path} className="ea-link-inherit" style={miudo}>
+            {l.nome}
+          </Link>
+        ))}
+      </div>
     </footer>
   );
 }

@@ -1,0 +1,1077 @@
+{
+ "schema": "ea-posts",
+ "gerado_de": "migracao/examineagora.WordPress.20260725.xml",
+ "gerado_por": "scripts/migra-wp.mjs",
+ "nota": "Posts de texto próprio da clínica, migrados do WP nas URLs originais. As reproduções de terceiros ficaram fora (301 para a landing do tema) — ver REPRODUZIDOS no script e o README. As imagens de destaque ficaram no servidor antigo e não vieram no export.",
+ "reproduzidos": [
+  {
+   "slug": "nodulos-tireoidianos-respeito-e-bom-e-eles-gostam",
+   "fonte": "Veja"
+  },
+  {
+   "slug": "ultrassom-o-que-e-como-e-feito-e-para-que-serve",
+   "fonte": "Veja Saúde"
+  },
+  {
+   "slug": "ultrassom-na-gravidez-quantos-a-gravida-tem-que-fazer",
+   "fonte": "Crescer"
+  },
+  {
+   "slug": "biopsia-de-mama-linhas-gerais",
+   "fonte": "Febrasgo"
+  },
+  {
+   "slug": "como-a-covid-19-causa-trombose",
+   "fonte": "Veja Saúde"
+  },
+  {
+   "slug": "a-importancia-do-mapeamento-no-doppler-venoso-superficial-dos-membros-inferiores-para-o-tratamento-das-varizes",
+   "fonte": "SBACV-RJ"
+  },
+  {
+   "slug": "entenda-a-puncao-aspirativa-com-agulha-fina-paaf",
+   "fonte": "tireoide.org.br"
+  },
+  {
+   "slug": "cancer-de-prostata",
+   "fonte": "INCA"
+  },
+  {
+   "slug": "o-que-e-o-doppler-de-carotidas-quando-e-indicado-e-como-e-feito",
+   "fonte": "Tua Saúde"
+  },
+  {
+   "slug": "ultrassom-de-mamas-quando-e-indicado-e-o-que-o-exame-detecta",
+   "fonte": "Minha Vida"
+  }
+ ],
+ "posts": [
+  {
+   "slug": "ultrassom-morfologico-guia-completo-bebe",
+   "titulo": "Ultrassom Morfológico: Guia Completo sobre o Exame que Revela Detalhes do seu Bebê",
+   "data": "2025-09-09",
+   "atualizado": "2025-09-09",
+   "tema": "morfologico",
+   "min": 3,
+   "lead": "O ultrassom morfológico representa um dos momentos mais aguardados durante a gravidez, oferecendo aos pais a primeira oportunidade de conhecer detalhadamente a anatomia do bebê. Este exame…",
+   "seo": {
+    "title": "Ultrassom Morfológico: Guia Completo sobre o Exame que Revela Detalhes do seu Bebê | Examine Agora",
+    "description": "O ultrassom morfológico representa um dos momentos mais aguardados durante a gravidez, oferecendo aos pais a primeira oportunidade de conhecer…",
+    "waMsg": "Olá! Li o artigo \"Ultrassom Morfológico: Guia Completo sobre o Exame que…\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "O ultrassom morfológico representa um dos momentos mais aguardados durante a gravidez, oferecendo aos pais a primeira oportunidade de conhecer detalhadamente a anatomia do bebê. Este exame especializado vai muito além das imagens convencionais, proporcionando uma avaliação minuciosa do desenvolvimento fetal."
+    },
+    {
+     "t": "p",
+     "html": "Para as famílias do Recanto das Emas e região, ter acesso a este exame com qualidade técnica e atendimento humanizado representa uma conquista importante, especialmente quando realizado por profissionais especializados e com equipamentos de última geração."
+    },
+    {
+     "t": "p",
+     "html": "O ultrassom morfológico é um exame de diagnóstico por imagem altamente especializado que avalia detalhadamente a anatomia fetal, diferindo dos <a href=\"/\">ultrassons convencionais</a>. Enquanto os exames de rotina focam no crescimento, o morfológico realiza uma análise estrutural completa de órgãos, membros, face e sistemas do feto. <strong>Principais diferenças do morfológico:</strong>"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "<strong>Duração prolongada:</strong> Entre 30 a 60 minutos, muito mais detalhado.",
+      "<strong>Análise sistemática:</strong> Avaliação de todos os sistemas orgânicos do feto.",
+      "<strong>Tecnologia avançada:</strong> Utilização de equipamentos de alta resolução com recursos 3D/4D.",
+      "<strong>Especialização médica:</strong> Realizado por profissionais com formação em medicina fetal."
+     ]
+    },
+    {
+     "t": "p",
+     "html": "O timing correto é crucial para obter resultados precisos. Existem dois períodos principais recomendados: <strong>Primeiro Trimestre (11ª a 14ª semana):</strong>"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "Avalia translucência nucal e marcadores de cromossomopatias (ex: Síndrome de Down).",
+      "Verifica a formação básica dos órgãos principais."
+     ]
+    },
+    {
+     "t": "p",
+     "html": "<strong>Segundo Trimestre (20ª a 24ª semana):</strong>"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "Análise estrutural detalhada de todos os sistemas orgânicos.",
+      "Período ideal para visualização precisa de malformações."
+     ]
+    },
+    {
+     "t": "p",
+     "html": "<strong>Preparação para o exame:</strong>"
+    },
+    {
+     "t": "p",
+     "html": "A preparação é simples. Recomenda-se boa hidratação, uso de roupas confortáveis e levar o cartão de gestante e exames anteriores. Não há necessidade de jejum."
+    },
+    {
+     "t": "p",
+     "html": "Permite a visualização tridimensional do bebê em movimento, facilitando a avaliação de estruturas complexas como face e membros."
+    },
+    {
+     "t": "p",
+     "html": "Avalia o fluxo sanguíneo fetal e placentário, identificando possíveis alterações circulatórias que podem impactar o desenvolvimento."
+    },
+    {
+     "t": "p",
+     "html": "Equipamentos modernos reduzem significativamente falsos positivos e negativos, proporcionando mais tranquilidade aos pais."
+    },
+    {
+     "t": "p",
+     "html": "O acesso ao ultrassom morfológico de qualidade não deve ser um privilégio. Na Examine Agora, trabalhamos com uma ampla rede de convênios e valores acessíveis."
+    },
+    {
+     "t": "p",
+     "html": "<strong>Alguns dos mais de 30 convênios aceitos:</strong><br />BACEN, EMBRAPA, PETROBRAS, GDF SAÚDE, FUSEX, PRÓ-SAÚDE (TJDFT), CARE PLUS, OMINT SAÚDE, UNIMED, POSTAL SAÚDE (ECT) e SAÚDE CAIXA."
+    },
+    {
+     "t": "p",
+     "html": "\"Nosso objetivo é democratizar o acesso ao diagnóstico de qualidade, oferecendo tecnologia de ponta com valores justos para a comunidade do Recanto das Emas.\""
+    },
+    {
+     "t": "p",
+     "html": "— Dr. Flávio Chaves<br />Especialista em Radiologia e Diagnóstico por Imagem"
+    },
+    {
+     "t": "p",
+     "html": "Garanta um acompanhamento pré-natal completo e seguro. Agende seu ultrassom morfológico com especialistas e tecnologia de ponta."
+    },
+    {
+     "t": "p",
+     "html": "<strong>Telefone e WhatsApp:</strong> (61) 3208-6814<br /><strong>E-mail:</strong> examineagora@gmail.com"
+    },
+    {
+     "t": "p",
+     "html": "<strong>Endereço:</strong> Avenida Recanto das Emas, Quadra 102, Lote 03, Loja 06"
+    },
+    {
+     "t": "p",
+     "html": "<strong>Website:</strong> examineagora.com.br"
+    },
+    {
+     "t": "p",
+     "html": "Dr. Flávio Chaves é médico especialista em <a href=\"/sobre-nos\">Radiologia e Diagnóstico por Imagem</a> com formação sólida adquirida nos principais centros médicos do país. Graduado pela Universidade Estadual do Pará (UEPA), especializou-se no renomado Hospital Heliópolis em São Paulo (2010). Sua formação complementar inclui subespecialização em Ressonância Musculoesquelético pelo HCOR (2011) e cursos de Ultrassom Morfológico e <a href=\"/procedimentos-guiados-por-ultrassom\">Biópsia</a> pelo CETRUS. Com mais de uma década de experiência, Dr. Flávio combina conhecimento técnico avançado com atendimento humanizado."
+    },
+    {
+     "t": "p",
+     "html": "⚠️ Estas informações têm caráter educativo e não substituem uma consulta médica. Para diagnóstico e tratamento adequados, procure orientação de um profissional qualificado. Dr. Flávio H. A. Chaves - CRM-DF: 19506 | RQE: 11288"
+    }
+   ]
+  },
+  {
+   "slug": "cancer-de-prostata-ultrassom-diagnostico",
+   "titulo": "Câncer de próstata: qual a importância do ultrassom no diagnóstico da doença?",
+   "data": "2023-11-22",
+   "atualizado": "2023-11-22",
+   "tema": "homem",
+   "min": 2,
+   "lead": "Quando o assunto é saúde masculina, a atenção ao câncer de próstata é fundamental. Por isso, compreender a importância do diagnóstico precoce é o primeiro passo para enfrentar essa doença…",
+   "seo": {
+    "title": "Câncer de próstata: qual a importância do ultrassom no diagnóstico da doença? | Examine Agora",
+    "description": "Quando o assunto é saúde masculina, a atenção ao câncer de próstata é fundamental. Por isso, compreender a importância do diagnóstico precoce é o primeiro…",
+    "waMsg": "Olá! Li o artigo \"Câncer de próstata: qual a importância do ultrassom no…\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "Quando o assunto é saúde masculina, a atenção ao câncer de próstata é fundamental. Por isso, compreender a importância do diagnóstico precoce é o primeiro passo para enfrentar essa doença que afeta milhões de homens em todo o mundo."
+    },
+    {
+     "t": "p",
+     "html": "Estatísticas recentes destacam que o diagnóstico precoce do câncer de próstata tem um impacto significativo nas taxas de sucesso do tratamento."
+    },
+    {
+     "t": "p",
+     "html": "Aliás, dados mostram que pacientes diagnosticados em estágios iniciais têm uma probabilidade substancialmente maior de resposta positiva aos tratamentos disponíveis."
+    },
+    {
+     "t": "p",
+     "html": "Nesse sentido, o ultrassom é uma ferramenta essencial, capaz de fornecer informações detalhadas e possibilitar a detecção precoce da doença."
+    },
+    {
+     "t": "p",
+     "html": "Isso porque, comparado a outros métodos diagnósticos, o exame oferece uma abordagem não invasiva, minimizando procedimentos agressivos. Isso reflete diretamente na qualidade de vida dos pacientes, impactando positivamente as estatísticas relacionadas ao bem-estar pós-tratamento."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>O exame é fundamental a partir dos 50 anos</strong>"
+    },
+    {
+     "t": "p",
+     "html": "Ao considerar as estatísticas, fica evidente que a frequência de diagnóstico aumenta significativamente em homens acima de 50 anos."
+    },
+    {
+     "t": "p",
+     "html": "Este dado destaca a importância da conscientização e do incentivo à busca regular por exames, especialmente considerando que a maioria dos casos diagnosticados ocorre em estágios avançados devido à falta de rastreamento."
+    },
+    {
+     "t": "p",
+     "html": "Vale ressaltar que muitos casos da doença não apresentam sintomas em estágios iniciais, tornando a busca proativa por exames preventivos, como o ultrassom, uma medida essencial para a saúde masculina."
+    },
+    {
+     "t": "p",
+     "html": "Ao iniciar os exames a partir dessa faixa etária, os homens aumentam significativamente as chances de identificar precocemente possíveis anomalias, possibilitando um tratamento mais eficaz e, consequentemente, contribuindo para melhores resultados em termos de prognóstico e qualidade de vida."
+    },
+    {
+     "t": "p",
+     "html": "Contudo, é importante reforçar que a prevenção é um investimento valioso na saúde a longo prazo."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Ultrassom da próstata no Recanto das Emas</strong>"
+    },
+    {
+     "t": "p",
+     "html": "Para cuidar da saúde do homem, a Examine Agora realiza exames de ultrassonografia específicos para o aparelho reprodutor masculino. Com uma década de experiência, a Examine Agora oferece uma estrutura confortável e atendimento humanizado para entregar, além de um diagnóstico preciso, a experiência do bem-estar. A Examine Agora está pronta para atender suas necessidades, oferecendo um diagnóstico rápido e seguro."
+    },
+    {
+     "t": "p",
+     "html": "(RT: Flávio H. A. Chaves – Radiologia e Diagnóstico por Imagem | CRM-DF: 19506; RQE: 11288)⠀"
+    }
+   ]
+  },
+  {
+   "slug": "importancia-do-exame-de-ultrassonografia-vascular-com-doppler-colorido",
+   "titulo": "A importância do exame de ultrassonografia vascular com Doppler colorido",
+   "data": "2023-08-25",
+   "atualizado": "2023-08-25",
+   "tema": "doppler",
+   "min": 2,
+   "lead": "A ultrassonografia vascular com Doppler colorido é uma ferramenta diagnóstica valiosa que oferece insights cruciais sobre a saúde e o funcionamento dos vasos sanguíneos em todo o corpo.",
+   "seo": {
+    "title": "A importância do exame de ultrassonografia vascular com Doppler colorido | Examine Agora",
+    "description": "A ultrassonografia vascular com Doppler colorido é uma ferramenta diagnóstica valiosa que oferece insights cruciais sobre a saúde e o funcionamento dos…",
+    "waMsg": "Olá! Li o artigo \"A importância do exame de ultrassonografia vascular com…\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "A ultrassonografia vascular com <a href=\"/doppler-vascular-brasilia\">Doppler</a> colorido é uma ferramenta diagnóstica valiosa que oferece insights cruciais sobre a saúde e o funcionamento dos vasos sanguíneos em todo o corpo."
+    },
+    {
+     "t": "p",
+     "html": "Essa técnica não invasiva permite a visualização em tempo real do fluxo sanguíneo, fornecendo informações fundamentais para a detecção precoce de condições vasculares e a prevenção de problemas cardíacos graves."
+    },
+    {
+     "t": "p",
+     "html": "Além disso, é uma modalidade de imagem médica que combina a ultrassonografia tradicional com a técnica Doppler, que avalia a direção e a velocidade do fluxo sanguíneo."
+    },
+    {
+     "t": "p",
+     "html": "Ou seja, ao utilizar cores para mapear o fluxo sanguíneo, é possível observar áreas de fluxo normal e anormal, além de identificar possíveis obstruções, estreitamentos e coágulos nos vasos sanguíneos."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Detecção Precoce de Doenças Vasculares</strong>"
+    },
+    {
+     "t": "p",
+     "html": "Um dos principais benefícios da ultrassonografia vascular com Doppler colorido é a detecção precoce de <a href=\"/ultrassom-das-articulacoes\">doenças vasculares</a>, como aterosclerose, aneurismas e trombose venosa profunda."
+    },
+    {
+     "t": "p",
+     "html": "Essas condições podem ser silenciosas em seus estágios iniciais, mas representam riscos significativos para a saúde cardiovascular."
+    },
+    {
+     "t": "p",
+     "html": "Logo, o exame permite que os médicos identifiquem problemas em estágios iniciais, antes que se tornem mais graves e potencialmente fatais."
+    },
+    {
+     "t": "p",
+     "html": "A ultrassonografia também é valiosa para avaliar o fluxo sanguíneo em áreas específicas do corpo, pois pode ajudar a identificar fluxos sanguíneos turbulentos, estreitamentos nos vasos (estenoses) e áreas onde o fluxo está prejudicado."
+    },
+    {
+     "t": "p",
+     "html": "Portanto, essas informações são vitais para a tomada de decisões médicas precisas, permitindo que os profissionais de saúde determinem se intervenções como angioplastia ou cirurgia vascular são necessárias."
+    },
+    {
+     "t": "p",
+     "html": "Além do diagnóstico inicial, a ultrassonografia vascular com Doppler colorido é usada para monitorar a eficácia dos <a href=\"/doppler-vascular-brasilia\">tratamentos</a>. Os médicos podem avaliar se as intervenções estão melhorando o fluxo sanguíneo, se as obstruções estão diminuindo e se os vasos estão se recuperando adequadamente."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Ultrassom vascular com Doppler colorido no Recanto das Emas</strong>"
+    },
+    {
+     "t": "p",
+     "html": "A Examine Agora Imagem e Medicina atua desde 2012 na área de diagnóstico por imagem em parceria com grandes clínicas e grupos hospitalares de Brasília."
+    },
+    {
+     "t": "p",
+     "html": "A clínica oferece uma estrutura agradável e atendimento humanizado para entregar, além de um diagnóstico preciso, a experiência do bem-estar."
+    },
+    {
+     "t": "p",
+     "html": "Realize seu exame de Ultrassom vascular com Doppler colorido na Exame Agora, localizada na Avenida Recanto das Emas."
+    },
+    {
+     "t": "p",
+     "html": "Agende já o seu exame com a Examine Agora:⠀"
+    },
+    {
+     "t": "p",
+     "html": "(61) 3208-6814 (WhatsApp)⠀"
+    },
+    {
+     "t": "p",
+     "html": "(RT: Flávio H. A. Chaves – Radiologia e Diagnóstico por Imagem | CRM-DF: 19506; RQE: 11288)⠀"
+    }
+   ]
+  },
+  {
+   "slug": "quando-realizar-ultrassom-transvaginal",
+   "titulo": "A importância do ultrassom transvaginal para a saúde da mulher",
+   "data": "2023-05-04",
+   "atualizado": "2023-05-04",
+   "tema": "mulher",
+   "min": 3,
+   "lead": "Fazer exames preventivos é a melhor maneira de cuidar da sua saúde e diagnosticar precocemente possíveis problemas.",
+   "seo": {
+    "title": "A importância do ultrassom transvaginal para a saúde da mulher | Examine Agora",
+    "description": "Fazer exames preventivos é a melhor maneira de cuidar da sua saúde e diagnosticar precocemente possíveis problemas.",
+    "waMsg": "Olá! Li o artigo \"A importância do ultrassom transvaginal para a saúde da…\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "Fazer exames preventivos é a melhor maneira de cuidar da sua saúde e diagnosticar precocemente possíveis problemas."
+    },
+    {
+     "t": "p",
+     "html": "O ultrassom transvaginal é um exame de rotina, normalmente solicitado pelos ginecologistas para avaliar a estrutura pélvica e o estado dos órgãos reprodutores femininos. Com o exame, é possível diagnosticar problemas na região pélvica, determinar uma gravidez ectópica, acompanhar uma gestação e, até mesmo, diagnosticar o câncer."
+    },
+    {
+     "t": "p",
+     "html": "Também chamado de ultrassom endovaginal, o exame é considerado não invasivo, visto que emite ondas sonoras (e não radiação) para gerar as imagens que serão avaliadas pelo médico."
+    },
+    {
+     "t": "p",
+     "html": "As imagens do ultrassom transvaginal são obtidas em tempo real, o que ajuda a guiar o médico que estiver executando o procedimento."
+    },
+    {
+     "t": "p",
+     "html": "Em geral, o ultrassom transvaginal é utilizado para identificar cistos, irregularidades em gestação, bem como para afastar dúvidas que possam surgir em demais exames ou até mesmo na análise clínica."
+    },
+    {
+     "t": "p",
+     "html": "Desta forma, o ultrassom transvaginal auxilia o médico na confirmação de diagnósticos, acompanhamento de condições pré-existentes e até mesmo confirmação de gravidez."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Quando o </strong><strong>ultrassom transvaginal</strong><strong> costuma ser indicado?</strong>"
+    },
+    {
+     "t": "p",
+     "html": "Existem muitas razões pelas quais o ultrassom transvaginal pode ser necessário, incluindo:"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "Sangramento anormal, sem causa aparente",
+      "Achados anormais identificados no exame físico, como aumento do volume do útero ou alteração na palpação dos ovários",
+      "Gravidez ectópica, que ocorre quando o feto se implanta fora do útero, geralmente nas trompas de falópio",
+      "Dor pélvica crônica",
+      "Irregularidade do ciclo menstrual",
+      "Cistos ovarianos",
+      "Verificar se o DIU está colocado corretamente",
+      "Suspeita de gravidez ectópica",
+      "Miomas uterinos",
+      "Adenomiose",
+      "Endometriose",
+      "Suspeita de infertilidade"
+     ]
+    },
+    {
+     "t": "h3",
+     "html": "<strong>A importância do </strong><strong>ultrassom transvaginal</strong><strong> durante a gestação</strong>"
+    },
+    {
+     "t": "p",
+     "html": "O ultrassom transvaginal é muito importante para detectar complicações presentes no canal vaginal das mulheres e para acompanhar a gestação."
+    },
+    {
+     "t": "p",
+     "html": "Durante a gravidez, o exame pode identificar sinais de aborto, acompanhar os batimentos cardíacos do feto, examinar a saúde da placenta e identificar irregularidades na vagina."
+    },
+    {
+     "t": "p",
+     "html": "O primeiro ultrassom transvaginal na gravidez é importante para confirmar a viabilidade da gestação, além de verificar se há realmente um embrião, uma vez que existem casos de gestação anembrionada."
+    },
+    {
+     "t": "p",
+     "html": "O exame ainda permite verificar se o embrião foi implantado no local correto, uma vez que existem casos de gestações ectópicas, que ocorrem quando o embrião se fixa na parede da trompa de Falópio, inviabilizando o progresso da gestação."
+    },
+    {
+     "t": "p",
+     "html": "Durante o exame, o médico realiza a medição do colo do útero e avalia o período gestacional baseado no atraso menstrual e no comprimento crânio-nádegas do embrião. Por meio desses cálculos comparativos, é possível estimar a data provável do parto."
+    },
+    {
+     "t": "p",
+     "html": "Quando o ultrassom transvaginal na gravidez é realizado em uma idade gestacional mais avançada, pode ser possível ouvir os batimentos cardíacos embrionários, causando grande emoção à gestante."
+    },
+    {
+     "t": "p",
+     "html": "Confira alguns tipos de ultrassom transvaginal para gestantes:"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "Ultrassom transvaginal obstétrico",
+      "Ultrassom transvaginal obstétrico gemelar",
+      "Ultrassom transvaginal obstétrico trigemelar",
+      "Ultrassom transvaginal obstétrico para avaliação do colo uterino"
+     ]
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Ultrassom transvaginal </strong><strong>no Recanto das Emas </strong>"
+    },
+    {
+     "t": "p",
+     "html": "A Examine Agora Imagem e Medicina atua desde 2012 na área de diagnóstico por imagem em parceria com grandes clínicas e grupos hospitalares de Brasília."
+    },
+    {
+     "t": "p",
+     "html": "A clínica oferece uma estrutura agradável e atendimento humanizado para entregar, além de um diagnóstico preciso, a experiência do bem-estar."
+    },
+    {
+     "t": "p",
+     "html": "Realize seu exame de ultrassom transvaginal na Exame Agora, localizada na Avenida Recanto das Emas."
+    },
+    {
+     "t": "p",
+     "html": "Agende já o seu exame com a Examine Agora:⠀"
+    },
+    {
+     "t": "p",
+     "html": "(61) 3208-6814 (WhatsApp)⠀"
+    },
+    {
+     "t": "p",
+     "html": "(RT: Flávio H. A. Chaves - Radiologia e Diagnóstico por Imagem | CRM-DF: 19506; RQE: 11288)⠀"
+    }
+   ]
+  },
+  {
+   "slug": "o-que-e-o-ultrassom-morfologico",
+   "titulo": "Conheça a importância do ultrassom morfológico na gravidez",
+   "data": "2023-01-26",
+   "atualizado": "2023-01-26",
+   "tema": "morfologico",
+   "min": 1,
+   "lead": "Muito além de descobrir o sexo do bebê, o ultrassom morfológico é um exame realizado para observar as estruturas anatômicas e analisar os órgãos internos do corpo humano, como o fígado, os…",
+   "seo": {
+    "title": "Conheça a importância do ultrassom morfológico na gravidez | Examine Agora",
+    "description": "Muito além de descobrir o sexo do bebê, o ultrassom morfológico é um exame realizado para observar as estruturas anatômicas e analisar os órgãos internos…",
+    "waMsg": "Olá! Li o artigo \"Conheça a importância do ultrassom morfológico na gravidez\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "Muito além de descobrir o sexo do bebê, o ultrassom morfológico é um exame realizado para observar as estruturas anatômicas e analisar os órgãos internos do corpo humano, como o fígado, os rins, a vesícula biliar, o baço, a tireoide, entre outros. O procedimento também serve para monitorar o desenvolvimento dos bebês durante a gestação."
+    },
+    {
+     "t": "p",
+     "html": "Com isso, o ultrassom morfológico também ajuda na investigação da presença de doenças congênitas nos bebês, pois ele analisa diversas partes do feto, como cabeça e cérebro, braços, pernas, coluna vertebral, coração, estômago, e várias outras."
+    },
+    {
+     "t": "p",
+     "html": "Outras análises feitas para o exame incluem as síndromes cromossômicas e as malformações no feto. Por isso, esse procedimento é realizado com bastante frequência durante o período gestacional, podendo ser feito também fora dele."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Como é feito o </strong><strong>ultrassom morfológico</strong><strong>?</strong>"
+    },
+    {
+     "t": "p",
+     "html": "O paciente deita-se em uma maca, com a barriga para cima, e o médico aplica um gel no local, para facilitar a passagem do equipamento, que emite ondas sonoras de alta frequência. Essas ondas são direcionadas para o organismo e refletidas de volta para o equipamento."
+    },
+    {
+     "t": "p",
+     "html": "Isso ajuda na interpretação das ondas, além de gerar imagens tridimensionais para o médico. Trata-se de um exame seguro, não invasivo, feito de forma rápida, em que os resultados são obtidos na mesma hora."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Ultrassom morfológico</strong><strong> no Recanto das Emas</strong>"
+    },
+    {
+     "t": "p",
+     "html": "A Examine Agora Imagem e Medicina atua desde 2012 na área de diagnóstico por imagem em parceria com grandes clínicas e grupos hospitalares de Brasília."
+    },
+    {
+     "t": "p",
+     "html": "A clínica oferece uma estrutura agradável e atendimento humanizado para entregar, além de um diagnóstico preciso, a experiência do bem-estar."
+    },
+    {
+     "t": "p",
+     "html": "Realize seu exame de ultrassom morfológico na Exame Agora, localizada na Avenida Recanto das Emas."
+    }
+   ]
+  },
+  {
+   "slug": "ultrassom-das-articulacoes",
+   "titulo": "O que você precisa saber sobre o ultrassom das articulações",
+   "data": "2022-11-17",
+   "atualizado": "2022-11-17",
+   "tema": "musculo",
+   "min": 3,
+   "lead": "O ultrassom das articulações é realizado para diagnosticar alterações das articulações e dos músculos a elas relacionados.",
+   "seo": {
+    "title": "O que você precisa saber sobre o ultrassom das articulações | Examine Agora",
+    "description": "O ultrassom das articulações é realizado para diagnosticar alterações das articulações e dos músculos a elas relacionados.",
+    "waMsg": "Olá! Li o artigo \"O que você precisa saber sobre o ultrassom das articulações\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "O ultrassom das articulações é realizado para diagnosticar alterações das articulações e dos músculos a elas relacionados."
+    },
+    {
+     "t": "p",
+     "html": "O exame de imagem pode ser importante no diagnóstico de problemas tanto para as grandes articulações, como joelhos, cotovelos, ombros e quadris, quanto para as pequenas articulações, como as dos punhos e dedos das mãos e dos pés."
+    },
+    {
+     "t": "p",
+     "html": "O ultrassom apresenta algumas vantagens em relação a outras técnicas de imagem como: a ausência de exposição à radiação ionizante, relativo baixo custo, capacidade de formar imagens em diferentes planos e quantificação de anormalidades em articulações e tecidos moles."
+    },
+    {
+     "t": "p",
+     "html": "Por meio do exame de ultrassom das articulações é possível detectar inflamações articulares que não são diagnosticadas durante o exame clínico, principalmente nas pequenas articulações de mãos e pés, que são mais acometidas por doenças como artrite reumatoide."
+    },
+    {
+     "t": "p",
+     "html": "Também é possível ter um diagnóstico preciso e precoce das alterações inflamatórias e do dano articular, monitorando a doença e proporcionando um tratamento mais eficiente."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Conheça alguns tipos de ultrassom das articulações</strong>"
+    },
+    {
+     "t": "p",
+     "html": "De acordo com a Sociedade Brasileira de Reumatologia (SBR), o ultrassom das articulações é importante para a avaliação de erosões ósseas, o que representa uma vantagem em relação à radiografia convencional."
+    },
+    {
+     "t": "p",
+     "html": "Além de alterações ósseas, a avaliação do dano da cartilagem articular é outro benefício trazido pelo ultrassom, quando comparado a outros exames de imagem, com a visualização direta da cartilagem."
+    },
+    {
+     "t": "p",
+     "html": "Conheça algumas modalidades do ultrassom das articulações:"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "Ultrassom das articulações dos ombros;",
+      "Ultrassom das articulações dos tornozelos;",
+      "Ultrassom das articulações dos joelhos;",
+      "Ultrassom das articulações dos punhos;",
+      "Ultrassom das articulações dos pés;",
+      "Ultrassom das articulações dos cotovelos;",
+      "Ultrassom das articulações das mãos e dedos;",
+      "Ultrassom das articulações dos quadris;",
+      "Ultrassom das articulações das pernas (panturrilha);",
+      "Ultrassom das articulações das coxas;",
+      "Ultrassom das articulações dos antebraços;",
+      "Ultrassom das articulações dos braços."
+     ]
+    },
+    {
+     "t": "p",
+     "html": "O exame de ultrassom das articulações é indicado para detectar doenças como: tendinite, tenossinovite, ruptura parcial, total, nódulos, cistos, abcessos, câncer, etc."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Como o paciente deve se preparar para realizar o</strong><strong> ultrassom das articulações?</strong>"
+    },
+    {
+     "t": "p",
+     "html": "O ultrassom das articulações é um procedimento bastante simples."
+    },
+    {
+     "t": "p",
+     "html": "No dia do exame, sugere-se o uso de roupas confortáveis ​​e folgadas, pois há a possibilidade de precisar remover roupas e acessórios da área a ser examinada."
+    },
+    {
+     "t": "p",
+     "html": "Para que o exame proporcione o resultado esperado, é importante manter-se imóvel, pois o ultrassom é muito sensível ao movimento."
+    },
+    {
+     "t": "p",
+     "html": "Além desses cuidados, nenhum outro preparo é necessário. O paciente deve somente levar os exames anteriores, caso tenha, para comparação no momento da realização do novo ultrassom das articulações."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Ultrassom das articulações no Recanto das Emas</strong>"
+    },
+    {
+     "t": "p",
+     "html": "A Examine Agora Imagem e Medicina atua desde 2012 na área de diagnóstico por imagem em parceria com grandes clínicas e grupos hospitalares de Brasília."
+    },
+    {
+     "t": "p",
+     "html": "A clínica oferece uma estrutura agradável e atendimento humanizado para entregar, além de um diagnóstico preciso, a experiência do bem-estar."
+    },
+    {
+     "t": "p",
+     "html": "Realize seu exame de ultrassom das articulações na Exame Agora, localizada na Avenida Recanto das Emas."
+    },
+    {
+     "t": "p",
+     "html": "Agende seu exame:(61) 3208-6814 (WhatsApp)"
+    },
+    {
+     "t": "p",
+     "html": "(RT: Flávio H. A. Chaves - Radiologia e Diagnóstico por Imagem|CRM-DF: 19506; RQE: 11288)"
+    }
+   ]
+  },
+  {
+   "slug": "ultrassom-de-tireoide-diagnostico",
+   "titulo": "Ultrassom de tireoide: qual o papel do exame no diagnóstico?",
+   "data": "2022-08-16",
+   "atualizado": "2022-08-16",
+   "tema": "tireoide",
+   "min": 2,
+   "lead": "Em uma pesquisa publicada na Science Alert, foi constatado que 1,6 bilhão de pessoas no mundo podem ter algum distúrbio de tireoide, sendo que uma a cada oito mulheres desenvolverá o…",
+   "seo": {
+    "title": "Ultrassom de tireoide: qual o papel do exame no diagnóstico? | Examine Agora",
+    "description": "Em uma pesquisa publicada na Science Alert, foi constatado que 1,6 bilhão de pessoas no mundo podem ter algum distúrbio de tireoide, sendo que uma a cada…",
+    "waMsg": "Olá! Li o artigo \"Ultrassom de tireoide: qual o papel do exame no diagnóstico?\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "Em uma <a href=\"https://scialert.net/fulltext/?doi=jms.2002.89.94&amp;org=11\" target=\"_blank\" rel=\"noopener\">pesquisa</a> publicada na <em>Science Alert</em>, foi constatado que 1,6 bilhão de pessoas no mundo podem ter algum distúrbio de tireoide, sendo que uma a cada oito mulheres desenvolverá o problema durante a vida."
+    },
+    {
+     "t": "p",
+     "html": "A tireóide fica localizada logo abaixo do chamado “pomo de adão”, na parte frontal do pescoço. Através da produção dos hormônios T3 (triiodotironina) e T4 (tiroxina), a glândula controla todo o metabolismo do corpo, regulando o gasto energético e a temperatura corporal, atuando nas funções do fígado, rins, coração e cérebro e interferindo diretamente no crescimento e desenvolvimento de crianças, peso, humor, memória, ciclo menstrual e fertilidade."
+    },
+    {
+     "t": "p",
+     "html": "Tanto o excesso quanto a falta desses hormônios causam problemas ao organismo, por isso alterações na tireoide precisam ser tratadas o quanto antes."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Principais doenças na tireoide</strong>"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "<strong>Hipertireoidismo:</strong> aumento na produção dos hormônios T3 e T4, condição que provoca perda de peso, aumento dos batimentos cardíacos, ansiedade e insônia.",
+      "<strong>Hipotiroidismo:</strong> diminuição na produção dos hormônios T3 e T4, condição que causa aumento de peso, cansaço, fraqueza e impotência sexual.",
+      "<strong>Doença de graves: </strong>tipo de hipertireoidismo causado por condições autoimunes. Além dos sintomas já citados, o paciente também pode apresentar olhos salientes e a formação de placas endurecidas e avermelhadas sob a pele.",
+      "<strong>Bócio:</strong> aumento visível do tamanho da tireoide, o que provoca dificuldade para engolir e respirar e sensação de aperto na garganta.",
+      "<strong>Nódulos e cistos: </strong>em geral, são benignos e desaparecem naturalmente. Podem ser descobertos através do toque ou não.",
+      "<strong>Tumores: </strong>formados pelo crescimento de tecido anormal, os tumores podem ser benignos ou malignos. No segundo caso, quando o câncer é diagnosticado, é necessário realizar a retirada da tireoide."
+     ]
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Ultrassom de tireoide: como funciona o exame?</strong>"
+    },
+    {
+     "t": "p",
+     "html": "O ultrassom da tireoide é o exame de imagem que pode ajudar a diagnosticar anomalias na glândula. Este tipo de ultrassom serve para detectar lesões focais (nódulos) e permite a avaliação de linfonodos (gânglios) e glândulas salivares."
+    },
+    {
+     "t": "p",
+     "html": "Deitado na maca, o paciente permanece estático enquanto o responsável pelo exame desliza o transdutor pela garganta com a ajuda de um gel. O transdutor é um aparelho que emite ondas sonoras de alta frequência que geram imagens bidimensionais dos órgãos, sem causar nenhum tipo de efeito colateral."
+    },
+    {
+     "t": "p",
+     "html": "Não é necessário nenhum tipo de preparo para esse exame."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Ultrassom de tireoide no Recanto das Emas, em Brasília</strong>"
+    },
+    {
+     "t": "p",
+     "html": "Com 8 anos de experiência, a <a href=\"/\">Examine Agora – Imagem e Medicina</a> atua na área de diagnóstico por imagem em parceria com grandes clínicas e grupos hospitalares de Brasília."
+    },
+    {
+     "t": "p",
+     "html": "Localizada no Recanto das Emas, a clínica oferece diversos tipos de exames de ultrassom, com atendimento para pacientes de muitos <a href=\"/convenios\">convênios</a> médicos."
+    },
+    {
+     "t": "p",
+     "html": "Agende seu exame através do telefone (61) 3208-6814 (WhatsApp)."
+    },
+    {
+     "t": "p",
+     "html": "(RT: Flávio H. A. Chaves – Radiologia e Diagnóstico por Imagem | CRM-DF: 19506; RQE: 11288)⠀"
+    }
+   ]
+  },
+  {
+   "slug": "quando-realizar-ultrassonografia-do-aparelho-reprodutor-masculino",
+   "titulo": "Quando o exame de ultrassonografia para o aparelho reprodutor masculino é indicado?",
+   "data": "2022-05-27",
+   "atualizado": "2022-05-27",
+   "tema": "homem",
+   "min": 2,
+   "lead": "O exame de ultrassonografia é indicado para análises e diagnósticos que evitam complicações, descartam suspeitas ou as confirmam, permitindo que médico realize a indicação do tratamento…",
+   "seo": {
+    "title": "Quando o exame de ultrassonografia para o aparelho reprodutor masculino é indicado? | Examine Agora",
+    "description": "O exame de ultrassonografia é indicado para análises e diagnósticos que evitam complicações, descartam suspeitas ou as confirmam, permitindo que médico…",
+    "waMsg": "Olá! Li o artigo \"Quando o exame de ultrassonografia para o aparelho…\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "O exame de ultrassonografia é indicado para análises e diagnósticos que evitam complicações, descartam suspeitas ou as confirmam, permitindo que médico realize a indicação do tratamento mais adequado."
+    },
+    {
+     "t": "p",
+     "html": "Uma das vantagens da ultrassonografia é a ausência de emissão de radiação, não haver necessidade de contraste, além de ser um exame prático e simples."
+    },
+    {
+     "t": "p",
+     "html": "Existem muitos tipos de ultrassonografias, dentre eles, alguns específicos para avaliar a saúde do homem e do aparelho reprodutor."
+    },
+    {
+     "t": "p",
+     "html": "A ultrassonografia é um recurso eficaz para avaliar, por exemplo, quadros de infertilidade, tanto feminina quanto masculina."
+    },
+    {
+     "t": "p",
+     "html": "Além disso, o exame de ultrassonografia da próstata, órgão que faz parte do aparelho reprodutor masculino, é indicado para avaliar e calcular o tamanho da próstata, verificando a ecoestrutura e seus contornos para identificar possíveis alterações. Esse tipo de ultrassonografia permite também a identificação do câncer em seu estágio inicial."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Conheça alguns tipos de </strong><strong>ultrassonografia</strong><strong> do aparelho reprodutor masculino</strong>"
+    },
+    {
+     "t": "p",
+     "html": "Os exames de ultrassonografia usam ondas sonoras para produzir imagens do interior do corpo. Dessa forma, auxiliam no diagnóstico de causas como dor, inchaço e infecção nos órgãos internos do corpo, por exemplo."
+    },
+    {
+     "t": "p",
+     "html": "Entre os tipos de ultrassonografia indicada para avaliar o sistema reprodutor masculino, estão:"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "Ultrassom da bolsa escrotal e testículos - importante para a investigação de causas do aumento da bolsa escrotal; câncer testicular; hematomas; hidroceles; cistos ou tumores do epidídimo; causas de infertilidade, lesões provocadas por traumas na bolsa escrotal;",
+      "Ultrassom da próstata via transretal - podem ser observadas imagens da próstata, vesículas seminais e pavimento da bexiga;",
+      "Ultrassom da próstata via abdominal - a avaliação é realizada por abordagem pélvica, semelhante à ecografia pélvica e vesical, quando a sonda é colocada na região abdominal."
+     ]
+    },
+    {
+     "t": "p",
+     "html": "É importante ressaltar que o exame de ultrassonografia da próstata é considerado um método de diagnóstico simples e seguro, além de não exigir um preparo específico."
+    },
+    {
+     "t": "p",
+     "html": "A ultrassonografia da próstata é indicada para os homens que apresentam alterações no valor de PSA, especialmente quando há suspeita de tumores. Ela auxilia o médico no diagnóstico de diversas doenças da próstata."
+    },
+    {
+     "t": "h3",
+     "html": "<strong>Ultrassonografia</strong><strong> do aparelho reprodutor masculino no Recanto das Emas</strong>"
+    },
+    {
+     "t": "p",
+     "html": "Para cuidar da saúde do homem, a <a href=\"/\">Examine Agora</a> realiza exames de ultrassonografia específicos para o aparelho reprodutor masculino."
+    },
+    {
+     "t": "p",
+     "html": "Com uma década de experiência, Examine Agora Imagem e Medicina oferece uma estrutura confortável e atendimento humanizado para entregar, além de um diagnóstico preciso, a experiência do bem-estar."
+    },
+    {
+     "t": "p",
+     "html": "A Examine Agora está pronta para atender suas necessidades, oferecendo um diagnóstico rápido e seguro."
+    },
+    {
+     "t": "p",
+     "html": "Agende seu exame:⠀⠀"
+    },
+    {
+     "t": "p",
+     "html": "(61) 3208-6814 (WhatsApp)⠀"
+    },
+    {
+     "t": "p",
+     "html": "(RT: Flávio H. A. Chaves - Radiologia e Diagnóstico por Imagem | CRM-DF: 19506; RQE: 11288)⠀"
+    }
+   ]
+  },
+  {
+   "slug": "ultrassom-abdominal-no-diagnostico-de-doencas",
+   "titulo": "Saiba como o Ultrassom abdominal pode ajudar no diagnóstico de diversos problemas",
+   "data": "2022-04-08",
+   "atualizado": "2022-04-08",
+   "tema": "abdominal",
+   "min": 3,
+   "lead": "O ultrassom abdominal é um exame de imagem muito confiável utilizado na avaliação periódica da saúde.",
+   "seo": {
+    "title": "Saiba como o Ultrassom abdominal pode ajudar no diagnóstico de diversos problemas | Examine Agora",
+    "description": "O ultrassom abdominal é um exame de imagem muito confiável utilizado na avaliação periódica da saúde.",
+    "waMsg": "Olá! Li o artigo \"Saiba como o Ultrassom abdominal pode ajudar no diagnóstico…\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "O <a href=\"/ultrassom-abdominal-brasilia\">ultrassom abdominal</a> é um exame de imagem muito confiável utilizado na avaliação periódica da saúde."
+    },
+    {
+     "t": "p",
+     "html": "O exame não utiliza radiação ionizante e adquire as imagens em tempo real. Através de ondas sonoras de alta frequência, ele permite visualizar alterações nos órgãos internos localizados na região do abdômen como a vesícula, as vias biliares, o pâncreas e o retroperitônio."
+    },
+    {
+     "t": "p",
+     "html": "Existem alguns tipos de ultrassom abdominal:"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "O ultrassom abdominal superior avalia os órgãos localizados na parte superior do abdômen, desde a região do tórax. O exame consegue visualizar o fígado, vesícula, baço, rins e pâncreas, mas também há usos para visualizar a veia cava inferior e a artéria aorta.",
+      "No ultrassom abdominal inferior o foco da avaliação serão os órgãos internos relacionados aos tratos urinários e reprodutivos. No homem, o exame visualiza a bexiga, as vesículas seminais e a próstata. Já na mulher, se estiver grávida,monitora o desenvolvimento do bebê e a saúde da gestação. Em mulheres não grávidas, o exame investiga o útero, ovários e trompas uterinas.",
+      "O ultrassom abdominal total além de visualizar o fígado, permite análise das vias biliares, vesícula biliar, pâncreas, baço, rins, retroperitônio e grandes vasos abdominais, vias urinárias e bexiga.",
+      "Já o ultrassom abdominal da parede abdominal analisa músculos retos abdominais, musculatura larga do abdômen, bem como presença de hérnias da parede abdominal."
+     ]
+    },
+    {
+     "t": "h3",
+     "html": "Quando o Ultrassom Abdominal deve ser solicitado?"
+    },
+    {
+     "t": "p",
+     "html": "Esse tipo de exame de imagem é muito importante para identificar a presença de alterações, cistos, nódulos, lesões e tumores nessa região do corpo. O ultrassom abdominal pode tanto ser solicitado pelo médico em consultas de check-up ou quando o paciente apresentar dores abdominais, que podem ser o indício de alterações nos rins e fígado, por exemplo."
+    },
+    {
+     "t": "p",
+     "html": "Com o auxílio do exame de ultrassom abdominal é possível realizar diagnóstico de doenças como:"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "Endometriose, cistos, miomas e tumores de útero e ovário;",
+      "Síndromes, doenças e malformações fetais durante a gestação;",
+      "Cistos e tumores na bexiga;",
+      "Cálculos nos rins e na vesícula;",
+      "Inflamações graves em órgãos, como a apendicite;",
+      "Câncer e outras doenças de próstata;",
+      "Bloqueios e alterações circulatórias em vias, veias e artérias;",
+      "Lesões e inflamações em tecidos dos órgãos abdominais;",
+      "Alterações importantes no tamanho e volume de órgãos;",
+      "Massas e tumores no peritônio;",
+      "Acúmulo de líquido e/ou secreção em locais incomuns."
+     ]
+    },
+    {
+     "t": "h3",
+     "html": "Como deve ser feito o preparo para realizar o Ultrassom Abdominal?"
+    },
+    {
+     "t": "p",
+     "html": "Realizar o preparo para a realização do exame de ultrassom abdominal é indispensável, uma vez que ele pode interferir muito na visualização dos órgãos avaliados."
+    },
+    {
+     "t": "p",
+     "html": "Por isso, é orientado que se evite consumo de bebidas alcoólicas, frituras e alimentos que produzam gases na véspera do exame (refrigerantes, laticínios, feijão, repolho). É preciso fazer um jejum absoluto de pelo menos 8h no dia do exame, sendo a última refeição leve."
+    },
+    {
+     "t": "p",
+     "html": "O paciente deve ingerir 60 gotas de antigases duas horas antes do exame, sem tomar muita água junto, para reduzir os gases intestinais e facilitar a visualização do exame. Reter a urina por 2 horas antes do exame facilita a visualização também, mas não é um impeditivo. Por fim, não se deve fumar antes do exame!"
+    },
+    {
+     "t": "h3",
+     "html": "Ultrassom abdominal no Recanto das Emas, em Brasília"
+    },
+    {
+     "t": "p",
+     "html": "Com 8 anos de experiência, a <a href=\"/\">Examine Agora - Imagem e Medicina</a>, atua na área de diagnóstico por imagem em parceria com grandes clínicas e grupos hospitalares de Brasília."
+    },
+    {
+     "t": "p",
+     "html": "Localizada no Recanto das Emas, a clínica oferece diversos tipos de exames de ultrassom abdominal, com atendimento para pacientes de muitos <a href=\"/convenios\">convênios</a> médicos."
+    },
+    {
+     "t": "p",
+     "html": "Agende seu exame através do telefone (61) 3208-6814 (WhatsApp)."
+    }
+   ]
+  },
+  {
+   "slug": "tudo-no-seu-tempo",
+   "titulo": "Tudo no seu tempo",
+   "data": "2021-12-17",
+   "atualizado": "2021-12-17",
+   "tema": "sobre",
+   "min": 1,
+   "lead": "É verdade. Tudo tem o seu tempo. Agora...",
+   "seo": {
+    "title": "Tudo no seu tempo | Examine Agora",
+    "description": "É verdade. Tudo tem o seu tempo. Agora...",
+    "waMsg": "Olá! Li o artigo \"Tudo no seu tempo\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "É verdade. Tudo tem o seu <strong>tempo</strong>. Agora..."
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de saudar a família Examine Agora;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de dizer muito obrigado aos nossos pacientes por acreditarem no nosso trabalho e confiarem suas vidas aos nossos profissionais;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de parabenizar toda a nossa equipe pelo comprometimento, profissionalismo, zelo e carinho de todos os dias;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de agradecer aos nossos fornecedores e parceiros por estarem conosco nessa missão tão nobre;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de homenagear a comunidade da qual fazemos parte e nos acolhe tão bem;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de lamentar as mortes ainda provocadas pela Covid-19 e prestar solidariedade aos familiares que convivem com o luto;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de oferecer apoio e solidariedade aos que vivenciam os impactos psicológicos e financeiros provocados pela maior crise sanitária mundial;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de manter os cuidados impostos pela pandemia, em respeito às vidas de todos os que estão ao nosso lado e em respeito às nossas próprias vidas;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de repensar os sentimentos, de reavaliar as palavras e atitudes;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de ressignificar as necessidades e as prioridades;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de dar adeus a 2021, mas sem esquecer dos ensinamentos que ele nos possibilitou diante das dificuldades, dos erros e das vitórias;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de renovar as esperanças;"
+    },
+    {
+     "t": "p",
+     "html": "É <strong>tempo</strong> de dar boas-vindas a 2022 e acreditar que os próximos 365 dias serão ainda melhores!"
+    },
+    {
+     "t": "p",
+     "html": "Um Feliz Natal e um Ano Novo de Paz para todos!"
+    },
+    {
+     "t": "p",
+     "html": "São os sinceros votos da Família Examine Agora."
+    }
+   ]
+  },
+  {
+   "slug": "ultrassonografia-ajudar-rastreio-pre-eclampsia",
+   "titulo": "Ultrassonografia pode ajudar no rastreio da pré-eclâmpsia",
+   "data": "2021-01-26",
+   "atualizado": "2021-01-26",
+   "tema": "morfologico",
+   "min": 2,
+   "lead": "Aproximadamente 76 mil mulheres e 500 mil bebês morrem no mundo, todos os anos, por causa da pré-eclâmpsia. A ultrassonografia pode ajudar no rastreio da pré-eclâmpsia — um dos problemas…",
+   "seo": {
+    "title": "Ultrassonografia pode ajudar no rastreio da pré-eclâmpsia | Examine Agora",
+    "description": "Aproximadamente 76 mil mulheres e 500 mil bebês morrem no mundo, todos os anos, por causa da pré-eclâmpsia. A ultrassonografia pode ajudar no rastreio da…",
+    "waMsg": "Olá! Li o artigo \"Ultrassonografia pode ajudar no rastreio da pré-eclâmpsia\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "Aproximadamente 76 mil mulheres e 500 mil bebês morrem no mundo, todos os anos, por causa da pré-eclâmpsia. A ultrassonografia pode ajudar no rastreio da pré-eclâmpsia — um dos problemas mais prevalentes durante a gestação e que mais matam mãe e feto."
+    },
+    {
+     "t": "p",
+     "html": "A pré-eclâmpsia é causada pela hipertensão arterial, geralmente após a 20ª semana de gravidez. Ela atinge de 5 a 15% das mulheres grávidas e está associada a sintomas como cefaleia, perda ou turvação da visão e dores abdominais."
+    },
+    {
+     "t": "h2",
+     "html": "Os perigos da pré-eclâmpsia"
+    },
+    {
+     "t": "p",
+     "html": "Além de comprometer os rins e dobrar os riscos de a mulher desenvolver problemas cardíacos, a pré-eclâmpsia também pode causar edema pulmonar, eclâmpsia e até convulsões."
+    },
+    {
+     "t": "p",
+     "html": "Para o bebê os riscos envolvem o comprometimento da placenta, com consequente restrição do crescimento intrauterino e a diminuição do líquido amniótico, que pode levar ao sofrimento fetal e ao parto prematuro."
+    },
+    {
+     "t": "h2",
+     "html": "Conheça os fatores de risco"
+    },
+    {
+     "t": "p",
+     "html": "A alta incidência e a gravidade da pré-eclâmpsia exigem a identificação precoce das pacientes com maior risco para o problema."
+    },
+    {
+     "t": "p",
+     "html": "Os principais fatores de risco para o desenvolvimento da pré-eclâmpsia (PE) são:"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "História prévia ou familiar de pré-eclâmpsia;",
+      "Hipertensão crônica;",
+      "Diabetes;",
+      "Obesidade;",
+      "Trombofilia;",
+      "Raça negra;",
+      "Primigestação."
+     ]
+    },
+    {
+     "t": "h2",
+     "html": "Ultrassonografia no diagnóstico da pré-eclâmpsia"
+    },
+    {
+     "t": "p",
+     "html": "<a href=\"https://www.instagram.com/p/CJ_VklEnzSv/\" target=\"_blank\" rel=\"noopener\">Simples, rápida, indolor e praticamente sem contraindicações, a ultrassonografia é o exame mais utilizado no diagnóstico da pré-eclâmpsia.</a> A modalidade com Doppler, por exemplo, é capaz de avaliar a qualidade da circulação sanguínea nas artérias uterinas."
+    },
+    {
+     "t": "h2",
+     "html": "O que fazer para evitar a pré-eclâmpsia?"
+    },
+    {
+     "t": "p",
+     "html": "Felizmente, a maioria dos fatores de risco para a pré-eclâmpsia são modificáveis. Por isso, eliminá-los é um grande avanço para evitar o surgimento do quadro. Além disso:"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "Faça um pré-natal criterioso;",
+      "Monitore sua pressão e contate seu médico imediatamente, caso haja aumento da pressão;",
+      "Conheça seu histórico familiar sobre hipertensão, gravidez e doenças cardíacas;",
+      "Alimente-se bem e faça atividade física regularmente."
+     ]
+    },
+    {
+     "t": "h2",
+     "html": "Sobre a Examine Agora"
+    },
+    {
+     "t": "p",
+     "html": "<a href=\"/\">A Examine Agora oferece serviços de excelência em diversos tipos de ultrassonografia no Recanto das Emas, incluindo morfológica e Doppler.</a> A clínica conta com equipamentos de alta tecnologia que permitem disponibilizar o resultado do exame on-line, para o paciente acessar quando e onde quiser. Também oferece uma estrutura agradável e atendimento humanizado para entregar, além de um diagnóstico preciso, a experiência do bem-estar."
+    }
+   ]
+  }
+ ]
+}

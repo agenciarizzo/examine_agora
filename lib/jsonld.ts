@@ -3,6 +3,7 @@
  * (spec do `nota` do ea-landings.json).
  */
 import { absolute, clinica, href, page, type Page, SITE_URL } from './content';
+import { type Post, postPath } from './posts';
 
 type Json = Record<string, unknown>;
 
@@ -120,6 +121,71 @@ export function graph(slug: string): Json {
   const faq = faqPage(p);
   if (faq) nodes.push(faq);
   return { '@context': 'https://schema.org', '@graph': nodes };
+}
+
+/**
+ * Grafo de um post: BlogPosting + MedicalClinic.
+ *
+ * O autor é a clínica, não o RT — o texto é da casa, e as afirmações médicas
+ * ainda dependem da revisão do Dr. Flávio (`REVISAO_CLINICA_PENDENTE`).
+ * Assinar em nome dele antes disso seria dizer o que não é.
+ */
+export function grafoPost(post: Post): Json {
+  const url = absolute(postPath(post));
+  const t = page(post.tema);
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BlogPosting',
+        '@id': `${url}#artigo`,
+        url,
+        mainEntityOfPage: url,
+        headline: post.titulo,
+        description: post.seo.description,
+        inLanguage: 'pt-BR',
+        datePublished: post.data,
+        dateModified: post.atualizado,
+        wordCount: post.blocos.reduce(
+          (n, b) =>
+            n +
+            ('html' in b ? b.html : b.itens.join(' '))
+              .replace(/<[^>]+>/g, ' ')
+              .split(/\s+/)
+              .filter(Boolean).length,
+          0,
+        ),
+        author: { '@id': CLINIC_ID },
+        publisher: { '@id': CLINIC_ID },
+        about: { '@type': 'MedicalTest', name: t.nome, url: absolute(t.path) },
+        isPartOf: {
+          '@type': 'Blog',
+          '@id': `${absolute(href('noticias'))}#blog`,
+          name: `Notícias · ${clinica.nome}`,
+          url: absolute(href('noticias')),
+        },
+      },
+      medicalClinic(),
+    ],
+  };
+}
+
+export function breadcrumbPost(post: Post): Json {
+  const items = [
+    { name: 'Início', item: absolute('/') },
+    { name: 'Notícias', item: absolute(href('noticias')) },
+    { name: post.titulo, item: absolute(postPath(post)) },
+  ];
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.name,
+      item: it.item,
+    })),
+  };
 }
 
 /** Breadcrumb das landings (hub → página). */
