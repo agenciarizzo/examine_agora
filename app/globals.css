@@ -51,6 +51,26 @@ details[open] > summary .ea-faq-sinal::after {
   content: '+';
 }
 
+/* Faixa de consentimento — mora no canto inferior esquerdo para não cobrir o
+   float do WhatsApp, que é o botão que converte. No telefone ela sobe acima do
+   float, em vez de disputar o mesmo canto. */
+.ea-consent {
+  position: fixed;
+  z-index: 90;
+  left: 22px;
+  bottom: 22px;
+  width: min(430px, calc(100vw - 44px));
+}
+
+@media (max-width: 560px) {
+  .ea-consent {
+    left: 12px;
+    right: 12px;
+    bottom: 92px;
+    width: auto;
+  }
+}
+
 /* Respeita quem pediu menos movimento. */
 @media (prefers-reduced-motion: reduce) {
   * {

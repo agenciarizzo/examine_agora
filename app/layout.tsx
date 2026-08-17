@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Analytics } from '@/components/Analytics';
+import { Medicao } from '@/components/Medicao';
 import { clinica, page, SITE_URL } from '@/lib/content';
 import './globals.css';
 
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         {children}
-        <Analytics />
+        <Medicao />
       </body>
     </html>
   );
