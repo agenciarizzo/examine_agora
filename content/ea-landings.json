@@ -2430,30 +2430,32 @@
      "h1a": "Política de",
      "emph": "cookies",
      "h1b": "",
-     "lead": "Cookies são arquivos pequenos que um site guarda no seu navegador. Este aqui usa muito pouco disso — e o texto abaixo diz exatamente o quê.",
+     "lead": "Cookies são arquivos pequenos que um site guarda no seu navegador. Este aqui usa pouco disso — e o texto abaixo diz exatamente o quê.",
      "secoes": [
       {
        "h2": "O que este site guarda no seu navegador",
        "ps": [
-        "O site da Examine Agora é estático: não tem cadastro, área de acesso nem carrinho, e não grava cookie próprio de análise, de publicidade ou de perfil de navegação. Nada do que você lê aqui depende de aceitar cookie."
+        "O site da Examine Agora é estático: não tem cadastro, área de acesso nem carrinho, e não grava cookie de publicidade, de remarketing ou de perfil de navegação para anúncio. O que ele grava é cookie de medição de audiência, do Google Analytics, detalhado no item abaixo. Nada do que você lê aqui depende de aceitar cookie."
        ]
       },
       {
        "h2": "Serviços de terceiros acionados pela visita",
        "ps": [
-        "Três serviços externos entram na sua visita — e vale saber o que cada um faz:"
+        "Quatro serviços externos entram na sua visita — e vale saber o que cada um faz:"
        ],
        "itens": [
+        "Google Analytics: mede a audiência do site — quais páginas são lidas, por qual tipo de dispositivo, de qual região e por qual caminho a visita chegou. Grava dois cookies próprios no seu navegador, o _ga e um segundo com o identificador da propriedade, que guardam um número aleatório para distinguir uma visita da outra. O relatório que a clínica lê é agregado: não carrega o seu nome, telefone, e-mail nem qualquer dado do seu atendimento.",
         "Fontes do Google: a tipografia do site é carregada dos servidores do Google, o que expõe o seu endereço IP e o seu navegador ao serviço. Esse carregamento não grava cookie.",
         "WhatsApp: só quando você toca em um botão de agendamento. A conversa acontece dentro do aplicativo, sob os termos do próprio serviço.",
         "Mapa: só quando você abre a rota até a clínica."
        ],
-       "nota": "A hospedagem do site pode gravar cookie estritamente técnico, de segurança e de entrega da página. Ele não monta perfil de navegação nem serve para publicidade."
+       "nota": "Na medição de audiência, o endereço IP serve para estimar a região e não fica guardado nos relatórios. Os recursos de publicidade do Google Analytics — sinais de anúncio, remarketing e cruzamento com dados de campanha — não estão ligados nesta propriedade. A hospedagem do site, por sua vez, pode gravar cookie estritamente técnico, de segurança e de entrega da página."
       },
       {
-       "h2": "Se um dia isso mudar",
+       "h2": "Como recusar a medição",
        "ps": [
-        "Se a clínica passar a medir campanhas ou a usar ferramenta de análise de audiência, este texto muda antes, e o seu consentimento é pedido no primeiro acesso. Nada de tag silenciosa."
+        "Recusar a medição de audiência não tira nada da leitura do site: basta bloquear cookies para este domínio no seu navegador, abrir o site em janela anônima ou instalar o complemento oficial do Google que desativa o Analytics em todos os sites que você visita.",
+        "Se a clínica passar a usar publicidade, remarketing ou qualquer cruzamento dos dados de navegação com dados de campanha, este texto muda antes, e o seu consentimento é pedido no primeiro acesso. Nada de tag silenciosa."
        ]
       },
       {
