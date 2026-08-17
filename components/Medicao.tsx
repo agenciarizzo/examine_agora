@@ -2,16 +2,16 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { Analytics } from '@/components/Analytics';
-import { Consentimento } from '@/components/Consentimento';
+import { AvisoMedicao } from '@/components/AvisoMedicao';
 import {
   comRef,
-  leConsentimento,
+  leEscolha,
   leOrigem,
   limpaOrigem,
   origemDaUrl,
-  salvaConsentimento,
+  salvaEscolha,
   salvaOrigem,
-  type Consentimento as Escolha,
+  type EscolhaDeMedicao,
   type Origem,
 } from '@/lib/medicao';
 
@@ -32,52 +32,44 @@ function evento(nome: string, params: Record<string, string>): void {
  *
  * Os CTAs estão espalhados por 24 landings, header, rodapé e float — em vez de
  * instrumentar cada um deles, escuta o clique na fase de captura do documento e
- * decide pelo `href`. Nenhum componente existente precisou mudar, e um erro
- * aqui não impede a navegação: o listener nunca cancela o clique.
+ * decide pelo `href`. Nenhum componente do site precisou mudar, e um erro aqui
+ * não impede a navegação: o listener nunca cancela o clique.
  *
- * Ordem que importa: sem consentimento não carrega o Analytics nem persiste
- * identificador de clique. O identificador da URL fica só em memória enquanto a
- * escolha não vem, e é gravado no momento do "Aceitar".
+ * Modelo de recusa: mede desde a primeira visita e o aviso informa. Só quem
+ * recusa fica de fora, e a recusa desliga Analytics e atribuição juntos.
  */
 export function Medicao() {
   /** `undefined` = ainda não leu o storage, então nada é renderizado no SSR. */
-  const [escolha, setEscolha] = useState<Escolha | null | undefined>(undefined);
+  const [escolha, setEscolha] = useState<EscolhaDeMedicao | null | undefined>(undefined);
   const [origem, setOrigem] = useState<Origem | null>(null);
 
+  const medindo = escolha !== undefined && escolha !== 'recusado';
+
   useEffect(() => {
-    const atual = leConsentimento();
+    const atual = leEscolha();
     setEscolha(atual);
+    if (atual === 'recusado') return;
 
+    // Clique novo manda no que já estava guardado: é a campanha mais recente.
     const daUrl = origemDaUrl(window.location.search);
-
-    if (atual === 'aceito') {
-      // Clique novo manda no que já estava guardado: é a campanha mais recente.
-      if (daUrl) salvaOrigem(daUrl);
-      setOrigem(daUrl ?? leOrigem());
-      return;
-    }
-    // Sem escolha ainda: segura em memória, sem tocar no storage.
-    if (atual === null) setOrigem(daUrl);
+    if (daUrl) salvaOrigem(daUrl);
+    setOrigem(daUrl ?? leOrigem());
   }, []);
 
-  const aceitar = useCallback(() => {
-    salvaConsentimento('aceito');
-    // A origem só desce para o storage agora, com o consentimento na mão.
-    const nova = origemDaUrl(window.location.search) ?? origem;
-    if (nova) salvaOrigem(nova);
-    setOrigem(nova ?? null);
+  const entendi = useCallback(() => {
+    salvaEscolha('aceito');
     setEscolha('aceito');
-  }, [origem]);
+  }, []);
 
   const recusar = useCallback(() => {
-    salvaConsentimento('recusado');
+    salvaEscolha('recusado');
     limpaOrigem();
     setOrigem(null);
     setEscolha('recusado');
   }, []);
 
   useEffect(() => {
-    if (escolha !== 'aceito') return;
+    if (!medindo) return;
 
     function noClique(e: MouseEvent) {
       const a = (e.target as Element | null)?.closest?.('a');
@@ -105,12 +97,12 @@ export function Medicao() {
 
     document.addEventListener('click', noClique, { capture: true });
     return () => document.removeEventListener('click', noClique, { capture: true });
-  }, [escolha, origem]);
+  }, [medindo, origem]);
 
   return (
     <>
-      {escolha === 'aceito' && <Analytics />}
-      {escolha === null && <Consentimento onAceitar={aceitar} onRecusar={recusar} />}
+      {medindo && <Analytics />}
+      {escolha === null && <AvisoMedicao onEntendi={entendi} onRecusar={recusar} />}
     </>
   );
 }

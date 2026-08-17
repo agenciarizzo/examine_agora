@@ -1,22 +1,26 @@
 /**
  * Medição de audiência e atribuição de clique pago.
  *
- * Duas coisas moram aqui, e as duas dependem do consentimento do visitante:
- * o carregamento do Google Analytics e a captura do identificador de clique
- * que o Google Ads (ou o Meta) põe na URL da landing.
+ * Duas coisas moram aqui: o carregamento do Google Analytics e a captura do
+ * identificador de clique que o Google Ads (ou o Meta) põe na URL da landing.
  *
  * O identificador viaja depois na mensagem do WhatsApp, numa linha final, para
  * que a recepção consiga amarrar o contato ao clique no CRM e a clínica consiga
  * subir a conversão offline — exame realizado — de volta para o Google Ads.
  * Sem isso, o lance otimiza por clique no botão; com isso, por exame feito.
  *
+ * Modelo de escolha: a medição roda desde a primeira visita e o aviso informa,
+ * em vez de barrar. Só o "recusar" desliga — e desliga tudo, medição e
+ * atribuição. Ausência de escolha significa medindo, não parado.
+ *
  * Este arquivo é puro de propósito: nada de DOM além de `localStorage`, para
  * que a regra de negócio fique testável e longe do componente.
  */
 
-export type Consentimento = 'aceito' | 'recusado';
+/** `aceito` aqui quer dizer "avisado e seguiu adiante". */
+export type EscolhaDeMedicao = 'aceito' | 'recusado';
 
-const CHAVE_CONSENTIMENTO = 'ea_consentimento';
+const CHAVE_ESCOLHA = 'ea_medicao';
 const CHAVE_ORIGEM = 'ea_origem';
 
 /** 90 dias — a janela do Google Ads para importar conversão offline. */
@@ -66,14 +70,14 @@ function storage(): Storage | null {
   }
 }
 
-export function leConsentimento(): Consentimento | null {
-  const v = storage()?.getItem(CHAVE_CONSENTIMENTO);
+export function leEscolha(): EscolhaDeMedicao | null {
+  const v = storage()?.getItem(CHAVE_ESCOLHA);
   return v === 'aceito' || v === 'recusado' ? v : null;
 }
 
-export function salvaConsentimento(v: Consentimento): void {
+export function salvaEscolha(v: EscolhaDeMedicao): void {
   try {
-    storage()?.setItem(CHAVE_CONSENTIMENTO, v);
+    storage()?.setItem(CHAVE_ESCOLHA, v);
   } catch {
     /* sem storage, a escolha vale só para esta visita */
   }
