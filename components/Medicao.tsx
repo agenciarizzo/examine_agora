@@ -18,11 +18,22 @@ import {
 declare global {
   interface Window {
     dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
-/** Fila do gtag.js. Evento empurrado antes do script chegar espera na fila. */
+/**
+ * Manda o evento pro gtag.js. `window.gtag` é a própria função definida pelo
+ * `Analytics` (o script oficial do Google) — chamar ela é o jeito documentado
+ * e sem ambiguidade. Se o clique acontecer antes do Analytics montar (não
+ * deveria, já que os dois nascem do mesmo `medindo`), cai no push cru pro
+ * dataLayer como fallback, pra não perder o evento.
+ */
 function evento(nome: string, params: Record<string, string>): void {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', nome, params);
+    return;
+  }
   window.dataLayer = window.dataLayer ?? [];
   window.dataLayer.push(['event', nome, params]);
 }
