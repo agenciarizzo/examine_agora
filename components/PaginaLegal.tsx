@@ -3,6 +3,7 @@ import { BotaoCeu, Em, ItemBarra, JsonLd } from '@/components/Bits';
 import { Halo, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 import { clinica, href, legalDoc, page, site, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
@@ -24,6 +25,7 @@ export function PaginaLegal({ slug }: { slug: string }) {
       <WhatsAppFloat href={wa} />
 
       <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+        <TopBar />
         <SiteHeader waHref={wa} />
 
         {/* Hero curto · campo */}

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BotaoCeu, Em, JsonLd } from '@/components/Bits';
+import { Em, JsonLd } from '@/components/Bits';
 import { Fechamento } from '@/components/Fechamento';
+import { ParCta } from '@/components/ParCta';
 import { RetratoRT } from '@/components/RetratoRT';
 import { Eco, Grain, Halo, Setor, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 import { clinica, href, page, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
@@ -31,6 +33,7 @@ export default function Home() {
       <WhatsAppFloat href={wa} />
 
       <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+        <TopBar />
         <SiteHeader waHref={wa} />
 
         {/* HERO · pano campo */}
@@ -102,9 +105,9 @@ export default function Home() {
                 marginTop: 36,
               }}
             >
-              <BotaoCeu href={wa} fontSize={17} padding="16px 30px">
+              <ParCta waHref={wa} fontSize={17} padding="16px 30px">
                 Agendar pelo WhatsApp
-              </BotaoCeu>
+              </ParCta>
               <Link
                 href={href('hub')}
                 className="ea-link-inherit"

@@ -5,6 +5,7 @@ import { RetratoRT } from '@/components/RetratoRT';
 import { Halo, Setor, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 import { clinica, site, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
@@ -23,6 +24,7 @@ export default function Sobre() {
       <WhatsAppFloat href={wa} />
 
       <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+        <TopBar />
         <SiteHeader waHref={wa} />
 
         {/* Hero · campo */}

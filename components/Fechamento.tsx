@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react';
 import { clinica, mapHref } from '@/lib/content';
 import { cor, WRAP } from '@/lib/theme';
-import { BotaoCeu, Em } from './Bits';
+import { Em } from './Bits';
 import { Halo } from './Panos';
+import { ParCta } from './ParCta';
 
 /** Fechamento com halo baixo — o CTA final de Home e das landings. */
 export function Fechamento({
@@ -54,8 +55,16 @@ export function Fechamento({
             {sub}
           </p>
         )}
-        <div style={{ marginTop: 34 }}>
-          <BotaoCeu href={waHref}>WhatsApp {clinica.phone}</BotaoCeu>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: 16,
+            marginTop: 34,
+          }}
+        >
+          <ParCta waHref={waHref}>WhatsApp {clinica.phone}</ParCta>
         </div>
         <div
           style={{

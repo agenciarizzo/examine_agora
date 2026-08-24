@@ -77,3 +77,21 @@ details[open] > summary .ea-faq-sinal::after {
     transition: none !important;
   }
 }
+
+/* Topbar utilitária (TopBar.tsx). O grupo secundário (endereço escrito,
+   horário, redes) vira CSS puro — sem style inline conflitante — porque só
+   assim a media query abaixo consegue vencer no celular. No celular sobra
+   só "Ligar" + "Como chegar", o par que converte, sem empurrar o <h1> pra
+   baixo da dobra. */
+.ea-topbar-secundario {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+
+@media (max-width: 700px) {
+  .ea-topbar-secundario {
+    display: none;
+  }
+}
