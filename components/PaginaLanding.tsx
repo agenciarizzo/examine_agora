@@ -1,11 +1,13 @@
 import Link from 'next/link';
-import { BotaoCeu, Em, ItemBarra, JsonLd, SeloRevisao } from '@/components/Bits';
+import { Em, ItemBarra, JsonLd, SeloRevisao } from '@/components/Bits';
 import { Fechamento } from '@/components/Fechamento';
 import { Ilustracao, temIlustracao } from '@/components/Ilustracao';
+import { ParCta } from '@/components/ParCta';
 import { RetratoRT } from '@/components/RetratoRT';
 import { Eco, Grain, Halo, Setor, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 import { REVISAO_CLINICA_PENDENTE } from '@/lib/config';
 import { clinica, href, type Page, page, waHref } from '@/lib/content';
@@ -39,6 +41,7 @@ export function PaginaLanding({ p }: { p: Page }) {
       <WhatsAppFloat href={wa} />
 
       <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+        <TopBar />
         <SiteHeader waHref={wa} />
 
         {/* HERO · pano campo */}
@@ -93,9 +96,9 @@ export function PaginaLanding({ p }: { p: Page }) {
             <div
               style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 18, marginTop: 36 }}
             >
-              <BotaoCeu href={wa} fontSize={17} padding="16px 30px">
+              <ParCta waHref={wa} fontSize={17} padding="16px 30px">
                 Agendar pelo WhatsApp
-              </BotaoCeu>
+              </ParCta>
               <span style={{ fontSize: 14, color: 'rgba(169,214,245,.75)' }}>{clinica.selo}</span>
             </div>
           </div>

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BotaoCeu, Em, JsonLd } from '@/components/Bits';
+import { Em, JsonLd } from '@/components/Bits';
+import { ParCta } from '@/components/ParCta';
 import { Grain, Halo } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
-import { clinica, href, mapHref, telHref, waHref } from '@/lib/content';
+import { clinica, href, mapHref, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
 import { metaDe } from '@/lib/meta';
 import { cor, WRAP } from '@/lib/theme';
@@ -21,6 +23,7 @@ export default function Agende() {
       <WhatsAppFloat href={wa} />
 
       <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+        <TopBar />
         {/* Sem CTA duplicado no header: a página inteira é o CTA. */}
         <SiteHeader waHref={wa} cta={false} />
 
@@ -71,22 +74,7 @@ export default function Agende() {
                 marginTop: 36,
               }}
             >
-              <BotaoCeu href={wa}>WhatsApp {clinica.phone}</BotaoCeu>
-              <a
-                href={telHref}
-                style={{
-                  display: 'inline-block',
-                  border: '1px solid rgba(169,214,245,.5)',
-                  color: cor.ceu,
-                  textDecoration: 'none',
-                  fontSize: 18,
-                  fontWeight: 500,
-                  padding: '18px 36px',
-                  borderRadius: 999,
-                }}
-              >
-                Ligar {clinica.phone}
-              </a>
+              <ParCta waHref={wa}>WhatsApp {clinica.phone}</ParCta>
             </div>
           </div>
         </section>
