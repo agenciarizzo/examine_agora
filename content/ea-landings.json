@@ -2444,21 +2444,22 @@
       {
        "h2": "O que este site guarda no seu navegador",
        "ps": [
-        "O site da Examine Agora é estático: não tem cadastro, área de acesso nem carrinho. Ele guarda três coisas: o cookie de medição de audiência do Google Analytics, o registro de qual anúncio trouxe a sua visita — se ela veio de um — e a resposta que você deu na faixa, para não avisar de novo a cada página."
+        "O site da Examine Agora é estático: não tem cadastro, área de acesso nem carrinho. Ele guarda quatro coisas: o cookie de medição de audiência do Google Analytics, o cookie do pixel do Meta nas páginas em que ele roda, o registro de qual anúncio trouxe a sua visita — se ela veio de um — e a resposta que você deu na faixa, para não avisar de novo a cada página."
        ]
       },
       {
        "h2": "Serviços de terceiros acionados pela visita",
        "ps": [
-        "Quatro serviços externos entram na sua visita — e vale saber o que cada um faz:"
+        "Cinco serviços externos entram na sua visita — e vale saber o que cada um faz:"
        ],
        "itens": [
         "Google Analytics: mede a audiência do site — quais páginas são lidas, por qual tipo de dispositivo, de qual região e por qual caminho a visita chegou. Grava dois cookies próprios no seu navegador, o _ga e um segundo com o identificador da propriedade, que guardam um número aleatório para distinguir uma visita da outra. O relatório que a clínica lê é agregado: não carrega o seu nome, telefone, e-mail nem qualquer dado do seu atendimento.",
+        "Pixel do Meta (Facebook e Instagram): mede o resultado dos anúncios que a clínica publica nessas redes e permite falar de novo com quem já visitou o site. Grava o cookie _fbp no seu navegador — e o _fbc, se você chegou por um anúncio —, que guardam um identificador daquele clique, não o seu nome. Ele não roda nas páginas de exame e procedimento: só na home, em Agende seu exame, Convênios, Sobre nós, Preparos e Notícias. Essa lista é curta de propósito — o endereço de uma página de exame diz qual exame você procurou, e isso é informação de saúde, que não vai para rede de anúncio nenhuma. Nas páginas legais ele também não roda.",
         "Fontes do Google: a tipografia do site é carregada dos servidores do Google, o que expõe o seu endereço IP e o seu navegador ao serviço. Esse carregamento não grava cookie.",
         "WhatsApp: só quando você toca em um botão de agendamento. A conversa acontece dentro do aplicativo, sob os termos do próprio serviço.",
         "Mapa: só quando você abre a rota até a clínica."
        ],
-       "nota": "Na medição de audiência, o endereço IP serve para estimar a região e não fica guardado nos relatórios. A clínica pode usar esses dados para ajustar a própria divulgação e falar de novo com quem já visitou o site — nunca separando as pessoas por exame procurado ou condição de saúde, como a seção seguinte detalha. A hospedagem do site, por sua vez, pode gravar cookie estritamente técnico, de segurança e de entrega da página."
+       "nota": "Na medição de audiência, o endereço IP serve para estimar a região e não fica guardado nos relatórios. A clínica pode usar esses dados para ajustar a própria divulgação e falar de novo com quem já visitou o site — nunca separando as pessoas por exame procurado ou condição de saúde, como a seção seguinte detalha. É por isso que o pixel do Meta fica restrito às páginas que não revelam procedimento: a promessa não é só de intenção, ela está aplicada no código do site. A hospedagem do site, por sua vez, pode gravar cookie estritamente técnico, de segurança e de entrega da página."
       },
       {
        "h2": "De qual anúncio a sua visita veio",
@@ -2471,7 +2472,7 @@
       {
        "h2": "Como recusar a medição",
        "ps": [
-        "O caminho mais curto é o botão \"Recusar\" da faixa: ele desliga de uma vez a medição de audiência e o registro de origem do anúncio, e apaga o que já tiver sido guardado. A faixa some na primeira resposta e não volta a incomodar.",
+        "O caminho mais curto é o botão \"Recusar\" da faixa: ele desliga de uma vez a medição de audiência, o pixel do Meta e o registro de origem do anúncio, e apaga o que já tiver sido guardado. Quem recusa não carrega o pixel em página nenhuma. A faixa some na primeira resposta e não volta a incomodar.",
         "Se você fechou a faixa e mudou de ideia, apagar os dados deste site no navegador zera a escolha e a faixa aparece de novo. Vale também o caminho de sempre, que não depende de nós: bloquear cookies para este domínio, abrir o site em janela anônima ou instalar o complemento oficial do Google que desativa o Analytics em todos os sites que você visita.",
         "Uma linha que não se move: o que a clínica faz de divulgação nunca separa as pessoas por exame procurado ou condição de saúde. Se esse limite mudar, este texto muda antes."
        ]
