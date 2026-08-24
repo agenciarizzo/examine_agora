@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Analytics } from '@/components/Analytics';
 import { AvisoMedicao } from '@/components/AvisoMedicao';
+import { MetaPixel } from '@/components/MetaPixel';
 import {
   comRef,
   leEscolha,
@@ -47,7 +48,8 @@ function evento(nome: string, params: Record<string, string>): void {
  * não impede a navegação: o listener nunca cancela o clique.
  *
  * Modelo de recusa: mede desde a primeira visita e o aviso informa. Só quem
- * recusa fica de fora, e a recusa desliga Analytics e atribuição juntos.
+ * recusa fica de fora, e a recusa desliga Analytics, pixel do Meta e atribuição
+ * juntos — os três nascem do mesmo `medindo`.
  */
 export function Medicao() {
   /** `undefined` = ainda não leu o storage, então nada é renderizado no SSR. */
@@ -113,6 +115,7 @@ export function Medicao() {
   return (
     <>
       {medindo && <Analytics />}
+      {medindo && <MetaPixel />}
       {escolha === null && <AvisoMedicao onEntendi={entendi} onRecusar={recusar} />}
     </>
   );
