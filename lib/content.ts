@@ -62,6 +62,8 @@ export type Clinica = {
   phone: string;
   whatsapp_link: string;
   handle: string;
+  instagram: string;
+  facebook: string;
   site: string;
   address: string;
   hours: string;
