@@ -5,6 +5,7 @@ import { RetratoRT } from '@/components/RetratoRT';
 import { Eco, Halo } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 import { REVISAO_CLINICA_PENDENTE } from '@/lib/config';
 import { clinica, href, waMsgHref } from '@/lib/content';
@@ -96,6 +97,7 @@ export function PaginaPost({ post }: { post: Post }) {
       <WhatsAppFloat href={wa} />
 
       <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+        <TopBar />
         <SiteHeader waHref={wa} />
 
         {/* Cabeça do artigo · campo */}

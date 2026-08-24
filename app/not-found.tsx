@@ -3,6 +3,7 @@ import { BotaoCeu, Em } from '@/components/Bits';
 import { Halo } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { TopBar } from '@/components/TopBar';
 import { href, nav, waHref } from '@/lib/content';
 import { cor, WRAP } from '@/lib/theme';
 
@@ -11,6 +12,7 @@ const wa = waHref('inicio');
 export default function NotFound() {
   return (
     <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+      <TopBar />
       <SiteHeader waHref={wa} />
       <section style={{ position: 'relative', overflow: 'hidden', background: cor.campo }}>
         <Halo gradient="radial-gradient(56% 42% at 50% 20%, rgba(20,112,196,.38) 0%, rgba(20,112,196,.12) 46%, rgba(6,20,35,0) 78%)" />

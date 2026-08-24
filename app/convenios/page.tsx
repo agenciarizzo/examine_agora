@@ -3,6 +3,7 @@ import { Em, JsonLd } from '@/components/Bits';
 import { Eco } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 import { site, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
@@ -20,6 +21,7 @@ export default function Convenios() {
       <WhatsAppFloat href={wa} />
 
       <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+        <TopBar />
         <SiteHeader waHref={wa} />
 
         {/* Hero curto · eco */}
