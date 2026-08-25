@@ -7,10 +7,7 @@
 </head>
 <body>
 <x-dc>
-<dc-import name="EA Landing Pagina" slug="morfologico" revisao-clinica="{{rev}}" hint-size="100%,4200px"></dc-import>
+<dc-import name="EA Landing Pagina" slug="morfologico" hint-size="100%,4200px"></dc-import>
 </x-dc>
-<script data-dc-script data-props='{"revisaoClinica":{"editor":"boolean","default":false,"tsType":"boolean"}}'>
-class Component extends DCLogic { renderVals() { return { rev: this.props.revisaoClinica ?? false }; } }
-</script>
 </body>
 </html>
