@@ -60,7 +60,6 @@
     <!-- Quando é indicada · pano chapado gelo -->
     <section data-screen-label="Indicada" style="background:#EEF6FC;color:#0A2A52">
       <div style="max-width:1100px;margin:0 auto;padding:80px 24px">
-        <sc-if value="{{rev}}"><span style="display:inline-block;border:1px solid #1470C4;color:#1470C4;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:14px">revisão clínica pendente</span></sc-if>
         <h2 style="margin:0 0 36px;font-weight:500;letter-spacing:-0.02em;font-size:clamp(28px,3.6vw,42px);max-width:22ch;text-wrap:balance">{{p.indicada.h2}}</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px 36px;max-width:900px">
           <sc-for list="{{indicadaItens}}" as="it" hint-placeholder-count="4">
@@ -78,7 +77,6 @@
       </div>
       <div style="position:relative;max-width:1100px;margin:0 auto;padding:84px 24px">
         <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:40px">
-          <sc-if value="{{rev}}"><span style="display:inline-block;border:1px solid #1470C4;color:#1470C4;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px">revisão clínica pendente</span></sc-if>
           <h2 style="margin:0;font-weight:500;letter-spacing:-0.02em;font-size:clamp(28px,3.6vw,42px);max-width:24ch">{{p.como.h2}}</h2>
           <span style="border:1px solid rgba(10,42,82,.25);color:#0A2A52;font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;white-space:nowrap">duração média: {{p.como.dur}}</span>
         </div>
@@ -102,7 +100,6 @@
     <section data-screen-label="Preparo" style="position:relative;overflow:hidden;background:#0A2A52;color:#EEF6FC">
       <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg, rgba(20,112,196,.5) 0 3px, transparent 3px 17px);opacity:.35;-webkit-mask-image:linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 55%);mask-image:linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 55%)"></div>
       <div style="position:relative;max-width:1100px;margin:0 auto;padding:80px 24px">
-        <sc-if value="{{rev}}"><span style="display:inline-block;border:1px solid #A9D6F5;color:#A9D6F5;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:14px">revisão clínica pendente</span></sc-if>
         <h2 style="margin:0 0 36px;font-weight:500;letter-spacing:-0.02em;font-size:clamp(28px,3.6vw,42px)">{{p.preparo.h2}}</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px 36px;max-width:940px">
           <sc-for list="{{preparoItens}}" as="it" hint-placeholder-count="4">
@@ -165,7 +162,6 @@
     <!-- Recuperação · pano chapado gelo -->
     <section data-screen-label="Depois" style="background:#EEF6FC;color:#0A2A52">
       <div style="max-width:1100px;margin:0 auto;padding:80px 24px">
-        <sc-if value="{{rev}}"><span style="display:inline-block;border:1px solid #1470C4;color:#1470C4;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:14px">revisão clínica pendente</span></sc-if>
         <h2 style="margin:0 0 36px;font-weight:500;letter-spacing:-0.02em;font-size:clamp(28px,3.6vw,42px)">{{p.depois.h2}}</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px 36px;max-width:940px">
           <sc-for list="{{depoisItens}}" as="it" hint-placeholder-count="4">
@@ -203,7 +199,6 @@
     <!-- FAQ · pano chapado gelo -->
     <section data-screen-label="FAQ" style="background:#EEF6FC;color:#0A2A52">
       <div style="max-width:860px;margin:0 auto;padding:80px 24px">
-        <sc-if value="{{rev}}"><span style="display:inline-block;border:1px solid #1470C4;color:#1470C4;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:14px">revisão clínica pendente</span></sc-if>
         <h2 style="margin:0 0 28px;font-weight:500;letter-spacing:-0.02em;font-size:clamp(28px,3.6vw,42px)">Dúvidas frequentes</h2>
         <sc-for list="{{faq}}" as="f" hint-placeholder-count="6">
           <details style="border-bottom:1px solid rgba(20,112,196,.25);padding:4px 0">
@@ -219,7 +214,6 @@
       <div style="max-width:1100px;margin:0 auto;padding:88px 24px">
         <div style="display:flex;align-items:center;gap:16px;margin-bottom:44px">
           <h2 style="margin:0;font-weight:500;letter-spacing:-0.02em;font-size:clamp(28px,3.6vw,42px)">Mitos e verdades</h2>
-          <sc-if value="{{rev}}"><span style="display:inline-block;border:1px solid #A9D6F5;color:#A9D6F5;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px">revisão clínica pendente</span></sc-if>
         </div>
         <div style="border-top:1px solid rgba(169,214,245,.3);padding-top:34px;margin-bottom:48px">
           <p style="margin:0 0 4px;font-size:clamp(24px,3vw,34px);font-weight:500;letter-spacing:-0.02em;color:rgba(238,246,252,.85)">“{{mitoDestaque.m}}”</p>
@@ -280,8 +274,7 @@
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{
- &quot;slug&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;hub&quot;, &quot;options&quot;: [&quot;hub&quot;, &quot;prostata&quot;, &quot;mama&quot;, &quot;tireoide&quot;, &quot;linfonodo&quot;, &quot;musculo&quot;, &quot;doppler&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Página&quot; },
- &quot;revisaoClinica&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Página&quot; }
+ &quot;slug&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;hub&quot;, &quot;options&quot;: [&quot;hub&quot;, &quot;prostata&quot;, &quot;mama&quot;, &quot;tireoide&quot;, &quot;linfonodo&quot;, &quot;musculo&quot;, &quot;doppler&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Página&quot; }
 }">
 class Component extends DCLogic {
   state = { db: null };
@@ -292,8 +285,7 @@ class Component extends DCLogic {
     const grain = "data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%27220%27%20height=%27220%27%3E%3Cfilter%20id=%27n%27%3E%3CfeTurbulence%20type=%27fractalNoise%27%20baseFrequency=%27.85%27%20numOctaves=%272%27/%3E%3C/filter%3E%3Crect%20width=%27220%27%20height=%27220%27%20filter=%27url(%23n)%27/%3E%3C/svg%3E";
     const db = this.state.db;
     const slug = this.props.slug ?? 'hub';
-    const rev = this.props.revisaoClinica ?? false;
-    if (!db) return { loaded: false, isHub: false, notHub: false, grain, hubHref: 'EA%20Landing%20Hub.dc.html', rev, nav: [] };
+    if (!db) return { loaded: false, isHub: false, notHub: false, grain, hubHref: 'EA%20Landing%20Hub.dc.html', nav: [] };
     const byS = {};
     db.pages.forEach(pg => { byS[pg.slug] = pg; });
     const p = byS[slug] || byS.hub;
@@ -306,7 +298,7 @@ class Component extends DCLogic {
     const leadEm = i >= 0 ? em : '';
     const leadB = i >= 0 ? lead.slice(i + em.length) : '';
     return {
-      loaded: true, grain, rev,
+      loaded: true, grain,
       isHub: !!p.hub, notHub: !p.hub,
       p, c, selo: c.selo, rtLine: c.rt_line,
       hubHref: href(byS.hub),
