@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Em, ItemBarra, JsonLd, SeloRevisao } from '@/components/Bits';
+import { Em, ItemBarra, JsonLd } from '@/components/Bits';
 import { Fechamento } from '@/components/Fechamento';
 import { Ilustracao, temIlustracao } from '@/components/Ilustracao';
 import { ParCta } from '@/components/ParCta';
@@ -9,7 +9,6 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
-import { REVISAO_CLINICA_PENDENTE } from '@/lib/config';
 import { clinica, href, type Page, page, waHref } from '@/lib/content';
 import { breadcrumb, graph } from '@/lib/jsonld';
 import { cor, WRAP } from '@/lib/theme';
@@ -30,7 +29,6 @@ function lead(p: Page) {
  */
 export function PaginaLanding({ p }: { p: Page }) {
   const wa = waHref(p.slug);
-  const rev = REVISAO_CLINICA_PENDENTE;
   const isHub = !!p.hub;
   const l = lead(p);
 
@@ -108,11 +106,6 @@ export function PaginaLanding({ p }: { p: Page }) {
         {!isHub && p.indicada && (
           <section style={{ background: cor.gelo, color: cor.navy }}>
             <div style={{ maxWidth: WRAP, margin: '0 auto', padding: '80px 24px' }}>
-              {rev && (
-                <div style={{ marginBottom: 14 }}>
-                  <SeloRevisao />
-                </div>
-              )}
               <h2
                 style={{
                   margin: '0 0 36px',
@@ -171,7 +164,6 @@ export function PaginaLanding({ p }: { p: Page }) {
                   marginBottom: 40,
                 }}
               >
-                {rev && <SeloRevisao />}
                 <h2
                   style={{
                     margin: 0,
@@ -275,11 +267,6 @@ export function PaginaLanding({ p }: { p: Page }) {
             <div
               style={{ position: 'relative', maxWidth: WRAP, margin: '0 auto', padding: '80px 24px' }}
             >
-              {rev && (
-                <div style={{ marginBottom: 14 }}>
-                  <SeloRevisao tom="escuro" />
-                </div>
-              )}
               <h2
                 style={{
                   margin: '0 0 36px',
@@ -488,11 +475,6 @@ export function PaginaLanding({ p }: { p: Page }) {
         {!isHub && p.depois && (
           <section style={{ background: cor.gelo, color: cor.navy }}>
             <div style={{ maxWidth: WRAP, margin: '0 auto', padding: '80px 24px' }}>
-              {rev && (
-                <div style={{ marginBottom: 14 }}>
-                  <SeloRevisao />
-                </div>
-              )}
               <h2
                 style={{
                   margin: '0 0 36px',
@@ -592,11 +574,6 @@ export function PaginaLanding({ p }: { p: Page }) {
         {!isHub && !!p.faq?.length && (
           <section style={{ background: cor.gelo, color: cor.navy }}>
             <div style={{ maxWidth: 860, margin: '0 auto', padding: '80px 24px' }}>
-              {rev && (
-                <div style={{ marginBottom: 14 }}>
-                  <SeloRevisao />
-                </div>
-              )}
               <h2
                 style={{
                   margin: '0 0 28px',
@@ -661,7 +638,6 @@ export function PaginaLanding({ p }: { p: Page }) {
                 >
                   Mitos e verdades
                 </h2>
-                {rev && <SeloRevisao tom="escuro" />}
               </div>
               <div
                 style={{

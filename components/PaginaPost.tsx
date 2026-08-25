@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Em, JsonLd, SeloRevisao } from '@/components/Bits';
+import { Em, JsonLd } from '@/components/Bits';
 import { Fechamento } from '@/components/Fechamento';
 import { RetratoRT } from '@/components/RetratoRT';
 import { Eco, Halo } from '@/components/Panos';
@@ -7,7 +7,6 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
-import { REVISAO_CLINICA_PENDENTE } from '@/lib/config';
 import { clinica, href, waMsgHref } from '@/lib/content';
 import { breadcrumbPost, grafoPost } from '@/lib/jsonld';
 import { type Bloco, dataLonga, type Post, tema } from '@/lib/posts';
@@ -88,7 +87,6 @@ function Blocos({ blocos }: { blocos: Bloco[] }) {
 export function PaginaPost({ post }: { post: Post }) {
   const t = tema(post);
   const wa = waMsgHref(post.seo.waMsg);
-  const rev = REVISAO_CLINICA_PENDENTE;
 
   return (
     <>
@@ -147,7 +145,6 @@ export function PaginaPost({ post }: { post: Post }) {
               <span>Publicado em {dataLonga(post.data)}</span>
               <span aria-hidden="true">·</span>
               <span>{post.min} min de leitura</span>
-              {rev && <SeloRevisao tom="escuro" />}
             </div>
           </div>
         </section>
