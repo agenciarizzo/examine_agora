@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import { BotaoCeu, Em, ItemBarra, JsonLd, Pilula, SeloRevisao } from '@/components/Bits';
+import { BotaoCeu, Em, ItemBarra, JsonLd, Pilula } from '@/components/Bits';
 import { Halo, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
-import { REVISAO_CLINICA_PENDENTE } from '@/lib/config';
 import { clinica, site, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
 import { metaDe } from '@/lib/meta';
@@ -62,11 +61,6 @@ export default function Preparos() {
               Jejum, bexiga cheia, medicações e o que trazer no dia. Na dúvida, chame no WhatsApp{' '}
               {clinica.phone} — respondemos antes do exame.
             </p>
-            {REVISAO_CLINICA_PENDENTE && (
-              <p style={{ margin: '18px 0 0' }}>
-                <SeloRevisao tom="escuro" />
-              </p>
-            )}
           </div>
         </section>
 

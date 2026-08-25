@@ -32,7 +32,7 @@ Para mudar um texto do site, mude o json — não o componente.
 | `lib/meta.ts` | `<title>`, description, keywords, canonical e OG a partir do bloco `seo` |
 | `lib/jsonld.ts` | Grafo JSON-LD por página (ver abaixo) |
 | `lib/redirects.ts` | 301 do WP antigo, derivados de `site.port_map` e `site.port_map_posts` |
-| `lib/config.ts` | Toggle da revisão clínica do RT |
+| `lib/config.ts` | IDs de medição (GA4, pixel do Meta) e o allowlist do pixel |
 | `lib/theme.ts` | Paleta Eco Editorial, grão e a ênfase em Instrument Serif |
 
 ## As 32 páginas
@@ -152,16 +152,6 @@ O site **não** publica preços, resultados online nem conteúdo de colo do úte
 "Doppler" vai sempre com D maiúsculo. Há um teste que varre as 20 páginas
 renderizadas atrás desses termos — ver "Verificação" abaixo.
 
-## Revisão clínica do RT
-
-As afirmações médicas seguem **pendentes de validação do Dr. Flávio**. Enquanto
-`NEXT_PUBLIC_REVISAO_CLINICA` não for `false`, as seções clínicas exibem o selo
-"revisão clínica pendente". Depois do aval:
-
-```bash
-NEXT_PUBLIC_REVISAO_CLINICA=false npm run build
-```
-
 ## Fotos e ilustrações
 
 As fotos reais da clínica e as ilustrações científicas entraram no lugar dos
@@ -223,9 +213,6 @@ Antes do go-live, três coisas dependem do cliente:
 
 ## Pendências
 
-- **Revisão clínica do RT** — ver acima; é o que trava o go-live. Os posts entram
-  nessa fila: são texto de 2021-2025 que ninguém revisou desde então, e por isso
-  cada artigo carrega o selo "revisão clínica pendente".
 - **Revisão jurídica** das três páginas legais, e a definição do encarregado (DPO).
 - **Imagens dos posts** — ficaram no servidor antigo; ver "Blog".
 - **Posts reproduzidos (10)** — decidir entre relicenciar, reescrever com texto

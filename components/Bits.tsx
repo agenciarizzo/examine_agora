@@ -6,31 +6,6 @@ export function Em({ children, color = cor.ceu }: { children: ReactNode; color?:
   return <em style={{ ...serif, color }}>{children}</em>;
 }
 
-/**
- * Selo de revisão clínica pendente. As afirmações médicas só saem do ar
- * depois do aval do RT (ver `design/HANDOFF.md` → Pendências).
- */
-export function SeloRevisao({ tom = 'claro' }: { tom?: 'claro' | 'escuro' }) {
-  const c = tom === 'claro' ? cor.eco : cor.ceu;
-  return (
-    <span
-      style={{
-        display: 'inline-block',
-        border: `1px solid ${c}`,
-        color: c,
-        fontSize: 11,
-        fontWeight: 700,
-        letterSpacing: '.12em',
-        textTransform: 'uppercase',
-        padding: '4px 10px',
-        borderRadius: 999,
-      }}
-    >
-      revisão clínica pendente
-    </span>
-  );
-}
-
 /** Item de lista com a barra vertical eco/céu. */
 export function ItemBarra({
   children,

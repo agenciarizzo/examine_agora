@@ -126,9 +126,8 @@ export function graph(slug: string): Json {
 /**
  * Grafo de um post: BlogPosting + MedicalClinic.
  *
- * O autor é a clínica, não o RT — o texto é da casa, e as afirmações médicas
- * ainda dependem da revisão do Dr. Flávio (`REVISAO_CLINICA_PENDENTE`).
- * Assinar em nome dele antes disso seria dizer o que não é.
+ * O autor é a clínica, não o RT — o texto é da casa, escrito e mantido pela
+ * equipe. Assinar em nome dele seria dizer o que não é.
  */
 export function grafoPost(post: Post): Json {
   const url = absolute(postPath(post));

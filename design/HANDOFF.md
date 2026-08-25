@@ -22,7 +22,6 @@ Os `.dc.html` abrem direto no navegador (manter `support.js` e `public/` ao lado
 - RT em todo rodapé: Dr. Flávio H. A. Chaves · CRM-DF 19506 · RQE 11288.
 
 ## Pendências (não bloqueiam implementação)
-- **Revisão clínica do RT**: afirmações médicas marcáveis via toggle `revisaoClinica` nas páginas — validar com Dr. Flávio antes do go-live.
 - Fotos reais da clínica/equipe (hoje banco de imagens).
 
 ## Linha visual (Eco Editorial)
