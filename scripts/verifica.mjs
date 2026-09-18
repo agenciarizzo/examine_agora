@@ -51,7 +51,7 @@ const falhas = [];
 const anota = (path, msg) => falhas.push(`${path} — ${msg}`);
 
 /** Guardrails, sinais obrigatórios e SEO de uma página renderizada. */
-async function verifica(path, exigeJsonLd = []) {
+async function verifica(path, exigeJsonLd = [], proprio = false) {
   const res = await fetch(base + path);
   if (!res.ok) {
     anota(path, `HTTP ${res.status}`);
@@ -88,7 +88,21 @@ async function verifica(path, exigeJsonLd = []) {
   }
   // Cartão de compartilhamento: sem ele, o link mandado no WhatsApp chega como
   // retângulo vazio. Vale para as 32 páginas, não só para a home.
-  if (!html.includes('property="og:image"')) anota(path, 'sem og:image');
+  const capa = /property="og:image" content="([^"]+)"/.exec(html)?.[1];
+  if (!capa) anota(path, 'sem og:image');
+  if (capa) {
+    // O arquivo tem de EXISTIR. É o gate que pega a divergência entre a regra
+    // de `lib/meta.ts` (quem declara o cartão) e a de `scripts/og-card.mjs`
+    // (quem gera): uma landing nova apontaria para um cartão inexistente, e o
+    // link chegaria vazio de novo — em silêncio.
+    const r = await fetch(base + new URL(capa).pathname);
+    if (!r.ok) anota(path, `og:image aponta para ${new URL(capa).pathname} → HTTP ${r.status}`);
+    // E landing clínica não pode cair no cartão institucional: o dela é o que
+    // diz qual exame o link abre.
+    if (proprio && new URL(capa).pathname === '/og-card.jpg') {
+      anota(path, 'landing com cartão institucional (devia ter o seu)');
+    }
+  }
 
   const desc = /<meta name="description" content="([^"]*)"/.exec(html)?.[1];
   if (!desc) anota(path, 'sem meta description');
@@ -125,7 +139,9 @@ for (const p of db.pages) {
   if (p.tipo === 'landing' && !p.hub) {
     exige.push(p.grupo === 'proc' ? 'MedicalProcedure' : 'MedicalTest');
   }
-  await verifica(p.path, exige);
+  // Landing clínica com ilustração tem cartão de compartilhamento PRÓPRIO.
+  const cartaoProprio = p.tipo === 'landing' && !p.hub && Boolean(p.hero);
+  await verifica(p.path, exige, cartaoProprio);
 }
 
 /** Posts migrados do WP: mesmas regras, mais o BlogPosting e o link do tema. */
