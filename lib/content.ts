@@ -199,6 +199,17 @@ export const nav = site.nav.map((n) => ({
 /** Domínio de produção — usado em canonical, sitemap e JSON-LD. */
 export const SITE_URL = `https://${clinica.site}`;
 
+/**
+ * URL absoluta de uma rota. A home sai SEM barra final.
+ *
+ * Isso não é escolha estética, é o que o Next faz: com `trailingSlash: false`
+ * (o padrão, e o que está em `next.config.ts`), ele normaliza as URLs de
+ * metadado e devolve `https://examineagora.com.br` no canonical e no og:url,
+ * mesmo quando o valor entra com a barra. Medido nesta manutenção: forçar a
+ * barra aqui mudava só o `<loc>` do sitemap — ou seja, CRIAVA a divergência
+ * entre os sinais em vez de tirar. Os cinco sinais falam a mesma forma
+ * seguindo o framework. Ver PARKING.md [A-03].
+ */
 export function absolute(path: string): string {
   return SITE_URL + (path === '/' ? '' : path);
 }

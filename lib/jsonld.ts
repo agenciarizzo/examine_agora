@@ -78,7 +78,7 @@ export function medicalClinic(): Json {
     '@type': 'MedicalClinic',
     '@id': CLINIC_ID,
     name: clinica.nome,
-    url: SITE_URL,
+    url: absolute('/'),
     telephone: clinica.phone,
     medicalSpecialty: 'Radiography',
     /*

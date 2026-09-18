@@ -86,6 +86,10 @@ async function verifica(path, exigeJsonLd = []) {
   if (titulo && titulo.length > TETO_TITLE) {
     anota(path, `<title> com ${titulo.length} caracteres (teto ${TETO_TITLE})`);
   }
+  // Cartão de compartilhamento: sem ele, o link mandado no WhatsApp chega como
+  // retângulo vazio. Vale para as 32 páginas, não só para a home.
+  if (!html.includes('property="og:image"')) anota(path, 'sem og:image');
+
   const desc = /<meta name="description" content="([^"]*)"/.exec(html)?.[1];
   if (!desc) anota(path, 'sem meta description');
   if (desc && desc.length > TETO_DESC) {
