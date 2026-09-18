@@ -183,10 +183,11 @@ export const mapHref =
 
 /**
  * O link de ligação continua sendo `tel:` com o número inteiro, e isso é
- * DELIBERADO — ver PARKING [A-02]. O número da clínica é NAP (nome, endereço,
- * telefone): apagá-lo do HTML tiraria do buscador o sinal de negócio local e
- * derrubaria o "Ligar" que o cliente pediu para destacar. A proteção
- * antirrobô desta casa mira o `wa.me`, que é o que o spam de WhatsApp colhe.
+ * DELIBERADO — decidido pelo cliente em 2026-09-18, PARKING [A-02]: *"o maior
+ * índice de spam é com WhatsApp, não telefone"*. O número da clínica é NAP
+ * (nome, endereço, telefone): apagá-lo do HTML tiraria do buscador o sinal de
+ * negócio local e derrubaria o "Ligar" que o cliente pediu para destacar. A
+ * proteção antirrobô daqui mira o `wa.me`, que é o canal que sofre o spam.
  */
 export const telHref = 'tel:+' + numeroWhatsApp();
 

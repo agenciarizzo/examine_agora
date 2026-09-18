@@ -281,8 +281,9 @@ dos CTAs.
 ⚠️ **O telefone continua em texto e em `tel:` no HTML, de propósito** — é NAP
 (nome, endereço, telefone), o sinal de negócio local que o buscador lê, e o
 "Ligar" que o cliente pediu para destacar. A divergência em relação aos sites da
-EL e da ECOA, que escondem o número inteiro, está registrada em `PARKING.md`
-[A-02] com a recomendação.
+EL e da ECOA, que escondem o número inteiro, foi **decidida pelo cliente em
+2026-09-18** (*"o maior índice de spam é com WhatsApp, não telefone"*): fica como
+está. Detalhe e o que reabre o assunto em `PARKING.md` [A-02].
 
 ⚠️ `clinica.phone` (o telefone **visível**, no json) e as partes (o telefone
 **discado**, no código) são o mesmo número, e `lib/content.ts` **reprova o
