@@ -54,7 +54,15 @@ const base = `
 body{width:1200px;height:630px;overflow:hidden;font-family:'Schibsted Grotesk',system-ui,sans-serif;background:#061423;color:#fff;position:relative}
 .grao{position:absolute;inset:0;background:url("${GRAIN}");opacity:.5;mix-blend-mode:overlay;pointer-events:none;z-index:3}
 .wrap{position:relative;z-index:2;height:100%;padding:62px 70px;display:flex;flex-direction:column;justify-content:space-between}
-.logo{height:42px;width:auto;display:block}
+/*
+ * ATENCAO: o align-self:flex-start NAO e enfeite. O .wrap e um flex em COLUNA, e
+ * num flex column o align-items:stretch padrao estica o item na LARGURA,
+ * atropelando o width:auto da imagem. Sem esta linha o logo saia 3,43x mais
+ * largo que o arquivo (744x42 em vez de 217x42), e os 12 cartoes foram ao ar
+ * assim ate o cliente enxergar. A trava contra a volta disso e a medicao da
+ * proporcao do logo, no fim do render().
+ */
+.logo{height:52px;width:auto;align-self:flex-start;display:block}
 h1{font-weight:500;line-height:1.0;letter-spacing:-.025em;text-wrap:balance}
 h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#A9D6F5}
 .pe{display:flex;align-items:center;gap:12px;font-size:20px;color:#A9D6F5;font-weight:500;margin-top:24px}
@@ -161,8 +169,26 @@ async function render(corpo, saida, rotulo) {
   if (!medida.coube) falhas.push(`${rotulo}: o texto não cabe nem a 40px`);
   if (medida.fundo > 630 || medida.topo < 0) falhas.push(`${rotulo}: bloco fora da moldura (${medida.topo}–${medida.fundo})`);
 
+  /*
+   * O logo tem de sair com a proporção do ARQUIVO. Deformar a marca do cliente
+   * é o tipo de defeito que passa por três revisões sem ninguém ver — este
+   * passou, e foi o cliente que viu. Tolerância de 1%: acima disso, reprova.
+   */
+  const logo = await pagina.evaluate(() => {
+    const el = document.querySelector('.logo');
+    const r = el.getBoundingClientRect();
+    return { render: r.width / r.height, arquivo: el.naturalWidth / el.naturalHeight, w: Math.round(r.width), h: Math.round(r.height) };
+  });
+  const desvio = Math.abs(logo.render / logo.arquivo - 1);
+  if (desvio > 0.01) {
+    falhas.push(
+      `${rotulo}: logo DEFORMADO — ${logo.w}×${logo.h} (proporção ${logo.render.toFixed(3)}) ` +
+        `contra ${logo.arquivo.toFixed(3)} do arquivo, ${(logo.render / logo.arquivo).toFixed(2)}× esticado`,
+    );
+  }
+
   await pagina.screenshot({ path: join(raiz, saida), type: 'jpeg', quality: 88 });
-  console.log(`  ${saida}  ·  H1 ${medida.px}px`);
+  console.log(`  ${saida}  ·  H1 ${medida.px}px  ·  logo ${logo.w}×${logo.h}`);
 }
 
 console.log('[og-card] gerando:');
