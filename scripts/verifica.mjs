@@ -43,6 +43,10 @@ const texto = (html) =>
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ');
 
+/** Tetos de metadado do Padrão Rizzo de SEO (seção C). */
+const TETO_TITLE = 60;
+const TETO_DESC = 155;
+
 const falhas = [];
 const anota = (path, msg) => falhas.push(`${path} — ${msg}`);
 
@@ -72,6 +76,24 @@ async function verifica(path, exigeJsonLd = []) {
   const titulo = /<title>(.*?)<\/title>/.exec(html)?.[1];
   if (!titulo) anota(path, 'sem <title>');
   if (!html.includes(`rel="canonical"`)) anota(path, 'sem canonical');
+
+  // Limites de metadados (Padrão Rizzo de SEO, seção C). O teto não é estético:
+  // acima dele o Google corta no meio da frase e quem busca lê reticências.
+  if (titulo && titulo.length > TETO_TITLE) {
+    anota(path, `<title> com ${titulo.length} caracteres (teto ${TETO_TITLE})`);
+  }
+  const desc = /<meta name="description" content="([^"]*)"/.exec(html)?.[1];
+  if (!desc) anota(path, 'sem meta description');
+  if (desc && desc.length > TETO_DESC) {
+    anota(path, `meta description com ${desc.length} caracteres (teto ${TETO_DESC})`);
+  }
+
+  // Exatamente um <h1> por página, e nenhuma imagem sem alt.
+  const h1 = [...html.matchAll(/<h1[\s>]/g)].length;
+  if (h1 !== 1) anota(path, `${h1} <h1> na página (esperado 1)`);
+  for (const img of html.matchAll(/<img\b[^>]*>/g)) {
+    if (!/\salt=/.test(img[0])) anota(path, `<img> sem alt: ${img[0].slice(0, 70)}…`);
+  }
 
   const blocos = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
   const tipos = blocos.flatMap((m) => {
