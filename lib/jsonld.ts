@@ -81,6 +81,13 @@ export function medicalClinic(): Json {
     url: SITE_URL,
     telephone: clinica.phone,
     medicalSpecialty: 'Radiography',
+    /*
+     * `sameAs` é o que amarra o perfil do Instagram e o do Facebook À MESMA
+     * entidade que o site descreve. Os dois links já existiam no json (e no
+     * topbar) e ficavam de fora do schema — o buscador via três presenças
+     * soltas em vez de uma clínica só.
+     */
+    sameAs: [clinica.instagram, clinica.facebook],
     address: ENDERECO,
     areaServed: [
       { '@type': 'Place', name: 'Recanto das Emas · Brasília-DF' },
