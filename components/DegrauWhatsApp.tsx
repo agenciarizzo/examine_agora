@@ -12,20 +12,53 @@ declare global {
 }
 
 /**
- * Manda o evento para o GA4.
+ * Manda a conversão para o GA4 assim que a tag montar — e não antes.
  *
- * Se o gtag.js ainda não carregou (o degrau vive menos de um segundo, e a tag
- * entra com `afterInteractive`), o evento vai para a fila do `dataLayer` no
- * formato de `arguments` — que é como o próprio gtag empilha. A tag processa a
- * fila assim que sobe, então a conversão não se perde por corrida de carga.
+ * ⚠️ Medido na revisão desta entrega (Chromium, iPhone, build de produção, nos
+ * 3 caminhos: link colado, aba nova e clique real no botão flutuante): quando
+ * este efeito roda, `window.gtag` AINDA NÃO EXISTE. O degrau vive menos de um
+ * segundo e a tag entra com `afterInteractive`, depois da hidratação — a prova
+ * é a ordem do `dataLayer`, em que o evento caía na posição 0, à frente do
+ * `js` e do `config` da própria tag.
+ *
+ * Duas coisas quebravam aí, e as duas em silêncio:
+ *  1. **Formato.** Sem `gtag`, o evento caía num push de ARRAY CRU no
+ *     `dataLayer` — e array cru o GA4 ignora. Não é teoria: é o defeito que o
+ *     commit `ce76a46` mediu em produção neste mesmo site ("nunca tinha
+ *     aparecido nos eventos da propriedade em 7 dias") e curou no
+ *     `components/Medicao.tsx`. O degrau nasceu repetindo o defeito curado.
+ *  2. **Ordem.** Evento que chega antes do `config` não tem a que propriedade
+ *     se associar.
+ *
+ * Esperar a tag montar resolve as duas de uma vez: o `gtag` só existe depois
+ * do script que chama `js` e `config`, então sair por ele é sair na ordem
+ * certa e no formato certo. Se a tag não montar (recusa da medição, bloqueador
+ * de anúncio, rede caída), o evento simplesmente não sai — que é o honesto:
+ * conversão inventada é pior que conversão perdida.
+ *
+ * Devolve o cancelador, para o efeito não deixar `setTimeout` solto.
  */
-function evento(nome: string, params: Record<string, string>): void {
-  if (typeof window.gtag === 'function') {
-    window.gtag('event', nome, params);
-    return;
-  }
-  window.dataLayer = window.dataLayer ?? [];
-  window.dataLayer.push(['event', nome, params]);
+function eventoQuandoATagMontar(
+  nome: string,
+  params: Record<string, string>,
+  limiteMs: number,
+): () => void {
+  const fim = Date.now() + limiteMs;
+  let id = 0;
+
+  const tenta = () => {
+    if (typeof window.gtag === 'function') {
+      // `beacon` porque o redirecionamento vem logo atrás: o navegador entrega
+      // o disparo mesmo com o documento indo embora.
+      window.gtag('event', nome, { ...params, transport_type: 'beacon' });
+      return;
+    }
+    if (Date.now() >= fim) return;
+    id = window.setTimeout(tenta, 30);
+  };
+
+  tenta();
+  return () => clearTimeout(id);
 }
 
 /**
@@ -67,23 +100,23 @@ export function DegrauWhatsApp({ padrao }: { padrao: string }) {
 
     botao.current?.setAttribute('href', url);
 
-    if (medindo) {
-      // A CONVERSÃO nasce AQUI, não no clique lá atrás: é neste ponto que o
-      // WhatsApp realmente abre. O clique anterior já foi contado como
-      // `whatsapp_click` e pode nunca virar conversa. `beacon` garante o envio
-      // mesmo com o redirecionamento logo em seguida.
-      evento('generate_lead', {
-        method: 'whatsapp',
-        origem,
-        transport_type: 'beacon',
-      });
-    }
+    // A CONVERSÃO nasce AQUI, não no clique lá atrás: é neste ponto que o
+    // WhatsApp realmente abre. O clique anterior já foi contado como
+    // `whatsapp_click` e pode nunca virar conversa. O limite de espera é o
+    // mesmo tempo que o degrau fica na tela — passou disso, o documento já
+    // está indo embora e não há mais o que disparar.
+    const paraDeEsperar = medindo
+      ? eventoQuandoATagMontar('generate_lead', { method: 'whatsapp', origem }, ESPERA_MS)
+      : () => {};
 
     // `replace` tira o degrau do histórico: quem voltar do WhatsApp cai no
     // site, e não neste degrau de novo — que reabriria o WhatsApp num
     // pingue-pongue e inflaria o número de cliques.
     const t = setTimeout(() => window.location.replace(url), ESPERA_MS);
-    return () => clearTimeout(t);
+    return () => {
+      clearTimeout(t);
+      paraDeEsperar();
+    };
   }, [padrao]);
 
   return (
