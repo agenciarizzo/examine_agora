@@ -2085,6 +2085,114 @@
     ]
    }
   ],
+  "exames": [
+   {
+    "nome": "Ultrassom de mamas",
+    "preparo": "Sem preparo",
+    "slug": "mulher"
+   },
+   {
+    "nome": "Ultrassom de tireoide e cervical",
+    "preparo": "Sem preparo"
+   },
+   {
+    "nome": "Ultrassom musculoesquelético (articulações)",
+    "preparo": "Sem preparo",
+    "slug": "musculo"
+   },
+   {
+    "nome": "Ultrassom morfológico",
+    "preparo": "Sem preparo",
+    "slug": "morfologico"
+   },
+   {
+    "nome": "Ultrassom obstétrico",
+    "preparo": "Sem preparo"
+   },
+   {
+    "nome": "Ultrassom de bolsa escrotal",
+    "preparo": "Sem preparo",
+    "slug": "homem"
+   },
+   {
+    "nome": "Ultrassom de partes moles",
+    "preparo": "Sem preparo"
+   },
+   {
+    "nome": "Doppler de membros e carótidas",
+    "preparo": "Sem preparo",
+    "slug": "doppler"
+   },
+   {
+    "nome": "Ultrassom de próstata via abdominal",
+    "preparo": "Bexiga cheia",
+    "slug": "homem"
+   },
+   {
+    "nome": "Ultrassom pélvico (ginecológico) pela barriga",
+    "preparo": "Bexiga cheia",
+    "slug": "mulher"
+   },
+   {
+    "nome": "Ultrassom de vias urinárias, rins e bexiga",
+    "preparo": "Bexiga cheia"
+   },
+   {
+    "nome": "Ultrassom transvaginal",
+    "preparo": "Bexiga vazia",
+    "slug": "mulher"
+   },
+   {
+    "nome": "Ultrassom de abdome total",
+    "preparo": "Abdome total e superior",
+    "slug": "abdominal"
+   },
+   {
+    "nome": "Ultrassom de abdome superior",
+    "preparo": "Abdome total e superior",
+    "slug": "abdominal"
+   },
+   {
+    "nome": "Doppler abdominal (aorta, renais, sistema porta)",
+    "preparo": "Abdome total e superior",
+    "slug": "doppler"
+   },
+   {
+    "nome": "Ultrassom transretal da próstata",
+    "preparo": "Próstata via transretal",
+    "slug": "homem"
+   },
+   {
+    "nome": "Biópsia de próstata",
+    "preparo": "Biópsias guiadas e PAAF",
+    "slug": "prostata"
+   },
+   {
+    "nome": "Biópsia de mama",
+    "preparo": "Biópsias guiadas e PAAF",
+    "slug": "mama"
+   },
+   {
+    "nome": "PAAF de tireoide",
+    "preparo": "Biópsias guiadas e PAAF",
+    "slug": "tireoide"
+   },
+   {
+    "nome": "PAAF / biópsia de linfonodo",
+    "preparo": "Biópsias guiadas e PAAF",
+    "slug": "linfonodo"
+   },
+   {
+    "nome": "Exames laboratoriais (sangue, urina e fezes)",
+    "preparo": "Exames laboratoriais",
+    "slug": "laboratorio"
+   },
+   {
+    "nome": "Teste de gravidez",
+    "preparo": "Exames laboratoriais",
+    "slug": "laboratorio"
+   }
+  ],
   "port_map": [
    {
     "de": "/",

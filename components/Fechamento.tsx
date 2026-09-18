@@ -4,15 +4,19 @@ import { cor, WRAP } from '@/lib/theme';
 import { Em } from './Bits';
 import { Halo } from './Panos';
 import { ParCta } from './ParCta';
+import { PreAgendamento } from './PreAgendamento';
 
 /** Fechamento com halo baixo — o CTA final de Home e das landings. */
 export function Fechamento({
   waHref,
   sub,
+  exameSlug,
   children,
 }: {
   waHref: string;
   sub?: string;
+  /** Slug da landing de origem — pré-seleciona o exame no modal (§4.5). */
+  exameSlug?: string;
   children?: ReactNode;
 }) {
   return (
@@ -65,6 +69,7 @@ export function Fechamento({
           }}
         >
           <ParCta waHref={waHref}>WhatsApp {clinica.phone}</ParCta>
+          <PreAgendamento exameSlugInicial={exameSlug} />
         </div>
         <div
           style={{

@@ -131,6 +131,40 @@ async function verifica(path, exigeJsonLd = [], proprio = false) {
   }
 }
 
+/**
+ * Varredura do json (cura da armadilha C, §1.1 do mapa de pré-agendamento):
+ * `texto()` acima tira o conteúdo de dentro de `<script>` antes de procurar
+ * termo vedado — e é exatamente onde mora a carga do React, ou seja, tudo
+ * que só existe depois de um clique (modal, concierge) é invisível para o
+ * scanner de HTML. Esta varredura aplica os MESMOS guardrails direto no
+ * json, offline, antes de qualquer `fetch`.
+ */
+function todasAsStrings(valor, acc = []) {
+  if (typeof valor === 'string') acc.push(valor);
+  else if (Array.isArray(valor)) for (const v of valor) todasAsStrings(v, acc);
+  else if (valor && typeof valor === 'object') for (const v of Object.values(valor)) todasAsStrings(v, acc);
+  return acc;
+}
+
+function varreJson(rotulo, valor) {
+  if (valor === undefined) return;
+  const junto = todasAsStrings(valor).join(' \n ');
+  const minusculo = junto.toLowerCase();
+  for (const termo of VEDADO) {
+    if (minusculo.includes(termo)) anota(rotulo, `termo vedado: "${termo}"`);
+  }
+  const colo = coloVedado(junto);
+  if (colo) anota(rotulo, `colo do útero em contexto de câncer: "…${colo}…"`);
+}
+
+varreJson('content/ea-landings.json → site.exames', db.site.exames);
+// `site.concierge` ainda não existe na Fatia 1 — `varreJson` não faz nada
+// com `undefined`, e a varredura liga sozinha quando a Fatia 2 criar o nó.
+varreJson('content/ea-landings.json → site.concierge', db.site.concierge);
+for (const p of db.pages) {
+  if (p.faq?.length) varreJson(`content/ea-landings.json → pages[${p.slug}].faq`, p.faq);
+}
+
 for (const p of db.pages) {
   // `Physician` entra em todas: é o RT que assina o laudo, e o perfil de
   // centro de diagnóstico por imagem pede o nó por membro do corpo clínico.
