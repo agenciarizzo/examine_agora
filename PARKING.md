@@ -76,25 +76,24 @@
 - **Custo de não decidir:** nenhum.
 - **Prazo sugerido:** não tem.
 
-## [C-01] `og:image` é um cartão global, não um por página
+## ✅ [C-01] `og:image` por página — FEITO em 2026-09-18
 
-- **Estado:** o site passou de **zero** cartão para **um**, global, gerado por
-  `scripts/og-card.mjs` (foto real da recepção + chamada da home + RT). O
-  padrão da casa pede um **por página** quando a stack tem `next/og` — e tem:
-  o site é Next 15.
-- **Por que não decidi:** cartão por página é obra, não ajuste: precisa de uma
-  rota `opengraph-image.tsx` com as fontes da marca carregadas no build (o
-  `next/og` não lê Google Fonts por link, tem de embutir o arquivo da fonte), e
-  de uma decisão de arte por grupo de página — landing de exame, post e página
-  legal não pedem o mesmo cartão. Entregar isso meia-boca produziria 32
-  cartões piores que o único bom que está no ar agora.
-- **Minha recomendação:** fazer em fatia própria, começando pelas **12 landings
-  clínicas** (que são as que recebem mídia paga): cartão com o nome do exame
-  sobre a ilustração que a própria landing já usa. Posts e páginas legais
-  seguem no cartão global.
-- **Custo de não decidir:** o compartilhamento das 12 landings mostra a mesma
-  arte — funciona, mas não diz qual exame o link abre.
-- **Prazo sugerido:** junto da próxima campanha.
+- **Estado:** as **11 landings clínicas com ilustração** têm cartão próprio
+  (`public/og/<slug>.jpg`): o H1 da própria página, a ilustração dela e a linha
+  do RT. Home, hub, posts, páginas do site e legais seguem no cartão
+  institucional (`public/og-card.jpg`). Os 12 saem de `scripts/og-card.mjs`.
+- **A decisão (do cliente, 2026-09-18):** *"faz"*. O item estava parqueado com a
+  recomendação de fazer junto da próxima campanha; o cliente adiantou.
+- **O hub ficou de fora de propósito:** `/procedimentos-guiados-por-ultrassom`
+  é página-índice e **não tem ilustração própria**. Inventar arte só para ele
+  seria copy nova (§⚖️ do `CLAUDE.md`: ausência honesta > presença defeituosa).
+  Ele usa o institucional, que é o cartão certo para uma página-índice.
+- **O que sustenta isso no tempo:** `scripts/verifica.mjs` confere, página a
+  página, que a URL do `og:image` **responde 200** e que landing clínica **não**
+  cai no cartão institucional. Provado vermelho: escondendo `og/mama.jpg`, a
+  varredura reprova com `→ HTTP 404`.
+- **Se entrar landing nova:** rodar `node scripts/og-card.mjs`. Esquecer disso
+  não passa silencioso — o gate reprova.
 
 ## [D-01] JSON-LD sem `GeoCoordinates`
 

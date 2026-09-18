@@ -30,7 +30,7 @@ Para mudar um texto do site, mude o json — não o componente.
 | `lib/content.ts` | Carrega e tipa o json; helpers `href`, `waHref`, `nav`, `mapHref` |
 | `lib/whatsapp.ts` | O número da clínica **em partes** e a rota do degrau (proteção antirrobô) |
 | `lib/posts.ts` | Carrega e tipa `posts.json`; blocos do post, data longa, tema |
-| `lib/meta.ts` | `<title>`, description, keywords, canonical e OG a partir do bloco `seo` |
+| `lib/meta.ts` | `<title>`, description, keywords, canonical e OG a partir do bloco `seo`; escolhe o cartão de compartilhamento (§ abaixo) |
 | `lib/jsonld.ts` | Grafo JSON-LD por página (ver abaixo) |
 | `lib/redirects.ts` | 301 do WP antigo, derivados de `site.port_map` e `site.port_map_posts` |
 | `lib/config.ts` | IDs de medição (GA4, pixel do Meta) e o allowlist do pixel |
@@ -257,6 +257,26 @@ termo, e isso derrubava a **medição obstétrica do colo** — comprimento cerv
 risco de parto prematuro —, que é exame que a clínica faz e aparece no post do
 transvaginal. Agora o termo só reprova quando vem perto de câncer, Papanicolau,
 colposcopia ou HPV, que é o que a regra veda de fato.
+
+## Os cartões de compartilhamento (`og:image`)
+
+A imagem que aparece quando alguém manda o link de uma página no WhatsApp, no
+Facebook ou no LinkedIn. São dois níveis:
+
+| Cartão | Quem usa |
+| --- | --- |
+| `public/og/<slug>.jpg` | as **11 landings clínicas com ilustração** — H1 da própria página + a ilustração dela |
+| `public/og-card.jpg` | home, hub, posts, páginas do site e legais |
+
+Os 12 saem de `scripts/og-card.mjs` (Chromium, 1200×630), a partir dos ativos
+do repo — **zero copy inventada**: o título é o `hero` da própria página, a arte
+é a ilustração dela, e o rótulo de categoria vem do campo `grupo`. Landing nova
+= rodar o script de novo; esquecer **não passa silencioso**, porque o
+`scripts/verifica.mjs` confere que o `og:image` de cada página responde `200` e
+que landing clínica não cai no cartão institucional.
+
+O **hub** (`/procedimentos-guiados-por-ultrassom`) usa o institucional de
+propósito: é página-índice e não tem ilustração própria.
 
 ## O degrau `/whatsapp` (proteção antirrobô)
 
