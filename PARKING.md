@@ -33,33 +33,31 @@
   acontecendo hoje.
 - **Prazo sugerido:** antes da próxima rodada de mídia paga.
 
-## [A-02] O telefone continua inteiro no HTML — e isso diverge da EL e da ECOA
+## ✅ [A-02] O telefone continua inteiro no HTML — DECIDIDO em 2026-09-18
 
-- **Estado:** o degrau `/whatsapp` tirou o `wa.me` de todos os arquivos
-  servidos (é o que `scripts/antirobo.mjs` prova a cada build). O **telefone**,
-  não: `(61) 3208-6814` aparece em texto no topbar e no rodapé, e como
-  `tel:+556132086814` nos botões "Ligar" — além de `telephone` no JSON-LD. Nos
+- **Estado:** o degrau `/whatsapp` tirou o `wa.me` de todos os arquivos servidos
+  (é o que `scripts/antirobo.mjs` prova a cada build). O **telefone**, não:
+  `(61) 3208-6814` aparece em texto no topbar e no rodapé, como
+  `tel:+556132086814` nos botões "Ligar", e como `telephone` no JSON-LD. Nos
   sites da **EL** e da **ECOA**, o número inteiro **não existe** em arquivo
-  servido: o display é montado das partes por JavaScript e o `tel:` nasce no
+  servido — o display é montado das partes por JavaScript e o `tel:` nasce no
   clique.
-- **Por que não decidi sozinho:** os dois lados têm razão, e a diferença é de
-  negócio, não técnica. **A favor de esconder:** um varredor que colha números
-  brasileiros ainda consegue tentar o WhatsApp deste número — o degrau protege
-  o link, não o número. **A favor de manter:** (a) o telefone é **NAP** (nome,
-  endereço, telefone), o sinal de negócio local que o buscador lê e cruza com o
-  Google Meu Negócio, e esconder atrás de JavaScript o entrega pior; (b) o
-  cliente pediu, em agosto, que o **"Ligar" ganhasse o mesmo peso do WhatsApp**
-  — o topbar existe por causa disso; (c) na EA, WhatsApp e ligação são **a
-  mesma linha**, então a decisão cobra pedágio nos dois canais de uma vez.
-- **Minha recomendação:** **manter como está** e revisar se aparecer spam de
-  voz/ligação (não de WhatsApp). Se o cliente quiser esconder mesmo assim, o
-  meio-termo que preserva o SEO é manter o número **em texto** (NAP) e mover só
-  o `tel:` para o clique — recupera parte da proteção sem apagar o sinal local.
-- **Custo de não decidir:** baixo e reversível. Nenhum dos dois caminhos trava
-  nada.
-- **Pergunta para o cliente:** a proteção da EL/ECOA foi decisão de padrão
-  ("todo site da casa esconde o número") ou resposta a um spam específico
-  daquelas clínicas? A resposta muda a régua para os próximos sites.
+- **A decisão (do cliente, 2026-09-18):** *"o maior índice de spam é com
+  WhatsApp, não telefone"*. **Fica como está.** O que o site tinha de fazer
+  contra spam já está feito — o link do WhatsApp não existe mais em arquivo
+  servido —, e esconder o telefone cobraria os dois preços que o negócio não
+  quer pagar: o **NAP** (nome, endereço, telefone é o sinal de negócio local que
+  o buscador cruza com o Google Meu Negócio) e o **"Ligar"** que o cliente pediu
+  em agosto para ter o mesmo peso do WhatsApp. Perder sinal de busca local para
+  proteger um canal que não é o atacado seria trocar certo por incerto.
+- **O que reabre este item:** spam **por ligação ou SMS** no número da clínica.
+  Aí o meio-termo que preserva o SEO é manter o número **em texto** (NAP) e mover
+  só o `tel:` para o clique — recupera parte da proteção sem apagar o sinal local.
+- **Para os próximos sites da casa:** a régua deixa de ser "todo site esconde o
+  número" e passa a ser **"esconde-se o canal que sofre o spam"**. Na EL e na
+  ECOA, esconder o número inteiro não custa NAP porque lá o telefone não é o
+  trilho que o cliente quis destacar; na EA, custa. Registrado em
+  `docs/EA_SEO_MANUTENCAO_MAPA.md` §4, no `rizzo-os`.
 
 ## [A-03] Barra final na home: quem decide é o Next, não o repo
 
