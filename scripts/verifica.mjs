@@ -70,7 +70,11 @@ async function verifica(path, exigeJsonLd = []) {
   // "Doppler" sempre com D maiúsculo — só no texto visível, não nas URLs.
   if (/\bdoppler\b/.test(visivel)) anota(path, 'Doppler em minúsculo');
 
-  if (!html.includes('wa.me/556132086814')) anota(path, 'sem float/link de WhatsApp');
+  // Todo CTA de WhatsApp aponta para o degrau interno, e `wa.me` não pode
+  // aparecer em página nenhuma — quem cobra isso no build é
+  // `scripts/antirobo.mjs`; aqui é o mesmo teste, do lado do servidor de pé.
+  if (!html.includes('href="/whatsapp?')) anota(path, 'sem float/link de WhatsApp');
+  if (html.includes('wa.me')) anota(path, 'wa.me servido na página (antirrobô furado)');
   if (!html.includes(db.clinica.rt.crm.split(' · ')[0])) anota(path, 'sem a linha do RT');
 
   const titulo = /<title>(.*?)<\/title>/.exec(html)?.[1];
@@ -162,6 +166,19 @@ const antigas = [
 for (const de of antigas) {
   const res = await fetch(base + de);
   if (!res.ok) anota(de, `URL antiga do WP terminou em HTTP ${res.status}`);
+}
+
+/** O degrau: responde, é noindex e não monta o link no HTML. */
+{
+  const res = await fetch(base + '/whatsapp?m=teste&o=verifica');
+  if (!res.ok) anota('/whatsapp', `HTTP ${res.status}`);
+  const html = res.ok ? await res.text() : '';
+  if (html && !/name="robots"[^>]*noindex/.test(html)) anota('/whatsapp', 'sem noindex');
+  if (html.includes('wa.me')) anota('/whatsapp', 'wa.me no HTML do degrau (tem de nascer no JS)');
+  const robots = await (await fetch(base + '/robots.txt')).text();
+  if (!/Disallow:\s*\/whatsapp/.test(robots)) anota('/robots.txt', 'sem Disallow do /whatsapp');
+  const sitemap = await (await fetch(base + '/sitemap.xml')).text();
+  if (sitemap.includes('/whatsapp')) anota('/sitemap.xml', 'degrau /whatsapp dentro do sitemap');
 }
 
 console.log(`páginas verificadas: ${db.pages.length}`);

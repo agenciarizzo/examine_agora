@@ -6,6 +6,7 @@
  * (regra do handoff, `design/HANDOFF.md`).
  */
 import raw from '../content/ea-landings.json';
+import { degrauHref, numeroWhatsApp, telefoneVisivel } from './whatsapp';
 
 export type Ponto = { t: string; d: string };
 export type Passo = { t: string; d: string };
@@ -60,7 +61,6 @@ export type Clinica = {
   rt_line: string;
   rt: { name: string; specialty: string; crm: string; rqe: string; bio: string };
   phone: string;
-  whatsapp_link: string;
   handle: string;
   instagram: string;
   facebook: string;
@@ -149,21 +149,46 @@ export function href(slug: string, hash?: string): string {
   return page(slug).path + (hash ?? '');
 }
 
-/** Link de WhatsApp com uma mensagem já escrita. */
-export function waMsgHref(msg: string): string {
-  return clinica.whatsapp_link + '?text=' + encodeURIComponent(msg);
+/**
+ * Trava contra deriva: o telefone que o site MOSTRA e as partes que o site
+ * DISCA têm de ser o mesmo número. Sem isto, editar `clinica.phone` no json
+ * (que é o gesto natural de quem mexe em texto) deixaria o site exibindo um
+ * número e abrindo outro — em silêncio. Reprova o build.
+ */
+if (clinica.phone !== telefoneVisivel()) {
+  throw new Error(
+    `clinica.phone ("${clinica.phone}") não bate com as partes de lib/whatsapp.ts ` +
+      `("${telefoneVisivel()}"). Um dos dois está errado — os dois são o mesmo número.`,
+  );
 }
 
-/** Link de WhatsApp com o `waMsg` da própria página. */
+/**
+ * CTA de WhatsApp com uma mensagem já escrita.
+ *
+ * Devolve a ROTA INTERNA, nunca `wa.me` — ver `lib/whatsapp.ts` para o porquê.
+ * A `origem` viaja como `?o=` e vira a dimensão do evento de conversão.
+ */
+export function waMsgHref(msg: string, origem?: string): string {
+  return degrauHref(msg, origem);
+}
+
+/** CTA de WhatsApp com o `waMsg` da própria página. */
 export function waHref(slug: string): string {
-  return waMsgHref(page(slug).seo.waMsg);
+  return degrauHref(page(slug).seo.waMsg, slug);
 }
 
 export const mapHref =
   'https://www.google.com/maps/search/?api=1&query=' +
   encodeURIComponent('Examine Agora, ' + clinica.address.replace(/ · /g, ', '));
 
-export const telHref = 'tel:+' + clinica.whatsapp_link.split('/').pop();
+/**
+ * O link de ligação continua sendo `tel:` com o número inteiro, e isso é
+ * DELIBERADO — ver PARKING [A-02]. O número da clínica é NAP (nome, endereço,
+ * telefone): apagá-lo do HTML tiraria do buscador o sinal de negócio local e
+ * derrubaria o "Ligar" que o cliente pediu para destacar. A proteção
+ * antirrobô desta casa mira o `wa.me`, que é o que o spam de WhatsApp colhe.
+ */
+export const telHref = 'tel:+' + numeroWhatsApp();
 
 /** Nav do header/rodapé, data-driven a partir de `site.nav`. */
 export const nav = site.nav.map((n) => ({
