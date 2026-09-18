@@ -155,3 +155,35 @@
   metadado ou de JSON-LD volta sem ninguém ver — que é exatamente o estado em
   que esta manutenção encontrou o site.
 - **Prazo sugerido:** próxima entrega que tocar o repo.
+
+## [M-01] A conversão do degrau depende do gtag.js carregar dentro de ~900 ms
+
+> **Fora das seções do Padrão Rizzo (A–G) de propósito:** medição não é SEO. O
+> degrau entrou nesta entrega como o terceiro pedido do cliente, e este item é a
+> ponta que sobrou dele. Aberto na **revisão (F3)**, depois de o defeito
+> principal ter sido medido e curado — ver o commit do `generate_lead`.
+
+- **Estado:** o `generate_lead` agora sai pela função `gtag` de verdade, no
+  formato certo e depois do `config` (medido nos 3 caminhos — link colado, aba
+  nova e clique real no flutuante). Mas o **disparo pela rede** ainda depende de
+  o `gtag.js` terminar de carregar antes de o degrau redirecionar, ~900 ms
+  depois. O evento fica na fila do `dataLayer`, e quem esvazia a fila é o
+  `gtag.js`: se ele não chegar a tempo, o documento vai embora com a fila
+  cheia. Na prática o arquivo quase sempre está **quente no cache** (a mesma tag
+  acabou de carregar na landing de onde o visitante veio); o caso frio é o link
+  **colado direto no WhatsApp** por quem nunca abriu o site.
+- **Por que não decidi:** a única forma de fechar isso é **segurar o visitante
+  mais tempo no degrau** esperando o disparo confirmar (`event_callback`), e
+  isso é troca de UX, não conserto: atrasa o WhatsApp do paciente para salvar um
+  registro de analytics. Quem decide de que lado essa balança pende é o cliente
+  — e o tempo do degrau na tela é justamente o que ele acabou de validar no
+  celular.
+- **Minha recomendação:** **deixar como está** e medir primeiro. O passo 7 do
+  roteiro de checkpoint (GA4 → Tempo real) já dá o número real: se a contagem de
+  `generate_lead` ficar muito abaixo da de `whatsapp_click`, a diferença é esta
+  fila perdida — e aí vale o `event_callback` com teto de ~1,6 s, que solta o
+  visitante assim que o disparo confirma e nunca segura além do teto.
+- **Custo de não decidir:** baixo e visível. Não afeta o paciente em nada — o
+  WhatsApp abre igual. O que se perde é contagem de conversão, e ela é
+  mensurável pela própria razão `generate_lead` ÷ `whatsapp_click`.
+- **Prazo sugerido:** depois da primeira semana de dados no GA4.
