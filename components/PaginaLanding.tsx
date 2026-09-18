@@ -10,7 +10,7 @@ import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 import { clinica, href, type Page, page, waHref } from '@/lib/content';
-import { breadcrumb, graph } from '@/lib/jsonld';
+import { graph } from '@/lib/jsonld';
 import { cor, WRAP } from '@/lib/theme';
 
 /** Quebra a frase-lead do bloco `guiado` em torno da palavra em ênfase. */
@@ -35,7 +35,6 @@ export function PaginaLanding({ p }: { p: Page }) {
   return (
     <>
       <JsonLd data={graph(p.slug)} />
-      <JsonLd data={breadcrumb(p)} />
       <WhatsAppFloat href={wa} />
 
       <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>

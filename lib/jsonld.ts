@@ -25,6 +25,54 @@ const OPENING_HOURS = [
 
 export const CLINIC_ID = `${SITE_URL}/#clinica`;
 
+/**
+ * O responsável técnico tem nó PRÓPRIO, com @id, e não mais um `employee`
+ * anônimo dentro da clínica.
+ *
+ * O perfil de centro de diagnóstico por imagem pede `Physician` por membro do
+ * corpo clínico — aqui é um só, e é ele quem assina o laudo. Nó anônimo não
+ * pode ser referenciado, não carrega CRM e RQE separados e não aparece em
+ * resposta de IA; com @id, a página do RT, os exames e a clínica passam a
+ * apontar para a MESMA pessoa.
+ */
+export const PHYSICIAN_ID = `${SITE_URL}/#rt`;
+
+/** Endereço da clínica — um lugar só, usado pela clínica e pelo RT. */
+const ENDERECO = {
+  '@type': 'PostalAddress',
+  streetAddress: 'Av. Recanto das Emas, Q102 L03 Loja 06',
+  addressLocality: 'Recanto das Emas',
+  addressRegion: 'DF',
+  addressCountry: 'BR',
+} as const;
+
+/**
+ * CRM e RQE entram como `PropertyValue` separados, não numa string só: é
+ * assim que um validador (e um buscador) consegue ler o registro como
+ * registro, e não como texto solto.
+ */
+export function physician(): Json {
+  const [crmDf, crmSp] = clinica.rt.crm.split(' · ');
+  return {
+    '@type': 'Physician',
+    '@id': PHYSICIAN_ID,
+    name: clinica.rt.name,
+    honorificPrefix: 'Dr.',
+    jobTitle: 'Responsável técnico',
+    medicalSpecialty: 'Radiography',
+    url: absolute(href('sobre')),
+    image: absolute('/dr-flavio.webp'),
+    description: clinica.rt.bio,
+    address: ENDERECO,
+    worksFor: { '@id': CLINIC_ID },
+    identifier: [
+      { '@type': 'PropertyValue', name: 'CRM', value: crmDf },
+      ...(crmSp ? [{ '@type': 'PropertyValue', name: 'CRM', value: crmSp }] : []),
+      { '@type': 'PropertyValue', name: 'RQE', value: clinica.rt.rqe },
+    ],
+  };
+}
+
 export function medicalClinic(): Json {
   return {
     '@type': 'MedicalClinic',
@@ -33,13 +81,7 @@ export function medicalClinic(): Json {
     url: SITE_URL,
     telephone: clinica.phone,
     medicalSpecialty: 'Radiography',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Av. Recanto das Emas, Q102 L03 Loja 06',
-      addressLocality: 'Recanto das Emas',
-      addressRegion: 'DF',
-      addressCountry: 'BR',
-    },
+    address: ENDERECO,
     areaServed: [
       { '@type': 'Place', name: 'Recanto das Emas · Brasília-DF' },
       { '@type': 'Place', name: 'Riacho Fundo II · Brasília-DF' },
@@ -48,12 +90,7 @@ export function medicalClinic(): Json {
     paymentAccepted: clinica.pagamento,
     hasMap: 'https://www.google.com/maps/search/?api=1&query=' +
       encodeURIComponent('Examine Agora, ' + clinica.address.replace(/ · /g, ', ')),
-    employee: {
-      '@type': 'Physician',
-      name: clinica.rt.name,
-      medicalSpecialty: 'Radiography',
-      identifier: `${clinica.rt.crm} · ${clinica.rt.rqe}`,
-    },
+    employee: { '@id': PHYSICIAN_ID },
   };
 }
 
@@ -116,10 +153,12 @@ function webPage(p: Page): Json {
 /** Grafo completo de uma página, pronto para o `<script type="application/ld+json">`. */
 export function graph(slug: string): Json {
   const p = page(slug);
-  const nodes: Json[] = [webPage(p), medicalClinic()];
+  const nodes: Json[] = [webPage(p), medicalClinic(), physician()];
   if (p.tipo === 'landing' && !p.hub) nodes.push(procedureOrTest(p));
   const faq = faqPage(p);
   if (faq) nodes.push(faq);
+  // A home é a raiz: rota raiz não tem trilha. Todas as outras têm.
+  if (p.path !== '/') nodes.push(breadcrumb(p));
   return { '@context': 'https://schema.org', '@graph': nodes };
 }
 
@@ -187,7 +226,15 @@ export function breadcrumbPost(post: Post): Json {
   };
 }
 
-/** Breadcrumb das landings (hub → página). */
+/**
+ * Breadcrumb de QUALQUER rota aninhada — landing, página do site ou legal.
+ *
+ * A regra do padrão da casa não tem exceção: rota aninhada leva
+ * `BreadcrumbList`. Antes daqui só as 12 landings tinham; `/preparos`,
+ * `/convenios`, `/sobre-nos`, `/agende-seu-exame`, `/noticias` e as 3 páginas
+ * legais ficavam sem — 8 rotas que o buscador via soltas, sem caminho de volta
+ * para a home.
+ */
 export function breadcrumb(p: Page): Json {
   const items = [
     { name: 'Início', item: absolute('/') },
@@ -197,8 +244,8 @@ export function breadcrumb(p: Page): Json {
     { name: p.curto, item: absolute(p.path) },
   ];
   return {
-    '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${absolute(p.path)}#trilha`,
     itemListElement: items.map((it, i) => ({
       '@type': 'ListItem',
       position: i + 1,

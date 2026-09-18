@@ -103,10 +103,16 @@ async function verifica(path, exigeJsonLd = []) {
   for (const t of ['MedicalClinic', ...exigeJsonLd]) {
     if (!tipos.includes(t)) anota(path, `sem ${t} no JSON-LD`);
   }
+  // Trilha em toda rota aninhada — a raiz é a única sem, porque é a raiz.
+  if (path !== '/' && !tipos.includes('BreadcrumbList')) {
+    anota(path, 'sem BreadcrumbList no JSON-LD (rota aninhada)');
+  }
 }
 
 for (const p of db.pages) {
-  const exige = [];
+  // `Physician` entra em todas: é o RT que assina o laudo, e o perfil de
+  // centro de diagnóstico por imagem pede o nó por membro do corpo clínico.
+  const exige = ['Physician'];
   if (p.faq?.length) exige.push('FAQPage');
   if (p.tipo === 'landing' && !p.hub) {
     exige.push(p.grupo === 'proc' ? 'MedicalProcedure' : 'MedicalTest');
