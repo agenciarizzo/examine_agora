@@ -5,7 +5,7 @@
   "description": "Site Examine Agora — Imagem e Medicina (Recanto das Emas, Brasília-DF)",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/antirobo.mjs",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"

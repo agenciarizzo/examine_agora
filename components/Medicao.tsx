@@ -5,7 +5,6 @@ import { Analytics } from '@/components/Analytics';
 import { AvisoMedicao } from '@/components/AvisoMedicao';
 import { MetaPixel } from '@/components/MetaPixel';
 import {
-  comRef,
   leEscolha,
   leOrigem,
   limpaOrigem,
@@ -15,6 +14,7 @@ import {
   type EscolhaDeMedicao,
   type Origem,
 } from '@/lib/medicao';
+import { WHATSAPP_ROUTE } from '@/lib/whatsapp';
 
 declare global {
   interface Window {
@@ -91,11 +91,10 @@ export function Medicao() {
 
       const pagina = window.location.pathname;
 
-      if (href.startsWith('https://wa.me/')) {
-        // A mensagem ganha a referência do clique pago antes da navegação.
-        const comReferencia = comRef(href, origem);
-        if (comReferencia !== href) a.setAttribute('href', comReferencia);
-
+      if (href.startsWith(WHATSAPP_ROUTE)) {
+        // Aqui conta-se o CLIQUE. A conversão (`generate_lead`) e a referência
+        // do clique pago na mensagem nascem no degrau `/whatsapp`, que é onde
+        // o WhatsApp realmente abre — ver `components/DegrauWhatsApp.tsx`.
         evento('whatsapp_click', { pagina, origem: origem?.tipo ?? 'organico' });
         return;
       }

@@ -43,6 +43,10 @@ const texto = (html) =>
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ');
 
+/** Tetos de metadado do Padrão Rizzo de SEO (seção C). */
+const TETO_TITLE = 60;
+const TETO_DESC = 155;
+
 const falhas = [];
 const anota = (path, msg) => falhas.push(`${path} — ${msg}`);
 
@@ -66,12 +70,38 @@ async function verifica(path, exigeJsonLd = []) {
   // "Doppler" sempre com D maiúsculo — só no texto visível, não nas URLs.
   if (/\bdoppler\b/.test(visivel)) anota(path, 'Doppler em minúsculo');
 
-  if (!html.includes('wa.me/556132086814')) anota(path, 'sem float/link de WhatsApp');
+  // Todo CTA de WhatsApp aponta para o degrau interno, e `wa.me` não pode
+  // aparecer em página nenhuma — quem cobra isso no build é
+  // `scripts/antirobo.mjs`; aqui é o mesmo teste, do lado do servidor de pé.
+  if (!html.includes('href="/whatsapp?')) anota(path, 'sem float/link de WhatsApp');
+  if (html.includes('wa.me')) anota(path, 'wa.me servido na página (antirrobô furado)');
   if (!html.includes(db.clinica.rt.crm.split(' · ')[0])) anota(path, 'sem a linha do RT');
 
   const titulo = /<title>(.*?)<\/title>/.exec(html)?.[1];
   if (!titulo) anota(path, 'sem <title>');
   if (!html.includes(`rel="canonical"`)) anota(path, 'sem canonical');
+
+  // Limites de metadados (Padrão Rizzo de SEO, seção C). O teto não é estético:
+  // acima dele o Google corta no meio da frase e quem busca lê reticências.
+  if (titulo && titulo.length > TETO_TITLE) {
+    anota(path, `<title> com ${titulo.length} caracteres (teto ${TETO_TITLE})`);
+  }
+  // Cartão de compartilhamento: sem ele, o link mandado no WhatsApp chega como
+  // retângulo vazio. Vale para as 32 páginas, não só para a home.
+  if (!html.includes('property="og:image"')) anota(path, 'sem og:image');
+
+  const desc = /<meta name="description" content="([^"]*)"/.exec(html)?.[1];
+  if (!desc) anota(path, 'sem meta description');
+  if (desc && desc.length > TETO_DESC) {
+    anota(path, `meta description com ${desc.length} caracteres (teto ${TETO_DESC})`);
+  }
+
+  // Exatamente um <h1> por página, e nenhuma imagem sem alt.
+  const h1 = [...html.matchAll(/<h1[\s>]/g)].length;
+  if (h1 !== 1) anota(path, `${h1} <h1> na página (esperado 1)`);
+  for (const img of html.matchAll(/<img\b[^>]*>/g)) {
+    if (!/\salt=/.test(img[0])) anota(path, `<img> sem alt: ${img[0].slice(0, 70)}…`);
+  }
 
   const blocos = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
   const tipos = blocos.flatMap((m) => {
@@ -81,10 +111,16 @@ async function verifica(path, exigeJsonLd = []) {
   for (const t of ['MedicalClinic', ...exigeJsonLd]) {
     if (!tipos.includes(t)) anota(path, `sem ${t} no JSON-LD`);
   }
+  // Trilha em toda rota aninhada — a raiz é a única sem, porque é a raiz.
+  if (path !== '/' && !tipos.includes('BreadcrumbList')) {
+    anota(path, 'sem BreadcrumbList no JSON-LD (rota aninhada)');
+  }
 }
 
 for (const p of db.pages) {
-  const exige = [];
+  // `Physician` entra em todas: é o RT que assina o laudo, e o perfil de
+  // centro de diagnóstico por imagem pede o nó por membro do corpo clínico.
+  const exige = ['Physician'];
   if (p.faq?.length) exige.push('FAQPage');
   if (p.tipo === 'landing' && !p.hub) {
     exige.push(p.grupo === 'proc' ? 'MedicalProcedure' : 'MedicalTest');
@@ -134,6 +170,19 @@ const antigas = [
 for (const de of antigas) {
   const res = await fetch(base + de);
   if (!res.ok) anota(de, `URL antiga do WP terminou em HTTP ${res.status}`);
+}
+
+/** O degrau: responde, é noindex e não monta o link no HTML. */
+{
+  const res = await fetch(base + '/whatsapp?m=teste&o=verifica');
+  if (!res.ok) anota('/whatsapp', `HTTP ${res.status}`);
+  const html = res.ok ? await res.text() : '';
+  if (html && !/name="robots"[^>]*noindex/.test(html)) anota('/whatsapp', 'sem noindex');
+  if (html.includes('wa.me')) anota('/whatsapp', 'wa.me no HTML do degrau (tem de nascer no JS)');
+  const robots = await (await fetch(base + '/robots.txt')).text();
+  if (!/Disallow:\s*\/whatsapp/.test(robots)) anota('/robots.txt', 'sem Disallow do /whatsapp');
+  const sitemap = await (await fetch(base + '/sitemap.xml')).text();
+  if (sitemap.includes('/whatsapp')) anota('/sitemap.xml', 'degrau /whatsapp dentro do sitemap');
 }
 
 console.log(`páginas verificadas: ${db.pages.length}`);

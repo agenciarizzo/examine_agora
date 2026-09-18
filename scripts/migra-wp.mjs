@@ -253,10 +253,63 @@ function corta(s, max) {
   return fatia.slice(0, fatia.lastIndexOf(' ')).replace(/[,;:.]$/, '') + '…';
 }
 
+/**
+ * Título de SEO por post — curado, porque o título editorial do WordPress não
+ * cabe no `<title>`.
+ *
+ * Os 11 títulos vieram do WP com 56 a 99 caracteres; somados a " | Examine
+ * Agora" (16), dez deles estouravam os 60 que o Google mostra, e o que o
+ * paciente lia na busca terminava em reticências no meio da frase. O padrão da
+ * casa é ≤ 60 com a palavra-chave ANTES do separador.
+ *
+ * O título editorial (`titulo`, que vira o `<h1>` e o cartão do índice) NÃO
+ * muda: só o `<title>` é reescrito. A tabela mora aqui, e não em
+ * `content/posts.json`, porque o json é gerado — valor curado fora daqui
+ * morreria na próxima migração.
+ *
+ * Post novo sem entrada aqui cai no padrão `${titulo} | Examine Agora`, e a
+ * trava logo abaixo reprova a geração se isso passar de 60.
+ */
+const TITULOS_SEO = {
+  'ultrassom-morfologico-guia-completo-bebe': 'Ultrassom morfológico: guia completo',
+  'cancer-de-prostata-ultrassom-diagnostico': 'Câncer de próstata: o papel do ultrassom',
+  'importancia-do-exame-de-ultrassonografia-vascular-com-doppler-colorido':
+    'Doppler colorido: o exame vascular explicado',
+  'quando-realizar-ultrassom-transvaginal': 'Ultrassom transvaginal: quando fazer',
+  'o-que-e-o-ultrassom-morfologico': 'Ultrassom morfológico na gravidez',
+  'ultrassom-das-articulacoes': 'Ultrassom das articulações: o que saber',
+  'ultrassom-de-tireoide-diagnostico': 'Ultrassom de tireoide no diagnóstico',
+  'quando-realizar-ultrassonografia-do-aparelho-reprodutor-masculino':
+    'Ultrassom do aparelho reprodutor masculino',
+  'ultrassom-abdominal-no-diagnostico-de-doencas': 'Ultrassom abdominal: o que o exame detecta',
+  'ultrassonografia-ajudar-rastreio-pre-eclampsia': 'Ultrassom no rastreio da pré-eclâmpsia',
+};
+
+/** Limite do `<title>`: o que o Google mostra sem cortar. */
+const TETO_TITLE = 60;
+
 // --- monta os posts --------------------------------------------------------
 const itens = pedacos('item').filter(
   (i) => campo(i, 'wp:post_type') === 'post' && campo(i, 'wp:status') === 'publish',
 );
+
+/**
+ * `<title>` do post: o curado quando existe, senão o editorial com a marca.
+ * Reprova a geração acima de `TETO_TITLE` — é a trava que impede um post novo
+ * de voltar a nascer com 99 caracteres.
+ */
+function tituloSeo(slug, titulo) {
+  const t = TITULOS_SEO[slug]
+    ? `${TITULOS_SEO[slug]} | Examine Agora`
+    : `${titulo} | Examine Agora`;
+  if (t.length > TETO_TITLE) {
+    throw new Error(
+      `<title> com ${t.length} caracteres (teto ${TETO_TITLE}) em "${slug}": ` +
+        'escreva o título curto em TITULOS_SEO.',
+    );
+  }
+  return t;
+}
 
 const posts = [];
 const fora = [];
@@ -286,7 +339,7 @@ for (const item of itens) {
     min: Math.max(1, Math.round(corrido.split(/\s+/).length / 200)),
     lead: corta(lead, 190),
     seo: {
-      title: `${titulo} | Examine Agora`,
+      title: tituloSeo(slug, titulo),
       description: corta(lead.replace(/\s+/g, ' '), 155),
       waMsg: `Olá! Li o artigo "${corta(titulo, 60)}" no site e quero agendar um exame.`,
     },

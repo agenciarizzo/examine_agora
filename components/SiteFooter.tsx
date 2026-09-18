@@ -4,10 +4,17 @@ import { clinica, href, legais, nav } from '@/lib/content';
 import { cor, WRAP } from '@/lib/theme';
 
 const miudo = {
-  color: 'rgba(169,214,245,.55)',
+  color: 'rgba(169,214,245,.8)',
   textDecoration: 'none',
   fontSize: 12,
 } as const;
+
+/**
+ * Ano do rodapé. O site é gerado estaticamente, então este valor congela no
+ * build — é o ano do último deploy, não o de hoje. Está certo assim: o que a
+ * linha declara é a data do conteúdo publicado.
+ */
+const ANO = new Date().getFullYear();
 
 /**
  * Rodapé mudo com a linha do RT. A faixa de links de navegação só aparece nas
@@ -37,9 +44,26 @@ export function SiteFooter({ links = false }: { links?: boolean }) {
           height={60}
           style={{ height: 30, width: 'auto', display: 'block' }}
         />
-        <p style={{ margin: 0, fontSize: 13, color: 'rgba(169,214,245,.7)' }}>{clinica.rt_line}</p>
-        <p style={{ margin: 0, fontSize: 13, color: 'rgba(169,214,245,.7)' }}>
-          {clinica.handle} · {clinica.site}
+        {/*
+          A linha do RT é exigência do CFM, não enfeite de rodapé: nome, CRM e
+          RQE precisam estar visíveis em toda página. Fica em `cor.ceu` cheio,
+          e não num cinza-azul a 70%, porque exigência ilegível é exigência
+          não cumprida.
+        */}
+        <p style={{ margin: 0, fontSize: 13, color: cor.ceu, fontWeight: 500 }}>
+          {clinica.rt_line}
+        </p>
+        <p style={{ margin: 0, fontSize: 13, color: 'rgba(169,214,245,.8)' }}>
+          <a
+            href={clinica.instagram}
+            target="_blank"
+            rel="noopener"
+            className="ea-link-inherit"
+            style={{ textDecoration: 'none' }}
+          >
+            {clinica.handle}
+          </a>{' '}
+          · {clinica.site}
         </p>
       </div>
       {links && (
@@ -79,6 +103,50 @@ export function SiteFooter({ links = false }: { links?: boolean }) {
             {l.nome}
           </Link>
         ))}
+      </div>
+      <div
+        style={{
+          maxWidth: WRAP,
+          margin: '0 auto',
+          padding: '0 24px 26px',
+          borderTop: '1px solid rgba(169,214,245,.1)',
+          paddingTop: 16,
+          display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '10px 22px',
+        }}
+      >
+        <p style={{ margin: 0, ...miudo }}>
+          © {ANO} {clinica.nome}. Todos os direitos reservados.
+        </p>
+        <p style={{ margin: 0, ...miudo }}>
+          Desenvolvido por{' '}
+          {/*
+            A assinatura da agência é link para o site dela — padrão da casa,
+            igual ao do site da ECOA.
+
+            `rel="noopener"` SEM `noreferrer`, ao contrário dos outros links
+            externos do site: é o referrer que faz a visita chegar identificada
+            como vinda daqui no Analytics da agência, que é exatamente o que um
+            crédito de rodapé existe para fazer. `noopener` fica, que é a parte
+            de segurança.
+
+            `aria-label` porque o "|" é ornamento da marca: em leitor de tela
+            ele seria lido como "barra vertical" no meio do nome.
+          */}
+          <a
+            href="https://www.agenciarizzo.com.br/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Agência Rizzo"
+            className="ea-link-inherit"
+            style={{ color: cor.branco, fontWeight: 600, textDecoration: 'none' }}
+          >
+            agência<span style={{ color: '#FFCC00' }}>|</span>rizzo
+          </a>
+        </p>
       </div>
     </footer>
   );

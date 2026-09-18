@@ -95,3 +95,30 @@ details[open] > summary .ea-faq-sinal::after {
     display: none;
   }
 }
+
+/*
+ * Girador do degrau de WhatsApp (`/whatsapp`). Fica aqui, e não inline, porque
+ * `@keyframes` não existe em estilo inline — e o degrau precisa pintar antes
+ * de qualquer JavaScript, que é a razão de ele existir.
+ */
+.ea-degrau-girador {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 20px;
+  border-radius: 999px;
+  border: 3px solid rgba(169, 214, 245, 0.25);
+  border-top-color: #a9d6f5;
+  animation: ea-girar 0.9s linear infinite;
+}
+
+@keyframes ea-girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ea-degrau-girador {
+    animation: none;
+  }
+}

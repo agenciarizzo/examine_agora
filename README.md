@@ -9,7 +9,7 @@ linha visual é reproduzida com os mesmos valores dos HTML de referência.
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # gera as 32 páginas estáticas (21 páginas + 11 posts)
+npm run build    # gera as 32 páginas estáticas (21 páginas + 11 posts) + o degrau /whatsapp
 npm start
 ```
 
@@ -28,6 +28,7 @@ Para mudar um texto do site, mude o json — não o componente.
 | Arquivo | Papel |
 | --- | --- |
 | `lib/content.ts` | Carrega e tipa o json; helpers `href`, `waHref`, `nav`, `mapHref` |
+| `lib/whatsapp.ts` | O número da clínica **em partes** e a rota do degrau (proteção antirrobô) |
 | `lib/posts.ts` | Carrega e tipa `posts.json`; blocos do post, data longa, tema |
 | `lib/meta.ts` | `<title>`, description, keywords, canonical e OG a partir do bloco `seo` |
 | `lib/jsonld.ts` | Grafo JSON-LD por página (ver abaixo) |
@@ -240,10 +241,15 @@ Com o servidor de pé (`npm start`), a varredura de guardrails e SEO:
 node scripts/verifica.mjs http://localhost:3000
 ```
 
-Ela faz três passagens: as 21 páginas (guardrails, WhatsApp, RT, canonical,
-JSON-LD), os 11 posts (o mesmo, mais o `BlogPosting` e o link para a landing do
-tema) e as 53 URLs antigas do WP, onde a regra é uma só — nenhuma pode terminar
-em 404.
+Ela faz quatro passagens: as 21 páginas (guardrails, WhatsApp, RT, canonical,
+limites de `<title>`/`description`, 1 `<h1>`, `alt` em toda imagem, JSON-LD com
+`MedicalClinic`, `Physician` e `BreadcrumbList`), os 11 posts (o mesmo, mais o
+`BlogPosting` e o link para a landing do tema), o degrau `/whatsapp`
+(`noindex`, fora do sitemap, bloqueado no robots) e as 53 URLs antigas do WP,
+onde a regra é uma só — nenhuma pode terminar em 404.
+
+O `npm run build` roda `scripts/antirobo.mjs` no fim e **reprova** se `wa.me`
+com número voltar a aparecer em qualquer arquivo servido (ver abaixo).
 
 Um dos guardrails foi afinado na migração do blog. A regra do cliente veda
 "diagnóstico de câncer de colo do útero"; o teste barrava qualquer menção ao
@@ -251,6 +257,36 @@ termo, e isso derrubava a **medição obstétrica do colo** — comprimento cerv
 risco de parto prematuro —, que é exame que a clínica faz e aparece no post do
 transvaginal. Agora o termo só reprova quando vem perto de câncer, Papanicolau,
 colposcopia ou HPV, que é o que a regra veda de fato.
+
+## O degrau `/whatsapp` (proteção antirrobô)
+
+**Nenhum CTA do site aponta para `wa.me`.** Todos apontam para a rota interna
+`/whatsapp?m=<mensagem>&o=<origem>`; o link de verdade é montado lá dentro, no
+navegador, a partir dos pedaços de `lib/whatsapp.ts`. É o padrão da casa
+(camada B do `PADRAO_SITE_LANDING_MAPA.md`, no `rizzo-os`), já rodando nos
+sites da EL e da ECOA.
+
+| Peça | Papel |
+| --- | --- |
+| `lib/whatsapp.ts` | O número em partes, a rota, o telefone visível derivado das partes |
+| `app/whatsapp/page.tsx` | O degrau: `noindex`, fora do sitemap, `Disallow` no robots |
+| `components/DegrauWhatsApp.tsx` | **O único lugar onde `wa.me` existe.** Monta o link, conta a conversão, redireciona em 900 ms |
+| `scripts/antirobo.mjs` | A prova, dentro do `npm run build` |
+
+O que isso compra: varredor que baixa o HTML não colhe o link; quem não executa
+JavaScript não chega ao WhatsApp (filtra bot ingênuo e clique acidental de
+tráfego amplo); e a conversão passa a nascer num ponto só, em vez de em cada um
+dos CTAs.
+
+⚠️ **O telefone continua em texto e em `tel:` no HTML, de propósito** — é NAP
+(nome, endereço, telefone), o sinal de negócio local que o buscador lê, e o
+"Ligar" que o cliente pediu para destacar. A divergência em relação aos sites da
+EL e da ECOA, que escondem o número inteiro, está registrada em `PARKING.md`
+[A-02] com a recomendação.
+
+⚠️ `clinica.phone` (o telefone **visível**, no json) e as partes (o telefone
+**discado**, no código) são o mesmo número, e `lib/content.ts` **reprova o
+build** se divergirem.
 
 ## Referências de design
 
