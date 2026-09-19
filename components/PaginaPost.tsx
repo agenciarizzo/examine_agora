@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BarraFixa } from '@/components/BarraFixa';
 import { Em, JsonLd } from '@/components/Bits';
 import { Fechamento } from '@/components/Fechamento';
 import { RetratoRT } from '@/components/RetratoRT';
@@ -93,8 +94,9 @@ export function PaginaPost({ post }: { post: Post }) {
       <JsonLd data={grafoPost(post)} />
       <JsonLd data={breadcrumbPost(post)} />
       <WhatsAppFloat href={wa} />
+      <BarraFixa waHref={wa} />
 
-      <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+      <div className="ea-com-barra-fixa" style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
         <TopBar />
         <SiteHeader waHref={wa} />
 

@@ -3,12 +3,18 @@ import { cor } from '@/lib/theme';
 /**
  * Float de WhatsApp fixo — obrigatório em todas as páginas
  * (bottom-right, #25D366, 58px, link `wa.me/...?text=` da própria página).
+ *
+ * ⚠️ No celular ele SAI de vista (`.ea-wa-float`, media query em
+ * `globals.css`) — a `BarraFixa` (§14 do mapa) ocupa o rodapé inteiro lá e os
+ * dois empilhados brigariam pelo mesmo polegar. No desktop ele continua como
+ * está: só a classe é nova, o `style` abaixo não muda um pixel (é o que o
+ * `git diff` da F3 confere, byte a byte).
  */
 export function WhatsAppFloat({ href }: { href: string }) {
   return (
     <a
       href={href}
-      className="ea-hover-wa"
+      className="ea-hover-wa ea-wa-float"
       aria-label="Agendar pelo WhatsApp"
       target="_blank"
       rel="noopener"

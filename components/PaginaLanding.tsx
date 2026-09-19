@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BarraFixa } from '@/components/BarraFixa';
 import { Em, ItemBarra, JsonLd } from '@/components/Bits';
 import { Concierge } from '@/components/Concierge';
 import { Fechamento } from '@/components/Fechamento';
@@ -38,8 +39,9 @@ export function PaginaLanding({ p }: { p: Page }) {
     <>
       <JsonLd data={graph(p.slug)} />
       <WhatsAppFloat href={wa} />
+      <BarraFixa waHref={wa} preAgendamento concierge exameSlug={p.slug} />
 
-      <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+      <div className="ea-com-barra-fixa" style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
         <TopBar />
         <SiteHeader waHref={wa} />
 

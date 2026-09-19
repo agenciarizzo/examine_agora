@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { BarraFixa } from '@/components/BarraFixa';
 import { Em, JsonLd } from '@/components/Bits';
 import { Fechamento } from '@/components/Fechamento';
 import { ParCta } from '@/components/ParCta';
@@ -9,6 +10,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
+import { cartao } from '@/lib/concierge';
 import { clinica, href, page, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
 import { metaDe } from '@/lib/meta';
@@ -31,8 +33,9 @@ export default function Home() {
     <>
       <JsonLd data={graph('inicio')} />
       <WhatsAppFloat href={wa} />
+      <BarraFixa waHref={wa} preAgendamento concierge />
 
-      <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+      <div className="ea-com-barra-fixa" style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
         <TopBar />
         <SiteHeader waHref={wa} />
 

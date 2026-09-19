@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { BarraFixa } from '@/components/BarraFixa';
 import { Em, JsonLd, Pilula } from '@/components/Bits';
 import { Fechamento } from '@/components/Fechamento';
 import { Eco } from '@/components/Panos';
@@ -24,8 +25,9 @@ export default function Noticias() {
     <>
       <JsonLd data={graph('noticias')} />
       <WhatsAppFloat href={wa} />
+      <BarraFixa waHref={wa} />
 
-      <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+      <div className="ea-com-barra-fixa" style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
         <TopBar />
         <SiteHeader waHref={wa} />
 
