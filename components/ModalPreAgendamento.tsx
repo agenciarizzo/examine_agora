@@ -29,38 +29,18 @@ function camposIniciais(exameSlugInicial?: string): CamposPreAgendamento {
 }
 
 /**
- * O botão que abre o modal + o modal do pré-agendamento (§4 do mapa). Vive
- * nos dois pontos do D4: `/agende-seu-exame` e o `Fechamento` das 12 landings
- * e da home. `exameSlugInicial` é o slug da landing de origem — o modal abre
- * com o primeiro exame do catálogo daquele slug já selecionado (§4.5); sem
- * slug (home, agende-seu-exame) ou landing sem exame no catálogo (hub), abre
+ * O modal do pré-agendamento (§4 do mapa). Quem o abre é o botão de
+ * `components/PreAgendamento.tsx`, que carrega este módulo **sob demanda**:
+ * ele puxa o `ea-landings.json` inteiro para o navegador (catálogo de exames
+ * + 44 convênios) e não pode viajar na carga inicial de página nenhuma —
+ * é a sobra medida do §5.5 do mapa (138 kB × 111 kB de First Load JS).
+ *
+ * `exameSlugInicial` é o slug da landing de origem — o modal abre com o
+ * primeiro exame do catálogo daquele slug já selecionado (§4.5); sem slug
+ * (home, `/agende-seu-exame`) ou landing sem exame no catálogo (o hub), abre
  * sem pré-seleção.
  */
-export function PreAgendamento({
-  exameSlugInicial,
-  rotulo = 'Preencher pré-agendamento',
-}: {
-  exameSlugInicial?: string;
-  rotulo?: string;
-}) {
-  const [aberto, setAberto] = useState(false);
-
-  return (
-    <>
-      <button type="button" onClick={() => setAberto(true)} style={botaoAbrir}>
-        {rotulo}
-      </button>
-      {aberto && (
-        <ModalPreAgendamento
-          exameSlugInicial={exameSlugInicial}
-          onFechar={() => setAberto(false)}
-        />
-      )}
-    </>
-  );
-}
-
-function ModalPreAgendamento({
+export function ModalPreAgendamento({
   exameSlugInicial,
   onFechar,
 }: {
@@ -222,19 +202,6 @@ function ModalPreAgendamento({
     </div>
   );
 }
-
-const botaoAbrir: CSSProperties = {
-  display: 'inline-block',
-  border: '1px solid rgba(169,214,245,.5)',
-  background: 'transparent',
-  color: cor.ceu,
-  fontFamily: 'inherit',
-  fontSize: 18,
-  fontWeight: 500,
-  padding: '18px 36px',
-  borderRadius: 999,
-  cursor: 'pointer',
-};
 
 const overlay: CSSProperties = {
   position: 'fixed',
