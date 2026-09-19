@@ -97,6 +97,17 @@ details[open] > summary .ea-faq-sinal::after {
   }
 }
 
+/* No desktop, sem esta reserva o botão mais à direita da barra (`Dúvidas`)
+   cresce até a borda (os botões são `flex:1`) e cai por baixo do float — que
+   é 58px + 22px de offset fixo no canto. Medido: o clique ali abria o
+   WhatsApp em vez do concierge. `!important` pela mesma razão do bloco
+   acima: vence o `padding` inline do próprio componente. */
+@media (min-width: 641px) {
+  .ea-barra-fixa {
+    padding-right: 96px !important;
+  }
+}
+
 /* Respeita quem pediu menos movimento. */
 @media (prefers-reduced-motion: reduce) {
   * {
