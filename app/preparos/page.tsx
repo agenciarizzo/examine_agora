@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { BotaoCeu, Em, ItemBarra, JsonLd, Pilula } from '@/components/Bits';
+import { Concierge } from '@/components/Concierge';
 import { Halo, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
-import { CONCIERGE } from '@/lib/concierge';
+import { cartao, CONCIERGE } from '@/lib/concierge';
 import { clinica, site, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
 import { metaDe } from '@/lib/meta';
@@ -162,6 +163,8 @@ export default function Preparos() {
                 Tirar dúvida no WhatsApp
               </BotaoCeu>
             </div>
+            {/* D2: o card junto do CTA final (a lista verbatim da opção que o cliente clicou). */}
+            <Concierge cartao={cartao} tom="escuro" />
           </div>
         </section>
 
