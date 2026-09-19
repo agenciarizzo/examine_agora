@@ -2193,6 +2193,86 @@
     "slug": "laboratorio"
    }
   ],
+  "concierge": {
+   "cartao": {
+    "titulo": "Dúvidas antes de agendar?",
+    "linha": "Preparo, convênio, o que levar no dia e as perguntas mais comuns de cada exame — em botões, com as mesmas respostas que estão nas páginas do site.",
+    "botao": "Abrir o guia de dúvidas"
+   },
+   "janela": {
+    "titulo": "Guia de dúvidas",
+    "fechar": "Fechar o guia",
+    "voltar": "Voltar",
+    "inicio": "Escolha um assunto."
+   },
+   "rodape": {
+    "quem": "Guia de dúvidas frequentes da clínica. As respostas são as mesmas que estão nas páginas do site. Não é atendimento médico e não substitui a avaliação do seu médico.",
+    "urgencia": "Sinal de urgência (dor forte, falta de ar, sangramento): ligue 192 (SAMU) ou procure a emergência mais próxima."
+   },
+   "ctas": {
+    "preAgendamento": "Fazer meu pré-agendamento",
+    "whatsapp": "Falar no WhatsApp",
+    "semResposta": "Minha dúvida não está aqui",
+    "waMsg": "Olá! Tenho uma dúvida antes de agendar meu exame na Examine Agora."
+   },
+   "menu": [
+    {
+     "id": "preparo",
+     "botao": "Preciso de jejum ou preparo?",
+     "titulo": "Jejum e preparo",
+     "abertura": "O preparo é o mesmo para todos os exames de um grupo. Escolha o grupo do seu exame.",
+     "link": "Ver a página de preparos"
+    },
+    {
+     "id": "convenio",
+     "botao": "Meu convênio atende?",
+     "titulo": "Convênios",
+     "abertura": "Como a clínica atende hoje:",
+     "link": "Ver a lista de convênios"
+    },
+    {
+     "id": "levar",
+     "botao": "O que eu levo no dia?",
+     "titulo": "O que levar no dia",
+     "abertura": "Em todo exame, leve:",
+     "link": "Ver a página de preparos"
+    },
+    {
+     "id": "exame",
+     "botao": "Dúvidas sobre um exame",
+     "titulo": "Dúvidas por exame",
+     "abertura": "Escolha o exame. As respostas são as mesmas da página dele.",
+     "link": "Ler a página completa"
+    },
+    {
+     "id": "local",
+     "botao": "Onde fica e que horas abre?",
+     "titulo": "Endereço e horário",
+     "abertura": "A clínica fica no Recanto das Emas, em Brasília-DF.",
+     "link": "Ver no mapa"
+    }
+   ],
+   "convenio": {
+    "paragrafos": [
+     "São {n} convênios na lista da página de convênios.",
+     "A cobertura de cada exame depende do seu plano e da autorização, então quem confirma o seu caso é a recepção — antes de marcar.",
+     "No pré-agendamento você já informa o convênio, e a recepção confirma a cobertura e a guia na mesma conversa."
+    ]
+   },
+   "levar": {
+    "itens": [
+     "Documento com foto",
+     "Pedido médico",
+     "Carteirinha do convênio",
+     "Exames anteriores da mesma região"
+    ],
+    "notaPreparo": "Exame sem preparo pede só isso: {nota}",
+    "nota": "Se o seu exame pede jejum, bexiga cheia ou medicação, confira o grupo dele na página de preparos."
+   },
+   "local": {
+    "ligar": "Ligar para a clínica"
+   }
+  },
   "port_map": [
    {
     "de": "/",
