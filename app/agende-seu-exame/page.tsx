@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Em, JsonLd } from '@/components/Bits';
 import { ParCta } from '@/components/ParCta';
 import { Grain, Halo } from '@/components/Panos';
+import { PreAgendamento } from '@/components/PreAgendamento';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
@@ -75,6 +76,7 @@ export default function Agende() {
               }}
             >
               <ParCta waHref={wa}>WhatsApp {clinica.phone}</ParCta>
+              <PreAgendamento />
             </div>
           </div>
         </section>

@@ -4,15 +4,27 @@ import { cor, WRAP } from '@/lib/theme';
 import { Em } from './Bits';
 import { Halo } from './Panos';
 import { ParCta } from './ParCta';
+import { PreAgendamento } from './PreAgendamento';
 
 /** Fechamento com halo baixo — o CTA final de Home e das landings. */
 export function Fechamento({
   waHref,
   sub,
+  preAgendamento = false,
+  exameSlug,
   children,
 }: {
   waHref: string;
   sub?: string;
+  /**
+   * Mostra o botão do pré-agendamento ao lado do `ParCta`. É **opt-in** porque
+   * o D4 do mapa limita esse botão a "onde o paciente já decidiu": as 12
+   * landings e a home. `/noticias` e os 11 posts também usam este `Fechamento`
+   * e ficam de fora — lá o CTA segue sendo só WhatsApp + Ligar.
+   */
+  preAgendamento?: boolean;
+  /** Slug da landing de origem — pré-seleciona o exame no modal (§4.5). */
+  exameSlug?: string;
   children?: ReactNode;
 }) {
   return (
@@ -65,6 +77,7 @@ export function Fechamento({
           }}
         >
           <ParCta waHref={waHref}>WhatsApp {clinica.phone}</ParCta>
+          {preAgendamento && <PreAgendamento exameSlugInicial={exameSlug} />}
         </div>
         <div
           style={{
