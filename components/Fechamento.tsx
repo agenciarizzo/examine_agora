@@ -1,7 +1,9 @@
 import type { ReactNode } from 'react';
+import { cartao } from '@/lib/concierge';
 import { clinica, mapHref } from '@/lib/content';
 import { cor, WRAP } from '@/lib/theme';
 import { Em } from './Bits';
+import { Concierge } from './Concierge';
 import { Halo } from './Panos';
 import { ParCta } from './ParCta';
 import { PreAgendamento } from './PreAgendamento';
@@ -11,6 +13,7 @@ export function Fechamento({
   waHref,
   sub,
   preAgendamento = false,
+  concierge = false,
   exameSlug,
   children,
 }: {
@@ -23,6 +26,13 @@ export function Fechamento({
    * e ficam de fora — lá o CTA segue sendo só WhatsApp + Ligar.
    */
   preAgendamento?: boolean;
+  /**
+   * Mostra o card do concierge abaixo do CTA final (um dos dois pontos do D2).
+   * **Opt-in pela mesma razão do `preAgendamento`** — a herança medida na F3
+   * da Fatia 1 (§5.5 do mapa): CTA pendurado sem porta neste componente vaza
+   * para `/noticias` e para os 11 posts, 26 URLs em vez de 14.
+   */
+  concierge?: boolean;
   /** Slug da landing de origem — pré-seleciona o exame no modal (§4.5). */
   exameSlug?: string;
   children?: ReactNode;
@@ -96,6 +106,7 @@ export function Fechamento({
             Ver no mapa ›
           </a>
         </div>
+        {concierge && <Concierge cartao={cartao} tom="escuro" exameSlug={exameSlug} />}
         {children}
       </div>
     </section>

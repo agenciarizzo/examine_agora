@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Em, ItemBarra, JsonLd } from '@/components/Bits';
+import { Concierge } from '@/components/Concierge';
 import { Fechamento } from '@/components/Fechamento';
 import { Ilustracao, temIlustracao } from '@/components/Ilustracao';
 import { ParCta } from '@/components/ParCta';
@@ -9,6 +10,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
+import { cartao } from '@/lib/concierge';
 import { clinica, href, type Page, page, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
 import { cor, WRAP } from '@/lib/theme';
@@ -618,6 +620,8 @@ export function PaginaLanding({ p }: { p: Page }) {
                   </p>
                 </details>
               ))}
+              {/* D2, ponto 1: o card fecha o bloco de FAQ. */}
+              <Concierge cartao={cartao} exameSlug={p.slug} />
             </div>
           </section>
         )}
@@ -720,6 +724,7 @@ export function PaginaLanding({ p }: { p: Page }) {
           waHref={wa}
           sub={`${clinica.pagamento} · atendemos com pedido médico e encaminhamentos.`}
           preAgendamento
+          concierge
           exameSlug={p.slug}
         >
           {!isHub && (

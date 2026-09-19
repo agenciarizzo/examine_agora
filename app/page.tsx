@@ -538,7 +538,7 @@ export default function Home() {
           </div>
         </section>
 
-        <Fechamento waHref={wa} preAgendamento />
+        <Fechamento waHref={wa} preAgendamento concierge />
         <SiteFooter links />
       </div>
     </>
