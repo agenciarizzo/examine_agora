@@ -719,6 +719,7 @@ export function PaginaLanding({ p }: { p: Page }) {
         <Fechamento
           waHref={wa}
           sub={`${clinica.pagamento} · atendemos com pedido médico e encaminhamentos.`}
+          preAgendamento
           exameSlug={p.slug}
         >
           {!isHub && (
