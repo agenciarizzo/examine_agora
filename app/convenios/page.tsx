@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BarraFixa } from '@/components/BarraFixa';
 import { Em, JsonLd } from '@/components/Bits';
 import { Concierge } from '@/components/Concierge';
 import { Eco } from '@/components/Panos';
@@ -21,8 +22,9 @@ export default function Convenios() {
     <>
       <JsonLd data={graph('convenios')} />
       <WhatsAppFloat href={wa} />
+      <BarraFixa waHref={wa} concierge />
 
-      <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+      <div className="ea-com-barra-fixa" style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
         <TopBar />
         <SiteHeader waHref={wa} />
 

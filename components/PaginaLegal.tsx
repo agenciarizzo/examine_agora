@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BarraFixa } from '@/components/BarraFixa';
 import { BotaoCeu, Em, ItemBarra, JsonLd } from '@/components/Bits';
 import { Halo, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
@@ -23,8 +24,9 @@ export function PaginaLegal({ slug }: { slug: string }) {
     <>
       <JsonLd data={graph(slug)} />
       <WhatsAppFloat href={wa} />
+      <BarraFixa waHref={wa} />
 
-      <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+      <div className="ea-com-barra-fixa" style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
         <TopBar />
         <SiteHeader waHref={wa} />
 

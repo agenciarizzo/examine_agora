@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { BarraFixa } from '@/components/BarraFixa';
 import { Em, JsonLd } from '@/components/Bits';
 import { Concierge } from '@/components/Concierge';
 import { ParCta } from '@/components/ParCta';
@@ -25,8 +26,9 @@ export default function Agende() {
     <>
       <JsonLd data={graph('agende')} />
       <WhatsAppFloat href={wa} />
+      <BarraFixa waHref={wa} preAgendamento concierge />
 
-      <div style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
+      <div className="ea-com-barra-fixa" style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
         <TopBar />
         {/* Sem CTA duplicado no header: a página inteira é o CTA. */}
         <SiteHeader waHref={wa} cta={false} />

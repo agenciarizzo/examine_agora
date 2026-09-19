@@ -51,14 +51,14 @@ details[open] > summary .ea-faq-sinal::after {
   content: '+';
 }
 
-/* Faixa de aviso da medição — mora no canto inferior esquerdo para não cobrir
-   o float do WhatsApp, que é o botão que converte. No telefone ela sobe acima
-   do float, em vez de disputar o mesmo canto. */
+/* Faixa de aviso da medição — mora no canto inferior esquerdo. `bottom` limpa
+   a `BarraFixa` (§14), que ocupa o rodapé inteiro em toda página agora; no
+   telefone ela também vira full-bleed, em vez de disputar o mesmo canto. */
 .ea-aviso {
   position: fixed;
   z-index: 90;
   left: 22px;
-  bottom: 22px;
+  bottom: calc(70px + env(safe-area-inset-bottom) + 14px);
   width: min(430px, calc(100vw - 44px));
 }
 
@@ -66,8 +66,45 @@ details[open] > summary .ea-faq-sinal::after {
   .ea-aviso {
     left: 12px;
     right: 12px;
-    bottom: 92px;
     width: auto;
+  }
+}
+
+/* Barra fixa do rodapé (Fatia 3, §14 do EA_PREAGENDAMENTO_CONCIERGE_MAPA.md)
+   — WhatsApp + Pré-agendamento + Dúvidas, largura inteira, em toda página. */
+.ea-barra-fixa {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+}
+
+/* Reserva o espaço da barra no fim de toda página, pra rodapé não ficar
+   escondido atrás dela. */
+.ea-com-barra-fixa {
+  padding-bottom: calc(70px + env(safe-area-inset-bottom));
+}
+
+/* No celular o float de canto do WhatsApp sai — empilharia com a barra nova;
+   no desktop ele continua como está (§14). `!important` porque o `style`
+   inline do próprio elemento já diz `display:flex` (e continua dizendo — é
+   o que fica intacto para a medição "verbatim" do §5.5), então só uma regra
+   mais forte que ele consegue desligar a exibição no celular. */
+@media (max-width: 640px) {
+  .ea-wa-float {
+    display: none !important;
+  }
+}
+
+/* No desktop, sem esta reserva o botão mais à direita da barra (`Dúvidas`)
+   cresce até a borda (os botões são `flex:1`) e cai por baixo do float — que
+   é 58px + 22px de offset fixo no canto. Medido: o clique ali abria o
+   WhatsApp em vez do concierge. `!important` pela mesma razão do bloco
+   acima: vence o `padding` inline do próprio componente. */
+@media (min-width: 641px) {
+  .ea-barra-fixa {
+    padding-right: 96px !important;
   }
 }
 
