@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { BotaoCeu, Em, ItemBarra, JsonLd, Pilula } from '@/components/Bits';
+import { Concierge } from '@/components/Concierge';
 import { Halo, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
+import { cartao, CONCIERGE } from '@/lib/concierge';
 import { clinica, site, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
 import { metaDe } from '@/lib/meta';
@@ -14,12 +16,14 @@ export const metadata: Metadata = metaDe('preparos');
 
 const wa = waHref('preparos');
 
-const TRAGA = [
-  'Documento com foto',
-  'Pedido médico',
-  'Carteirinha do convênio',
-  'Exames anteriores da mesma região',
-];
+/**
+ * O "o que levar no dia" é a resposta P3 do concierge (§5.2 do mapa), e por
+ * isso ele deixou de ser lista literal aqui e passou a ser `site.concierge.
+ * levar.itens` no json: a página e o concierge dizem a MESMA coisa porque
+ * leem o mesmo endereço, e é aqui — em HTML visível — que o guardrail de
+ * `scripts/verifica.mjs` consegue enxergar essa copy.
+ */
+const TRAGA = CONCIERGE.levar.itens;
 
 export default function Preparos() {
   return (
@@ -159,6 +163,8 @@ export default function Preparos() {
                 Tirar dúvida no WhatsApp
               </BotaoCeu>
             </div>
+            {/* D2: o card junto do CTA final (a lista verbatim da opção que o cliente clicou). */}
+            <Concierge cartao={cartao} tom="escuro" />
           </div>
         </section>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Em, JsonLd } from '@/components/Bits';
+import { Concierge } from '@/components/Concierge';
 import { ParCta } from '@/components/ParCta';
 import { Grain, Halo } from '@/components/Panos';
 import { PreAgendamento } from '@/components/PreAgendamento';
@@ -8,6 +9,8 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
+// `cartao` é renomeado porque esta página já tem uma const `cartao` de estilo.
+import { cartao as cartaoConcierge } from '@/lib/concierge';
 import { clinica, href, mapHref, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
 import { metaDe } from '@/lib/meta';
@@ -78,6 +81,8 @@ export default function Agende() {
               <ParCta waHref={wa}>WhatsApp {clinica.phone}</ParCta>
               <PreAgendamento />
             </div>
+            {/* D2: o card junto do CTA final (a lista verbatim da opção que o cliente clicou). */}
+            <Concierge cartao={cartaoConcierge} tom="escuro" />
           </div>
         </section>
 

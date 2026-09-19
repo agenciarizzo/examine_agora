@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { Em, JsonLd } from '@/components/Bits';
+import { Concierge } from '@/components/Concierge';
 import { Eco } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
+import { cartao } from '@/lib/concierge';
 import { site, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
 import { metaDe } from '@/lib/meta';
@@ -125,6 +127,8 @@ export default function Convenios() {
                 Confirmar meu convênio no WhatsApp
               </a>
             </div>
+            {/* D2: o card junto do CTA final (a lista verbatim da opção que o cliente clicou). */}
+            <Concierge cartao={cartao} />
           </div>
         </section>
 

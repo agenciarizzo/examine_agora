@@ -158,8 +158,8 @@ function varreJson(rotulo, valor) {
 }
 
 varreJson('content/ea-landings.json → site.exames', db.site.exames);
-// `site.concierge` ainda não existe na Fatia 1 — `varreJson` não faz nada
-// com `undefined`, e a varredura liga sozinha quando a Fatia 2 criar o nó.
+// Ligou na Fatia 2, quando o nó `site.concierge` passou a existir: é a copy
+// que só aparece depois de um clique, invisível para o scanner de HTML.
 varreJson('content/ea-landings.json → site.concierge', db.site.concierge);
 for (const p of db.pages) {
   if (p.faq?.length) varreJson(`content/ea-landings.json → pages[${p.slug}].faq`, p.faq);
@@ -220,6 +220,23 @@ const antigas = [
 for (const de of antigas) {
   const res = await fetch(base + de);
   if (!res.ok) anota(de, `URL antiga do WP terminou em HTTP ${res.status}`);
+}
+
+/**
+ * A resposta P3 do concierge ("o que eu levo no dia") e o bloco "Em todo
+ * exame, traga" de `/preparos` leem o MESMO endereço do json. Este teste cobra
+ * que a lista continue saindo em HTML VISÍVEL na página: é por ali que o
+ * guardrail enxerga essa copy — dentro do concierge ela só existe depois de um
+ * clique, e o `texto()` acima não alcança o que mora em `<script>`.
+ */
+{
+  const res = await fetch(base + '/preparos');
+  const visivel = res.ok ? texto(await res.text()) : '';
+  for (const item of db.site.concierge.levar.itens) {
+    if (!visivel.includes(item)) {
+      anota('/preparos', `sem "${item}" (site.concierge.levar.itens) em HTML visível`);
+    }
+  }
 }
 
 /** O degrau: responde, é noindex e não monta o link no HTML. */
