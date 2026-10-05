@@ -27,6 +27,23 @@ export type Hero = {
   h1b: string;
   pano: string;
   sub: string;
+  /** Sobrescreve o sobretítulo fixo do hero ("Examine Agora · desde 2012…"). */
+  olho?: string;
+  /** Sobrescreve o rótulo do botão de WhatsApp do hero ("Agendar pelo WhatsApp"). */
+  cta?: string;
+  /** Sobrescreve `clinica.selo` ao lado do botão do hero. */
+  selo?: string;
+};
+
+/**
+ * Seção genérica de conteúdo (cartões e/ou lista), para landing que precisa
+ * de mais blocos do que os do design — hoje só a de infiltração guiada.
+ */
+export type Bloco = {
+  h2: string;
+  lead?: string;
+  cartoes?: Ponto[];
+  itens?: string[];
 };
 
 export type Lista = { h2: string; itens: string[] };
@@ -46,7 +63,8 @@ export type Page = {
   hero?: Hero;
   manifesto?: string[];
   indicada?: Lista;
-  como?: { h2: string; dur: string; passos: Passo[] };
+  como?: { h2: string; dur?: string; passos: Passo[] };
+  blocos?: Bloco[];
   preparo?: Lista;
   guiado?: { h2: string; emph: string; lead: string; pontos: Ponto[] };
   depois?: Lista;
@@ -54,6 +72,10 @@ export type Page = {
   mitos?: { destaque: Mito; pares: Mito[] };
   rel?: string[];
   gridSlugs?: string[];
+  /** Sobrescreve a linha de pagamento do fechamento da landing. */
+  fechamentoSub?: string;
+  /** `false` tira o pré-agendamento da página (fluxo por envio de pedido). */
+  preAgendamento?: boolean;
 };
 
 export type Clinica = {

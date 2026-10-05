@@ -18,6 +18,7 @@ const DISPONIVEIS = new Set([
   'abdominal',
   'homem',
   'laboratorio',
+  'infiltracao',
 ]);
 
 export function temIlustracao(slug: string): boolean {

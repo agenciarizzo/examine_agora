@@ -12,7 +12,7 @@ import { SiteHeader } from '@/components/SiteHeader';
 import { TopBar } from '@/components/TopBar';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
 import { cartao } from '@/lib/concierge';
-import { clinica, href, type Page, page, waHref } from '@/lib/content';
+import { type Bloco, clinica, href, type Page, page, waHref } from '@/lib/content';
 import { graph } from '@/lib/jsonld';
 import { cor, WRAP } from '@/lib/theme';
 
@@ -26,7 +26,7 @@ function lead(p: Page) {
 }
 
 /**
- * Renderer único das 12 landings (hub, procedimentos guiados e exames),
+ * Renderer único das 13 landings (hub, procedimentos guiados e exames),
  * reproduzindo `EA Landing Pagina.dc.html`. Liga e desliga cada seção conforme
  * os campos presentes no json, como os `sc-if` do design.
  */
@@ -34,12 +34,13 @@ export function PaginaLanding({ p }: { p: Page }) {
   const wa = waHref(p.slug);
   const isHub = !!p.hub;
   const l = lead(p);
+  const comPre = p.preAgendamento !== false;
 
   return (
     <>
       <JsonLd data={graph(p.slug)} />
       <WhatsAppFloat href={wa} />
-      <BarraFixa waHref={wa} preAgendamento concierge exameSlug={p.slug} />
+      <BarraFixa waHref={wa} preAgendamento={comPre} concierge exameSlug={p.slug} />
 
       <div className="ea-com-barra-fixa" style={{ minHeight: '100vh', background: cor.campo, color: cor.gelo }}>
         <TopBar />
@@ -67,7 +68,7 @@ export function PaginaLanding({ p }: { p: Page }) {
                 color: cor.ceu,
               }}
             >
-              Examine Agora · desde 2012 no Recanto das Emas
+              {p.hero!.olho ?? 'Examine Agora · desde 2012 no Recanto das Emas'}
             </p>
             <h1
               style={{
@@ -98,9 +99,11 @@ export function PaginaLanding({ p }: { p: Page }) {
               style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 18, marginTop: 36 }}
             >
               <ParCta waHref={wa} fontSize={17} padding="16px 30px">
-                Agendar pelo WhatsApp
+                {p.hero!.cta ?? 'Agendar pelo WhatsApp'}
               </ParCta>
-              <span style={{ fontSize: 14, color: 'rgba(169,214,245,.75)' }}>{clinica.selo}</span>
+              <span style={{ fontSize: 14, color: 'rgba(169,214,245,.75)' }}>
+                {p.hero!.selo ?? clinica.selo}
+              </span>
             </div>
           </div>
         </section>
@@ -178,19 +181,21 @@ export function PaginaLanding({ p }: { p: Page }) {
                 >
                   {p.como.h2}
                 </h2>
-                <span
-                  style={{
-                    border: '1px solid rgba(10,42,82,.25)',
-                    color: cor.navy,
-                    fontSize: 13,
-                    fontWeight: 700,
-                    padding: '6px 14px',
-                    borderRadius: 999,
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  duração média: {p.como.dur}
-                </span>
+                {p.como.dur && (
+                  <span
+                    style={{
+                      border: '1px solid rgba(10,42,82,.25)',
+                      color: cor.navy,
+                      fontSize: 13,
+                      fontWeight: 700,
+                      padding: '6px 14px',
+                      borderRadius: 999,
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    duração média: {p.como.dur}
+                  </span>
+                )}
               </div>
               <div
                 style={{
@@ -261,6 +266,9 @@ export function PaginaLanding({ p }: { p: Page }) {
             </div>
           </section>
         )}
+
+        {!isHub &&
+          (p.blocos ?? []).map((b, i) => <SecaoBloco key={b.h2} b={b} fundo={i % 2 ? cor.gelo : '#FFFFFF'} />)}
 
         {!isHub && p.preparo && (
           <section
@@ -353,7 +361,7 @@ export function PaginaLanding({ p }: { p: Page }) {
                     fontSize: 'clamp(28px,3.6vw,42px)',
                   }}
                 >
-                  Os seis procedimentos
+                  Os {porExtenso((p.gridSlugs ?? []).length)} procedimentos
                 </h2>
                 <div
                   style={{
@@ -724,8 +732,8 @@ export function PaginaLanding({ p }: { p: Page }) {
 
         <Fechamento
           waHref={wa}
-          sub={`${clinica.pagamento} · atendemos com pedido médico e encaminhamentos.`}
-          preAgendamento
+          sub={p.fechamentoSub ?? `${clinica.pagamento} · atendemos com pedido médico e encaminhamentos.`}
+          preAgendamento={comPre}
           concierge
           exameSlug={p.slug}
         >
@@ -778,3 +786,87 @@ const pilulaVazada = {
   padding: '8px 18px',
   borderRadius: 999,
 } as const;
+
+/** Contagem por extenso do título do hub ("Os sete procedimentos"). */
+function porExtenso(n: number): string {
+  const nomes = ['zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+  return nomes[n] ?? String(n);
+}
+
+/** Seção genérica (`p.blocos`): título, lead opcional, cartões e/ou lista com barra. */
+function SecaoBloco({ b, fundo }: { b: Bloco; fundo: string }) {
+  return (
+    <section style={{ background: fundo, color: cor.navy }}>
+      <div style={{ maxWidth: WRAP, margin: '0 auto', padding: '80px 24px' }}>
+        <h2
+          style={{
+            margin: b.lead ? '0 0 16px' : '0 0 36px',
+            fontWeight: 500,
+            letterSpacing: '-0.02em',
+            fontSize: 'clamp(28px,3.6vw,42px)',
+            maxWidth: '24ch',
+            textWrap: 'balance',
+          }}
+        >
+          {b.h2}
+        </h2>
+        {b.lead && (
+          <p
+            style={{
+              margin: '0 0 36px',
+              fontSize: 18,
+              lineHeight: 1.55,
+              color: 'rgba(10,42,82,.78)',
+              maxWidth: '62ch',
+            }}
+          >
+            {b.lead}
+          </p>
+        )}
+        {!!b.cartoes?.length && (
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))',
+              gap: 20,
+              marginBottom: b.itens?.length ? 36 : 0,
+            }}
+          >
+            {b.cartoes.map((c) => (
+              <div
+                key={c.t}
+                style={{
+                  background: fundo === cor.gelo ? '#FFFFFF' : cor.gelo,
+                  border: '1px solid rgba(20,112,196,.18)',
+                  borderRadius: 10,
+                  padding: 26,
+                }}
+              >
+                <h3 style={{ margin: '0 0 10px', fontSize: 20, fontWeight: 600, letterSpacing: '-0.01em' }}>
+                  {c.t}
+                </h3>
+                <p style={{ margin: 0, fontSize: 16, lineHeight: 1.55, color: 'rgba(10,42,82,.75)' }}>
+                  {c.d}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+        {!!b.itens?.length && (
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
+              gap: '14px 36px',
+              maxWidth: 900,
+            }}
+          >
+            {b.itens.map((it) => (
+              <ItemBarra key={it}>{it}</ItemBarra>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

@@ -9,7 +9,7 @@ linha visual é reproduzida com os mesmos valores dos HTML de referência.
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # gera as 32 páginas estáticas (21 páginas + 11 posts) + o degrau /whatsapp
+npm run build    # gera as 33 páginas estáticas (22 páginas + 11 posts) + o degrau /whatsapp
 npm start
 ```
 
@@ -36,13 +36,13 @@ Para mudar um texto do site, mude o json — não o componente.
 | `lib/config.ts` | IDs de medição (GA4, pixel do Meta) e o allowlist do pixel |
 | `lib/theme.ts` | Paleta Eco Editorial, grão e a ênfase em Instrument Serif |
 
-## As 32 páginas
+## As 33 páginas
 
 | Rota | Origem |
 | --- | --- |
 | `/` | `app/page.tsx` |
 | `/procedimentos-guiados-por-ultrassom` | hub, renderer `components/PaginaLanding.tsx` |
-| 4 procedimentos guiados (próstata, mama, tireoide, linfonodo) | mesmo renderer |
+| 5 procedimentos guiados (próstata, mama, tireoide, linfonodo, infiltração) | mesmo renderer |
 | 7 landings de exame (morfológico, mulher, abdominal, homem, musculoesquelético, Doppler, laboratório) | mesmo renderer |
 | `/preparos` `/convenios` `/sobre-nos` `/agende-seu-exame` | páginas próprias |
 | `/noticias` | índice do blog, `app/noticias/page.tsx` |
@@ -59,6 +59,13 @@ resto → 404.
 procedimento (indicada, como, preparo, depois, FAQ, mitos) e a grade do hub
 conforme os campos presentes no json, exatamente como os `sc-if` do design.
 
+A landing de infiltração guiada (`/infiltracao-guiada-por-ultrassom-brasilia`,
+briefing do RT de 05/10/2026) usa campos opcionais que as outras não têm:
+`hero.olho`, `hero.cta` e `hero.selo` (sobretítulo, botão e selo do hero),
+`blocos` (seções genéricas de cartões e lista), `fechamentoSub` e
+`preAgendamento: false` — o fluxo dela é **enviar pedido e exames pelo
+WhatsApp**, não agendar exame. Sem o campo, cada página segue igual.
+
 Rotas fora dessa lista dão 404 (`dynamicParams = false`), com uma página de erro
 na linha visual do site.
 
@@ -69,7 +76,7 @@ na linha visual do site.
   (procedimentos guiados) ou `MedicalTest` (exames e laboratório) nas landings;
   `FAQPage` onde há FAQ; `BreadcrumbList` nas landings.
 - Nos posts: `BlogPosting` (autor e publisher = a clínica) + `BreadcrumbList` (Início → Notícias → post).
-- `sitemap.xml` e `robots.txt` gerados das 32 URLs (legais com prioridade 0.3, posts com 0.5).
+- `sitemap.xml` e `robots.txt` gerados das 33 URLs (legais com prioridade 0.3, posts com 0.5).
 - Horário no `MedicalClinic`: **seg a sex 8h–18h · sáb 8h–12h** (confirmado pelo cliente em 2026-07-25).
 
 ## Blog
@@ -158,7 +165,7 @@ renderizadas atrás desses termos — ver "Verificação" abaixo.
 As fotos reais da clínica e as ilustrações científicas entraram no lugar dos
 placeholders do handoff:
 
-- **Retrato do RT** (`public/dr-flavio.webp`) na Home, nas 12 landings e em `/sobre-nos`.
+- **Retrato do RT** (`public/dr-flavio.webp`) na Home, nas 13 landings e em `/sobre-nos`.
 - **Galeria "A clínica por dentro"** em `/sobre-nos`, montada a partir de
   `content/fotos.json`. Para acrescentar uma foto: arquivo em `public/fotos/`,
   entrada no json — nada de mexer em componente.
@@ -241,7 +248,7 @@ Com o servidor de pé (`npm start`), a varredura de guardrails e SEO:
 node scripts/verifica.mjs http://localhost:3000
 ```
 
-Ela faz quatro passagens: as 21 páginas (guardrails, WhatsApp, RT, canonical,
+Ela faz quatro passagens: as 22 páginas (guardrails, WhatsApp, RT, canonical,
 limites de `<title>`/`description`, 1 `<h1>`, `alt` em toda imagem, JSON-LD com
 `MedicalClinic`, `Physician` e `BreadcrumbList`), os 11 posts (o mesmo, mais o
 `BlogPosting` e o link para a landing do tema), o degrau `/whatsapp`
