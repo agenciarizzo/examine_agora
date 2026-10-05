@@ -211,3 +211,24 @@ Suba os 11 arquivos com esses nomes exatos em `public/ilustracoes/` (do
 jeito que já fizemos com `content/fotos.json` para as fotos da clínica) e
 me avisa — eu troco a caixa tracejada "ilustração científica · placeholder"
 de cada landing por essa imagem, sem tocar em mais nada da página.
+
+---
+
+## 12 — Infiltração guiada por ultrassom (`infiltracao`) · 2026-10-05
+**Arquivo:** `public/ilustracoes/infiltracao.jpg` (gerada no gpt-image-2, 1024², fundo gelo chapado)
+
+> Scientific medical-editorial illustration, thin uniform vector line art. ONE
+> central anatomical element: a human knee joint seen from the front/side in
+> section (femur end, tibia plateau, patella, the joint space and the
+> suprapatellar recess outlined with thin lines). A linear ultrasound
+> transducer rests on the skin at the side of the knee, with a soft
+> translucent blue ultrasound beam fan under it, and a fine straight needle
+> entering the joint space, its trajectory clearly inside the beam, needle
+> tip reaching the joint space. Colors locked: navy #0A2A52 for all anatomy
+> lines, eco blue #1470C4 for the needle, the beam and the joint space
+> highlight, on a flat ice-blue background #EEF6FC. Lots of breathing room,
+> clean composition. No realistic shadow, no photographic gradient, no skin
+> texture, no 3D render. No full leg, no human figure, no hands. IMPORTANT:
+> no text, no letters, no numbers, no watermark, no labels; no generic
+> ultrasound machine, no heart or stethoscope icon, nothing that looks like a
+> report screen. Square 1:1.

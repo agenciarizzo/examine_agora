@@ -82,6 +82,7 @@
     "mama",
     "tireoide",
     "linfonodo",
+    "infiltracao",
     "musculo",
     "doppler"
    ],
@@ -692,6 +693,209 @@
    "grupo": "proc"
   },
   {
+   "slug": "infiltracao",
+   "file": "EA Landing Pagina.dc.html",
+   "path": "/infiltracao-guiada-por-ultrassom-brasilia",
+   "nome": "Infiltração guiada por ultrassom",
+   "curto": "Infiltrações guiadas",
+   "intencao": "procedimento · paciente já com indicação médica",
+   "illo": "articulação do joelho em corte com o transdutor linear e a agulha guiada até o espaço articular — vetor de linha navy/eco sobre gelo",
+   "seo": {
+    "title": "Infiltração guiada por ultrassom em Brasília | Examine Agora",
+    "description": "Infiltrações com corticoide, ácido hialurônico e aspiração de derrame guiadas por ultrassom, para quem já tem indicação médica. Recanto das Emas, DF.",
+    "kw": "infiltração guiada por ultrassom brasília",
+    "kws": [
+     "infiltração com corticoide brasília",
+     "viscossuplementação com ácido hialurônico",
+     "aspiração de derrame articular guiada por ultrassom"
+    ],
+    "waMsg": "Olá! Tenho indicação médica de infiltração e quero enviar meu pedido e meus exames."
+   },
+   "hero": {
+    "h1a": "Infiltrações",
+    "emph": "guiadas por ultrassom",
+    "h1b": "em Brasília",
+    "pano": "campo",
+    "sub": "Infiltrações com corticoides e outros medicamentos, conforme indicação médica, viscossuplementação com ácido hialurônico, aspiração de derrames e outros procedimentos para pacientes previamente encaminhados.",
+    "olho": "Procedimentos musculoesqueléticos guiados por ultrassom",
+    "cta": "Enviar pedido e exames pelo WhatsApp",
+    "selo": "Mediante indicação médica · Recanto das Emas · Brasília-DF"
+   },
+   "indicada": {
+    "h2": "Para quem já tem a indicação do seu médico",
+    "itens": [
+     "Quem recebeu do seu médico a indicação de infiltração",
+     "Quem tem pedido ou encaminhamento para infiltração com corticoide ou outro medicamento",
+     "Quem recebeu indicação de aplicação de ácido hialurônico",
+     "Quem tem solicitação de aspiração de derrame",
+     "Quem foi encaminhado para infiltração articular ou periarticular"
+    ]
+   },
+   "como": {
+    "h2": "Do pedido ao relatório",
+    "passos": [
+     {
+      "t": "Indicação do seu médico",
+      "d": "O médico que acompanha você indica o procedimento, a estrutura e, quando necessário, o medicamento."
+     },
+     {
+      "t": "Envio do pedido e dos exames",
+      "d": "Você envia o pedido ou encaminhamento e os exames da região pelo WhatsApp."
+     },
+     {
+      "t": "Conferência e orçamento",
+      "d": "A equipe confere a solicitação e informa a disponibilidade, o medicamento utilizado e o valor do procedimento."
+     },
+     {
+      "t": "Procedimento guiado",
+      "d": "No dia agendado, o radiologista localiza a estrutura no ultrassom e acompanha a agulha em tempo real."
+     },
+     {
+      "t": "Relatório e retorno",
+      "d": "Você recebe o relatório do procedimento e retorna ao seu médico assistente para o seguimento clínico."
+     }
+    ]
+   },
+   "blocos": [
+    {
+     "h2": "As modalidades",
+     "lead": "Infiltração com corticoide e viscossuplementação com ácido hialurônico são modalidades diferentes. Cada procedimento segue a indicação do seu médico.",
+     "cartoes": [
+      {
+       "t": "Infiltrações com corticoides e outros medicamentos",
+       "d": "Aplicação de corticoide ou de outro medicamento indicado para auxiliar no controle da dor e de processos inflamatórios, traumáticos ou degenerativos do sistema musculoesquelético, conforme indicação médica."
+      },
+      {
+       "t": "Viscossuplementação com ácido hialurônico",
+       "d": "Aplicação de ácido hialurônico em articulações ou regiões periarticulares, conforme indicação médica e características do produto utilizado. Existem apresentações para pequenas e grandes articulações."
+      },
+      {
+       "t": "Aspiração de derrames",
+       "d": "Quando existe indicação médica de punção articular, o ultrassom auxilia na localização do derrame e no acompanhamento da agulha durante a aspiração. O líquido pode ser encaminhado para análise laboratorial quando solicitado pelo médico assistente."
+      }
+     ]
+    },
+    {
+     "h2": "Articulações, tendões, bursas e nervos",
+     "lead": "Além das infiltrações em grandes articulações, como joelho, quadril e ombro, e em pequenas articulações, a Examine Agora realiza:",
+     "itens": [
+      "Infiltrações de bursas",
+      "Aplicações peritendinosas e em bainhas tendinosas",
+      "Punção seguida de infiltração",
+      "Bloqueios analgésicos e infiltrações perineurais",
+      "Hidrodissecção do nervo mediano no túnel do carpo",
+      "Tratamento de pontos-gatilho"
+     ]
+    },
+    {
+     "h2": "Para o médico que encaminha",
+     "lead": "O serviço inclui conferência da solicitação, planejamento ultrassonográfico, execução, registro de imagens e relatório. Após o procedimento, o paciente retorna ao médico assistente para seguimento clínico. O encaminhamento ajuda quando informa:",
+     "itens": [
+      "O procedimento",
+      "A estrutura e a lateralidade",
+      "O produto ou a classe terapêutica, quando necessário",
+      "As informações clínicas relevantes",
+      "A necessidade de análise laboratorial do líquido aspirado"
+     ]
+    }
+   ],
+   "preparo": {
+    "h2": "Documentos para enviar",
+    "itens": [
+     "Pedido ou encaminhamento médico",
+     "Relatório médico, quando disponível",
+     "Exames relacionados à região",
+     "Procedimento, articulação ou estrutura e lateralidade",
+     "Medicamento indicado, quando especificado",
+     "Lista de medicamentos em uso",
+     "Informação sobre uso de anticoagulantes",
+     "Alergias"
+    ]
+   },
+   "guiado": {
+    "h2": "Como funciona a orientação ultrassonográfica",
+    "emph": "tempo real",
+    "lead": "A agulha acompanhada em tempo real, do começo ao fim.",
+    "pontos": [
+     {
+      "t": "Estrutura identificada",
+      "d": "O ultrassom localiza a articulação, a bursa, o tendão ou a bainha indicados no pedido antes da aplicação."
+     },
+     {
+      "t": "Posicionamento da agulha",
+      "d": "A orientação ultrassonográfica em tempo real proporciona maior precisão no posicionamento da agulha."
+     },
+     {
+      "t": "Radiologista musculoesquelético",
+      "d": "Todos os procedimentos são realizados por médico radiologista musculoesquelético."
+     },
+     {
+      "t": "Seu médico segue com você",
+      "d": "Você permanece acompanhado pelo seu médico assistente, responsável pela indicação e pelo seguimento clínico do tratamento."
+     }
+    ]
+   },
+   "depois": {
+    "h2": "No dia do procedimento",
+    "itens": [
+     "Traga o pedido ou encaminhamento e os exames da região",
+     "Informe os medicamentos em uso, o uso de anticoagulantes e as alergias",
+     "A realização depende da conferência do pedido, dos exames disponíveis e das condições de segurança no dia do atendimento",
+     "Produto fornecido pelo paciente: lacrado, dentro da validade, com nota fiscal e transportado conforme o fabricante",
+     "Depois do procedimento, você retorna ao seu médico assistente com o relatório"
+    ]
+   },
+   "faq": [
+    {
+     "q": "Preciso ter indicação médica?",
+     "a": "Sim. Os procedimentos da Examine Agora são realizados mediante indicação médica prévia. Se você ainda não tem a indicação, o primeiro passo é procurar o médico responsável pelo seu acompanhamento."
+    },
+    {
+     "q": "A Examine Agora faz consulta para indicar a infiltração?",
+     "a": "Não. A indicação e o acompanhamento clínico são do seu médico assistente. A Examine Agora é responsável pelo planejamento técnico e pela execução do procedimento."
+    },
+    {
+     "q": "Como sei o valor e o medicamento?",
+     "a": "Depois do envio do pedido e dos exames, a equipe informa a disponibilidade, o medicamento utilizado e o valor do procedimento."
+    },
+    {
+     "q": "Quantas aplicações de ácido hialurônico são feitas?",
+     "a": "O número de aplicações varia conforme o produto utilizado e a orientação médica. Cada aplicação corresponde a um novo procedimento."
+    },
+    {
+     "q": "Posso levar o produto indicado pelo meu médico?",
+     "a": "Sim, desde que tenha sido previamente indicado e aprovado, esteja lacrado, dentro da validade, acompanhado de nota fiscal e transportado conforme as orientações do fabricante."
+    },
+    {
+     "q": "O líquido aspirado pode ser analisado?",
+     "a": "Sim. Quando solicitado pelo médico assistente, o líquido pode ser encaminhado para análise laboratorial."
+    }
+   ],
+   "mitos": {
+    "destaque": {
+     "m": "Ácido hialurônico é a versão mais cara da infiltração com corticoide",
+     "v": "São modalidades diferentes, e não versões barata e cara do mesmo tratamento. Cada procedimento deve respeitar a indicação médica."
+    },
+    "pares": [
+     {
+      "m": "Todo derrame precisa ser aspirado ou infiltrado",
+      "v": "A punção é feita quando existe indicação médica. O ultrassom auxilia na localização do derrame e no acompanhamento da agulha."
+     },
+     {
+      "m": "A clínica decide se você precisa de infiltração",
+      "v": "A indicação é do seu médico assistente. A Examine Agora realiza o procedimento com orientação ultrassonográfica."
+     }
+    ]
+   },
+   "rel": [
+    "musculo"
+   ],
+   "tipo": "landing",
+   "grupo": "proc",
+   "fechamentoSub": "Mediante indicação médica · envie o pedido e os exames pelo WhatsApp.",
+   "preAgendamento": false
+  },
+  {
    "slug": "musculo",
    "file": "EA Landing Ultrassom Musculoesqueletico.dc.html",
    "path": "/ultrassom-musculoesqueletico-brasilia",
@@ -835,6 +1039,7 @@
     ]
    },
    "rel": [
+    "infiltracao",
     "doppler",
     "tireoide"
    ],
