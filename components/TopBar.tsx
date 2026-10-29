@@ -1,4 +1,5 @@
 import { clinica, mapHref, telHref } from '@/lib/content';
+import { REDES } from '@/lib/redes';
 import { cor, WRAP } from '@/lib/theme';
 
 /**
@@ -45,23 +46,31 @@ export function TopBar() {
           </a>
         </div>
 
-        <div className="ea-topbar-secundario">
-          <span style={item}>
-            <IconPino />
-            {clinica.address}
-          </span>
-          <span style={item}>
-            <IconRelogio />
-            {clinica.hours}
-          </span>
-          <a href={clinica.instagram} target="_blank" rel="noopener" className="ea-link-inherit ea-topbar-item" style={item}>
-            <IconInstagram />
-            Instagram
-          </a>
-          <a href={clinica.facebook} target="_blank" rel="noopener" className="ea-link-inherit ea-topbar-item" style={item}>
-            <IconFacebook />
-            Facebook
-          </a>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '4px 20px' }}>
+          <div className="ea-topbar-secundario">
+            <span style={item}>
+              <IconPino />
+              {clinica.address}
+            </span>
+            <span style={item}>
+              <IconRelogio />
+              {clinica.hours}
+            </span>
+          </div>
+          {/* Ícones de rede: fora do grupo secundário, para seguirem visíveis no celular. */}
+          {REDES.map((r) => (
+            <a
+              key={r.rede}
+              href={r.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={r.label}
+              className="ea-link-inherit ea-topbar-item"
+              style={item}
+            >
+              <IconInstagram />
+            </a>
+          ))}
         </div>
       </div>
     </div>
@@ -105,14 +114,6 @@ function IconInstagram() {
   return (
     <svg viewBox="0 0 24 24" width={14} height={14} fill="currentColor" aria-hidden="true">
       <path d="M12 2c-2.7 0-3.1 0-4.1.1-1.1.1-1.8.2-2.5.5-.7.3-1.3.6-1.9 1.2C2.9 4.4 2.6 5 2.3 5.7c-.3.7-.4 1.4-.5 2.5C1.7 9.2 1.7 9.6 1.7 12.3s0 3.1.1 4.1c.1 1.1.2 1.8.5 2.5.3.7.6 1.3 1.2 1.9.6.6 1.2.9 1.9 1.2.7.3 1.4.4 2.5.5 1 .1 1.4.1 4.1.1s3.1 0 4.1-.1c1.1-.1 1.8-.2 2.5-.5.7-.3 1.3-.6 1.9-1.2.6-.6.9-1.2 1.2-1.9.3-.7.4-1.4.5-2.5.1-1 .1-1.4.1-4.1s0-3.1-.1-4.1c-.1-1.1-.2-1.8-.5-2.5-.3-.7-.6-1.3-1.2-1.9-.6-.6-1.2-.9-1.9-1.2-.7-.3-1.4-.4-2.5-.5C15.1 2 14.7 2 12 2zm0 1.8c2.6 0 3 0 4 .1 1 .1 1.5.2 1.9.4.5.2.8.4 1.1.7.3.3.5.6.7 1.1.2.4.3.9.4 1.9.1 1 .1 1.4.1 4s0 3-.1 4c-.1 1-.2 1.5-.4 1.9-.2.5-.4.8-.7 1.1-.3.3-.6.5-1.1.7-.4.2-.9.3-1.9.4-1 .1-1.4.1-4 .1s-3 0-4-.1c-1-.1-1.5-.2-1.9-.4-.5-.2-.8-.4-1.1-.7-.3-.3-.5-.6-.7-1.1-.2-.4-.3-.9-.4-1.9-.1-1-.1-1.4-.1-4s0-3 .1-4c.1-1 .2-1.5.4-1.9.2-.5.4-.8.7-1.1.3-.3.6-.5 1.1-.7.4-.2.9-.3 1.9-.4 1-.1 1.4-.1 4-.1zm0 3a5.2 5.2 0 1 0 0 10.4A5.2 5.2 0 0 0 12 6.8zm0 8.6a3.4 3.4 0 1 1 0-6.8 3.4 3.4 0 0 1 0 6.8zm5.4-8.8a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z" />
-    </svg>
-  );
-}
-
-function IconFacebook() {
-  return (
-    <svg viewBox="0 0 24 24" width={14} height={14} fill="currentColor" aria-hidden="true">
-      <path d="M13.5 21v-8.1h2.7l.4-3.2h-3.1V7.6c0-.9.3-1.6 1.6-1.6h1.7V3.1C16.5 3 15.6 3 14.5 3c-2.3 0-3.9 1.4-3.9 4v2.7H8v3.2h2.6V21h2.9z" />
     </svg>
   );
 }

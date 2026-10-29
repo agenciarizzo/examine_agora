@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "skipDangerousModePermissionPrompt": true,
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [
+      "mcp__Claude_Code_Remote",
+      "mcp__claude-code-remote",
+      "mcp__github",
+      "mcp__Supabase",
+      "mcp__Vercel",
+      "mcp__Gmail",
+      "mcp__Google_Drive",
+      "mcp__Google_Calendar",
+      "mcp__Trello",
+      "mcp__Resend",
+      "mcp__Dropbox",
+      "mcp__Figma",
+      "mcp__Zapier",
+      "mcp__Replit",
+      "mcp__Canva",
+      "mcp__HyperFrames_by_HeyGen",
+      "mcp__Cloudflare_Developer_Platform",
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "Skill",
+      "Agent",
+      "TaskCreate",
+      "TaskUpdate",
+      "TaskList",
+      "TaskGet",
+      "Bash(git *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(node *)",
+      "Bash(python3 *)",
+      "Bash(jq *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(grep *)",
+      "Bash(find *)",
+      "Bash(mkdir *)",
+      "Bash(cp *)",
+      "Bash(mv *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__Zapier__execute_zapier_read_action|mcp__Zapier__execute_zapier_write_action",
+        "hooks": [
+          {
+            "type": "command",
+            "timeout": 10,
+            "command": "f=\"$CLAUDE_PROJECT_DIR/.claude/hooks/travaCustoZapier.mjs\"; if [ -f \"$f\" ]; then node \"$f\"; else printf '%s' '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Trava de custo Zapier sem o script neste repo: copiar LITERAL de agenciarizzo/rizzo-os scripts/hooks/travaCustoZapier.mjs para .claude/hooks/travaCustoZapier.mjs (docs/SITES_CLIENTE_MULTIREPO_MAPA.md) e repetir a chamada. Cada chamada do Zapier custa ~US$ 0,09; volume vai por conector nativo (rizzo-os docs/ZAPIER_SAIDA_MAPA.md §14).\"}}'; fi"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "timeout": 30,
+            "command": "input=$(cat); case \"$input\" in *git*push*) f=\"$CLAUDE_PROJECT_DIR/.claude/hooks/check-reporting-link.mjs\"; if [ -f \"$f\" ]; then printf '%s' \"$input\" | node \"$f\" --hook; else printf '%s' '{\"systemMessage\":\"Trava do vinculo Reporting Ninja sem o script neste repo\",\"hookSpecificOutput\":{\"hookEventName\":\"PostToolUse\",\"additionalContext\":\"A trava do vinculo Reporting Ninja NAO checou este push: falta .claude/hooks/check-reporting-link.mjs neste repo. Copiar LITERAL de agenciarizzo/rizzo-os scripts/check-reporting-link.mjs (docs/SITES_CLIENTE_MULTIREPO_MAPA.md). Ate la, levar ao FECHAMENTO: conferir vinculo e menu Campanhas do cliente no RizzoOS.\"}}'; fi ;; esac; exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}

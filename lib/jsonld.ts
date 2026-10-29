@@ -4,6 +4,7 @@
  */
 import { absolute, clinica, href, page, type Page, SITE_URL } from './content';
 import { type Post, postPath } from './posts';
+import { REDES } from './redes';
 
 type Json = Record<string, unknown>;
 
@@ -82,12 +83,11 @@ export function medicalClinic(): Json {
     telephone: clinica.phone,
     medicalSpecialty: 'Radiography',
     /*
-     * `sameAs` é o que amarra o perfil do Instagram e o do Facebook À MESMA
-     * entidade que o site descreve. Os dois links já existiam no json (e no
-     * topbar) e ficavam de fora do schema — o buscador via três presenças
-     * soltas em vez de uma clínica só.
+     * `sameAs` amarra os perfis À MESMA entidade que o site descreve. Vem da
+     * mesma lista (`REDES`) que alimenta o topo e o rodapé: o schema só cita
+     * perfil que a tela linka.
      */
-    sameAs: [clinica.instagram, clinica.facebook],
+    sameAs: REDES.map((r) => r.url),
     address: ENDERECO,
     areaServed: [
       { '@type': 'Place', name: 'Recanto das Emas · Brasília-DF' },
