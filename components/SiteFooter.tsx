@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { clinica, href, legais, nav } from '@/lib/content';
+import { ICONES, REDES } from '@/lib/redes';
 import { cor, WRAP } from '@/lib/theme';
 
 const miudo = {
@@ -53,17 +54,34 @@ export function SiteFooter({ links = false }: { links?: boolean }) {
         <p style={{ margin: 0, fontSize: 13, color: cor.ceu, fontWeight: 500 }}>
           {clinica.rt_line}
         </p>
-        <p style={{ margin: 0, fontSize: 13, color: 'rgba(169,214,245,.8)' }}>
-          <a
-            href={clinica.instagram}
-            target="_blank"
-            rel="noopener"
-            className="ea-link-inherit"
-            style={{ textDecoration: 'none' }}
-          >
-            {clinica.handle}
-          </a>{' '}
-          · {clinica.site}
+        <p style={{ margin: 0, fontSize: 13, color: 'rgba(169,214,245,.8)', display: 'flex', alignItems: 'center', gap: 8 }}>
+          {REDES.map((r) => (
+            <a
+              key={r.rede}
+              href={r.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={r.label}
+              className="ea-link-inherit"
+              style={{ textDecoration: 'none', display: 'inline-flex' }}
+            >
+              <svg viewBox="0 0 24 24" width={16} height={16} fill="currentColor" aria-hidden="true">
+                <path d={ICONES[r.rede]} />
+              </svg>
+            </a>
+          ))}
+          <span>
+            <a
+              href={clinica.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ea-link-inherit"
+              style={{ textDecoration: 'none' }}
+            >
+              {clinica.handle}
+            </a>{' '}
+            · {clinica.site}
+          </span>
         </p>
       </div>
       {links && (

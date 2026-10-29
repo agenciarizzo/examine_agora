@@ -85,7 +85,6 @@ export type Clinica = {
   phone: string;
   handle: string;
   instagram: string;
-  facebook: string;
   site: string;
   address: string;
   hours: string;
