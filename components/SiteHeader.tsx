@@ -2,10 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { clinica, href, nav } from '@/lib/content';
 import { cor, WRAP } from '@/lib/theme';
+import { MenuCelular } from './MenuCelular';
 
 /**
  * Header data-driven (`site.nav` do json). O CTA some na página Agende,
  * como nos HTML de referência.
+ *
+ * Celular: os HTML de referência só desenham o desktop, e o nav quebrava em
+ * 5 linhas ao lado do logo (medido em 390 px: 150 px de largura, 256 de
+ * altura). Até 640 px o nav do desktop sai (`.ea-nav-desk`) e os mesmos
+ * itens vão pra um `<details>` "Menu" (`MenuCelular`) — o desktop fica
+ * idêntico. Regras no `globals.css`.
  */
 export function SiteHeader({
   waHref,
@@ -44,7 +51,7 @@ export function SiteHeader({
             style={{ height: 34, width: 'auto', display: 'block' }}
           />
         </Link>
-        <nav style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap' }}>
+        <nav className="ea-nav-desk" style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap' }}>
           {nav.map((n) => (
             <Link
               key={n.label}
@@ -74,6 +81,7 @@ export function SiteHeader({
             </a>
           )}
         </nav>
+        <MenuCelular itens={nav} waHref={waHref} cta={cta} />
       </div>
     </header>
   );

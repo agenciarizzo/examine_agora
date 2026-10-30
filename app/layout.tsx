@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Medicao } from '@/components/Medicao';
 import { clinica, page, SITE_URL } from '@/lib/content';
 import './globals.css';
+import { NA26_HEAD, NA26_HTML } from '@/lib/novembro-azul-2026'; // Novembro Azul 2026: apagar em dezembro
 
 const inicio = page('inicio');
 
@@ -29,8 +30,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: NA26_HEAD }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
@@ -40,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body>
+        <div dangerouslySetInnerHTML={{ __html: NA26_HTML }} />
         {children}
         <Medicao />
       </body>
