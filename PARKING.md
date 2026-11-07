@@ -153,7 +153,18 @@
   que esta manutenção encontrou o site.
 - **Prazo sugerido:** próxima entrega que tocar o repo.
 
-## [M-01] A conversão do degrau depende do gtag.js carregar dentro de ~900 ms
+## ✅ [M-01] A conversão do degrau depende do gtag.js carregar dentro de ~900 ms — FECHADO em 2026-11-07
+
+- **Fechado pelo conserto da ponte que conta no toque** (rizzo-os →
+  `docs/ADS_CONVERSAO_HONESTA_MAPA.md` §3): o degrau não vai mais embora
+  sozinho. O `generate_lead` sai no toque em "Abrir o WhatsApp", que abre o
+  WhatsApp em OUTRA aba, então esta página segue viva e o `gtag.js` tem o tempo
+  que precisar (o toque espera a tag montar por até 10 s). Medido em navegador:
+  o toque dá 1 `generate_lead` na rede (`g/collect`), o 2º toque e a volta não
+  dão nada. A troca de UX que este item temia (segurar o paciente esperando o
+  disparo) não acontece: quem segura agora é o toque, e ninguém espera.
+- O texto abaixo é o estado de 2026-09-18, mantido como registro.
+
 
 > **Fora das seções do Padrão Rizzo (A–G) de propósito:** medição não é SEO. O
 > degrau entrou nesta entrega como o terceiro pedido do cliente, e este item é a

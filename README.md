@@ -297,13 +297,25 @@ sites da EL e da ECOA.
 | --- | --- |
 | `lib/whatsapp.ts` | O número em partes, a rota, o telefone visível derivado das partes |
 | `app/whatsapp/page.tsx` | O degrau: `noindex`, fora do sitemap, `Disallow` no robots |
-| `components/DegrauWhatsApp.tsx` | **O único lugar onde `wa.me` existe.** Monta o link, conta a conversão, redireciona em 900 ms |
-| `scripts/antirobo.mjs` | A prova, dentro do `npm run build` |
+| `components/DegrauWhatsApp.tsx` | **O único lugar onde `wa.me` existe.** Monta o link e conta a conversão (`generate_lead`) **no toque** em "Abrir o WhatsApp", 1 vez por sessão. Não abre sozinho (desde 2026-11-07) |
+| `scripts/antirobo.mjs` | A prova, dentro do `npm run build` (inclusive: o degrau não redireciona sozinho nem promete abrir sozinho) |
 
 O que isso compra: varredor que baixa o HTML não colhe o link; quem não executa
 JavaScript não chega ao WhatsApp (filtra bot ingênuo e clique acidental de
 tráfego amplo); e a conversão passa a nascer num ponto só, em vez de em cada um
 dos CTAs.
+
+**O lead conta no TOQUE, não na chegada (2026-11-07).** Até essa data o degrau
+disparava o `generate_lead` ao carregar e abria o WhatsApp sozinho em 900 ms: o
+Google e o GA4 contavam como lead quem só chegou (aba aberta por engano,
+pré-carregamento, a mesma pessoa voltando). Agora a pessoa toca em "Abrir o
+WhatsApp", o WhatsApp abre em outra aba e o `generate_lead` sai nesse toque, com
+o mesmo nome e os mesmos parâmetros, 1 vez a cada 30 minutos (a sessão do GA4;
+`localStorage`, porque o degrau abre em aba nova e aba nova nasce com o
+`sessionStorage` vazio). No celular, no degrau, o aviso de medição fica no topo,
+para não cobrir o botão. Provas: `provas/prova-3-ponte-no-toque-390x664.jpg` e
+`provas/prova-4-ponte-aviso-no-topo-390x664.jpg`. Memória: rizzo-os →
+`docs/ADS_CONVERSAO_HONESTA_MAPA.md` §3.
 
 ⚠️ **O telefone continua em texto e em `tel:` no HTML, de propósito** — é NAP
 (nome, endereço, telefone), o sinal de negócio local que o buscador lê, e o
