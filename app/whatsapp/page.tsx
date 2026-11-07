@@ -11,16 +11,21 @@ import { cor, GRAIN, serif } from '@/lib/theme';
  * Ela não é conteúdo do site — é o degrau que abre o WhatsApp. Indexá-la só
  * exporia o caminho e ainda poria uma página sem conteúdo no índice.
  * `app/robots.ts` também a bloqueia; os dois sinais juntos são de propósito.
+ *
+ * Desde 07/11/2026 o degrau NÃO abre sozinho: mostra o botão "Abrir o
+ * WhatsApp", e o lead conta no toque dele (`components/DegrauWhatsApp.tsx`).
+ * O texto diz isso, e o botão vem logo depois da frase que pede o toque.
  */
 export const metadata: Metadata = {
-  title: 'Abrindo o WhatsApp — Examine Agora',
-  description: 'Abrindo a conversa de WhatsApp da Examine Agora.',
+  title: 'Continue no WhatsApp | Examine Agora',
+  description: 'Abra a conversa de WhatsApp da Examine Agora.',
   robots: { index: false, follow: false },
 };
 
 export default function Whatsapp() {
   return (
     <main
+      className="ea-degrau"
       style={{
         minHeight: '100svh',
         background: cor.campo,
@@ -53,15 +58,15 @@ export default function Whatsapp() {
           padding: '38px 26px 32px',
         }}
       >
-        <div className="ea-degrau-girador" aria-hidden="true" />
         <h1 style={{ margin: 0, fontSize: 21, fontWeight: 500, lineHeight: 1.35 }}>
-          Abrindo o <span style={{ ...serif, color: cor.ceu }}>WhatsApp</span> da{' '}
-          {clinica.nome.split(' — ')[0]}…
+          Continue no <span style={{ ...serif, color: cor.ceu }}>WhatsApp</span> da{' '}
+          {/* O nome não quebra no meio: em 390 px o "Agora" caía sozinho na 2ª linha (Voz V1, sem linha órfã). */}
+          {clinica.nome.split(' — ')[0].replace(/ /g, '\u00a0')}
         </h1>
         <p style={{ margin: '12px 0 0', fontSize: 14, lineHeight: 1.55, color: 'rgba(255,255,255,.72)' }}>
-          Você será direcionado em instantes.
+          Sua mensagem já está pronta.
           <br />
-          Se não abrir sozinho, toque no botão abaixo.
+          Toque no botão abaixo para abrir a conversa.
         </p>
 
         <DegrauWhatsApp padrao={page('inicio').seo.waMsg} />

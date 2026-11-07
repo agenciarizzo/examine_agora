@@ -70,6 +70,20 @@ details[open] > summary .ea-faq-sinal::after {
   }
 }
 
+/* No celular, no degrau `/whatsapp` (que não tem a barra fixa embaixo), o
+   aviso vai pro TOPO. Embaixo ele cobria o cartão do degrau inteiro, botão
+   junto: em 390×664 o aviso ocupava de 357 a 580 px e o "Abrir o WhatsApp"
+   ficava em 539–588 (medido em 07/11/2026). Desde então o botão é o ÚNICO
+   caminho pro WhatsApp, porque o degrau não abre mais sozinho. No desktop o
+   aviso fica à esquerda e não alcança o botão: lá nada muda. O aviso é irmão
+   do `<main>` no body (o `Medicao` vem depois da página no layout), daí o `~`. */
+@media (max-width: 560px) {
+  .ea-degrau ~ .ea-aviso {
+    top: calc(12px + env(safe-area-inset-top));
+    bottom: auto;
+  }
+}
+
 /* Barra fixa do rodapé (Fatia 3, §14 do EA_PREAGENDAMENTO_CONCIERGE_MAPA.md)
    — WhatsApp + Pré-agendamento + Dúvidas, largura inteira, em toda página. */
 .ea-barra-fixa {
@@ -130,33 +144,6 @@ details[open] > summary .ea-faq-sinal::after {
 @media (max-width: 700px) {
   .ea-topbar-secundario {
     display: none;
-  }
-}
-
-/*
- * Girador do degrau de WhatsApp (`/whatsapp`). Fica aqui, e não inline, porque
- * `@keyframes` não existe em estilo inline — e o degrau precisa pintar antes
- * de qualquer JavaScript, que é a razão de ele existir.
- */
-.ea-degrau-girador {
-  width: 42px;
-  height: 42px;
-  margin: 0 auto 20px;
-  border-radius: 999px;
-  border: 3px solid rgba(169, 214, 245, 0.25);
-  border-top-color: #a9d6f5;
-  animation: ea-girar 0.9s linear infinite;
-}
-
-@keyframes ea-girar {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ea-degrau-girador {
-    animation: none;
   }
 }
 
