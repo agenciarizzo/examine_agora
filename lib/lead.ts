@@ -14,9 +14,15 @@
  *     sozinha, sem contar nada na chegada. Tira o clique a mais e não volta a
  *     contar quem só chegou.
  *
+ * Meta (07/11/2026): o 1º lead da janela manda também o `Lead` do Pixel, no
+ * mesmo instante e com o mesmo id (`event_id` no GA4, `eventID` no Pixel),
+ * só nas páginas em que o Pixel roda (`lib/pixelLead.ts`).
+ *
  * Este módulo NÃO importa `lib/whatsapp.ts` nem monta link: o `wa.me` só
  * existe no degrau (`scripts/antirobo.mjs`).
  */
+
+import { leadMeta } from '@/lib/pixelLead';
 
 /** A chave guarda QUANDO o lead saiu. */
 const CHAVE_LEAD = 'ea_lead_whatsapp';
@@ -97,6 +103,14 @@ function eventoQuandoATagMontar(
 
 let pendente = false;
 
+function novoId(): string {
+  try {
+    return crypto.randomUUID();
+  } catch {
+    return `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+  }
+}
+
 /**
  * Conta o lead do clique num botão de WhatsApp do site: `generate_lead` com o
  * mesmo nome e os mesmos parâmetros de sempre (`method`, `origem`), 1 vez a
@@ -105,8 +119,16 @@ let pendente = false;
 export function contaLeadDoClique(href: string): void {
   if (pendente || leadJaContado()) return;
   pendente = true;
-  eventoQuandoATagMontar('generate_lead', { method: 'whatsapp', origem: origemDoBotao(href) }, (saiu) => {
-    if (saiu) marcaLeadContado();
+  const inicio = Date.now();
+  const origem = origemDoBotao(href);
+  // O id do evento: o mesmo no `generate_lead` (parâmetro `event_id`) e no
+  // `Lead` do Pixel (`eventID`), que o Meta usa para não contar em dobro.
+  const eventId = novoId();
+  eventoQuandoATagMontar('generate_lead', { method: 'whatsapp', origem, event_id: eventId }, (saiu) => {
+    if (saiu) {
+      marcaLeadContado();
+      leadMeta(origem, eventId, inicio); // junto do lead, no mesmo instante
+    }
     pendente = false;
   });
 }

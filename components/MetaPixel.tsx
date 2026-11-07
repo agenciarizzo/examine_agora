@@ -4,6 +4,7 @@ import Script from 'next/script';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { META_PIXEL_ID, pixelLiberado } from '@/lib/config';
+import { EVENTO_PIXEL_PRONTO } from '@/lib/pixelLead';
 
 declare global {
   interface Window {
@@ -37,6 +38,11 @@ declare global {
  *     quem está sem JavaScript o aviso de medição também não funciona, então
  *     não haveria como recusar. Rastrear quem não pode dizer não fica fora.
  *
+ * 4. **Avisa quando a config do pixel carrega** (`signals/config/<id>`, o
+ *    `load` desse script, visto por um ouvinte de captura no documento
+ *    registrado ANTES do fbevents.js entrar). Antes dela o `fbq` só enfileira;
+ *    o `Lead` do clique de WhatsApp (`lib/pixelLead.ts`) espera esse aviso.
+ *
  * O `PageView` não sai do snippet: sai do efeito abaixo, um por página
  * liberada. Assim a primeira carga e as navegações internas seguem o mesmo
  * caminho, sem contar duas vezes na primeira.
@@ -60,7 +66,11 @@ export function MetaPixel() {
 
   return (
     <Script id="meta-pixel" strategy="afterInteractive" onReady={() => setPronto(true)}>
-      {`!function(f,b,e,v,n,t,s)
+      {`document.addEventListener('load',function c(e){var t=e.target;
+if(t&&t.tagName==='SCRIPT'&&t.src&&t.src.indexOf('/signals/config/${META_PIXEL_ID}')>-1){
+document.removeEventListener('load',c,true);window.__eaPixelPronto=true;
+window.dispatchEvent(new Event('${EVENTO_PIXEL_PRONTO}'))}},true);
+!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
