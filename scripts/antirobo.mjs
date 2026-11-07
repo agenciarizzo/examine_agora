@@ -90,31 +90,30 @@ exigir('a rota /whatsapp não foi pré-renderada', Boolean(degrau), '.next/serve
 if (degrau) {
   const t = readFileSync(degrau, 'utf-8');
   exigir('o degrau /whatsapp não declara noindex', /noindex/.test(t), 'whatsapp.html');
-  // 5 · o degrau conta no TOQUE e não abre sozinho (07/11/2026, rizzo-os →
-  //     `docs/ADS_CONVERSAO_HONESTA_MAPA.md` §3). Antes, a chegada disparava o
-  //     `generate_lead` e fazia `location.replace` em 900 ms: o Google contava
-  //     como lead quem só chegou. O texto servido não pode voltar a prometer
-  //     que abre sozinho.
-  exigir(
-    'o degrau /whatsapp promete abrir sozinho (o lead conta no toque)',
-    !/em instantes|abrir sozinho|Abrindo o/i.test(t),
-    'whatsapp.html',
-  );
-  exigir('o degrau /whatsapp sem o botão "Abrir o WhatsApp"', />Abrir o WhatsApp</.test(t), 'whatsapp.html');
+  // 5 · o botão de reserva existe no HTML do degrau (se o navegador não abrir sozinho).
+  exigir('o degrau /whatsapp sem o botão "Abrir o WhatsApp agora"', />Abrir o WhatsApp agora</.test(t), 'whatsapp.html');
 }
 
-// 6 · …e o JavaScript do degrau (o único pedaço com `wa.me`) não redireciona
-//     sozinho: nenhum `location.replace`/`location.assign`/`location.href =`.
+// 6 · o degrau NÃO conta lead (07/11/2026, rizzo-os →
+//     `docs/ADS_CONVERSAO_HONESTA_MAPA.md` §3): chegar lá sem clicar (aba
+//     restaurada, pré-carregamento, link colado, robô) não pode virar lead. O
+//     pedaço de JS do degrau (o único com `wa.me`) não chama `gtag` nem tem
+//     `generate_lead`.
 const pedacosDoDegrau = js.filter((f) => readFileSync(f, 'utf-8').includes('wa.me'));
 exigir('nenhum pedaço de navegador monta o link do degrau', pedacosDoDegrau.length > 0, '.next/static');
 for (const caminho of pedacosDoDegrau) {
   const texto = readFileSync(caminho, 'utf-8');
-  exigir(
-    'o degrau voltou a redirecionar sozinho',
-    !/location\.(replace|assign)\(|location\.href\s*=[^=]/.test(texto),
-    relative(saida, caminho),
-  );
+  exigir('o degrau voltou a contar lead na chegada', !/generate_lead|gtag\(/.test(texto), relative(saida, caminho));
 }
+
+// 7 · …e o lead conta no CLIQUE: o pedaço que conta o `whatsapp_click` (o
+//     ouvinte do layout) também tem o `generate_lead`.
+const pedacosDoClique = js.filter((f) => readFileSync(f, 'utf-8').includes('whatsapp_click'));
+exigir(
+  'o generate_lead saiu do clique do botão do site',
+  pedacosDoClique.some((f) => readFileSync(f, 'utf-8').includes('generate_lead')),
+  pedacosDoClique.map((f) => relative(saida, f)).join(', ') || '.next/static',
+);
 
 console.log(
   `[antirobo] ${html.length} páginas e ${js.length} arquivos de navegador varridos.`,
