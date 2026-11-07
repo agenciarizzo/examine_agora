@@ -90,6 +90,30 @@ exigir('a rota /whatsapp não foi pré-renderada', Boolean(degrau), '.next/serve
 if (degrau) {
   const t = readFileSync(degrau, 'utf-8');
   exigir('o degrau /whatsapp não declara noindex', /noindex/.test(t), 'whatsapp.html');
+  // 5 · o degrau conta no TOQUE e não abre sozinho (07/11/2026, rizzo-os →
+  //     `docs/ADS_CONVERSAO_HONESTA_MAPA.md` §3). Antes, a chegada disparava o
+  //     `generate_lead` e fazia `location.replace` em 900 ms: o Google contava
+  //     como lead quem só chegou. O texto servido não pode voltar a prometer
+  //     que abre sozinho.
+  exigir(
+    'o degrau /whatsapp promete abrir sozinho (o lead conta no toque)',
+    !/em instantes|abrir sozinho|Abrindo o/i.test(t),
+    'whatsapp.html',
+  );
+  exigir('o degrau /whatsapp sem o botão "Abrir o WhatsApp"', />Abrir o WhatsApp</.test(t), 'whatsapp.html');
+}
+
+// 6 · …e o JavaScript do degrau (o único pedaço com `wa.me`) não redireciona
+//     sozinho: nenhum `location.replace`/`location.assign`/`location.href =`.
+const pedacosDoDegrau = js.filter((f) => readFileSync(f, 'utf-8').includes('wa.me'));
+exigir('nenhum pedaço de navegador monta o link do degrau', pedacosDoDegrau.length > 0, '.next/static');
+for (const caminho of pedacosDoDegrau) {
+  const texto = readFileSync(caminho, 'utf-8');
+  exigir(
+    'o degrau voltou a redirecionar sozinho',
+    !/location\.(replace|assign)\(|location\.href\s*=[^=]/.test(texto),
+    relative(saida, caminho),
+  );
 }
 
 console.log(
