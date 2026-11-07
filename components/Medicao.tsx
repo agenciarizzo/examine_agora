@@ -14,6 +14,7 @@ import {
   type EscolhaDeMedicao,
   type Origem,
 } from '@/lib/medicao';
+import { contaLeadDoClique } from '@/lib/lead';
 import { WHATSAPP_ROUTE } from '@/lib/whatsapp';
 
 declare global {
@@ -92,10 +93,13 @@ export function Medicao() {
       const pagina = window.location.pathname;
 
       if (href.startsWith(WHATSAPP_ROUTE)) {
-        // Aqui conta-se o CLIQUE. A conversão (`generate_lead`) e a referência
-        // do clique pago na mensagem nascem no degrau `/whatsapp`, que é onde
-        // o WhatsApp realmente abre — ver `components/DegrauWhatsApp.tsx`.
+        // Aqui conta-se o CLIQUE: o `whatsapp_click` (todo clique) e, desde
+        // 07/11/2026, a conversão `generate_lead` (1 vez a cada 30 min,
+        // `lib/lead.ts`). O degrau `/whatsapp` só monta o link, põe a
+        // referência do clique pago na mensagem e abre o WhatsApp; ele não
+        // conta nada, para que chegar lá sem clicar nunca vire lead.
         evento('whatsapp_click', { pagina, origem: origem?.tipo ?? 'organico' });
+        contaLeadDoClique(href);
         return;
       }
       if (href.startsWith('tel:')) {
