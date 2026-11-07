@@ -155,14 +155,13 @@
 
 ## ✅ [M-01] A conversão do degrau depende do gtag.js carregar dentro de ~900 ms — FECHADO em 2026-11-07
 
-- **Fechado pelo conserto da ponte que conta no toque** (rizzo-os →
-  `docs/ADS_CONVERSAO_HONESTA_MAPA.md` §3): o degrau não vai mais embora
-  sozinho. O `generate_lead` sai no toque em "Abrir o WhatsApp", que abre o
-  WhatsApp em OUTRA aba, então esta página segue viva e o `gtag.js` tem o tempo
-  que precisar (o toque espera a tag montar por até 10 s). Medido em navegador:
-  o toque dá 1 `generate_lead` na rede (`g/collect`), o 2º toque e a volta não
-  dão nada. A troca de UX que este item temia (segurar o paciente esperando o
-  disparo) não acontece: quem segura agora é o toque, e ninguém espera.
+- **Fechado pela régua do lead no clique** (rizzo-os →
+  `docs/ADS_CONVERSAO_HONESTA_MAPA.md` §3): o `generate_lead` não nasce mais no
+  degrau. Ele sai no clique do botão de WhatsApp do site, e esses botões abrem
+  o degrau em aba NOVA, então a página do clique segue viva e o `gtag.js` tem o
+  tempo que precisar (espera a tag montar por até 10 s, `lib/lead.ts`). O
+  degrau só monta o link e abre o WhatsApp. Medido em navegador: o clique dá 1
+  `generate_lead` na rede (`g/collect`); a chegada direta ao degrau não dá nada.
 - O texto abaixo é o estado de 2026-09-18, mantido como registro.
 
 
