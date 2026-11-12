@@ -347,6 +347,17 @@ for (const item of itens) {
   });
 }
 
+/**
+ * Posts escritos DEPOIS da migração (matérias novas, ex.: /ultrassom-de-mama,
+ * 2026-11) moram só no `content/posts.json` — não existem no WXR. Sem isto,
+ * rodar a migração de novo os apagaria em silêncio. Quem não veio do export é
+ * preservado como está.
+ */
+const doExport = new Set([...posts.map((p) => p.slug), ...fora.map((f) => f.slug)]);
+const atual = JSON.parse(readFileSync(SAIDA, 'utf8'));
+const novos = (atual.posts ?? []).filter((p) => !doExport.has(p.slug));
+posts.push(...novos);
+
 posts.sort((a, b) => (a.data < b.data ? 1 : -1));
 
 /**
@@ -372,7 +383,7 @@ const db = {
   gerado_de: 'migracao/examineagora.WordPress.20260725.xml',
   gerado_por: 'scripts/migra-wp.mjs',
   nota:
-    'Posts de texto próprio da clínica, migrados do WP nas URLs originais. As reproduções de terceiros ficaram fora (301 para a landing do tema) — ver REPRODUZIDOS no script e o README. As imagens de destaque ficaram no servidor antigo e não vieram no export.',
+    'Posts de texto próprio da clínica, migrados do WP nas URLs originais. As reproduções de terceiros ficaram fora (301 para a landing do tema) — ver REPRODUZIDOS no script e o README. As imagens de destaque ficaram no servidor antigo e não vieram no export. Matérias escritas depois da migração entram à mão aqui, e o script as preserva.',
   reproduzidos: fora,
   posts,
 };

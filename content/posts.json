@@ -2,7 +2,7 @@
  "schema": "ea-posts",
  "gerado_de": "migracao/examineagora.WordPress.20260725.xml",
  "gerado_por": "scripts/migra-wp.mjs",
- "nota": "Posts de texto próprio da clínica, migrados do WP nas URLs originais. As reproduções de terceiros ficaram fora (301 para a landing do tema) — ver REPRODUZIDOS no script e o README. As imagens de destaque ficaram no servidor antigo e não vieram no export.",
+ "nota": "Posts de texto próprio da clínica, migrados do WP nas URLs originais. As reproduções de terceiros ficaram fora (301 para a landing do tema) — ver REPRODUZIDOS no script e o README. As imagens de destaque ficaram no servidor antigo e não vieram no export. Matérias escritas depois da migração entram à mão aqui, e o script as preserva.",
  "reproduzidos": [
   {
    "slug": "nodulos-tireoidianos-respeito-e-bom-e-eles-gostam",
@@ -46,6 +46,134 @@
   }
  ],
  "posts": [
+  {
+   "slug": "ultrassom-de-mama",
+   "titulo": "Ultrassom de mama: o que ele mostra e quando o médico indica",
+   "data": "2026-11-12",
+   "atualizado": "2026-11-12",
+   "tema": "mulher",
+   "min": 4,
+   "lead": "O câncer de mama é mais fácil de tratar quando é descoberto cedo. Para isso, o acompanhamento regular da saúde da mama conta com consulta, exame físico e exames de imagem. O ultrassom de…",
+   "seo": {
+    "title": "Ultrassom de mama: o que ele mostra e quando o médico indica",
+    "description": "Entenda o que o ultrassom de mama avalia, como se relaciona com a mamografia e por que o diagnóstico precoce importa. Examine Agora, no Recanto das Emas.",
+    "waMsg": "Olá! Li o artigo \"Ultrassom de mama: o que ele mostra e quando o médico indica\" no site e quero agendar um exame."
+   },
+   "blocos": [
+    {
+     "t": "p",
+     "html": "O câncer de mama é mais fácil de tratar quando é descoberto cedo. Para isso, o acompanhamento regular da saúde da mama conta com consulta, exame físico e exames de imagem. O ultrassom de mama é um deles, e costuma gerar dúvidas: ele substitui a mamografia, quem precisa fazer, o que esperar do exame."
+    },
+    {
+     "t": "p",
+     "html": "Este texto é educativo. Ele explica, em linguagem simples, como o ultrassom de mama funciona e qual é o papel dele no diagnóstico precoce. A indicação de qualquer exame é sempre do médico, depois de avaliar cada caso."
+    },
+    {
+     "t": "h2",
+     "html": "O que é o ultrassom de mama"
+    },
+    {
+     "t": "p",
+     "html": "É um exame de imagem que usa ondas sonoras, sem radiação, para formar imagens do tecido mamário em tempo real. Um aparelho chamado transdutor é deslizado sobre a pele, com um gel, e o médico radiologista observa as imagens enquanto examina. O exame é feito sem agulha, não exige anestesia e costuma ser rápido."
+    },
+    {
+     "t": "p",
+     "html": "Ele ajuda o médico a avaliar a estrutura da mama e a diferenciar, por exemplo, um nódulo sólido de uma lesão com conteúdo líquido, como os cistos."
+    },
+    {
+     "t": "h2",
+     "html": "Ultrassom e mamografia: exames que se complementam"
+    },
+    {
+     "t": "p",
+     "html": "Os dois exames olham a mama de formas diferentes, e um não substitui o outro."
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "<strong>Mamografia:</strong> é o exame de rastreamento estabelecido no Brasil. Desde 2025, o Ministério da Saúde recomenda a mamografia a cada dois anos para mulheres de 50 a 74 anos. De 40 a 49 anos, o exame pode ser feito por decisão conjunta com o profissional de saúde. Outras sociedades médicas e o próprio médico podem orientar uma rotina diferente, de acordo com a idade e o histórico de cada mulher.",
+      "<strong>Ultrassom de mama:</strong> costuma ser usado como complemento. Em geral, o médico o solicita para esclarecer uma alteração percebida no exame físico ou na mamografia, ou quando a mama é mais densa, o que pode dificultar a leitura da mamografia."
+     ]
+    },
+    {
+     "t": "p",
+     "html": "Quem decide qual exame faz sentido, e com que frequência, é o médico que acompanha a paciente."
+    },
+    {
+     "t": "h2",
+     "html": "Quando o médico costuma indicar o ultrassom de mama"
+    },
+    {
+     "t": "p",
+     "html": "Algumas situações em que o exame pode ser pedido:"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "<strong>Nódulo ou alteração percebida</strong> no autoexame, na consulta ou em outro exame de imagem.",
+      "<strong>Complemento da mamografia</strong>, quando há uma imagem que precisa ser melhor esclarecida.",
+      "<strong>Mamas densas</strong>, a critério do médico.",
+      "<strong>Acompanhamento</strong> de uma alteração já conhecida, para observar se ela mudou ao longo do tempo."
+     ]
+    },
+    {
+     "t": "p",
+     "html": "O autoexame e a atenção às mudanças do próprio corpo continuam importantes. Qualquer alteração, como um nódulo, uma mudança na pele ou no mamilo, ou uma secreção, merece avaliação médica, sem esperar o próximo exame de rotina."
+    },
+    {
+     "t": "h2",
+     "html": "Quando o exame mostra uma alteração"
+    },
+    {
+     "t": "p",
+     "html": "Encontrar uma alteração no exame não significa que existe câncer: a maior parte dos achados precisa ser avaliada com cuidado, e muitos são benignos. Quando o médico considera necessário investigar melhor, pode indicar outros passos. Um deles é a <a href=\"/biopsia-de-mama-guiada-por-ultrassom\">biópsia guiada por ultrassom</a>, em que o médico acompanha a agulha pela imagem para coletar uma amostra do ponto exato, com anestesia local. A amostra é analisada para esclarecer a natureza da alteração. A decisão de biopsiar e o que fazer com o resultado são sempre do médico assistente."
+    },
+    {
+     "t": "h2",
+     "html": "Como se preparar para o exame"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "<strong>Leve exames anteriores</strong>, como mamografias e ultrassons, e o pedido médico, quando houver. A comparação com exames passados ajuda na leitura.",
+      "<strong>Use roupas confortáveis</strong>, de duas peças, que facilitem o exame.",
+      "<strong>Informe ao médico</strong> se percebeu algum nódulo, dor ou mudança, e qual é o seu histórico de saúde e familiar.",
+      "<strong>Siga as orientações da clínica</strong> no momento do agendamento. Se houver algum preparo específico, a equipe informa."
+     ]
+    },
+    {
+     "t": "h2",
+     "html": "Ultrassom da mulher na Examine Agora"
+    },
+    {
+     "t": "p",
+     "html": "A Examine Agora é uma clínica de diagnóstico por imagem no Recanto das Emas, com atuação desde 2012. Entre os exames de <a href=\"/ultrassom-da-mulher-brasilia\">ultrassom da mulher</a> estão os de mama, pélvico, transvaginal e obstétrico, além de procedimentos guiados por ultrassom, como a biópsia de mama. A equipe atende particular e também por convênios, e a confirmação do seu plano pode ser feita direto com a clínica."
+    },
+    {
+     "t": "p",
+     "html": "Para agendar, fale com a equipe pelo telefone ou WhatsApp <strong>(61) 3208-6814</strong>. A clínica fica na Avenida Recanto das Emas, Quadra 102, Lote 03, Loja 06, Recanto das Emas (DF)."
+    },
+    {
+     "t": "p",
+     "html": "<em>Este conteúdo é informativo e não substitui a consulta médica. Somente um médico, após avaliar cada paciente, pode indicar diagnóstico, exames e tratamento.</em>"
+    },
+    {
+     "t": "p",
+     "html": "<em>Responsável Técnico: Dr. Flávio H. A. Chaves, Radiologia e Diagnóstico por Imagem · CRM-DF 19506 · RQE 11288</em>"
+    },
+    {
+     "t": "p",
+     "html": "<strong>Fontes e referências:</strong>"
+    },
+    {
+     "t": "ul",
+     "itens": [
+      "Ministério da Saúde. <a href=\"https://www.gov.br/saude/pt-br/assuntos/noticias/2025/setembro/ministerio-da-saude-garante-acesso-a-mamografia-a-partir-dos-40-anos\" target=\"_blank\" rel=\"noopener\">Ministério da Saúde garante acesso a mamografia a partir dos 40 anos</a>, setembro de 2025.",
+      "Examine Agora: serviços e endereço, examineagora.com.br"
+     ]
+    }
+   ]
+  },
   {
    "slug": "ultrassom-morfologico-guia-completo-bebe",
    "titulo": "Ultrassom Morfológico: Guia Completo sobre o Exame que Revela Detalhes do seu Bebê",
