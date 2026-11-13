@@ -5,7 +5,7 @@
 ## Identidade
 
 - **Cliente:** `Examine Agora — Imagem e Medicina` (`diagnóstico por imagem e laboratório · Recanto das Emas, Brasília-DF`) · **Prod:** `https://examineagora.com.br` · **Vercel:** `ea` · **Stack:** `Next.js 15 (App Router), páginas estáticas`
-- ⚠️ **A `main` NÃO publica sozinha:** o deploy dela sai como preview, porque o branch de produção do projeto `ea` no Vercel não é a `main`. Depois do squash, redeploy do deploy da `main` como produção (`create_deployment` com `deploymentId` e `target: "production"`) e conferir em examineagora.com.br. A troca no painel é do Raphael (rizzo-os → `docs/NOVEMBRO_AZUL_2026_MAPA.md` §9).
+- **A `main` publica sozinha** (medido em 12/11/2026, no squash do #24: o deploy saiu `target: "production"` com o domínio, sem passo manual). Depois do squash, conferir em examineagora.com.br. Se um deploy da `main` voltar a sair `target: null`, o branch de produção mudou: redeploy como produção (`create_deployment` com `deploymentId` e `target: "production"`) e avisar (rizzo-os → `docs/NOVEMBRO_AZUL_2026_MAPA.md` §9).
 - **Doc-mapa da frente** (fonte da verdade do trabalho, "o que falta e por onde retomo"): repo `agenciarizzo/rizzo-os` → `docs/EA_SEO_MANUTENCAO_MAPA.md` (o site); a medição do WhatsApp no Ads, `docs/ADS_CONVERSAO_HONESTA_MAPA.md` §3 (índice-mestre: `MAPAS.md` de lá).
 
 ## Fonte da verdade dos DADOS do cliente — CONSULTAR, nunca colar
