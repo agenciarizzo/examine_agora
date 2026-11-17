@@ -39,7 +39,7 @@ export function Ilustracao({ slug, nome }: { slug: string; nome: string }) {
     >
       <Image
         src={`/ilustracoes/${slug}.jpg`}
-        alt={`Ilustração científica do procedimento — ${nome}`}
+        alt={`Ilustração científica do procedimento: ${nome}`}
         width={1024}
         height={1024}
         style={{ width: '100%', height: 'auto', display: 'block' }}

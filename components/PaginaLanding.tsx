@@ -3,6 +3,7 @@ import { BarraFixa } from '@/components/BarraFixa';
 import { Em, ItemBarra, JsonLd } from '@/components/Bits';
 import { Concierge } from '@/components/Concierge';
 import { Fechamento } from '@/components/Fechamento';
+import { HeroEco, temHeroEco } from '@/components/HeroEco';
 import { Ilustracao, temIlustracao } from '@/components/Ilustracao';
 import { ParCta } from '@/components/ParCta';
 import { RetratoRT } from '@/components/RetratoRT';
@@ -56,6 +57,7 @@ export function PaginaLanding({ p }: { p: Page }) {
           />
           <Grain />
           <div
+            className={temHeroEco(p.slug) ? 'ea-hero-grade' : undefined}
             style={{ position: 'relative', maxWidth: WRAP, margin: '0 auto', padding: '96px 24px 88px' }}
           >
             <p
@@ -105,6 +107,7 @@ export function PaginaLanding({ p }: { p: Page }) {
                 {p.hero!.selo ?? clinica.selo}
               </span>
             </div>
+            {temHeroEco(p.slug) && <HeroEco slug={p.slug} />}
           </div>
         </section>
 
