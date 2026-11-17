@@ -5,6 +5,7 @@ import { Em, JsonLd } from '@/components/Bits';
 import { Fechamento } from '@/components/Fechamento';
 import { ParCta } from '@/components/ParCta';
 import { RetratoRT } from '@/components/RetratoRT';
+import { HeroEcoCiclo } from '@/components/HeroEco';
 import { Eco, Grain, Halo, Setor, Varredura } from '@/components/Panos';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
@@ -54,6 +55,7 @@ export default function Home() {
           />
           <Grain />
           <div
+            className="ea-hero-grade"
             style={{
               position: 'relative',
               maxWidth: WRAP,
@@ -136,6 +138,7 @@ export default function Home() {
               <span>Recanto das Emas · Brasília-DF</span>
               <span>{clinica.rt_line}</span>
             </div>
+            <HeroEcoCiclo slugs={['morfologico', 'doppler', 'mama', 'prostata']} />
           </div>
         </section>
 
