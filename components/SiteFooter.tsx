@@ -139,32 +139,6 @@ export function SiteFooter({ links = false }: { links?: boolean }) {
         <p style={{ margin: 0, ...miudo }}>
           © {ANO} {clinica.nome}. Todos os direitos reservados.
         </p>
-        <p style={{ margin: 0, ...miudo }}>
-          Desenvolvido por{' '}
-          {/*
-            A assinatura da agência é link para o site dela — padrão da casa,
-            igual ao do site da ECOA.
-
-            `rel="noopener"` SEM `noreferrer`, ao contrário dos outros links
-            externos do site: é o referrer que faz a visita chegar identificada
-            como vinda daqui no Analytics da agência, que é exatamente o que um
-            crédito de rodapé existe para fazer. `noopener` fica, que é a parte
-            de segurança.
-
-            `aria-label` porque o "|" é ornamento da marca: em leitor de tela
-            ele seria lido como "barra vertical" no meio do nome.
-          */}
-          <a
-            href="https://www.agenciarizzo.com.br/"
-            target="_blank"
-            rel="noopener"
-            aria-label="Agência Rizzo"
-            className="ea-link-inherit"
-            style={{ color: cor.branco, fontWeight: 600, textDecoration: 'none' }}
-          >
-            agência<span style={{ color: '#FFCC00' }}>|</span>rizzo
-          </a>
-        </p>
       </div>
     </footer>
   );
